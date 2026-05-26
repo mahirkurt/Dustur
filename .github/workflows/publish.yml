@@ -7,11 +7,15 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Versiyon (örn. 1.2.1) · package.json güncellenir ve tag oluşturulur"
+        description: "Versiyon (örn. 1.2.1) · package.json güncellenir ve tag oluşturulur. Boş bırakırsanız mevcut sürüm kullanılır."
         type: string
         required: false
       dry-run:
         description: "Dry run (publish etmeden simüle et)"
+        type: boolean
+        default: false
+      provenance:
+        description: "Sigstore provenance (npm trusted publishing config gerekir, başlangıçta kapalı tut)"
         type: boolean
         default: false
 
@@ -20,8 +24,8 @@ jobs:
     name: Publish to NPM + GitHub Release
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      id-token: write   # npm provenance için
+      contents: write       # tag oluşturma + release create
+      id-token: write       # npm provenance (OIDC)
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -44,33 +48,62 @@ jobs:
       - name: Verify (lint + audit + build)
         run: npm run verify
 
-      - name: Bump version + create tag (workflow_dispatch)
+      - name: NPM whoami diagnostic
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "─── Registry config ───"
+          npm config get registry
+          echo ""
+          echo "─── Authenticated user ───"
+          npm whoami || echo "✗ npm whoami failed (token invalid or scope mismatch)"
+          echo ""
+          echo "─── Package metadata ───"
+          npm view "$(node -p "require('./package.json').name")" --json 2>&1 || echo "ℹ Package not published yet (404 expected for first publish)"
+
+      - name: Bump version + create tag (workflow_dispatch · version input)
         if: github.event_name == 'workflow_dispatch' && inputs.version != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          npm version ${{ inputs.version }} --no-git-tag-version
-          git add package.json package-lock.json
-          git commit -m "chore(release): v${{ inputs.version }}"
-          git tag -a "v${{ inputs.version }}" -m "v${{ inputs.version }}"
-          git push origin HEAD:main
-          git push origin "v${{ inputs.version }}"
+          CURRENT=$(node -p "require('./package.json').version")
+          if [ "$CURRENT" = "${{ inputs.version }}" ]; then
+            echo "ℹ Version $CURRENT zaten güncel · bump skip"
+          else
+            npm version ${{ inputs.version }} --no-git-tag-version
+            git add package.json package-lock.json
+            git commit -m "chore(release): v${{ inputs.version }}"
+            git push origin HEAD:main
+          fi
+          if git rev-parse "v${{ inputs.version }}" >/dev/null 2>&1 || git ls-remote --tags origin "v${{ inputs.version }}" | grep -q .; then
+            echo "ℹ Tag v${{ inputs.version }} zaten var · tag push skip"
+          else
+            git tag -a "v${{ inputs.version }}" -m "v${{ inputs.version }}"
+            git push origin "v${{ inputs.version }}"
+          fi
 
       - name: Pack (tarball oluştur)
-        run: npm pack
+        run: |
+          npm pack
+          ls -la *.tgz
 
-      - name: NPM publish (dry-run veya real)
+      - name: NPM publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          if [ "${{ inputs.dry-run }}" = "true" ]; then
-            npm publish --dry-run
-          else
-            npm publish --provenance --access public
-          fi
+          set -e
+          DRY="${{ inputs.dry-run }}"
+          PROV="${{ inputs.provenance }}"
+          FLAGS="--access public"
+          if [ "$PROV" = "true" ]; then FLAGS="$FLAGS --provenance"; fi
+          if [ "$DRY" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
+          echo "─── Publish flags: npm publish $FLAGS ───"
+          npm publish $FLAGS
 
       - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.version != '' && inputs.dry-run == false)
+        if: |
+          (success() || failure()) &&
+          (startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.version != '' && inputs.dry-run != 'true'))
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.version != '' && format('v{0}', inputs.version) || github.ref_name }}
