@@ -1,0 +1,38 @@
+# DÜSTUR · Code Owners
+# RACI haritasını koda bağlar. Aşağıdaki path'lerde değişiklik PR'ı,
+# ilgili kişi/ekibin review'unu zorunlu kılar.
+#
+# Format:  <path>  @kullanıcı veya @org/ekip
+
+# Global fallback — herhangi bir değişiklik için Sistem Sahibi haberdar
+*                                @mahirkurt
+
+# Doktriner LOCKED jetonlar — Sistem Sahibi + Tasarım Lideri zorunlu
+/tokens/primitives/color.json    @mahirkurt
+/tokens/semantic/tier.json       @mahirkurt
+/tokens/index.json               @mahirkurt
+
+# Tipografi (font ailesi seçimi LOCKED)
+/tokens/primitives/typography.json @mahirkurt
+
+# Erişilebilirlik · A11y Lead görüşü
+/css/themes/high-contrast.css    @mahirkurt
+/css/themes/reduced-motion.css   @mahirkurt
+/scripts/check-contrast.mjs      @mahirkurt
+/scripts/check-diacritics.mjs    @mahirkurt
+
+# Akoma Ntoso · Hukuk Danışmanı görüşü
+/tokens/akoma-ntoso/             @mahirkurt
+/css/akn/                        @mahirkurt
+/docs/06-akoma-ntoso/            @mahirkurt
+
+# Yönetişim / governance
+/CONTRIBUTING.md                 @mahirkurt
+/.github/                        @mahirkurt
+/CHANGELOG.md                    @mahirkurt
+/CODE_OF_CONDUCT.md              @mahirkurt
+/SECURITY.md                     @mahirkurt
+
+# Doktrini değiştiren dokümantasyon
+/docs/01-manifesto/              @mahirkurt
+/docs/07-governance/             @mahirkurt

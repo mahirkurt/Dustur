@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · @font-face declarations
+   TR-subset variable fonts · self-hosted (assets/fonts/subset/)
+
+   Google Fonts CDN bağımlılığını ortadan kaldırır:
+     - Daha hızlı first-paint (DNS resolve + handshake yok)
+     - Offline çalışma
+     - Privacy (Google'a request gitmez)
+     - Subset boyut: ~73% daha küçük
+   ═══════════════════════════════════════════════════════════════════ */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/subset/Fraunces-Subset.woff2") format("woff2-variations"),
+       url("../assets/fonts/subset/Fraunces-Subset.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 25% 151%;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-024F, U+02B0-02FF, U+2010-205E, U+20A0-20CF;
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  src: url("../assets/fonts/subset/AlbertSans-Subset.woff2") format("woff2-variations"),
+       url("../assets/fonts/subset/AlbertSans-Subset.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-024F, U+02B0-02FF, U+2010-205E, U+20A0-20CF;
+}
+
+@font-face {
+  font-family: "Recursive";
+  src: url("../assets/fonts/subset/Recursive-Subset.woff2") format("woff2-variations"),
+       url("../assets/fonts/subset/Recursive-Subset.woff2") format("woff2");
+  font-weight: 300 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-024F, U+02B0-02FF, U+2010-205E, U+20A0-20CF;
+}

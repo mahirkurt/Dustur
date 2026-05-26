@@ -101,6 +101,26 @@ URI segmentleri:
 - `2026-01-15` — Konsolide tarih
 - `article_220` — Element ID
 
+## Uygulama Kaynakları
+
+| Dosya | Açıklama |
+|---|---|
+| [`tokens/akoma-ntoso/element-map.json`](../../tokens/akoma-ntoso/element-map.json) | XML element → CSS class → semantic jeton eşlemesi |
+| [`tokens/akoma-ntoso/eli-uri.schema.json`](../../tokens/akoma-ntoso/eli-uri.schema.json) | TR ELI URI JSON Schema |
+| [`css/akn/element-styles.css`](../../css/akn/element-styles.css) | Akoma Ntoso element CSS uygulaması |
+| [`examples/akn/tck-madde-220.xml`](../../examples/akn/tck-madde-220.xml) | TCK Madde 220 örneği · valid AKN 3.0 |
+| [`examples/akn/render.html`](../../examples/akn/render.html) | Aynı maddenin Düstur stillerinde HTML render'ı |
+
+## Validasyon
+
+```bash
+# Lokal validasyon (xmllint)
+xmllint --noout --schema https://docs.oasis-open.org/legaldocml/ns/akn/3.0 examples/akn/tck-madde-220.xml
+
+# ELI URI schema validation
+ajv validate -s tokens/akoma-ntoso/eli-uri.schema.json -d <your-uri.json>
+```
+
 ---
 
 > Tam metin: [`reference/dustur-source.html`](../../reference/dustur-source.html) (Sayfalar 69-76)

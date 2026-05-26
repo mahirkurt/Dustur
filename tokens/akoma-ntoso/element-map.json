@@ -1,0 +1,141 @@
+{
+  "$description": "Akoma Ntoso (OASIS LegalDocML) → DÜSTUR CSS class → semantic jeton eşlemesi · TR adaptasyon",
+  "$extensions": {
+    "tr.tcm.standart": "OASIS LegalDocML · Akoma Ntoso 3.0",
+    "tr.tcm.spec-url": "http://docs.oasis-open.org/legaldocml/akn-core/v1.0/akn-core-v1.0.html"
+  },
+  "akn": {
+    "act": {
+      "$description": "<act> · Kanun",
+      "css-class": ".akn-act",
+      "tier": "kanun",
+      "tier-token": "{tier.kanun.mark}",
+      "typography": "{typography.page-title}"
+    },
+    "bill": {
+      "$description": "<bill> · Kanun Tasarısı",
+      "css-class": ".akn-bill",
+      "tier": "kanun-tasari",
+      "tier-token": "{color.turkuvaz.6}",
+      "typography": "{typography.page-title}"
+    },
+    "amendmentAct": {
+      "$description": "<amendmentAct> · Değişiklik Kanunu",
+      "css-class": ".akn-amendment-act",
+      "tier": "kanun",
+      "tier-token": "{tier.kanun.mark}"
+    },
+    "doc": {
+      "$description": "<doc> · Genel belge (Tebliğ, Genelge için)",
+      "css-class": ".akn-doc"
+    },
+    "constitution": {
+      "$description": "<constitution> (TR akn:constitution) · Anayasa",
+      "css-class": ".akn-constitution",
+      "tier": "anayasa",
+      "tier-token": "{tier.anayasa.mark}"
+    },
+    "judgment": {
+      "$description": "<judgment> · AYM kararı",
+      "css-class": ".akn-judgment",
+      "tier": "aym",
+      "tier-token": "{tier.aym.mark}"
+    },
+    "article": {
+      "$description": "<article> · Madde",
+      "css-class": ".akn-article",
+      "typography": "{typography.madde-body}"
+    },
+    "paragraph": {
+      "$description": "<paragraph> · Fıkra",
+      "css-class": ".akn-paragraph",
+      "typography": "{typography.madde-body}"
+    },
+    "subparagraph": {
+      "$description": "<subparagraph> · Bent",
+      "css-class": ".akn-subparagraph"
+    },
+    "clause": {
+      "$description": "<clause> · Cümle",
+      "css-class": ".akn-clause"
+    },
+    "heading": {
+      "$description": "<heading> · Madde başlığı",
+      "css-class": ".akn-heading",
+      "typography": "{typography.heading-3}"
+    },
+    "num": {
+      "$description": "<num> · Numaralandırma (Madde 1, Fıkra a, vb.)",
+      "css-class": ".akn-num",
+      "typography": "{typography.uri}",
+      "color": "{color.turkuvaz.10}"
+    },
+    "ref": {
+      "$description": "<ref> · Çapraz referans link",
+      "css-class": ".akn-ref",
+      "color": "{link.default}",
+      "color-visited": "{link.visited}"
+    },
+    "quotedStructure": {
+      "$description": "<quotedStructure> · Alıntı blok (mülga, değişiklik)",
+      "css-class": ".akn-quoted"
+    },
+    "remark": {
+      "$description": "<remark> · Yorum notu",
+      "css-class": ".akn-remark",
+      "color": "{color.gri.9}"
+    },
+    "term": {
+      "$description": "<term> · Tanım vurgusu",
+      "css-class": ".akn-term"
+    },
+    "date": {
+      "$description": "<date> · Tarih ifadesi",
+      "css-class": ".akn-date",
+      "typography": "{typography.uri}"
+    },
+    "courtType": {
+      "$description": "<courtType> · Mahkeme tipi (AYM, Yargıtay, Danıştay)",
+      "css-class": ".akn-court-type",
+      "color": "{color.lacivert.11}"
+    },
+    "preface":   { "$description": "<preface> · Önsöz",   "css-class": ".akn-preface" },
+    "preamble":  { "$description": "<preamble> · Başlangıç hükümleri", "css-class": ".akn-preamble" },
+    "body":      { "$description": "<body> · Ana gövde",  "css-class": ".akn-body" },
+    "conclusions": { "$description": "<conclusions> · Sonuç hükümleri", "css-class": ".akn-conclusions" },
+    "FRBRWork":  { "$description": "<FRBRWork> · ELI Work seviyesi",   "css-class": ".akn-frbr-work" }
+  },
+  "durum": {
+    "yururlukte": {
+      "$description": "Yürürlükte (default)",
+      "css-class": ".akn-status-active"
+    },
+    "mulga": {
+      "$description": "Mülga (yürürlükten kaldırılmış)",
+      "css-class": ".akn-status-repealed",
+      "text-decoration": "line-through",
+      "color": "{tier.mulga.text}",
+      "opacity": "{tier.mulga.opacity}"
+    },
+    "aym-iptal": {
+      "$description": "AYM tarafından iptal edilmiş",
+      "css-class": ".akn-status-aym-iptal",
+      "marker-bg": "{tier.aym-iptal.hap-bg}",
+      "marker-text": "{tier.aym-iptal.hap-text}"
+    },
+    "değişiklik-bekleyen": {
+      "$description": "Değişiklik bekleyen (TBMM gündeminde)",
+      "css-class": ".akn-status-pending",
+      "marker-bg": "{color.amber.2}",
+      "marker-text": "{color.amber.11}"
+    },
+    "ibtidai": {
+      "$description": "İbtidai (değişiklik öncesi metin)",
+      "css-class": ".akn-status-original"
+    },
+    "konsolide": {
+      "$description": "Konsolide (belirli tarih itibariyle birleştirilmiş)",
+      "css-class": ".akn-status-consolidated"
+    }
+  }
+}

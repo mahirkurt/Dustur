@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Akoma Ntoso · DÜSTUR Render Örneği</title>
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/tokens/primitives.css">
+<link rel="stylesheet" href="../../css/tokens/semantics.css">
+<link rel="stylesheet" href="../../css/base/reset.css">
+<link rel="stylesheet" href="../../css/base/typography.css">
+<link rel="stylesheet" href="../../css/akn/element-styles.css">
+<link rel="stylesheet" href="../../css/components/badges.css">
+
+<style>
+  body { padding: 16mm 22mm; max-width: 210mm; margin: 0 auto; background: var(--tcm-sayfa-bg); }
+  .doc-meta { margin-bottom: var(--tcm-space-5); padding-bottom: var(--tcm-space-3); border-bottom: 1px solid var(--tcm-border-default); display: flex; align-items: center; gap: var(--tcm-space-3); flex-wrap: wrap; }
+  .doc-meta .docNumber { font-family: var(--tcm-uri-family); font-variation-settings: "MONO" 1, "wght" 700; font-size: 10pt; color: var(--tcm-text-body); }
+  .doc-meta .docTitle { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 72, "wght" 700, "SOFT" 18, "WONK" 1; font-size: 28pt; line-height: 1.05; letter-spacing: -0.02em; }
+  .doc-meta .docDate { font-family: var(--tcm-uri-family); font-variation-settings: "MONO" 1; font-size: 8pt; color: var(--tcm-text-muted); }
+  .doc-meta .docProponent { font-family: var(--tcm-family-as); font-weight: 600; font-size: 9pt; color: var(--tcm-color-lacivert-11); }
+  .akn-act .akn-heading { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 32, "wght" 600; font-size: 16pt; }
+  .akn-paragraph p { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 14, "wght" 400; font-size: 10.5pt; line-height: 1.62; text-align: justify; hyphens: auto; margin: 0; }
+</style>
+</head>
+<body>
+
+<article class="akn-act">
+  <div class="doc-meta">
+    <span class="yuzey-badge kanun">KANUN</span>
+    <span class="docNumber">5237</span>
+    <span class="docDate">26.09.2004</span>
+    <span class="docProponent">TBMM</span>
+    <span style="margin-left:auto;font-family:var(--tcm-family-mo);font-size:7pt;color:var(--tcm-text-muted);letter-spacing:0.06em">v2026-01-15 · konsolide</span>
+  </div>
+  <h1 class="docTitle" style="font-family:var(--tcm-family-fr);font-variation-settings:'opsz' 96,'wght' 700,'SOFT' 20,'WONK' 1;font-size:32pt;line-height:0.95;letter-spacing:-0.025em;margin-bottom:6mm">Türk Ceza Kanunu</h1>
+
+  <section class="akn-article" id="article_220">
+    <span class="akn-num">Madde 220</span>
+    <h2 class="akn-heading">Suç işlemek amacıyla örgüt kurma</h2>
+
+    <div class="akn-paragraph">
+      <span class="akn-num">(1)</span>
+      <p>Kanunun suç saydığı fiilleri işlemek amacıyla örgüt kuranlar veya yönetenler, örgütün yapısı, sahip bulunduğu üye sayısı ile araç ve gereç bakımından amaç suçları işlemeye elverişli olması halinde, dört yıldan sekiz yıla kadar hapis cezası ile cezalandırılır.</p>
+    </div>
+
+    <div class="akn-paragraph">
+      <span class="akn-num">(2)</span>
+      <p>Suç işlemek amacıyla kurulmuş olan örgüte üye olanlar, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır.</p>
+    </div>
+
+    <div class="akn-paragraph">
+      <span class="akn-num">(3)</span>
+      <p>Örgütün silahlı olması halinde, yukarıdaki fıkralara göre verilecek ceza dörtte birinden yarısına kadar artırılır.</p>
+    </div>
+
+    <div class="akn-paragraph">
+      <span class="akn-num">(4)</span>
+      <p>Örgütün faaliyeti çerçevesinde suç işlenmesi halinde, ayrıca bu suçlardan dolayı da cezaya hükmolunur. <a class="akn-ref" href="#article_221">Bkz. Madde 221</a>.</p>
+    </div>
+  </section>
+</article>
+
+</body>
+</html>

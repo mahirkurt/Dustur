@@ -1,0 +1,22 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · REDUCED MOTION
+   prefers-reduced-motion ile motion jetonlarını sıfıra indir.
+   Vestibüler bozukluğu olan kullanıcılar için zorunlu erişilebilirlik.
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --tcm-duration-fast: 0ms;
+    --tcm-duration-base: 0ms;
+    --tcm-duration-slow: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

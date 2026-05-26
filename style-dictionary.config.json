@@ -1,8 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/amzn/style-dictionary/main/types/schema.json",
+  "log": { "verbosity": "verbose" },
   "source": [
     "tokens/primitives/*.json",
-    "tokens/semantic/*.json"
+    "tokens/semantic/*.json",
+    "tokens/component/*.json"
   ],
   "platforms": {
     "css": {
@@ -14,8 +16,7 @@
           "destination": "tcm-tokens.css",
           "format": "css/variables",
           "options": {
-            "outputReferences": true,
-            "fileHeader": "dustur-header"
+            "outputReferences": true
           }
         }
       ]
@@ -28,7 +29,9 @@
         {
           "destination": "TCMTokens.swift",
           "format": "ios-swift/class.swift",
-          "className": "TCMTokens"
+          "options": {
+            "className": "TCMTokens"
+          }
         }
       ]
     },
@@ -40,12 +43,12 @@
         {
           "destination": "colors.xml",
           "format": "android/resources",
-          "filter": { "type": "color" }
+          "filter": { "$type": "color" }
         },
         {
           "destination": "dimens.xml",
           "format": "android/resources",
-          "filter": { "type": "dimension" }
+          "filter": { "$type": "dimension" }
         }
       ]
     },

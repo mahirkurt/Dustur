@@ -1,29 +1,23 @@
 {
-  "$description": "DÜSTUR semantic surface jetonları · yüzeyler, kenarlıklar, metin renkleri",
+  "$description": "DÜSTUR semantic surface jetonları · yüzeyler, kenarlıklar (metin renkleri için ink.* primitive'lerini doğrudan kullanın)",
   "surface": {
     "page": {
-      "bg":     { "$type": "color", "$value": "#FAF6EE", "$description": "Specimen miras sayfa zemini · klasik kitap kâğıdı" },
-      "deep":   { "$type": "color", "$value": "#E9E2D2", "$description": "Sayfa zemini koyu varyant" }
+      "bg":   { "$type": "color", "$value": "{kagit.sayfa}",  "$description": "Specimen miras sayfa zemini" },
+      "deep": { "$type": "color", "$value": "{kagit.deep}",   "$description": "Sayfa zemini koyu varyant" }
     },
     "panel": {
-      "bg":     { "$type": "color", "$value": "#FFFFFF", "$description": "Panel · kart · aside bg" },
-      "subtle": { "$type": "color", "$value": "#F3EEE2", "$description": "Subtle panel bg" }
+      "bg":     { "$type": "color", "$value": "{kagit.panel}",  "$description": "Panel · kart · aside bg" },
+      "subtle": { "$type": "color", "$value": "{kagit.subtle}", "$description": "Subtle panel bg" }
     },
-    "stripe": { "$type": "color", "$value": "#F7F1E3", "$description": "Zebra çizgili yüzey" }
+    "stripe": { "$type": "color", "$value": "{kagit.stripe}", "$description": "Zebra çizgili yüzey" }
   },
   "border": {
-    "subtle":  { "$type": "color", "$value": "#E9E2D2", "$description": "Subtle · ince ayraç" },
-    "default": { "$type": "color", "$value": "#D8D1C4", "$description": "Default UI border" },
-    "strong":  { "$type": "color", "$value": "{color.gri.7}", "$description": "Strong border" }
-  },
-  "ink": {
-    "1": { "$type": "color", "$value": "#1A1A1A", "$description": "Body text · ana mevzuat metni · AAA" },
-    "2": { "$type": "color", "$value": "#4A4744", "$description": "Secondary text" },
-    "3": { "$type": "color", "$value": "#807A72", "$description": "Muted text · açıklama" },
-    "4": { "$type": "color", "$value": "#B5AE9F", "$description": "Disabled text · placeholder" }
+    "subtle":  { "$type": "color", "$value": "{kagit.border-subtle}",  "$description": "Subtle · ince ayraç" },
+    "default": { "$type": "color", "$value": "{kagit.border-default}", "$description": "Default UI border" },
+    "strong":  { "$type": "color", "$value": "{color.gri.7}",          "$description": "Strong border" }
   },
   "selection": {
     "bg":   { "$type": "color", "$value": "{color.turkuvaz.9}", "$description": "Text selection bg" },
-    "text": { "$type": "color", "$value": "#FAF6EE",            "$description": "Text selection foreground" }
+    "text": { "$type": "color", "$value": "{kagit.sayfa}",      "$description": "Text selection foreground" }
   }
 }

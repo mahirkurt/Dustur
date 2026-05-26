@@ -1,12 +1,17 @@
 # Style Dictionary build output
 dist/
+!dist/visual/
+!dist/visual/baseline/
+!dist/visual/baseline/*.png
+
+# Font sources (large) — subsetler commit edilir
+assets/fonts/source/
 
 # Node
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 yarn.lock
 
 # IDE

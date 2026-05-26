@@ -1,0 +1,94 @@
+name: Jeton RFC · Token Değişiklik Talebi
+description: Yeni jeton ekleme, mevcut jetonu değiştirme veya silme talebi
+title: "[Jeton RFC] "
+labels: ["jeton-rfc", "tasarım-doktrini"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Düstur Jeton RFC
+        Jeton değişiklikleri sistemin **anayasal mührüdür**. 4-aşamalı protokol uygulanır.
+        Lütfen tüm alanları doldurun. `CONTRIBUTING.md`'yi okuduğunuzdan emin olun.
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Değişiklik Tipi
+      options:
+        - "PATCH · değer düzeltmesi · kontrast iyileştirme · doc güncelleme"
+        - "MINOR · yeni jeton ekleme · yeni semantic kategori"
+        - "MAJOR · jeton silme · yeniden adlandırma · scale tipolojik değişim"
+    validations:
+      required: true
+
+  - type: input
+    id: affected-tokens
+    attributes:
+      label: Etkilenen Jetonlar
+      description: Virgülle ayrılmış jeton path'leri (örn. `color.turkuvaz.9`, `tier.kanun.mark`)
+      placeholder: "color.tbk.9, tier.anayasa.mark"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Gerekçe
+      description: Neden bu değişiklik gerekli? Doktriner bağlam nedir?
+    validations:
+      required: true
+
+  - type: textarea
+    id: doctrinal-reference
+    attributes:
+      label: Doktriner Referans
+      description: Hangi bölüm doktrinine bağlı? (Bölüm I-VII)
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-components
+    attributes:
+      label: Etkilenen Bileşenler / CSS Sınıfları
+      placeholder: |
+        - css/components/badges.css
+        - css/akn/element-styles.css
+        - dist/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: a11y-impact
+    attributes:
+      label: Erişilebilirlik Etkisi
+      description: WCAG + APCA değerleri (renk değişikliği için) · Klavye/SR etkisi · prefers-contrast / prefers-reduced-motion etkisi
+      placeholder: |
+        WCAG 2.1 AA: ✓ 4.74:1
+        WCAG 2.1 AAA: ✗ <7:1
+        APCA Lc: 74.5
+    validations:
+      required: true
+
+  - type: textarea
+    id: backward-compat
+    attributes:
+      label: Geriye-Uyum
+      description: Breaking change var mı? Hangi versiyondan beri etkili? Deprecation pattern?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Düşünülen Alternatifler
+      description: Reddettiğiniz alternatif yaklaşımlar ve nedenleri
+
+  - type: checkboxes
+    id: locked-check
+    attributes:
+      label: Kilit (LOCKED) Kontrolü
+      options:
+        - label: "Etkilenen jetonlardan hiçbiri `LOCKED` değil; veya kilit kaldırma için Kurum Yönetim Kurulu bilgisi mevcut"
+          required: true
+        - label: "`tokens/index.json` `kilit-jetonlar` listesini kontrol ettim"
+          required: true

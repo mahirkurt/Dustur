@@ -21,8 +21,8 @@
       "$description": "Bölüm başlığı (32-42pt)",
       "family": { "$type": "fontFamily", "$value": "{family.fr}" },
       "opsz":   { "$type": "number",     "$value": "{fr.opsz.36}" },
-      "wght":   { "$type": "number",     "$value": "{fr.wght.700}" },
-      "soft":   { "$type": "number",     "$value": "{fr.soft.12}" },
+      "wght":   { "$type": "fontWeight", "$value": "{fr.wght.700}" },
+      "soft":   { "$type": "number",     "$value": "{fr.soft.25}" },
       "wonk":   { "$type": "number",     "$value": "{fr.wonk.1}" }
     },
     "heading-3": {

@@ -1,0 +1,64 @@
+{
+  "$description": "DÜSTUR jeton kütüphanesi manifest · tüm jeton dosyalarının birleştirilmiş haritası",
+  "$extensions": {
+    "tr.tcm.spec": "v1.0.0",
+    "tr.tcm.dtcg-versiyon": "Format Module Draft 2024-03",
+    "tr.tcm.toplam-jeton": 230
+  },
+  "katmanlar": {
+    "primitive": {
+      "$description": "Ham değer kütüphanesi · politik olarak nötr",
+      "dosyalar": [
+        "./primitives/color.json",
+        "./primitives/typography.json",
+        "./primitives/space.json",
+        "./primitives/radius.json",
+        "./primitives/motion.json",
+        "./primitives/z-index.json"
+      ]
+    },
+    "semantic": {
+      "$description": "Rol-bağlam birleşimleri · primitive'lere referans",
+      "dosyalar": [
+        "./semantic/tier.json",
+        "./semantic/action.json",
+        "./semantic/surface.json",
+        "./semantic/typography.json"
+      ]
+    },
+    "component": {
+      "$description": "Bileşen-düzeyi jetonlar · semantic'e referans · bileşen özel özelleştirmeler",
+      "dosyalar": [
+        "./component/rozet.json",
+        "./component/yuzey.json",
+        "./component/atif-modal.json"
+      ]
+    },
+    "akoma-ntoso": {
+      "$description": "Akoma Ntoso XML element → CSS class → semantic jeton eşlemesi",
+      "dosyalar": [
+        "./akoma-ntoso/element-map.json",
+        "./akoma-ntoso/eli-uri.schema.json"
+      ]
+    }
+  },
+  "kilit-jetonlar": {
+    "$description": "LOCKED jetonlar · doktriner sözleşme · MAJOR bump olmadan değiştirilemez",
+    "jetonlar": [
+      "color.tbk.9",
+      "color.turkuvaz.9",
+      "color.bordo.9",
+      "color.lacivert.9",
+      "color.amber.9",
+      "tier.anayasa.mark",
+      "tier.kanun.mark",
+      "tier.cbk.mark",
+      "tier.aym.mark",
+      "tier.teblig.mark",
+      "family.fr",
+      "family.as",
+      "family.mo",
+      "radius.0"
+    ]
+  }
+}

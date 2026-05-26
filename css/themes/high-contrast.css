@@ -1,0 +1,78 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · YÜKSEK KONTRAST TEMA
+   Görme engelli vatandaşlar için zorunlu erişilebilirlik teması.
+   Aktivasyon:  <html data-tema="yuksek-kontrast">  veya  prefers-contrast: more
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (prefers-contrast: more) {
+  :root {
+    /* Surface */
+    --tcm-sayfa-bg:        #FFFFFF;
+    --tcm-panel-bg:        #FFFFFF;
+    --tcm-panel-subtle:    #F0F0F0;
+    --tcm-border-subtle:   #000000;
+    --tcm-border-default:  #000000;
+    --tcm-border-strong:   #000000;
+
+    /* Ink — max contrast */
+    --tcm-text-body:       #000000;
+    --tcm-text-2:          #000000;
+    --tcm-text-muted:      #1A1A1A;
+    --tcm-text-4:          #3D3D3D;
+
+    /* Tier markers — saf siyah border, renk korunur */
+    --tcm-anayasa-mark:    #B40000;
+    --tcm-kanun-mark:      #006D6E;
+    --tcm-cbk-mark:        #3A0D0D;
+    --tcm-aym-mark:        #001640;
+    --tcm-teblig-mark:     #762D00;
+    --tcm-genelge-mark:    #000000;
+
+    /* Action — high contrast solid */
+    --tcm-action-primary-bg:        #006D6E;
+    --tcm-action-primary-bg-hover:  #053334;
+    --tcm-link-default:             #003F3F;
+    --tcm-link-visited:             #3A0D0D;
+  }
+}
+
+[data-tema="yuksek-kontrast"] {
+  --tcm-sayfa-bg:        #FFFFFF;
+  --tcm-panel-bg:        #FFFFFF;
+  --tcm-panel-subtle:    #F0F0F0;
+  --tcm-border-subtle:   #000000;
+  --tcm-border-default:  #000000;
+  --tcm-border-strong:   #000000;
+
+  --tcm-text-body:       #000000;
+  --tcm-text-2:          #000000;
+  --tcm-text-muted:      #1A1A1A;
+  --tcm-text-4:          #3D3D3D;
+
+  --tcm-anayasa-mark:    #B40000;
+  --tcm-kanun-mark:      #006D6E;
+  --tcm-cbk-mark:        #3A0D0D;
+  --tcm-aym-mark:        #001640;
+  --tcm-teblig-mark:     #762D00;
+  --tcm-genelge-mark:    #000000;
+
+  --tcm-action-primary-bg:        #006D6E;
+  --tcm-action-primary-bg-hover:  #053334;
+  --tcm-link-default:             #003F3F;
+  --tcm-link-visited:             #3A0D0D;
+}
+
+/* Outline'ları kalınlaştır */
+[data-tema="yuksek-kontrast"] *:focus-visible,
+@media (prefers-contrast: more) {
+  *:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+/* Rozetlere zorunlu border ekle */
+[data-tema="yuksek-kontrast"] .yuzey-badge,
+[data-tema="yuksek-kontrast"] .yüzey-badge {
+  border: 2px solid #000000;
+}

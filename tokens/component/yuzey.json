@@ -1,0 +1,36 @@
+{
+  "$description": "DÜSTUR component-level jetonlar · Yüzey (madde detay, kanun ana, vb.) bileşen kompozit jetonları",
+  "$extensions": {
+    "tr.tcm.bileşen": "yuzey",
+    "tr.tcm.css-class": ".yuzey-render"
+  },
+  "yuzey": {
+    "padding-x":      { "$type": "dimension", "$value": "{space.6}",  "$description": "Yatay sayfa içi padding" },
+    "padding-y":      { "$type": "dimension", "$value": "{space.5}",  "$description": "Dikey sayfa içi padding" },
+    "border-width":   { "$type": "dimension", "$value": "1px" },
+    "border-color":   { "$type": "color",     "$value": "{color.gri.6}" },
+    "tier-bar-height": { "$type": "dimension", "$value": "3px", "$description": "Üst kademe ribbon yüksekliği (Anayasa, Kanun, CBK)" },
+    "tier-bar-height-light": { "$type": "dimension", "$value": "2px", "$description": "İnce ribbon (Yönetmelik, Tebliğ, Genelge)" },
+    "madde-baslik": {
+      "$description": "Yüzey içindeki madde başlığı",
+      "font-size":      { "$type": "dimension", "$value": "22pt" },
+      "line-height":    { "$type": "number",    "$value": 1.05 },
+      "letter-spacing": { "$type": "dimension", "$value": "{letter-spacing.tighter}" },
+      "margin-bottom":  { "$type": "dimension", "$value": "{space.5}" }
+    },
+    "madde-no": {
+      "$description": "Madde numarası mono ifadesi",
+      "font-size":  { "$type": "dimension", "$value": "8pt" },
+      "color":      { "$type": "color", "$value": "{color.turkuvaz.10}" }
+    },
+    "kanun-no": {
+      "$description": "Kanun numarası mono ifadesi",
+      "font-size":  { "$type": "dimension", "$value": "9pt" },
+      "color":      { "$type": "color", "$value": "{color.gri.12}" }
+    },
+    "version-meta": {
+      "font-size":  { "$type": "dimension", "$value": "6.5pt" },
+      "color":      { "$type": "color",     "$value": "{color.gri.8}" }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Tartışma
+    url: https://github.com/mahirkurt/Dustur/discussions
+    about: Soru sorma · genel tartışma · doktrin müzakeresi (issue açmadan önce)
+  - name: 📜 Dokümantasyon
+    url: https://github.com/mahirkurt/Dustur/tree/main/docs
+    about: Doktrin belgesi · 7 bölüm + sözlük
+  - name: 🔒 Güvenlik
+    url: https://github.com/mahirkurt/Dustur/security
+    about: Güvenlik açığı bildirimi (özel kanal)

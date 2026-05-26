@@ -1,0 +1,34 @@
+{
+  "$description": "DÜSTUR component-level jetonlar · Atıf ağı modal · cross-reference popover",
+  "$extensions": {
+    "tr.tcm.bileşen": "atif-modal",
+    "tr.tcm.css-class": ".atif-modal"
+  },
+  "atif-modal": {
+    "max-width":   { "$type": "dimension", "$value": "120mm" },
+    "padding":     { "$type": "dimension", "$value": "{space.5}" },
+    "bg":          { "$type": "color",     "$value": "{surface.panel.bg}" },
+    "border":      { "$type": "color",     "$value": "{color.gri.6}" },
+    "shadow": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "4px",
+        "blur": "20px",
+        "spread": "-2px",
+        "color": "rgba(0,0,0,0.18)"
+      }
+    },
+    "z-index":     { "$type": "number",   "$value": "{z.modal}" },
+    "transition-duration": { "$type": "duration", "$value": "{duration.base}" },
+    "header": {
+      "font-size":  { "$type": "dimension", "$value": "14pt" },
+      "color":      { "$type": "color",     "$value": "{color.gri.12}" }
+    },
+    "ref-link": {
+      "color":              { "$type": "color", "$value": "{link.default}" },
+      "color-visited":      { "$type": "color", "$value": "{link.visited}" },
+      "underline-offset":   { "$type": "dimension", "$value": "2px" }
+    }
+  }
+}

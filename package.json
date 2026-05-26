@@ -1,35 +1,78 @@
 {
   "name": "@dustur/tasarim-sistemi",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "DÜSTUR · T.C. Mevzuat Tasarım Sistemi · Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey doktrini.",
   "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
   "main": "css/dustur.css",
   "style": "css/dustur.css",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "files": [
     "css/",
     "tokens/",
     "docs/",
-    "assets/"
+    "assets/fonts/subset/",
+    "assets/motifs/",
+    "dist/web/",
+    "dist/dtcg/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "SECURITY.md"
   ],
   "exports": {
     ".": {
       "style": "./css/dustur.css",
-      "import": "./tokens/index.json"
+      "default": "./css/dustur.css"
     },
+    "./tokens": "./tokens/index.json",
     "./tokens/*": "./tokens/*",
-    "./css/*": "./css/*"
+    "./css/*": "./css/*",
+    "./themes/high-contrast": "./css/themes/high-contrast.css",
+    "./themes/reduced-motion": "./css/themes/reduced-motion.css",
+    "./themes/print": "./css/themes/print.css",
+    "./fonts": "./css/fonts.css",
+    "./akn": "./css/akn/element-styles.css",
+    "./dist/*": "./dist/*"
   },
   "scripts": {
-    "build": "style-dictionary build --config style-dictionary.config.json",
-    "build:web": "style-dictionary build --config style-dictionary.config.json --platforms css",
-    "build:ios": "style-dictionary build --config style-dictionary.config.json --platforms ios",
-    "build:android": "style-dictionary build --config style-dictionary.config.json --platforms android",
-    "build:dtcg": "style-dictionary build --config style-dictionary.config.json --platforms dtcg",
-    "clean": "rm -rf dist/",
-    "lint:tokens": "find tokens -name '*.json' -exec node -e \"JSON.parse(require('fs').readFileSync('{}', 'utf8'))\" \\;"
+    "lint": "node scripts/lint-tokens.mjs",
+    "lint:tokens": "node scripts/lint-tokens.mjs",
+    "lint:strict": "LINT_STRICT=1 node scripts/lint-tokens.mjs",
+    "check:contrast": "node scripts/check-contrast.mjs --strict",
+    "check:diacritics": "node scripts/check-diacritics.mjs",
+    "check:locked": "node scripts/check-locked.mjs",
+    "check:colorblind": "node scripts/check-colorblind.mjs",
+    "check:akn": "node scripts/check-akn.mjs",
+    "check:visual": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs",
+    "check:visual:baseline": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs --baseline",
+    "check:visual:strict": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs --strict",
+    "check:all": "npm run lint && npm run check:contrast && npm run check:diacritics && npm run check:locked && npm run check:colorblind && npm run check:akn",
+    "verify": "npm run check:all && npm run build",
+    "build": "node scripts/sd-config.mjs",
+    "build:sd": "node scripts/sd-config.mjs",
+    "build:fallback": "node scripts/build-css-from-tokens.mjs",
+    "build:sourcemap": "node scripts/build-css-sourcemap.mjs",
+    "build:fonts": "node scripts/subset-fonts.mjs",
+    "build:all": "npm run build && npm run build:sourcemap",
+    "report:usage": "node scripts/token-usage-map.mjs",
+    "report:all": "npm run check:contrast && npm run check:colorblind && npm run report:usage",
+    "preview": "python3 -m http.server 8080 || python -m http.server 8080",
+    "showcase:shoot": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/showcase-shoot.mjs",
+    "pdf": "pagedjs-cli reference/dustur-source.html -o dustur.pdf",
+    "clean": "rm -rf dist/ node_modules/.cache/",
+    "prepublishOnly": "npm run check:all && npm run build:all"
   },
   "devDependencies": {
+    "playwright": "^1.60.0",
     "style-dictionary": "^4.0.0"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0"
   },
   "keywords": [
     "design-system",
@@ -39,11 +82,26 @@
     "mevzuat",
     "typography",
     "legal-design",
-    "akoma-ntoso"
+    "akoma-ntoso",
+    "wcag-aaa",
+    "apca",
+    "variable-fonts",
+    "print-first",
+    "paged-js",
+    "tr",
+    "turkish"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mahirkurt/dustur.git"
+    "url": "git+https://github.com/mahirkurt/Dustur.git"
   },
-  "author": "Düstur Tasarım Sistemi Ekibi"
+  "bugs": {
+    "url": "https://github.com/mahirkurt/Dustur/issues"
+  },
+  "homepage": "https://github.com/mahirkurt/Dustur#readme",
+  "author": "Düstur Tasarım Sistemi Ekibi",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
 }

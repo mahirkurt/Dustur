@@ -1,0 +1,38 @@
+name: Dokümantasyon · Eksik / Yanlış / Güncelleme
+description: Doktrin belgesi veya README/docs içeriğinde sorun
+title: "[Doc] "
+labels: ["dokumantasyon"]
+body:
+  - type: dropdown
+    id: doc-area
+    attributes:
+      label: Hangi Dokümantasyon?
+      options:
+        - "README.md"
+        - "CONTRIBUTING.md"
+        - "CHANGELOG.md"
+        - "docs/00-overview"
+        - "docs/01-manifesto"
+        - "docs/02-typography"
+        - "docs/03-color"
+        - "docs/04-tokens"
+        - "docs/05-ui-surface"
+        - "docs/06-akoma-ntoso"
+        - "docs/07-governance"
+        - "docs/glossary"
+        - "reference/dustur-source.html"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Sorun
+      description: Eksik mi, yanlış mı, güncel değil mi?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Önerilen Düzeltme

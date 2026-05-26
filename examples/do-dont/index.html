@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Düstur · Do / Don't Pattern Library</title>
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/tokens/primitives.css">
+<link rel="stylesheet" href="../../css/tokens/semantics.css">
+<link rel="stylesheet" href="../../css/base/reset.css">
+<link rel="stylesheet" href="../../css/base/typography.css">
+<link rel="stylesheet" href="../../css/components/badges.css">
+
+<style>
+  body { padding: var(--tcm-space-8) var(--tcm-space-8); max-width: 1100px; margin: 0 auto; background: var(--tcm-sayfa-bg); }
+  h1 { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 96, "wght" 700, "SOFT" 25, "WONK" 1; font-size: 48pt; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: var(--tcm-space-2); }
+  .sub { font-family: var(--tcm-family-fr); font-style: italic; font-size: 13pt; color: var(--tcm-text-2); margin-bottom: var(--tcm-space-8); border-bottom: 1px solid var(--tcm-border-default); padding-bottom: var(--tcm-space-4); }
+  h2 { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 36, "wght" 700, "SOFT" 12; font-size: 22pt; margin: var(--tcm-space-6) 0 var(--tcm-space-2); letter-spacing: -0.015em; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--tcm-space-5); margin-bottom: var(--tcm-space-6); }
+  .case { background: var(--tcm-panel-bg); border: 1px solid var(--tcm-border-default); padding: var(--tcm-space-4); position: relative; }
+  .case::before { position: absolute; top: 0; left: 0; right: 0; height: 4px; content: ""; }
+  .case.do::before    { background: #047857; }
+  .case.dont::before  { background: var(--tcm-color-tbk-9); }
+  .case-h { font-family: var(--tcm-family-as); font-weight: 700; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: var(--tcm-space-3); }
+  .case.do   .case-h { color: #047857; }
+  .case.dont .case-h { color: var(--tcm-color-tbk-9); }
+  .case-render { background: var(--tcm-color-gri-2); padding: var(--tcm-space-4); margin-bottom: var(--tcm-space-3); min-height: 100px; display: flex; align-items: center; justify-content: center; gap: var(--tcm-space-2); flex-wrap: wrap; }
+  .case-desc { font-family: var(--tcm-family-fr); font-size: 10.5pt; line-height: 1.55; color: var(--tcm-text-body); }
+</style>
+</head>
+<body>
+
+<h1>Yapın · Yapmayın</h1>
+<p class="sub">Sistemin yanlış kullanımını <em>açıkça göstermek</em>, doğru kullanımı pekiştirmek kadar önemlidir.</p>
+
+<!-- 1 · Tier mührlerinin çapraz uygulanması -->
+<h2>1 · Tier Mührünün Kademesini Karıştırma</h2>
+<div class="pair">
+  <div class="case do">
+    <div class="case-h">✓ Yapın</div>
+    <div class="case-render">
+      <span class="yuzey-badge anayasa">ANAYASA</span>
+      <span class="yuzey-badge kanun">KANUN</span>
+      <span class="yuzey-badge cbk">CBK</span>
+    </div>
+    <p class="case-desc">Her rozet kendi kademesinin doktriner kromatik mührüyle eşleşir. <strong>Anayasa = TBK</strong>, <strong>Kanun = Turkuvaz</strong>, <strong>CBK = Bordo</strong>.</p>
+  </div>
+  <div class="case dont">
+    <div class="case-h">✗ Yapmayın</div>
+    <div class="case-render">
+      <span class="yuzey-badge kanun" style="background:var(--tcm-anayasa-mark);color:var(--tcm-anayasa-text);border:none">KANUN</span>
+      <span class="yuzey-badge anayasa" style="background:var(--tcm-kanun-rozet-bg);color:var(--tcm-kanun-rozet-text);border:1px solid var(--tcm-color-turkuvaz-5)">ANAYASA</span>
+    </div>
+    <p class="case-desc">Kademeleri renk karıştırma. TBK <em>sadece</em> Anayasa'nın mührüdür. Bir Kanun rozetine TBK uygulamak <strong>doktriner sözleşmenin ihlali</strong>dir ve LOCKED token ihlalidir.</p>
+  </div>
+</div>
+
+<!-- 2 · Italic vurgu yerine bold -->
+<h2>2 · Vurgu için Bold Yerine Italic</h2>
+<div class="pair">
+  <div class="case do">
+    <div class="case-h">✓ Yapın</div>
+    <div class="case-render" style="text-align:left;display:block">
+      <p style="font-family:var(--tcm-family-fr);font-variation-settings:'opsz' 14;font-size:11pt;line-height:1.6;margin:0">Kanunun suç saydığı fiilleri işlemek <em style="font-variation-settings:'wght' 500,'SOFT' 0">amacıyla</em> örgüt kuranlar cezalandırılır.</p>
+    </div>
+    <p class="case-desc">Mevzuat metninde inline vurgu için <strong>italic</strong>. Fraunces SOFT 0 + italic, mevzuat metnin akışını bozmadan vurguyu ileten klasik gelenek.</p>
+  </div>
+  <div class="case dont">
+    <div class="case-h">✗ Yapmayın</div>
+    <div class="case-render" style="text-align:left;display:block">
+      <p style="font-family:var(--tcm-family-fr);font-variation-settings:'opsz' 14;font-size:11pt;line-height:1.6;margin:0">Kanunun suç saydığı fiilleri işlemek <strong style="background:yellow;padding:0 2px">AMACIYLA</strong> örgüt kuranlar cezalandırılır.</p>
+    </div>
+    <p class="case-desc">All-caps + sarı highlight, mevzuat metninde <strong>kurumsal tonu ihlal eder</strong>. Bu tipografik gürültü dikkatin metinden ayrılmasına yol açar.</p>
+  </div>
+</div>
+
+<!-- 3 · Border-radius -->
+<h2>3 · Radius Sistem Sabitidir</h2>
+<div class="pair">
+  <div class="case do">
+    <div class="case-h">✓ Yapın</div>
+    <div class="case-render">
+      <span class="yuzey-badge kanun">KANUN</span>
+      <button style="font-family:var(--tcm-family-as);font-weight:600;padding:2mm 5mm;background:var(--tcm-action-primary-bg);color:var(--tcm-action-primary-text);border:none;cursor:pointer">İndir</button>
+    </div>
+    <p class="case-desc">Tüm UI elementleri için radius <strong>sabit 0</strong>. Bu sade keskin köşe doktrini, mevzuat sisteminin kurumsal tonunu korur.</p>
+  </div>
+  <div class="case dont">
+    <div class="case-h">✗ Yapmayın</div>
+    <div class="case-render">
+      <span class="yuzey-badge kanun" style="border-radius:999px">KANUN</span>
+      <button style="font-family:var(--tcm-family-as);font-weight:600;padding:2mm 5mm;background:var(--tcm-action-primary-bg);color:var(--tcm-action-primary-text);border:none;cursor:pointer;border-radius:8px">İndir</button>
+    </div>
+    <p class="case-desc">Yumuşatılmış köşeler iOS soft-corner doktrinasyonunun karşıtı bir disiplini ihlal eder. Bu sistemde radius LOCKED · 0.</p>
+  </div>
+</div>
+
+<!-- 4 · Tier border yön -->
+<h2>4 · Tier Border Yönü</h2>
+<div class="pair">
+  <div class="case do">
+    <div class="case-h">✓ Yapın</div>
+    <div class="case-render" style="background:white;flex-direction:column;align-items:stretch">
+      <div style="background:white;border-top:3px solid var(--tcm-kanun-mark);padding:var(--tcm-space-3);font-family:var(--tcm-family-fr);font-size:14pt">Kanun yüzeyi (border-top)</div>
+      <div style="background:white;border-left:3px solid var(--tcm-aym-mark);padding:var(--tcm-space-3);font-family:var(--tcm-family-fr);font-size:14pt;margin-top:var(--tcm-space-2)">AYM kararı (border-left)</div>
+    </div>
+    <p class="case-desc">Asıl norm tipleri (Anayasa, Kanun, CBK) <strong>border-top</strong>. Aksesuar/destekleyici belgeler (AYM, Tebliğ, Genelge) <strong>border-left</strong>.</p>
+  </div>
+  <div class="case dont">
+    <div class="case-h">✗ Yapmayın</div>
+    <div class="case-render" style="background:white;flex-direction:column;align-items:stretch">
+      <div style="background:white;border:3px solid var(--tcm-kanun-mark);padding:var(--tcm-space-3);font-family:var(--tcm-family-fr);font-size:14pt">Kanun yüzeyi (4 yandan)</div>
+      <div style="background:white;border-bottom:3px solid var(--tcm-aym-mark);padding:var(--tcm-space-3);font-family:var(--tcm-family-fr);font-size:14pt;margin-top:var(--tcm-space-2)">AYM (border-bottom)</div>
+    </div>
+    <p class="case-desc">Çerçeveleme (4 yan) bir <em>belge</em> hissi yerine bir <em>kutu</em> hissi verir. Border yönü doktriner kademe konumlandırmasının bir parçasıdır.</p>
+  </div>
+</div>
+
+<!-- 5 · Madde durum -->
+<h2>5 · Mülga Madde İşaretleme</h2>
+<div class="pair">
+  <div class="case do">
+    <div class="case-h">✓ Yapın</div>
+    <div class="case-render" style="background:white;flex-direction:column;align-items:stretch">
+      <p style="font-family:var(--tcm-family-fr);font-size:11pt;margin:0;text-decoration:line-through;color:var(--tcm-color-gri-7);opacity:0.6">Madde 39 — (Mülga: 7188 sayılı Kanun ile)</p>
+    </div>
+    <p class="case-desc">Mülga maddeler <strong>strikethrough + gri-7 + opacity 0.6</strong>. Metin kalır ama "yürürlükten kaldırıldı" sinyali açıktır.</p>
+  </div>
+  <div class="case dont">
+    <div class="case-h">✗ Yapmayın</div>
+    <div class="case-render" style="background:white;flex-direction:column;align-items:stretch">
+      <p style="font-family:var(--tcm-family-fr);font-size:11pt;margin:0;display:none">Madde 39 — (Mülga)</p>
+      <p style="font-family:var(--tcm-family-fr);font-size:9pt;color:var(--tcm-text-muted);font-style:italic;margin:0">[Madde silindi]</p>
+    </div>
+    <p class="case-desc">Mülga maddeleri DOM'dan veya görünümden <strong>silmek</strong> hukuki belgelendirmeyi bozar. Yürürlükten kaldırılmış metin görünür kalmalı.</p>
+  </div>
+</div>
+
+</body>
+</html>
