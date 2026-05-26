@@ -1,6 +1,6 @@
 {
   "name": "@dustur/tasarim-sistemi",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "DÜSTUR · T.C. Mevzuat Tasarım Sistemi · Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey doktrini.",
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
@@ -34,17 +34,25 @@
     "check:contrast": "node scripts/check-contrast.mjs --strict",
     "check:diacritics": "node scripts/check-diacritics.mjs",
     "check:locked": "node scripts/check-locked.mjs",
-    "check:all": "npm run lint && npm run check:contrast && npm run check:diacritics && npm run check:locked",
+    "check:colorblind": "node scripts/check-colorblind.mjs",
+    "check:akn": "node scripts/check-akn.mjs",
+    "check:visual": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs",
+    "check:visual:baseline": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs --baseline",
+    "check:visual:strict": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs --strict",
+    "check:all": "npm run lint && npm run check:contrast && npm run check:diacritics && npm run check:locked && npm run check:colorblind && npm run check:akn",
     "build": "node scripts/sd-config.mjs",
     "build:sd": "node scripts/sd-config.mjs",
     "build:fallback": "node scripts/build-css-from-tokens.mjs",
+    "build:sourcemap": "node scripts/build-css-sourcemap.mjs",
+    "build:fonts": "node scripts/subset-fonts.mjs",
     "report:usage": "node scripts/token-usage-map.mjs",
-    "report:all": "npm run check:contrast && npm run report:usage",
+    "report:all": "npm run check:contrast && npm run check:colorblind && npm run report:usage",
     "preview": "python3 -m http.server 8080 || python -m http.server 8080",
     "pdf": "pagedjs-cli reference/dustur-source.html -o dustur.pdf",
     "clean": "rm -rf dist/"
   },
   "devDependencies": {
+    "playwright": "^1.60.0",
     "style-dictionary": "^4.0.0"
   },
   "keywords": [
@@ -68,5 +76,9 @@
     "url": "https://github.com/mahirkurt/dustur/issues"
   },
   "homepage": "https://github.com/mahirkurt/dustur#readme",
-  "author": "Düstur Tasarım Sistemi Ekibi"
+  "author": "Düstur Tasarım Sistemi Ekibi",
+  "dependencies": {
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0"
+  }
 }

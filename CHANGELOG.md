@@ -7,6 +7,55 @@ Sürümlendirme [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html)
 
 ## [Unreleased]
 
+## [1.2.0] · 2026-05-26
+
+### Eklendi · Backlog tamamlandı
+
+**1) Renk körlüğü audit (Brettel 1997 + CIEDE2000)**
+- `scripts/check-colorblind.mjs` — Protanopia/Deuteranopia/Tritanopia simülasyonu + ΔE2000 algısal renk farkı
+- **Gerçek bulgu:** Anayasa↔Tebliğ (TBK kırmızı ↔ Amber) deuteranopia altında ΔE=3.6 — ayırt edilemez
+- `docs/03-color/colorblind-strategy.md` — Non-color cue zorunluluğu doktrini
+
+**2) Akoma Ntoso XSD validation**
+- `tokens/akoma-ntoso/schema/akomantoso30.xsd` — OASIS LegalDocML 3.0 resmî şeması (244 KB)
+- `tokens/akoma-ntoso/schema/xml.xsd` — W3C xml namespace bağımlılığı
+- `scripts/check-akn.mjs` — Tüm AKN XML örneklerini xmllint ile valide eder
+- TCK Madde 220 örneği şemayı geçti ✓
+
+**3) CSS Source Maps (v3)**
+- `scripts/build-css-sourcemap.mjs` — Source Map v3 VLQ encoding
+- `dist/web/tcm-tokens.css.map` üretir; her CSS değişkeni kaynak JSON dosyasının satırına haritalanır
+- Tarayıcı DevTools'unda token'a tıklayınca JSON kaynağına atlanabilir
+
+**4) Font Subsetting (TR-only)**
+- `scripts/subset-fonts.mjs` — pyftsubset ile variable font subset
+- `css/fonts.css` — `@font-face` self-hosted declarations (Google Fonts CDN bağımlılığı yok)
+- TR-optimum unicode kapsamı: ASCII + Latin Extended A/B + TR diakritik + ₺ + temel sembol
+- **Boyut kazancı:**
+  - Fraunces:    352 KB → 169 KB (-52.0%)
+  - Albert Sans: 126 KB → 46 KB  (-63.5%)
+  - Recursive:   2.3 MB → 521 KB (-77.6%)
+  - **Toplam: 2.8 MB → 736 KB (-73.7%)**
+
+**5) Visual Regression (Playwright)**
+- `scripts/visual-regression.mjs` — Playwright + Chromium headless + pixelmatch
+- 6 sayfa screenshot (gallery, madde, akn, badges, do-dont, yüksek-kontrast)
+- İlk çalıştırma baseline oluşturur; sonrakiler pixel-by-pixel diff
+- Eşik: <0.1% tolerans, 0.1-1% minor, >1% significant (CI fail)
+- `dist/visual/diff/*.diff.png` — değişen pixel'leri kırmızıyla işaretler
+- `.github/workflows/visual.yml` — PR'larda otomatik diff + comment
+
+### Eklendi · Workflow
+- `.github/workflows/visual.yml` — visual regression CI
+- `scripts/check-akn.mjs` · `scripts/check-colorblind.mjs` · `scripts/build-css-sourcemap.mjs` · `scripts/subset-fonts.mjs` · `scripts/visual-regression.mjs`
+- 5 yeni npm script: `check:colorblind`, `check:akn`, `check:visual`, `build:sourcemap`, `build:fonts`
+
+### Değişti
+- `css/dustur.css` — yeni `fonts` @layer ile self-hosted fonts en başta yüklenir
+- `package.json` — playwright (devDep), pixelmatch + pngjs (dep)
+- `.gitignore` — `assets/fonts/source/` (~3 MB) git-ignore; sadece subset'ler commit edilir
+- CI workflow'una `check:colorblind` ve `check:akn` zorunlu adımları eklendi
+
 ## [1.1.1] · 2026-05-26
 
 ### Düzeltildi (audit-driven · `docs/audit-report.md`)

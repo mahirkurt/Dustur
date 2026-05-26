@@ -29,6 +29,14 @@ jobs:
       - name: LOCKED jeton audit
         run: node scripts/check-locked.mjs
 
+      - name: Color blindness simulation (CVD + ΔE2000)
+        run: node scripts/check-colorblind.mjs
+
+      - name: Akoma Ntoso XSD validation
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          node scripts/check-akn.mjs --strict
+
       - name: Build CSS bundle
         run: node scripts/build-css-from-tokens.mjs
 

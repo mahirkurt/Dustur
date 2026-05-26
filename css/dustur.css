@@ -8,7 +8,12 @@
    En soldaki katman en düşük öncelik; sağa doğru artar.
    ═══════════════════════════════════════════════════════════════════ */
 
-@layer reset, tokens, base, components, themes, utilities, overrides;
+@layer reset, fonts, tokens, base, components, themes, utilities, overrides;
+
+/* 0) Self-hosted fonts (TR-subset · ~73% küçük) */
+@layer fonts {
+  @import "./fonts.css";
+}
 
 /* 1) Tokens · primitive sonra semantic */
 @layer tokens {
