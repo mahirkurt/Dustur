@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · PAGED.JS A4 PRINT SETUP
+   PDF üretim için sayfa yerleşim disiplini
+   ═══════════════════════════════════════════════════════════════════ */
+
+@page {
+  size: A4;
+  margin: 24mm 22mm 20mm 22mm;
+  background: var(--tcm-sayfa-bg);
+
+  @top-left {
+    content: string(section-title);
+    font-family: var(--tcm-family-mo);
+    font-variation-settings: "MONO" 1;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--tcm-text-muted);
+    margin-bottom: 8mm;
+  }
+  @top-right {
+    content: "T.C. Mevzuat Tasarım Sistemi";
+    font-family: var(--tcm-family-mo);
+    font-variation-settings: "MONO" 1;
+    font-size: 7.5pt;
+    color: var(--tcm-text-muted);
+    margin-bottom: 8mm;
+  }
+  @bottom-left {
+    content: "DÜSTUR · T.C. Mevzuat Tasarım Sistemi";
+    font-family: var(--tcm-family-mo);
+    font-variation-settings: "MONO" 1;
+    font-size: 7pt;
+    color: var(--tcm-text-4);
+    margin-top: 6mm;
+  }
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--tcm-family-fr);
+    font-variation-settings: "opsz" 14, "wght" 500, "SOFT" 0;
+    font-size: 9pt;
+    color: var(--tcm-text-2);
+    margin-top: 6mm;
+  }
+  @bottom-right {
+    content: "/ " counter(pages);
+    font-family: var(--tcm-family-mo);
+    font-variation-settings: "MONO" 1;
+    font-size: 7pt;
+    color: var(--tcm-text-4);
+    margin-top: 6mm;
+  }
+}
+
+@page :first {
+  margin: 0;
+  background: var(--tcm-text-body);
+  @top-left, @top-right, @bottom-left, @bottom-center, @bottom-right { content: none; }
+}
+
+@page cover {
+  margin: 0;
+  background: var(--tcm-text-body);
+  @top-left, @top-right, @bottom-left, @bottom-center, @bottom-right { content: none; }
+}
+
+/* Running header pattern */
+h2.bp-section { string-set: section-title content(); }
+
+/* ──────────────────────────────────────────────────────────────────
+   PAGED.JS DİSİPLİN · Sayfa kırılma kuralları
+   ────────────────────────────────────────────────────────────────── */
+
+/* Paragraf widows / orphans */
+p, li { widows: 3; orphans: 3; }
+
+/* Başlıklar altındaki ile birlikte */
+h1, h2, h3, h4, h5, h6 {
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+
+/* Başlık + ilk paragraf birlikte */
+h1 + p, h2 + p, h3 + p, h4 + p {
+  break-before: avoid-page;
+  page-break-before: avoid;
+}
+
+/* Lead paragrafı başlıktan ayrılmaz */
+.lead, .essay > p:first-of-type {
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+
+/* Mock screen ve büyük görseller bütünlük */
+.mock-screen,
+.yüzey-render {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+/* Tablo disiplini */
+table,
+.xml-tree,
+.code-block,
+svg {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+table thead { break-after: avoid-page; page-break-after: avoid; }
+table tr    { break-inside: avoid;     page-break-inside: avoid; }
+
+/* Karakter bloklar */
+.dq-block,
+.aside-box,
+.lock-card,
+.colophon-block {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.dq-block { break-before: avoid-page; page-break-before: avoid; }
+
+/* Force page break */
+.sub-page    { break-before: page; page-break-before: always; }
+.ch-opener   { break-before: page !important; page-break-before: always !important; }
+.ch-opener > * { break-before: avoid; page-break-before: avoid; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madde Detay · Düstur Örneği</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Recursive:MONO,slnt,wght@0..1,-15..0,300..1000&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/tokens/primitives.css">
+<link rel="stylesheet" href="../css/tokens/semantics.css">
+<link rel="stylesheet" href="../css/base/reset.css">
+<link rel="stylesheet" href="../css/base/typography.css">
+<link rel="stylesheet" href="../css/components/badges.css">
+<link rel="stylesheet" href="../css/components/quote-block.css">
+
+<style>
+  body { padding: 24mm 22mm; max-width: 210mm; margin: 0 auto; }
+  .surface { background: var(--tcm-panel-bg); border: 1px solid var(--tcm-border-default); padding: 8mm 10mm; }
+  .surface > .tier-border { height: 3px; margin: -8mm -10mm 6mm; background: var(--tcm-kanun-mark); }
+  .meta-row { display: flex; gap: 4mm; align-items: center; margin-bottom: 5mm; padding-bottom: 4mm; border-bottom: 1px dotted var(--tcm-border-default); }
+  .kanun-no { font-family: var(--tcm-uri-family); font-weight: 600; font-size: 9pt; color: var(--tcm-text-body); }
+  .madde-no { font-family: var(--tcm-uri-family); font-weight: 500; font-size: 8.5pt; color: var(--tcm-color-turkuvaz-10); }
+  .version { margin-left: auto; font-family: var(--tcm-family-mo); font-size: 7pt; color: var(--tcm-text-muted); letter-spacing: 0.06em; }
+  .madde-baslik { font-family: var(--tcm-page-title-family); font-variation-settings: "opsz" 72, "wght" 700, "SOFT" 18, "WONK" 1; font-size: 28pt; line-height: 1.05; letter-spacing: -0.02em; color: var(--tcm-text-body); margin-bottom: 6mm; }
+  .madde-body p { font-family: var(--tcm-madde-body-family); font-variation-settings: "opsz" 14, "wght" 400; font-size: 10.5pt; line-height: 1.62; color: var(--tcm-text-body); text-align: justify; hyphens: auto; margin-bottom: 4mm; }
+  .akn-ref { color: var(--tcm-link-default); text-decoration: underline; text-underline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<article class="surface">
+  <div class="tier-border"></div>
+
+  <div class="meta-row">
+    <span class="yuzey-badge kanun">KANUN</span>
+    <span class="kanun-no">5237</span>
+    <span class="madde-no">Madde 220</span>
+    <span class="version">v2026-01-15 · konsolide</span>
+  </div>
+
+  <h1 class="madde-baslik">Suç işlemek amacıyla örgüt kurma</h1>
+
+  <div class="madde-body">
+    <p>(1) Kanunun suç saydığı fiilleri işlemek amacıyla örgüt kuranlar veya yönetenler, örgütün yapısı, sahip bulunduğu üye sayısı ile araç ve gereç bakımından amaç suçları işlemeye elverişli olması halinde, dört yıldan sekiz yıla kadar hapis cezası ile cezalandırılır.</p>
+
+    <p>(2) Suç işlemek amacıyla kurulmuş olan örgüte üye olanlar, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır.</p>
+
+    <p>(3) Örgütün silahlı olması halinde, yukarıdaki fıkralara göre verilecek ceza dörtte birinden yarısına kadar artırılır.</p>
+
+    <p>(4) Örgütün faaliyeti çerçevesinde suç işlenmesi halinde, ayrıca bu suçlardan dolayı da cezaya hükmolunur. <a class="akn-ref" href="#">Bkz. Madde 221</a></p>
+  </div>
+
+  <div class="dq-block tur-left" style="margin-top: 8mm;">
+    <span class="dq-block-mark">"</span>
+    <p class="dq-block-tx">Bu örnek <em>DÜSTUR Bileşen Galerisi</em> ile aynı semantic jetonları kullanır. Bileşen kodu primitive değerleri tanımaz; sadece UI rolüne göre çağrılır.</p>
+    <span class="dq-block-attr">— Bölüm IV · Jeton Doktrini</span>
+  </div>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · T.C. MEVZUAT TASARIM SİSTEMİ · BUNDLED CSS
+   Tek dosya import — tüm jeton, base ve bileşen katmanlarını yükler.
+
+   Import sırası önemlidir:
+     1. primitives  — ham değer kütüphanesi
+     2. semantics   — rol-bağlam birleşimleri
+     3. base/*      — reset, typography, print
+     4. components/* — yeniden kullanılabilir bileşenler
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* 1) Tokens */
+@import "./tokens/primitives.css";
+@import "./tokens/semantics.css";
+
+/* 2) Base */
+@import "./base/reset.css";
+@import "./base/typography.css";
+@import "./base/print.css";
+
+/* 3) Components */
+@import "./components/badges.css";
+@import "./components/code-block.css";
+@import "./components/quote-block.css";
+@import "./components/token-card.css";

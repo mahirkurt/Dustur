@@ -1,0 +1,12 @@
+{
+  "$description": "DÜSTUR z-index birincilleri · katman hiyerarşisi",
+  "z": {
+    "base":     { "$type": "number", "$value": 0,    "$description": "Sayfa zemini" },
+    "elevated": { "$type": "number", "$value": 10,   "$description": "Kart · panel" },
+    "sticky":   { "$type": "number", "$value": 100,  "$description": "Sticky nav · sticky kenar çubuğu" },
+    "overlay":  { "$type": "number", "$value": 500,  "$description": "Drawer · sheet overlay" },
+    "modal":    { "$type": "number", "$value": 1000, "$description": "Atıf ağı modal · search panel" },
+    "tooltip":  { "$type": "number", "$value": 1500, "$description": "Tooltip · popover" },
+    "toast":    { "$type": "number", "$value": 2000, "$description": "Toast bildirim katmanı" }
+  }
+}

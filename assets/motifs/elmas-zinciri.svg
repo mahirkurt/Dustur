@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 24" width="280" height="24">
+  <title>Elmas Zinciri · Düstur Motif Kütüphanesi · Bölüm Ayraç</title>
+  <g fill="none" stroke="#002664" stroke-width="0.6" stroke-linecap="square">
+    <polygon points="14,5 22,12 14,19 6,12"/>
+    <polygon points="51,9 56,12 51,15 46,12" fill="#002664"/>
+    <polygon points="84,5 92,12 84,19 76,12"/>
+    <polygon points="121,9 126,12 121,15 116,12" fill="#002664"/>
+    <polygon points="154,5 162,12 154,19 146,12"/>
+    <polygon points="191,9 196,12 191,15 186,12" fill="#002664"/>
+    <polygon points="224,5 232,12 224,19 216,12"/>
+    <polygon points="261,9 266,12 261,15 256,12" fill="#002664"/>
+  </g>
+</svg>

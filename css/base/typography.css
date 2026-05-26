@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · BASE TYPOGRAPHY
+   Variable font axis disiplini · OpenType opsz/wght/SOFT/WONK
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────────────────────────────
+   DISPLAY · Kapak / bölüm açılışı (96-144pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-display {
+  font-family: var(--tcm-display-family);
+  font-variation-settings:
+    "opsz" var(--tcm-display-opsz),
+    "wght" var(--tcm-display-wght),
+    "SOFT" var(--tcm-display-soft),
+    "WONK" var(--tcm-display-wonk);
+  font-size: 124pt;
+  line-height: var(--tcm-lh-tight);
+  letter-spacing: var(--tcm-ls-tightest);
+  color: var(--tcm-text-body);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   PAGE TITLE · Sayfa başlığı (42-72pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-page-title {
+  font-family: var(--tcm-page-title-family);
+  font-variation-settings:
+    "opsz" var(--tcm-page-title-opsz),
+    "wght" var(--tcm-page-title-wght),
+    "SOFT" 20,
+    "WONK" 1;
+  font-size: 42pt;
+  line-height: 0.95;
+  letter-spacing: var(--tcm-ls-tighter);
+  color: var(--tcm-text-body);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   SECTION · Bölüm başlığı (32-42pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-section {
+  font-family: var(--tcm-section-family);
+  font-variation-settings:
+    "opsz" var(--tcm-section-opsz),
+    "wght" var(--tcm-section-wght),
+    "SOFT" 12,
+    "WONK" 1;
+  font-size: 32pt;
+  line-height: 1.05;
+  letter-spacing: var(--tcm-ls-tighter);
+  color: var(--tcm-text-body);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   H3 · Sub-head (16-20pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-h3,
+h3.bp-h3 {
+  font-family: var(--tcm-h3-family);
+  font-variation-settings:
+    "opsz" var(--tcm-h3-opsz),
+    "wght" var(--tcm-h3-wght),
+    "SOFT" 10;
+  font-size: 16pt;
+  line-height: var(--tcm-lh-snug);
+  letter-spacing: var(--tcm-ls-tight);
+  color: var(--tcm-text-body);
+  margin-top: var(--tcm-space-12);
+  margin-bottom: 3.5mm;
+  padding-bottom: 1.5mm;
+  border-bottom: 1px solid var(--tcm-border-default);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   H4 · Sans
+   ────────────────────────────────────────────────────────────────── */
+.t-h4,
+h4.bp-h4 {
+  font-family: var(--tcm-h4-family);
+  font-weight: var(--tcm-h4-wght);
+  font-size: 11pt;
+  color: var(--tcm-text-body);
+  margin-top: var(--tcm-space-6);
+  margin-bottom: var(--tcm-space-2);
+  letter-spacing: -0.005em;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   LEAD · Giriş paragrafı (12-13pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-lead,
+p.lead {
+  font-family: var(--tcm-lead-family);
+  font-variation-settings:
+    "opsz" var(--tcm-lead-opsz),
+    "wght" var(--tcm-lead-wght),
+    "SOFT" 25;
+  font-size: 12pt;
+  line-height: 1.55;
+  color: var(--tcm-text-body);
+  margin-bottom: var(--tcm-space-6);
+}
+.t-lead em,
+p.lead em {
+  font-variation-settings: "opsz" 18, "wght" 500, "SOFT" 0;
+  font-style: italic;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   MADDE BODY · Ana mevzuat metni (10.5pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-body,
+.bp-body p {
+  font-family: var(--tcm-madde-body-family);
+  font-variation-settings:
+    "opsz" var(--tcm-madde-body-opsz),
+    "wght" var(--tcm-madde-body-wght);
+  font-size: 10.5pt;
+  line-height: var(--tcm-lh-relaxed);
+  color: var(--tcm-text-body);
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: var(--tcm-space-4);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   FOOTNOTE · Dipnot (8-9pt)
+   ────────────────────────────────────────────────────────────────── */
+.t-footnote {
+  font-family: var(--tcm-footnote-family);
+  font-variation-settings:
+    "opsz" var(--tcm-footnote-opsz),
+    "wght" 400;
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: var(--tcm-text-2);
+  font-style: italic;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   EYEBROW · Üst etiket (mono · all-caps)
+   ────────────────────────────────────────────────────────────────── */
+.t-eyebrow {
+  font-family: var(--tcm-eyebrow-family);
+  font-variation-settings: "MONO" 1;
+  font-size: 7.5pt;
+  text-transform: uppercase;
+  letter-spacing: var(--tcm-eyebrow-ls);
+  font-weight: 600;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   ROZET · Kademe etiketi (6.5pt all-caps)
+   ────────────────────────────────────────────────────────────────── */
+.t-rozet {
+  font-family: var(--tcm-rozet-family);
+  font-weight: var(--tcm-rozet-wght);
+  font-size: 6.5pt;
+  text-transform: uppercase;
+  letter-spacing: var(--tcm-rozet-ls);
+  line-height: 1;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   URI · Kanun no · veri ifadeleri (mono)
+   ────────────────────────────────────────────────────────────────── */
+.t-uri {
+  font-family: var(--tcm-uri-family);
+  font-variation-settings: "MONO" 1, "wght" var(--tcm-uri-wght);
+  font-size: 9pt;
+  letter-spacing: var(--tcm-uri-ls);
+  color: var(--tcm-text-body);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   ORTAK · Strong · em · mark
+   ────────────────────────────────────────────────────────────────── */
+strong { font-weight: 600; }
+em     { font-style: italic; }
+
+.mark-tur { color: var(--tcm-color-turkuvaz-10); font-weight: 500; }
+.mark-tbk { color: var(--tcm-color-tbk-10);     font-weight: 500; }
+
+.mono {
+  font-family: var(--tcm-family-mo);
+  font-variation-settings: "MONO" 1;
+  font-size: 9.5pt;
+  background: var(--tcm-panel-subtle);
+  padding: 0.5mm 1.4mm;
+  border: 1px solid var(--tcm-border-subtle);
+}

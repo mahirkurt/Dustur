@@ -1,0 +1,201 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · PRIMITIVE TOKENS (CSS Custom Properties)
+   Auto-generated from tokens/primitives/*.json — do not edit by hand.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ──────────────────────────────────────────────────────────────────
+     RENK · TBK (Türk Bayrağı Kırmızısı) · TS 715/2010
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-color-tbk-1:  #FFFCFC;
+  --tcm-color-tbk-2:  #FFF7F7;
+  --tcm-color-tbk-3:  #FEEBEC;
+  --tcm-color-tbk-4:  #FDD8DA;
+  --tcm-color-tbk-5:  #FBC0C3;
+  --tcm-color-tbk-6:  #F89DA2;
+  --tcm-color-tbk-7:  #F5717A;
+  --tcm-color-tbk-8:  #EE3F4A;
+  --tcm-color-tbk-9:  #E30A17;
+  --tcm-color-tbk-10: #C40612;
+  --tcm-color-tbk-11: #A1050F;
+  --tcm-color-tbk-12: #5D0107;
+
+  /* ──────────────────────────────────────────────────────────────────
+     RENK · TURKUVAZ (Anadolu Selçuklu) · Karatay 1251
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-color-turkuvaz-1:  #F7FCFC;
+  --tcm-color-turkuvaz-2:  #EBF6F6;
+  --tcm-color-turkuvaz-3:  #D7EDEE;
+  --tcm-color-turkuvaz-4:  #B9E0E1;
+  --tcm-color-turkuvaz-5:  #94CFD0;
+  --tcm-color-turkuvaz-6:  #6BB9BB;
+  --tcm-color-turkuvaz-7:  #43A1A2;
+  --tcm-color-turkuvaz-8:  #298F90;
+  --tcm-color-turkuvaz-9:  #1A8B8C;
+  --tcm-color-turkuvaz-10: #137070;
+  --tcm-color-turkuvaz-11: #0C5455;
+  --tcm-color-turkuvaz-12: #053334;
+
+  /* ──────────────────────────────────────────────────────────────────
+     RENK · BORDO (Düstûr Bordo) · CBK
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-color-bordo-1:  #FCFAFA;
+  --tcm-color-bordo-2:  #F8F2F2;
+  --tcm-color-bordo-3:  #EFE0E0;
+  --tcm-color-bordo-4:  #E0C3C3;
+  --tcm-color-bordo-5:  #CCA1A2;
+  --tcm-color-bordo-6:  #B17B7C;
+  --tcm-color-bordo-7:  #945858;
+  --tcm-color-bordo-8:  #763A3B;
+  --tcm-color-bordo-9:  #5C1A1B;
+  --tcm-color-bordo-10: #4A1314;
+  --tcm-color-bordo-11: #3A0D0D;
+  --tcm-color-bordo-12: #260606;
+
+  /* ──────────────────────────────────────────────────────────────────
+     RENK · LACİVERT (Cumhuriyet) · AYM
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-color-lacivert-1:  #FBFCFE;
+  --tcm-color-lacivert-2:  #F2F5FB;
+  --tcm-color-lacivert-3:  #E1E8F4;
+  --tcm-color-lacivert-4:  #C8D4EB;
+  --tcm-color-lacivert-5:  #A5B7DD;
+  --tcm-color-lacivert-6:  #7A93CB;
+  --tcm-color-lacivert-7:  #4F6FB5;
+  --tcm-color-lacivert-8:  #284C97;
+  --tcm-color-lacivert-9:  #002664;
+  --tcm-color-lacivert-10: #001E53;
+  --tcm-color-lacivert-11: #001640;
+  --tcm-color-lacivert-12: #000C24;
+
+  /* ──────────────────────────────────────────────────────────────────
+     RENK · AMBER (Tebliğ Amber) · Bakanlık Tebliğleri
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-color-amber-1:  #FEFCF8;
+  --tcm-color-amber-2:  #FDF7EB;
+  --tcm-color-amber-3:  #F9ECCF;
+  --tcm-color-amber-4:  #F3DAA8;
+  --tcm-color-amber-5:  #EAC07A;
+  --tcm-color-amber-6:  #DDA34F;
+  --tcm-color-amber-7:  #CB8329;
+  --tcm-color-amber-8:  #BB6A14;
+  --tcm-color-amber-9:  #B45309;
+  --tcm-color-amber-10: #963F03;
+  --tcm-color-amber-11: #762D00;
+  --tcm-color-amber-12: #451900;
+
+  /* ──────────────────────────────────────────────────────────────────
+     RENK · NÖTR GRİ · UI omurgası · OKLCH neutral
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-color-gri-1:  #FCFCFC;
+  --tcm-color-gri-2:  #F7F7F7;
+  --tcm-color-gri-3:  #EEEEEE;
+  --tcm-color-gri-4:  #E0E0E0;
+  --tcm-color-gri-5:  #CCCCCC;
+  --tcm-color-gri-6:  #B0B0B0;
+  --tcm-color-gri-7:  #909090;
+  --tcm-color-gri-8:  #707070;
+  --tcm-color-gri-9:  #525252;
+  --tcm-color-gri-10: #3D3D3D;
+  --tcm-color-gri-11: #262626;
+  --tcm-color-gri-12: #0A0A0A;
+
+  /* ──────────────────────────────────────────────────────────────────
+     TİPOGRAFİ · FONT FAMILIES
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-family-fr: "Fraunces", Georgia, serif;
+  --tcm-family-as: "Albert Sans", system-ui, sans-serif;
+  --tcm-family-mo: "Recursive", ui-monospace, monospace;
+
+  /* ──────────────────────────────────────────────────────────────────
+     TİPOGRAFİ · FRAUNCES VARIABLE AXIS
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-fr-opsz-9:   9;
+  --tcm-fr-opsz-14:  14;
+  --tcm-fr-opsz-20:  20;
+  --tcm-fr-opsz-32:  32;
+  --tcm-fr-opsz-36:  36;
+  --tcm-fr-opsz-60:  60;
+  --tcm-fr-opsz-72:  72;
+  --tcm-fr-opsz-96:  96;
+  --tcm-fr-opsz-144: 144;
+
+  --tcm-fr-wght-300: 300;
+  --tcm-fr-wght-400: 400;
+  --tcm-fr-wght-500: 500;
+  --tcm-fr-wght-600: 600;
+  --tcm-fr-wght-700: 700;
+  --tcm-fr-wght-800: 800;
+
+  --tcm-fr-soft-0:   0;
+  --tcm-fr-soft-25:  25;
+  --tcm-fr-soft-50:  50;
+  --tcm-fr-soft-100: 100;
+
+  --tcm-fr-wonk-0: 0;
+  --tcm-fr-wonk-1: 1;
+
+  /* ──────────────────────────────────────────────────────────────────
+     TİPOGRAFİ · LETTER-SPACING
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-ls-tightest: -0.045em;
+  --tcm-ls-tighter:  -0.025em;
+  --tcm-ls-tight:    -0.012em;
+  --tcm-ls-normal:    0;
+  --tcm-ls-wide:      0.06em;
+  --tcm-ls-wider:     0.14em;
+  --tcm-ls-widest:    0.25em;
+  --tcm-ls-ultra:     0.32em;
+
+  /* ──────────────────────────────────────────────────────────────────
+     TİPOGRAFİ · LINE-HEIGHT
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-lh-tight:   1.0;
+  --tcm-lh-snug:    1.2;
+  --tcm-lh-normal:  1.5;
+  --tcm-lh-relaxed: 1.62;
+  --tcm-lh-loose:   1.7;
+
+  /* ──────────────────────────────────────────────────────────────────
+     SPACE · 12-step modular scale · base 4mm
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-space-0:  0;
+  --tcm-space-1:  1mm;
+  --tcm-space-2:  2mm;
+  --tcm-space-3:  3mm;
+  --tcm-space-4:  4mm;
+  --tcm-space-5:  5mm;
+  --tcm-space-6:  6mm;
+  --tcm-space-8:  8mm;
+  --tcm-space-12: 12mm;
+  --tcm-space-16: 16mm;
+  --tcm-space-24: 24mm;
+  --tcm-space-32: 32mm;
+
+  /* ──────────────────────────────────────────────────────────────────
+     RADIUS · sabit 0 · kurumsal sade keskin köşe
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-radius-0: 0;
+
+  /* ──────────────────────────────────────────────────────────────────
+     MOTION · duration + easing
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-duration-fast: 120ms;
+  --tcm-duration-base: 240ms;
+  --tcm-duration-slow: 400ms;
+
+  --tcm-easing-standard:   cubic-bezier(0.4, 0, 0.2, 1);
+  --tcm-easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --tcm-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+
+  /* ──────────────────────────────────────────────────────────────────
+     Z-INDEX · katman hiyerarşisi
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-z-base:     0;
+  --tcm-z-elevated: 10;
+  --tcm-z-sticky:   100;
+  --tcm-z-overlay:  500;
+  --tcm-z-modal:    1000;
+  --tcm-z-tooltip:  1500;
+  --tcm-z-toast:    2000;
+}

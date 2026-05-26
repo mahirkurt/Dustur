@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Rozet Galerisi · Düstur</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=Albert+Sans:wght@400..700&family=Recursive:MONO,wght@0..1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/tokens/primitives.css">
+<link rel="stylesheet" href="../css/tokens/semantics.css">
+<link rel="stylesheet" href="../css/base/reset.css">
+<link rel="stylesheet" href="../css/base/typography.css">
+<link rel="stylesheet" href="../css/components/badges.css">
+
+<style>
+  body { padding: 16mm; max-width: 200mm; margin: 0 auto; }
+  h1 { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 60, "wght" 700, "SOFT" 20, "WONK" 1; font-size: 32pt; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 8mm; }
+  .row { display: flex; align-items: center; gap: 6mm; padding: 4mm 5mm; border-bottom: 1px dotted var(--tcm-border-default); }
+  .row:last-child { border-bottom: none; }
+  .row > strong { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 8pt; min-width: 100mm; color: var(--tcm-text-2); }
+  .group { background: var(--tcm-panel-bg); border: 1px solid var(--tcm-border-default); margin-bottom: 6mm; }
+  .group-h { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.18em; padding: 3mm 5mm; background: var(--tcm-panel-subtle); border-bottom: 1px solid var(--tcm-border-default); color: var(--tcm-text-2); }
+</style>
+</head>
+<body>
+
+<h1>Mevzuat Kademesi Rozetleri</h1>
+
+<div class="group">
+  <div class="group-h">Tier Badges · 7 Kademe</div>
+  <div class="row"><span class="yuzey-badge anayasa">ANAYASA</span><strong>--tcm-anayasa-mark · #E30A17</strong></div>
+  <div class="row"><span class="yuzey-badge aym">AYM KARARI</span><strong>--tcm-aym-mark · #002664</strong></div>
+  <div class="row"><span class="yuzey-badge cbk">CBK</span><strong>--tcm-cbk-mark · #5C1A1B</strong></div>
+  <div class="row"><span class="yuzey-badge kanun">KANUN</span><strong>--tcm-kanun-mark · #1A8B8C</strong></div>
+  <div class="row"><span class="yuzey-badge yonetmelik">YÖNETMELİK</span><strong>--tcm-yonetmelik-mark · #43A1A2</strong></div>
+  <div class="row"><span class="yuzey-badge teblig">TEBLİĞ</span><strong>--tcm-teblig-mark · #B45309</strong></div>
+  <div class="row"><span class="yuzey-badge genelge">GENELGE</span><strong>--tcm-genelge-mark · #525252</strong></div>
+</div>
+
+<div class="group">
+  <div class="group-h">Madde Durum İşaretleri</div>
+  <div class="row"><span class="aym-iptal-hap">AYM İPTAL</span><strong>--tcm-aym-iptal-hap-bg / -text</strong></div>
+</div>
+
+<div class="group">
+  <div class="group-h">Tier Border (Yüzey Üst Mührü)</div>
+  <div class="row"><span style="width:50mm;"><div class="yuzey-render-bord"></div>Anayasa</span><strong>3px · TBK-9</strong></div>
+  <div class="row"><span style="width:50mm;"><div class="yuzey-render-bord kanun"></div>Kanun</span><strong>3px · Turkuvaz-9</strong></div>
+  <div class="row"><span style="width:50mm;"><div class="yuzey-render-bord cbk"></div>CBK</span><strong>3px · Bordo-9</strong></div>
+  <div class="row"><span style="width:50mm;"><div class="yuzey-render-bord yonetmelik"></div>Yönetmelik</span><strong>2px · Turkuvaz-7</strong></div>
+  <div class="row"><span style="width:50mm;"><div class="yuzey-render-bord aym"></div>AYM</span><strong>3px · Lacivert-9</strong></div>
+</div>
+
+</body>
+</html>

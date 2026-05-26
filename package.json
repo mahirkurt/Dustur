@@ -1,0 +1,49 @@
+{
+  "name": "@dustur/tasarim-sistemi",
+  "version": "1.0.0",
+  "description": "DÜSTUR · T.C. Mevzuat Tasarım Sistemi · Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey doktrini.",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "css/dustur.css",
+  "style": "css/dustur.css",
+  "files": [
+    "css/",
+    "tokens/",
+    "docs/",
+    "assets/"
+  ],
+  "exports": {
+    ".": {
+      "style": "./css/dustur.css",
+      "import": "./tokens/index.json"
+    },
+    "./tokens/*": "./tokens/*",
+    "./css/*": "./css/*"
+  },
+  "scripts": {
+    "build": "style-dictionary build --config style-dictionary.config.json",
+    "build:web": "style-dictionary build --config style-dictionary.config.json --platforms css",
+    "build:ios": "style-dictionary build --config style-dictionary.config.json --platforms ios",
+    "build:android": "style-dictionary build --config style-dictionary.config.json --platforms android",
+    "build:dtcg": "style-dictionary build --config style-dictionary.config.json --platforms dtcg",
+    "clean": "rm -rf dist/",
+    "lint:tokens": "find tokens -name '*.json' -exec node -e \"JSON.parse(require('fs').readFileSync('{}', 'utf8'))\" \\;"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.0"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "w3c-dtcg",
+    "turkish-government",
+    "mevzuat",
+    "typography",
+    "legal-design",
+    "akoma-ntoso"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahirkurt/dustur.git"
+  },
+  "author": "Düstur Tasarım Sistemi Ekibi"
+}

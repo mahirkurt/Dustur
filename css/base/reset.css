@@ -1,0 +1,42 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · BASE RESET
+   Minimal modern reset · korumalı semantik
+   ═══════════════════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10.5pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+body {
+  background: var(--tcm-sayfa-bg);
+  color: var(--tcm-text-body);
+  font-family: var(--tcm-family-fr);
+  font-variation-settings: "opsz" 14, "wght" 400, "SOFT" 0, "WONK" 0;
+  line-height: var(--tcm-lh-relaxed);
+  orphans: 3;
+  widows: 3;
+}
+
+/* Selection */
+::selection {
+  background: var(--tcm-selection-bg);
+  color: var(--tcm-selection-text);
+}
+
+/* Font helper sınıfları */
+.fr { font-family: var(--tcm-family-fr); font-optical-sizing: auto; }
+.as { font-family: var(--tcm-family-as); }
+.mo { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; }

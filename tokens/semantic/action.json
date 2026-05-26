@@ -1,0 +1,37 @@
+{
+  "$description": "DÜSTUR semantic action jetonları · butonlar, linkler, durum mesajları",
+  "action": {
+    "primary": {
+      "bg":       { "$type": "color", "$value": "{color.turkuvaz.9}",  "$description": "Primary buton arka plan" },
+      "bg-hover": { "$type": "color", "$value": "{color.turkuvaz.10}", "$description": "Primary buton hover" },
+      "text":     { "$type": "color", "$value": "{color.gri.1}",       "$description": "Primary buton text · beyaz" }
+    },
+    "secondary": {
+      "bg":       { "$type": "color", "$value": "{color.gri.2}",  "$description": "Secondary buton arka plan" },
+      "bg-hover": { "$type": "color", "$value": "{color.gri.3}",  "$description": "Secondary buton hover" },
+      "text":     { "$type": "color", "$value": "{color.gri.12}", "$description": "Secondary buton text" },
+      "border":   { "$type": "color", "$value": "{color.gri.6}",  "$description": "Secondary buton border" }
+    }
+  },
+  "link": {
+    "default": { "$type": "color", "$value": "{color.turkuvaz.10}", "$description": "Cross-ref link · AAA contrast" },
+    "hover":   { "$type": "color", "$value": "{color.turkuvaz.11}", "$description": "Link hover" },
+    "visited": { "$type": "color", "$value": "{color.bordo.10}",    "$description": "Visited link rengi" }
+  },
+  "danger": {
+    "bg":   { "$type": "color", "$value": "#FEE2E2", "$description": "Error/uyarı bg (semantic, TBK değil)" },
+    "text": { "$type": "color", "$value": "#B91C1C", "$description": "Error/uyarı text" }
+  },
+  "warning": {
+    "bg":   { "$type": "color", "$value": "{color.amber.2}",  "$description": "Uyarı bg" },
+    "text": { "$type": "color", "$value": "{color.amber.11}", "$description": "Uyarı text · AAA" }
+  },
+  "success": {
+    "bg":   { "$type": "color", "$value": "#D1FAE5", "$description": "Başarı bg" },
+    "text": { "$type": "color", "$value": "#047857", "$description": "Başarı text" }
+  },
+  "info": {
+    "bg":   { "$type": "color", "$value": "{color.lacivert.3}",  "$description": "Bilgi bg" },
+    "text": { "$type": "color", "$value": "{color.lacivert.11}", "$description": "Bilgi text · AAA" }
+  }
+}
