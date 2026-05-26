@@ -1,0 +1,156 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · SEMANTIC TOKENS (CSS Custom Properties)
+   Rol-bağlam birleşimleri · UI'nin primitive değerleri bilmesi gerekmez.
+   Auto-generated from tokens/semantic/*.json — do not edit by hand.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ──────────────────────────────────────────────────────────────────
+     TIER · Mevzuat kademeleri kromatik mührleri
+     ────────────────────────────────────────────────────────────────── */
+  /* Anayasa */
+  --tcm-anayasa-mark:       var(--tcm-color-tbk-9);
+  --tcm-anayasa-text:       var(--tcm-color-gri-1);
+
+  /* AYM (Anayasa Mahkemesi) */
+  --tcm-aym-mark:           var(--tcm-color-lacivert-9);
+  --tcm-aym-rozet-bg:       var(--tcm-color-lacivert-3);
+  --tcm-aym-rozet-text:     var(--tcm-color-lacivert-11);
+  --tcm-aym-iptal-hap-bg:   var(--tcm-color-tbk-2);
+  --tcm-aym-iptal-hap-text: var(--tcm-color-tbk-11);
+
+  /* CBK (Cumhurbaşkanlığı Kararnamesi) */
+  --tcm-cbk-mark:           var(--tcm-color-bordo-9);
+  --tcm-cbk-rozet-bg:       var(--tcm-color-bordo-3);
+  --tcm-cbk-rozet-text:     var(--tcm-color-bordo-11);
+
+  /* Kanun */
+  --tcm-kanun-mark:         var(--tcm-color-turkuvaz-9);
+  --tcm-kanun-rozet-bg:     var(--tcm-color-turkuvaz-3);
+  --tcm-kanun-rozet-text:   var(--tcm-color-turkuvaz-11);
+
+  /* Yönetmelik */
+  --tcm-yonetmelik-mark:    var(--tcm-color-turkuvaz-7);
+  --tcm-yonetmelik-rozet-bg: var(--tcm-color-turkuvaz-2);
+
+  /* Tebliğ */
+  --tcm-teblig-mark:        var(--tcm-color-amber-9);
+  --tcm-teblig-bg:          var(--tcm-color-amber-2);
+
+  /* Genelge */
+  --tcm-genelge-mark:       var(--tcm-color-gri-9);
+  --tcm-genelge-bg:         var(--tcm-color-gri-2);
+
+  /* ──────────────────────────────────────────────────────────────────
+     ACTION · Butonlar · linkler
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-action-primary-bg:        var(--tcm-color-turkuvaz-9);
+  --tcm-action-primary-bg-hover:  var(--tcm-color-turkuvaz-10);
+  --tcm-action-primary-text:      var(--tcm-color-gri-1);
+
+  --tcm-action-secondary-bg:      var(--tcm-color-gri-2);
+  --tcm-action-secondary-bg-hover: var(--tcm-color-gri-3);
+  --tcm-action-secondary-text:    var(--tcm-color-gri-12);
+  --tcm-action-secondary-border:  var(--tcm-color-gri-6);
+
+  --tcm-link-default: var(--tcm-color-turkuvaz-10);
+  --tcm-link-hover:   var(--tcm-color-turkuvaz-11);
+  --tcm-link-visited: var(--tcm-color-bordo-10);
+
+  /* ──────────────────────────────────────────────────────────────────
+     STATUS · Durum mesajları
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-danger-bg:    #FEE2E2;
+  --tcm-danger-text:  #B91C1C;
+
+  --tcm-warning-bg:   var(--tcm-color-amber-2);
+  --tcm-warning-text: var(--tcm-color-amber-11);
+
+  --tcm-success-bg:   #D1FAE5;
+  --tcm-success-text: #047857;
+
+  --tcm-info-bg:      var(--tcm-color-lacivert-3);
+  --tcm-info-text:    var(--tcm-color-lacivert-11);
+
+  /* ──────────────────────────────────────────────────────────────────
+     SURFACE · Yüzeyler · kenarlıklar · metin
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-sayfa-bg:     #FAF6EE;       /* Specimen miras */
+  --tcm-sayfa-deep:   #E9E2D2;
+  --tcm-panel-bg:     #FFFFFF;
+  --tcm-panel-subtle: #F3EEE2;
+  --tcm-stripe:       #F7F1E3;
+
+  --tcm-border-subtle:  #E9E2D2;
+  --tcm-border-default: #D8D1C4;
+  --tcm-border-strong:  var(--tcm-color-gri-7);
+
+  --tcm-text-body:    #1A1A1A;       /* AAA · ana mevzuat metni */
+  --tcm-text-2:       #4A4744;
+  --tcm-text-muted:   #807A72;
+  --tcm-text-4:       #B5AE9F;
+
+  --tcm-selection-bg:   var(--tcm-color-turkuvaz-9);
+  --tcm-selection-text: var(--tcm-sayfa-bg);
+
+  /* ──────────────────────────────────────────────────────────────────
+     TYPOGRAPHY · Rol jetonları
+     ────────────────────────────────────────────────────────────────── */
+  /* Display başlık (kapak, bölüm açılışı) */
+  --tcm-display-family: var(--tcm-family-fr);
+  --tcm-display-opsz:   var(--tcm-fr-opsz-144);
+  --tcm-display-wght:   var(--tcm-fr-wght-700);
+  --tcm-display-soft:   var(--tcm-fr-soft-25);
+  --tcm-display-wonk:   var(--tcm-fr-wonk-1);
+
+  /* Sayfa başlığı */
+  --tcm-page-title-family: var(--tcm-family-fr);
+  --tcm-page-title-opsz:   var(--tcm-fr-opsz-96);
+  --tcm-page-title-wght:   var(--tcm-fr-wght-700);
+
+  /* Bölüm başlığı */
+  --tcm-section-family:    var(--tcm-family-fr);
+  --tcm-section-opsz:      var(--tcm-fr-opsz-36);
+  --tcm-section-wght:      var(--tcm-fr-wght-700);
+
+  /* H3 · sub-head */
+  --tcm-h3-family:         var(--tcm-family-fr);
+  --tcm-h3-opsz:           var(--tcm-fr-opsz-32);
+  --tcm-h3-wght:           var(--tcm-fr-wght-600);
+
+  /* H4 · sans */
+  --tcm-h4-family:         var(--tcm-family-as);
+  --tcm-h4-wght:           600;
+
+  /* Lead */
+  --tcm-lead-family:       var(--tcm-family-fr);
+  --tcm-lead-opsz:         var(--tcm-fr-opsz-20);
+  --tcm-lead-wght:         var(--tcm-fr-wght-400);
+
+  /* Madde body · ana mevzuat metni */
+  --tcm-madde-body-family: var(--tcm-family-fr);
+  --tcm-madde-body-opsz:   var(--tcm-fr-opsz-14);
+  --tcm-madde-body-wght:   var(--tcm-fr-wght-400);
+
+  /* Footnote */
+  --tcm-footnote-family:   var(--tcm-family-fr);
+  --tcm-footnote-opsz:     var(--tcm-fr-opsz-9);
+
+  /* UI · sans */
+  --tcm-ui-button-family:  var(--tcm-family-as);
+  --tcm-ui-button-wght:    600;
+
+  /* Eyebrow · üst etiket */
+  --tcm-eyebrow-family:    var(--tcm-family-mo);
+  --tcm-eyebrow-ls:        var(--tcm-ls-widest);
+
+  /* Rozet · kademe etiketi */
+  --tcm-rozet-family:      var(--tcm-family-as);
+  --tcm-rozet-wght:        700;
+  --tcm-rozet-ls:          var(--tcm-ls-wider);
+
+  /* URI · mono */
+  --tcm-uri-family:        var(--tcm-family-mo);
+  --tcm-uri-wght:          500;
+  --tcm-uri-ls:            var(--tcm-ls-wide);
+}

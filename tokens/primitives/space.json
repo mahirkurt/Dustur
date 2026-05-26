@@ -1,0 +1,17 @@
+{
+  "$description": "DÜSTUR boşluk birincilleri · 12-step modular scale · 4mm base unit (modern responsive web 4px base'e paralel)",
+  "space": {
+    "0":  { "$type": "dimension", "$value": "0",    "$description": "Sıfır aralama · adjacent" },
+    "1":  { "$type": "dimension", "$value": "1mm",  "$description": "0.25× · sıkı içerik · satır içi gap" },
+    "2":  { "$type": "dimension", "$value": "2mm",  "$description": "0.5× · compact aralama" },
+    "3":  { "$type": "dimension", "$value": "3mm",  "$description": "0.75× · form girdi padding" },
+    "4":  { "$type": "dimension", "$value": "4mm",  "$description": "1× base · standart paragraph gap" },
+    "5":  { "$type": "dimension", "$value": "5mm",  "$description": "1.25× · kart padding" },
+    "6":  { "$type": "dimension", "$value": "6mm",  "$description": "1.5× · madde arası gap" },
+    "8":  { "$type": "dimension", "$value": "8mm",  "$description": "2× · bölüm gap" },
+    "12": { "$type": "dimension", "$value": "12mm", "$description": "3× · major bölüm ayraç" },
+    "16": { "$type": "dimension", "$value": "16mm", "$description": "4× · sub-bölüm opener gap" },
+    "24": { "$type": "dimension", "$value": "24mm", "$description": "6× · bölüm opener gap" },
+    "32": { "$type": "dimension", "$value": "32mm", "$description": "8× · mega-aralama (görünüm)" }
+  }
+}

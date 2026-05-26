@@ -1,0 +1,25 @@
+{
+  "$description": "DÜSTUR motion birincilleri · duration ve easing değerleri · Material Design easing standardı",
+  "duration": {
+    "fast": { "$type": "duration", "$value": "120ms", "$description": "Hover transitions" },
+    "base": { "$type": "duration", "$value": "240ms", "$description": "Modal/overlay aç-kapat" },
+    "slow": { "$type": "duration", "$value": "400ms", "$description": "Sayfa transitions" }
+  },
+  "easing": {
+    "standard": {
+      "$type": "cubicBezier",
+      "$value": [0.4, 0, 0.2, 1],
+      "$description": "Material Design standard curve"
+    },
+    "accelerate": {
+      "$type": "cubicBezier",
+      "$value": [0.4, 0, 1, 1],
+      "$description": "Çıkış · sayfa terk"
+    },
+    "decelerate": {
+      "$type": "cubicBezier",
+      "$value": [0, 0, 0.2, 1],
+      "$description": "Giriş · sayfa açılma"
+    }
+  }
+}

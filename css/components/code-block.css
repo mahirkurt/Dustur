@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · CODE BLOCK BİLEŞENİ
+   Kod sergisi · Syntax highlighting · dark theme
+   ═══════════════════════════════════════════════════════════════════ */
+
+.code-block {
+  background: #0A0A0A;
+  color: #E5E7EB;
+  border: 1px solid #1F2937;
+  margin: 3mm 0 4mm;
+  font-family: var(--tcm-family-mo);
+  font-variation-settings: "MONO" 1;
+  font-size: 7.5pt;
+  line-height: 1.65;
+  overflow: hidden;
+}
+
+.code-block-head {
+  background: #18181B;
+  border-bottom: 1px solid #2D2D33;
+  padding: 1.5mm 3mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 6.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.code-block-tab {
+  color: #64FFDA;
+  font-weight: 700;
+}
+
+.code-block-path {
+  color: #71717A;
+  font-size: 6pt;
+}
+
+.code-block-body {
+  padding: 3mm 4mm 3.5mm;
+  white-space: pre-wrap;
+}
+
+/* Syntax tokens */
+.code-block-body .ck { color: #C792EA; }                 /* keyword */
+.code-block-body .cs { color: #80CBC4; }                 /* string */
+.code-block-body .cn { color: #F78C6C; }                 /* number */
+.code-block-body .cc { color: #546E7A; font-style: italic; } /* comment */
+.code-block-body .cp { color: #F07178; }                 /* property */
+.code-block-body .cv { color: #FFCB6B; }                 /* variable */
+.code-block-body .ct { color: #82AAFF; }                 /* type */

@@ -1,0 +1,93 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · BADGE / ROZET BİLEŞENİ
+   Mevzuat kademesi rozetleri · 7 farklı tier varyantı
+   ═══════════════════════════════════════════════════════════════════ */
+
+.yuzey-badge,
+.yüzey-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8mm 2mm;
+  font-family: var(--tcm-rozet-family);
+  font-weight: var(--tcm-rozet-wght);
+  font-size: 6.5pt;
+  text-transform: uppercase;
+  letter-spacing: var(--tcm-rozet-ls);
+  line-height: 1;
+}
+
+/* Tier varyantları */
+.yuzey-badge.anayasa,
+.yüzey-badge.anayasa {
+  background: var(--tcm-anayasa-mark);
+  color: var(--tcm-anayasa-text);
+}
+
+.yuzey-badge.kanun,
+.yüzey-badge.kanun {
+  background: var(--tcm-kanun-rozet-bg);
+  color: var(--tcm-kanun-rozet-text);
+  border: 1px solid var(--tcm-color-turkuvaz-5);
+}
+
+.yuzey-badge.cbk,
+.yüzey-badge.cbk {
+  background: var(--tcm-cbk-rozet-bg);
+  color: var(--tcm-cbk-rozet-text);
+  border: 1px solid var(--tcm-color-bordo-5);
+}
+
+.yuzey-badge.yonetmelik,
+.yüzey-badge.yonetmelik {
+  background: var(--tcm-yonetmelik-rozet-bg);
+  color: var(--tcm-kanun-rozet-text);
+  border: 1px solid var(--tcm-color-turkuvaz-4);
+}
+
+.yuzey-badge.aym,
+.yüzey-badge.aym {
+  background: var(--tcm-aym-rozet-bg);
+  color: var(--tcm-aym-rozet-text);
+  border: 1px solid var(--tcm-color-lacivert-5);
+}
+
+.yuzey-badge.teblig,
+.yüzey-badge.teblig {
+  background: var(--tcm-teblig-bg);
+  color: var(--tcm-color-amber-11);
+  border: 1px solid var(--tcm-color-amber-5);
+}
+
+.yuzey-badge.genelge,
+.yüzey-badge.genelge {
+  background: var(--tcm-genelge-bg);
+  color: var(--tcm-color-gri-11);
+  border: 1px solid var(--tcm-color-gri-5);
+}
+
+/* AYM iptal hap (madde durum işareti) */
+.aym-iptal-hap {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4mm 1.6mm;
+  background: var(--tcm-aym-iptal-hap-bg);
+  color: var(--tcm-aym-iptal-hap-text);
+  font-family: var(--tcm-family-as);
+  font-weight: 700;
+  font-size: 6pt;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+/* Yüzey kenarlık-top mührü (madde tip ribbon) */
+.yuzey-render-bord,
+.yüzey-render-bord {
+  height: 3px;
+  background: var(--tcm-anayasa-mark);
+}
+.yuzey-render-bord.kanun,      .yüzey-render-bord.kanun      { background: var(--tcm-kanun-mark); }
+.yuzey-render-bord.cbk,        .yüzey-render-bord.cbk        { background: var(--tcm-cbk-mark); }
+.yuzey-render-bord.yonetmelik, .yüzey-render-bord.yonetmelik { background: var(--tcm-yonetmelik-mark); height: 2px; }
+.yuzey-render-bord.aym,        .yüzey-render-bord.aym        { background: var(--tcm-aym-mark); }
+.yuzey-render-bord.teblig,     .yüzey-render-bord.teblig     { background: var(--tcm-teblig-mark); height: 2px; }

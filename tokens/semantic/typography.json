@@ -1,0 +1,86 @@
+{
+  "$description": "DÜSTUR semantic tipografi jetonları · UI rolüne göre adlandırılmış, primitive'lere referans tutan kompozit jetonlar",
+  "typography": {
+    "display": {
+      "$description": "Display başlık · kapak · bölüm açılışı (96-144pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.144}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.700}" },
+      "soft":   { "$type": "number",     "$value": "{fr.soft.25}" },
+      "wonk":   { "$type": "number",     "$value": "{fr.wonk.1}" }
+    },
+    "page-title": {
+      "$description": "Sayfa başlığı · yüzey başlık (42-72pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.96}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.700}" },
+      "soft":   { "$type": "number",     "$value": "{fr.soft.25}" },
+      "wonk":   { "$type": "number",     "$value": "{fr.wonk.1}" }
+    },
+    "section": {
+      "$description": "Bölüm başlığı (32-42pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.36}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.700}" },
+      "soft":   { "$type": "number",     "$value": "{fr.soft.12}" },
+      "wonk":   { "$type": "number",     "$value": "{fr.wonk.1}" }
+    },
+    "heading-3": {
+      "$description": "Alt başlık (16-20pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.32}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.600}" },
+      "soft":   { "$type": "number",     "$value": "{fr.soft.0}" },
+      "wonk":   { "$type": "number",     "$value": "{fr.wonk.0}" }
+    },
+    "heading-4": {
+      "$description": "Alt başlık 4 · sans · UI",
+      "family": { "$type": "fontFamily", "$value": "{family.as}" },
+      "wght":   { "$type": "number",     "$value": "{as.wght.600}" }
+    },
+    "lead": {
+      "$description": "Giriş paragrafı · vurgulu metin (12-13pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.20}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.400}" },
+      "soft":   { "$type": "number",     "$value": "{fr.soft.25}" },
+      "wonk":   { "$type": "number",     "$value": "{fr.wonk.0}" }
+    },
+    "madde-body": {
+      "$description": "Madde gövdesi · ana mevzuat metni (10.5-11pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.14}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.400}" }
+    },
+    "footnote": {
+      "$description": "Dipnot · footnote (8-9pt)",
+      "family": { "$type": "fontFamily", "$value": "{family.fr}" },
+      "opsz":   { "$type": "number",     "$value": "{fr.opsz.9}" },
+      "wght":   { "$type": "number",     "$value": "{fr.wght.400}" }
+    },
+    "ui-button": {
+      "$description": "UI buton · navigasyon · etiket",
+      "family": { "$type": "fontFamily", "$value": "{family.as}" },
+      "wght":   { "$type": "number",     "$value": "{as.wght.600}" }
+    },
+    "eyebrow": {
+      "$description": "Üst etiket · all-caps mono",
+      "family":        { "$type": "fontFamily",  "$value": "{family.mo}" },
+      "letter-spacing":{ "$type": "dimension",   "$value": "{letter-spacing.widest}" },
+      "transform":     { "$type": "string",      "$value": "uppercase" }
+    },
+    "rozet": {
+      "$description": "Rozet · kademe etiketi (6.5-7pt all-caps)",
+      "family":        { "$type": "fontFamily",  "$value": "{family.as}" },
+      "wght":          { "$type": "number",      "$value": "{as.wght.700}" },
+      "letter-spacing":{ "$type": "dimension",   "$value": "{letter-spacing.wider}" },
+      "transform":     { "$type": "string",      "$value": "uppercase" }
+    },
+    "uri": {
+      "$description": "URI · kanun no · veri ifadeleri (mono)",
+      "family":        { "$type": "fontFamily",  "$value": "{family.mo}" },
+      "wght":          { "$type": "number",      "$value": "{mo.wght.500}" },
+      "letter-spacing":{ "$type": "dimension",   "$value": "{letter-spacing.wide}" }
+    }
+  }
+}
