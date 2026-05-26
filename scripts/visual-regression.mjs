@@ -101,12 +101,18 @@ const results = [];
 for (const p of PAGES) {
   await page.setViewportSize(p.vp);
   const url = `http://127.0.0.1:${port}${p.path}`;
-  await page.goto(url, { waitUntil: "networkidle", timeout: 10000 }).catch(() => {});
+  await page.goto(url, { waitUntil: "networkidle", timeout: 15000 }).catch(() => {});
+
+  // Determinism: tüm font'lar yüklenene kadar bekle (race condition önlemi)
+  await page.evaluate(() => document.fonts.ready).catch(() => {});
 
   if (p.theme) {
     await page.evaluate(t => document.documentElement.setAttribute("data-tema", t), p.theme);
-    await page.waitForTimeout(100);
+    await page.evaluate(() => document.fonts.ready).catch(() => {});
   }
+
+  // Ek tampon: layout/paint kararlı hâle gelene kadar
+  await page.waitForTimeout(200);
 
   const buf = await page.screenshot({ fullPage: true, type: "png" });
   const currentPath = `${CURRENT_DIR}/${p.name}.png`;
