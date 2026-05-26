@@ -1,0 +1,62 @@
+name: Hata Raporu · Bug
+description: Sistemde bir hata, tutarsızlık veya beklenmeyen davranış
+title: "[Hata] "
+labels: ["hata", "triaj"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Hata Tanımı
+      description: Ne oldu? Ne bekleniyordu?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Düstur Versiyon
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Etkilenen Yüzey / Bileşen
+      multiple: true
+      options:
+        - "Tokens (JSON)"
+        - "CSS · base"
+        - "CSS · components"
+        - "CSS · themes (HC / reduced motion / print)"
+        - "Akoma Ntoso · element-styles"
+        - "Documentation"
+        - "Build pipeline"
+        - "Reference HTML (Paged.js)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Yeniden Üretme Adımları
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ortam
+      placeholder: |
+        Tarayıcı: Chrome 130
+        OS: Ubuntu 24.04
+        Node: 20.x
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Ekran Görüntüsü / CSS dökümü

@@ -1,0 +1,49 @@
+{
+  "$description": "DÜSTUR component-level jetonlar · Rozet bileşeni · semantic tier'lara referans",
+  "$extensions": {
+    "tr.tcm.bileşen": "rozet",
+    "tr.tcm.css-class": ".yuzey-badge"
+  },
+  "rozet": {
+    "padding-x": { "$type": "dimension", "$value": "{space.2}",        "$description": "Yatay padding" },
+    "padding-y": { "$type": "dimension", "$value": "0.8mm",            "$description": "Dikey padding" },
+    "font-size": { "$type": "dimension", "$value": "6.5pt",            "$description": "Rozet metin boyu" },
+    "letter-spacing": { "$type": "dimension", "$value": "{letter-spacing.wider}", "$description": "Tracking" },
+    "line-height": { "$type": "number", "$value": 1.0,                 "$description": "Tek satır" },
+    "border-width": { "$type": "dimension", "$value": "1px",           "$description": "Outline-style rozetler için" },
+    "anayasa": {
+      "bg":   { "$type": "color", "$value": "{tier.anayasa.mark}" },
+      "text": { "$type": "color", "$value": "{tier.anayasa.text}" }
+    },
+    "kanun": {
+      "bg":     { "$type": "color", "$value": "{tier.kanun.rozet-bg}" },
+      "text":   { "$type": "color", "$value": "{tier.kanun.rozet-text}" },
+      "border": { "$type": "color", "$value": "{color.turkuvaz.5}" }
+    },
+    "cbk": {
+      "bg":     { "$type": "color", "$value": "{tier.cbk.rozet-bg}" },
+      "text":   { "$type": "color", "$value": "{tier.cbk.rozet-text}" },
+      "border": { "$type": "color", "$value": "{color.bordo.5}" }
+    },
+    "yonetmelik": {
+      "bg":     { "$type": "color", "$value": "{tier.yonetmelik.rozet-bg}" },
+      "text":   { "$type": "color", "$value": "{tier.kanun.rozet-text}" },
+      "border": { "$type": "color", "$value": "{color.turkuvaz.4}" }
+    },
+    "aym": {
+      "bg":     { "$type": "color", "$value": "{tier.aym.rozet-bg}" },
+      "text":   { "$type": "color", "$value": "{tier.aym.rozet-text}" },
+      "border": { "$type": "color", "$value": "{color.lacivert.5}" }
+    },
+    "teblig": {
+      "bg":     { "$type": "color", "$value": "{tier.teblig.bg}" },
+      "text":   { "$type": "color", "$value": "{color.amber.11}" },
+      "border": { "$type": "color", "$value": "{color.amber.5}" }
+    },
+    "genelge": {
+      "bg":     { "$type": "color", "$value": "{tier.genelge.bg}" },
+      "text":   { "$type": "color", "$value": "{color.gri.11}" },
+      "border": { "$type": "color", "$value": "{color.gri.5}" }
+    }
+  }
+}

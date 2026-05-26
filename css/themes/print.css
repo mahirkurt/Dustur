@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · BASKI TEMA
+   Specimen miras renkleri (FAF6EE) sadece baskıya özgü.
+   Ekran teması ise nötr beyaz (gri-1).
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media print {
+  :root {
+    --tcm-sayfa-bg:     #FAF6EE;   /* Specimen miras kâğıdı */
+    --tcm-sayfa-deep:   #E9E2D2;
+    --tcm-panel-bg:     #FFFFFF;
+    --tcm-panel-subtle: #F3EEE2;
+    --tcm-stripe:       #F7F1E3;
+    --tcm-border-subtle:  #E9E2D2;
+    --tcm-border-default: #D8D1C4;
+  }
+}
+
+[data-tema="baski"] {
+  --tcm-sayfa-bg:     #FAF6EE;
+  --tcm-sayfa-deep:   #E9E2D2;
+  --tcm-panel-bg:     #FFFFFF;
+  --tcm-panel-subtle: #F3EEE2;
+  --tcm-stripe:       #F7F1E3;
+  --tcm-border-subtle:  #E9E2D2;
+  --tcm-border-default: #D8D1C4;
+}
+
+[data-tema="ekran"] {
+  --tcm-sayfa-bg:     var(--tcm-color-gri-1);
+  --tcm-sayfa-deep:   var(--tcm-color-gri-3);
+  --tcm-panel-bg:     #FFFFFF;
+  --tcm-panel-subtle: var(--tcm-color-gri-2);
+  --tcm-stripe:       var(--tcm-color-gri-2);
+  --tcm-border-subtle:  var(--tcm-color-gri-4);
+  --tcm-border-default: var(--tcm-color-gri-5);
+}

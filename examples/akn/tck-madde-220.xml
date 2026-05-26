@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Düstur · Akoma Ntoso 3.0 örneği
+  Türk Ceza Kanunu (5237) · Madde 220 · 2026-01-15 konsolide
+  ELI URI:  /akn/tr/act/2004/5237/2026-01-15/tur@main/article_220
+-->
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="act" contains="originalVersion">
+    <meta>
+      <identification source="#tcm">
+        <FRBRWork>
+          <FRBRthis value="/akn/tr/act/2004/5237/!main"/>
+          <FRBRuri value="/akn/tr/act/2004/5237"/>
+          <FRBRdate date="2004-09-26" name="enactment"/>
+          <FRBRauthor href="#tbmm"/>
+          <FRBRcountry value="tr"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/tr/act/2004/5237/2026-01-15/tur@main"/>
+          <FRBRuri value="/akn/tr/act/2004/5237/2026-01-15/tur@"/>
+          <FRBRdate date="2026-01-15" name="consolidation"/>
+          <FRBRauthor href="#tcm"/>
+          <FRBRlanguage language="tur"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/tr/act/2004/5237/2026-01-15/tur@main.xml"/>
+          <FRBRuri value="/akn/tr/act/2004/5237/2026-01-15/tur@.xml"/>
+          <FRBRdate date="2026-01-15" name="generation"/>
+          <FRBRauthor href="#tcm"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#tcm">
+        <TLCOrganization eId="tbmm" href="/akn/ontology/organization/tr/tbmm" showAs="Türkiye Büyük Millet Meclisi"/>
+        <TLCOrganization eId="tcm" href="/akn/ontology/organization/tr/tcm" showAs="T.C. Mevzuat Tasarım Sistemi"/>
+      </references>
+    </meta>
+
+    <preface>
+      <p>
+        <docNumber>5237 sayılı</docNumber>
+        <docTitle>Türk Ceza Kanunu</docTitle>
+      </p>
+      <p><docDate date="2004-09-26">26 Eylül 2004</docDate> · <docProponent>TBMM</docProponent></p>
+    </preface>
+
+    <body>
+      <article eId="art_220">
+        <num>Madde 220</num>
+        <heading>Suç işlemek amacıyla örgüt kurma</heading>
+
+        <paragraph eId="art_220__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Kanunun suç saydığı fiilleri işlemek amacıyla örgüt kuranlar veya yönetenler, örgütün yapısı, sahip bulunduğu üye sayısı ile araç ve gereç bakımından amaç suçları işlemeye elverişli olması halinde, dört yıldan sekiz yıla kadar hapis cezası ile cezalandırılır.</p>
+          </content>
+        </paragraph>
+
+        <paragraph eId="art_220__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Suç işlemek amacıyla kurulmuş olan örgüte üye olanlar, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır.</p>
+          </content>
+        </paragraph>
+
+        <paragraph eId="art_220__para_3">
+          <num>(3)</num>
+          <content>
+            <p>Örgütün silahlı olması halinde, yukarıdaki fıkralara göre verilecek ceza dörtte birinden yarısına kadar artırılır.</p>
+          </content>
+        </paragraph>
+
+        <paragraph eId="art_220__para_4">
+          <num>(4)</num>
+          <content>
+            <p>Örgütün faaliyeti çerçevesinde suç işlenmesi halinde, ayrıca bu suçlardan dolayı da cezaya hükmolunur. <ref href="/akn/tr/act/2004/5237/2026-01-15/tur@main/article_221">Bkz. Madde 221</ref>.</p>
+          </content>
+        </paragraph>
+      </article>
+    </body>
+  </act>
+</akomaNtoso>

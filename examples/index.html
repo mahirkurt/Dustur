@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Düstur · Component Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&family=Albert+Sans:wght@400..700&family=Recursive:MONO,slnt,wght@0..1,-15..0,300..1000&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/tokens/primitives.css">
+<link rel="stylesheet" href="../css/tokens/semantics.css">
+<link rel="stylesheet" href="../css/themes/print.css">
+<link rel="stylesheet" href="../css/themes/high-contrast.css">
+<link rel="stylesheet" href="../css/themes/reduced-motion.css">
+<link rel="stylesheet" href="../css/base/reset.css">
+<link rel="stylesheet" href="../css/base/typography.css">
+<link rel="stylesheet" href="../css/components/badges.css">
+<link rel="stylesheet" href="../css/components/code-block.css">
+<link rel="stylesheet" href="../css/components/quote-block.css">
+<link rel="stylesheet" href="../css/components/token-card.css">
+<link rel="stylesheet" href="../css/akn/element-styles.css">
+
+<style>
+  html { font-size: 11pt; }
+  body { padding: 0; max-width: none; }
+
+  /* App chrome */
+  .app { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+  .nav { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: var(--tcm-panel-subtle); border-right: 1px solid var(--tcm-border-default); padding: var(--tcm-space-5) var(--tcm-space-4); }
+  .nav-h { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 60, "wght" 700, "SOFT" 20, "WONK" 1; font-size: 20pt; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: var(--tcm-space-2); }
+  .nav-sub { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.18em; color: var(--tcm-text-muted); margin-bottom: var(--tcm-space-6); }
+  .nav ul { list-style: none; padding: 0; margin: 0; }
+  .nav li { margin-bottom: 2.5mm; }
+  .nav a { display: block; padding: 1.5mm 2mm; color: var(--tcm-text-2); text-decoration: none; border-left: 2px solid transparent; font-size: 8.5pt; }
+  .nav a:hover { color: var(--tcm-text-body); background: var(--tcm-panel-bg); border-left-color: var(--tcm-color-turkuvaz-6); }
+  .nav a.active { color: var(--tcm-color-turkuvaz-11); border-left-color: var(--tcm-color-turkuvaz-9); font-weight: 600; }
+  .nav-tema { margin-top: var(--tcm-space-6); padding-top: var(--tcm-space-4); border-top: 1px solid var(--tcm-border-default); display: flex; flex-direction: column; gap: 1.5mm; }
+  .nav-tema-h { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.18em; color: var(--tcm-text-muted); }
+  .nav-tema button { font-family: var(--tcm-family-as); font-size: 8pt; padding: 1.5mm 2.5mm; background: var(--tcm-panel-bg); border: 1px solid var(--tcm-border-default); color: var(--tcm-text-body); cursor: pointer; text-align: left; }
+  .nav-tema button.active { background: var(--tcm-color-turkuvaz-9); color: var(--tcm-color-gri-1); border-color: var(--tcm-color-turkuvaz-9); }
+
+  .main { padding: var(--tcm-space-6) var(--tcm-space-8); max-width: 200mm; }
+  section.demo { margin-bottom: var(--tcm-space-12); scroll-margin-top: var(--tcm-space-6); }
+  section.demo > h2 { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 96, "wght" 700, "SOFT" 25, "WONK" 1; font-size: 38pt; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: var(--tcm-space-2); }
+  section.demo > .demo-eb { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.22em; color: var(--tcm-color-turkuvaz-9); margin-bottom: var(--tcm-space-2); }
+  section.demo > .demo-sub { font-family: var(--tcm-family-fr); font-style: italic; font-size: 12pt; color: var(--tcm-text-2); margin-bottom: var(--tcm-space-6); border-bottom: 1px solid var(--tcm-border-default); padding-bottom: var(--tcm-space-3); }
+
+  .demo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--tcm-space-3); margin-bottom: var(--tcm-space-5); }
+  .swatch { background: var(--tcm-panel-bg); border: 1px solid var(--tcm-border-default); }
+  .swatch-block { height: 60px; }
+  .swatch-meta { padding: 2mm 3mm; font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 7pt; }
+  .swatch-name { color: var(--tcm-text-body); font-weight: 600; display: block; }
+  .swatch-hex  { color: var(--tcm-text-muted); display: block; }
+
+  .scale { display: flex; height: 36px; border: 1px solid var(--tcm-border-default); margin-bottom: var(--tcm-space-3); }
+  .scale > div { flex: 1; display: flex; align-items: center; justify-content: center; font-family: var(--tcm-family-mo); font-size: 6pt; }
+
+  .stack { display: flex; gap: var(--tcm-space-3); flex-wrap: wrap; align-items: center; margin-bottom: var(--tcm-space-4); }
+
+  .type-row { padding: var(--tcm-space-3) 0; border-bottom: 1px dotted var(--tcm-border-default); }
+  .type-row:last-child { border-bottom: none; }
+  .type-row > .meta { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 7pt; color: var(--tcm-text-muted); margin-bottom: var(--tcm-space-1); }
+
+  pre { background: var(--tcm-panel-subtle); border: 1px solid var(--tcm-border-default); padding: var(--tcm-space-3); font-family: var(--tcm-family-mo); font-size: 8pt; overflow-x: auto; }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <nav class="nav">
+    <div class="nav-h">Düstur</div>
+    <div class="nav-sub">Component Gallery</div>
+    <ul>
+      <li><a href="#renk-primitives">Renk · Primitives</a></li>
+      <li><a href="#renk-semantic">Renk · Tier mührler</a></li>
+      <li><a href="#tipografi">Tipografi</a></li>
+      <li><a href="#rozet">Rozetler</a></li>
+      <li><a href="#tier-border">Tier border</a></li>
+      <li><a href="#madde-durum">Madde durumları</a></li>
+      <li><a href="#akn">Akoma Ntoso</a></li>
+      <li><a href="#alinti">Alıntı blokları</a></li>
+      <li><a href="#tokens">Token kartları</a></li>
+    </ul>
+    <div class="nav-tema">
+      <div class="nav-tema-h">Tema</div>
+      <button data-tema-set="" class="active">Otomatik</button>
+      <button data-tema-set="ekran">Ekran (beyaz)</button>
+      <button data-tema-set="baski">Baskı (specimen)</button>
+      <button data-tema-set="yuksek-kontrast">Yüksek kontrast</button>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="demo" id="renk-primitives">
+      <div class="demo-eb">● 01 / 09 · Primitive</div>
+      <h2>Renk · Primitives</h2>
+      <p class="demo-sub">6 aile × 12 step = 72 jeton · LCH algısal-eşit aralanmış.</p>
+
+      <h3 style="font-family:var(--tcm-family-as);font-weight:600;font-size:10pt;margin:5mm 0 2mm">TBK · Türk Bayrağı Kırmızısı</h3>
+      <div class="scale">
+        <div style="background:#FFFCFC;color:#5D0107">1</div><div style="background:#FFF7F7;color:#5D0107">2</div><div style="background:#FEEBEC;color:#5D0107">3</div><div style="background:#FDD8DA;color:#5D0107">4</div><div style="background:#FBC0C3;color:#5D0107">5</div><div style="background:#F89DA2;color:#5D0107">6</div><div style="background:#F5717A;color:#FFF">7</div><div style="background:#EE3F4A;color:#FFF">8</div><div style="background:#E30A17;color:#FFF">9</div><div style="background:#C40612;color:#FFF">10</div><div style="background:#A1050F;color:#FFF">11</div><div style="background:#5D0107;color:#FFF">12</div>
+      </div>
+
+      <h3 style="font-family:var(--tcm-family-as);font-weight:600;font-size:10pt;margin:5mm 0 2mm">Turkuvaz · Anadolu Selçuklu</h3>
+      <div class="scale">
+        <div style="background:#F7FCFC;color:#053334">1</div><div style="background:#EBF6F6;color:#053334">2</div><div style="background:#D7EDEE;color:#053334">3</div><div style="background:#B9E0E1;color:#053334">4</div><div style="background:#94CFD0;color:#053334">5</div><div style="background:#6BB9BB;color:#053334">6</div><div style="background:#43A1A2;color:#FFF">7</div><div style="background:#298F90;color:#FFF">8</div><div style="background:#1A8B8C;color:#FFF">9</div><div style="background:#137070;color:#FFF">10</div><div style="background:#0C5455;color:#FFF">11</div><div style="background:#053334;color:#FFF">12</div>
+      </div>
+
+      <h3 style="font-family:var(--tcm-family-as);font-weight:600;font-size:10pt;margin:5mm 0 2mm">Bordo · CBK</h3>
+      <div class="scale">
+        <div style="background:#FCFAFA;color:#260606">1</div><div style="background:#F8F2F2;color:#260606">2</div><div style="background:#EFE0E0;color:#260606">3</div><div style="background:#E0C3C3;color:#260606">4</div><div style="background:#CCA1A2;color:#260606">5</div><div style="background:#B17B7C;color:#260606">6</div><div style="background:#945858;color:#FFF">7</div><div style="background:#763A3B;color:#FFF">8</div><div style="background:#5C1A1B;color:#FFF">9</div><div style="background:#4A1314;color:#FFF">10</div><div style="background:#3A0D0D;color:#FFF">11</div><div style="background:#260606;color:#FFF">12</div>
+      </div>
+
+      <h3 style="font-family:var(--tcm-family-as);font-weight:600;font-size:10pt;margin:5mm 0 2mm">Lacivert · AYM</h3>
+      <div class="scale">
+        <div style="background:#FBFCFE;color:#000C24">1</div><div style="background:#F2F5FB;color:#000C24">2</div><div style="background:#E1E8F4;color:#000C24">3</div><div style="background:#C8D4EB;color:#000C24">4</div><div style="background:#A5B7DD;color:#000C24">5</div><div style="background:#7A93CB;color:#000C24">6</div><div style="background:#4F6FB5;color:#FFF">7</div><div style="background:#284C97;color:#FFF">8</div><div style="background:#002664;color:#FFF">9</div><div style="background:#001E53;color:#FFF">10</div><div style="background:#001640;color:#FFF">11</div><div style="background:#000C24;color:#FFF">12</div>
+      </div>
+
+      <h3 style="font-family:var(--tcm-family-as);font-weight:600;font-size:10pt;margin:5mm 0 2mm">Amber · Tebliğ</h3>
+      <div class="scale">
+        <div style="background:#FEFCF8;color:#451900">1</div><div style="background:#FDF7EB;color:#451900">2</div><div style="background:#F9ECCF;color:#451900">3</div><div style="background:#F3DAA8;color:#451900">4</div><div style="background:#EAC07A;color:#451900">5</div><div style="background:#DDA34F;color:#451900">6</div><div style="background:#CB8329;color:#FFF">7</div><div style="background:#BB6A14;color:#FFF">8</div><div style="background:#B45309;color:#FFF">9</div><div style="background:#963F03;color:#FFF">10</div><div style="background:#762D00;color:#FFF">11</div><div style="background:#451900;color:#FFF">12</div>
+      </div>
+
+      <h3 style="font-family:var(--tcm-family-as);font-weight:600;font-size:10pt;margin:5mm 0 2mm">Nötr Gri · UI Omurgası</h3>
+      <div class="scale">
+        <div style="background:#FCFCFC;color:#0A0A0A">1</div><div style="background:#F7F7F7;color:#0A0A0A">2</div><div style="background:#EEEEEE;color:#0A0A0A">3</div><div style="background:#E0E0E0;color:#0A0A0A">4</div><div style="background:#CCCCCC;color:#0A0A0A">5</div><div style="background:#B0B0B0;color:#0A0A0A">6</div><div style="background:#909090;color:#FFF">7</div><div style="background:#707070;color:#FFF">8</div><div style="background:#525252;color:#FFF">9</div><div style="background:#3D3D3D;color:#FFF">10</div><div style="background:#262626;color:#FFF">11</div><div style="background:#0A0A0A;color:#FFF">12</div>
+      </div>
+    </section>
+
+    <section class="demo" id="renk-semantic">
+      <div class="demo-eb">● 02 / 09 · Semantic</div>
+      <h2>Tier Mührleri</h2>
+      <p class="demo-sub">Mevzuat kademelerinin kromatik kimliği · semantic jeton katmanı.</p>
+      <div class="demo-grid">
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-anayasa-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-anayasa-mark</span><span class="swatch-hex">→ color.tbk.9</span></div></div>
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-aym-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-aym-mark</span><span class="swatch-hex">→ color.lacivert.9</span></div></div>
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-cbk-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-cbk-mark</span><span class="swatch-hex">→ color.bordo.9</span></div></div>
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-kanun-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-kanun-mark</span><span class="swatch-hex">→ color.turkuvaz.9</span></div></div>
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-yonetmelik-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-yonetmelik-mark</span><span class="swatch-hex">→ color.turkuvaz.7</span></div></div>
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-teblig-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-teblig-mark</span><span class="swatch-hex">→ color.amber.9</span></div></div>
+        <div class="swatch"><div class="swatch-block" style="background:var(--tcm-genelge-mark)"></div><div class="swatch-meta"><span class="swatch-name">--tcm-genelge-mark</span><span class="swatch-hex">→ color.gri.9</span></div></div>
+      </div>
+    </section>
+
+    <section class="demo" id="tipografi">
+      <div class="demo-eb">● 03 / 09 · Type</div>
+      <h2>Tipografi Skalası</h2>
+      <p class="demo-sub">3 variable font ailesi · 12 UI rolü.</p>
+      <div class="type-row"><div class="meta">.t-display · Fraunces · opsz 144 · wght 700 · WONK 1</div><div class="t-display" style="font-size:64pt;line-height:1">Hukuk</div></div>
+      <div class="type-row"><div class="meta">.t-page-title · Fraunces · opsz 96 · wght 700 · SOFT 20</div><div class="t-page-title">Türk Ceza Kanunu</div></div>
+      <div class="type-row"><div class="meta">.t-section · Fraunces · opsz 36</div><div class="t-section">Madde 220</div></div>
+      <div class="type-row"><div class="meta">.t-h3 · Fraunces · opsz 32</div><div class="t-h3" style="border:none;margin:0;padding:0">Örgüt kurma</div></div>
+      <div class="type-row"><div class="meta">.t-lead · Fraunces · opsz 20 · italic</div><p class="t-lead" style="margin:0">Türkiye Cumhuriyeti'nin temel mevzuat sistemi, üç bağımsız evreni birleştirir.</p></div>
+      <div class="type-row"><div class="meta">.t-body · Fraunces · opsz 14 · 10.5pt body</div><p style="font-family:var(--tcm-family-fr);font-variation-settings:'opsz' 14,'wght' 400;font-size:10.5pt;line-height:1.62;margin:0">Kanunun suç saydığı fiilleri işlemek amacıyla örgüt kuranlar veya yönetenler, örgütün yapısı ve sahip bulunduğu üye sayısı bakımından elverişli olması halinde cezalandırılır.</p></div>
+      <div class="type-row"><div class="meta">.t-footnote · Fraunces · opsz 9 · italic</div><p style="font-family:var(--tcm-family-fr);font-variation-settings:'opsz' 9,'wght' 400;font-size:8.5pt;font-style:italic;color:var(--tcm-text-2);margin:0">Bu dipnot 9pt'de optical sizing axis ile farklı çizimle render edilir.</p></div>
+      <div class="type-row"><div class="meta">.t-eyebrow · Recursive · MONO · uppercase</div><span class="t-eyebrow">Bölüm I · Manifesto</span></div>
+      <div class="type-row"><div class="meta">.t-uri · Recursive · MONO 1</div><span class="t-uri">/akn/tr/act/2004/5237/2026-01-15/main/article_220</span></div>
+    </section>
+
+    <section class="demo" id="rozet">
+      <div class="demo-eb">● 04 / 09 · Component</div>
+      <h2>Rozet Bileşeni</h2>
+      <p class="demo-sub">Mevzuat kademesi rozetleri · 7 tier varyantı.</p>
+      <div class="stack">
+        <span class="yuzey-badge anayasa">ANAYASA</span>
+        <span class="yuzey-badge aym">AYM KARARI</span>
+        <span class="yuzey-badge cbk">CBK</span>
+        <span class="yuzey-badge kanun">KANUN</span>
+        <span class="yuzey-badge yonetmelik">YÖNETMELİK</span>
+        <span class="yuzey-badge teblig">TEBLİĞ</span>
+        <span class="yuzey-badge genelge">GENELGE</span>
+      </div>
+    </section>
+
+    <section class="demo" id="tier-border">
+      <div class="demo-eb">● 05 / 09 · Component</div>
+      <h2>Tier Border (Yüzey Mührü)</h2>
+      <p class="demo-sub">Her yüzey üst kısmında 3px (veya 2px) yatay bant ile kademesini ilan eder.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--tcm-space-3)">
+        <div><div class="yuzey-render-bord"></div><div style="padding:2mm 0;font-size:8pt;color:var(--tcm-text-muted)">Anayasa · 3px</div></div>
+        <div><div class="yuzey-render-bord kanun"></div><div style="padding:2mm 0;font-size:8pt;color:var(--tcm-text-muted)">Kanun · 3px</div></div>
+        <div><div class="yuzey-render-bord cbk"></div><div style="padding:2mm 0;font-size:8pt;color:var(--tcm-text-muted)">CBK · 3px</div></div>
+        <div><div class="yuzey-render-bord yonetmelik"></div><div style="padding:2mm 0;font-size:8pt;color:var(--tcm-text-muted)">Yönetmelik · 2px</div></div>
+        <div><div class="yuzey-render-bord aym"></div><div style="padding:2mm 0;font-size:8pt;color:var(--tcm-text-muted)">AYM · 3px</div></div>
+        <div><div class="yuzey-render-bord teblig"></div><div style="padding:2mm 0;font-size:8pt;color:var(--tcm-text-muted)">Tebliğ · 2px</div></div>
+      </div>
+    </section>
+
+    <section class="demo" id="madde-durum">
+      <div class="demo-eb">● 06 / 09 · Status</div>
+      <h2>Madde Durum İşaretleri</h2>
+      <p class="demo-sub">Yürürlükte · Mülga · AYM İptal · Değişiklik bekleyen.</p>
+      <div class="stack">
+        <span class="aym-iptal-hap">AYM İPTAL</span>
+        <span style="background:var(--tcm-color-amber-2);color:var(--tcm-color-amber-11);font-family:var(--tcm-family-as);font-weight:700;font-size:6pt;letter-spacing:0.1em;padding:0.4mm 1.6mm;line-height:1">DEĞİŞİKLİK BEKLEYEN</span>
+        <span style="text-decoration:line-through;color:var(--tcm-color-gri-7);opacity:0.6;font-family:var(--tcm-family-fr);font-size:10pt">Mülga: bu madde 7188 sayılı Kanun ile yürürlükten kaldırılmıştır.</span>
+      </div>
+    </section>
+
+    <section class="demo" id="akn">
+      <div class="demo-eb">● 07 / 09 · Akoma Ntoso</div>
+      <h2>Akoma Ntoso Element Stilleri</h2>
+      <p class="demo-sub">XML element'ler doğrudan render edildiğinde semantic jetonlar otomatik uygulanır.</p>
+
+      <article class="akn-act">
+        <h3 class="akn-heading">Türk Ceza Kanunu</h3>
+        <section class="akn-article" id="article_220">
+          <span class="akn-num">Madde 220</span>
+          <span class="akn-heading">Suç işlemek amacıyla örgüt kurma</span>
+          <div class="akn-paragraph">
+            <span class="akn-num">(1)</span>
+            Kanunun suç saydığı fiilleri işlemek amacıyla örgüt kuranlar veya yönetenler...
+          </div>
+          <div class="akn-paragraph akn-status-pending">
+            <span class="akn-num">(2)</span>
+            Suç işlemek amacıyla kurulmuş olan örgüte üye olanlar...
+          </div>
+          <div class="akn-paragraph">
+            <span class="akn-num">(3)</span>
+            Örgütün <a class="akn-ref" href="#article_221">Madde 221</a> hükümlerinde tanımlanan silahlı olması halinde...
+          </div>
+        </section>
+      </article>
+
+      <pre style="margin-top:var(--tcm-space-4)">&lt;article class="akn-act"&gt;
+  &lt;section class="akn-article" id="article_220"&gt;
+    &lt;span class="akn-num"&gt;Madde 220&lt;/span&gt;
+    &lt;span class="akn-heading"&gt;Suç işlemek amacıyla örgüt kurma&lt;/span&gt;
+    &lt;div class="akn-paragraph"&gt;&lt;span class="akn-num"&gt;(1)&lt;/span&gt; ...&lt;/div&gt;
+  &lt;/section&gt;
+&lt;/article&gt;</pre>
+    </section>
+
+    <section class="demo" id="alinti">
+      <div class="demo-eb">● 08 / 09 · Component</div>
+      <h2>Doktriner Alıntı Blokları</h2>
+      <p class="demo-sub">Doktrinin özetlendiği vurgu kutuları · 5 tier varyantı.</p>
+
+      <div class="dq-block tur-left">
+        <span class="dq-block-mark">"</span>
+        <p class="dq-block-tx">Bir tasarım sistemi insan tarafından <em>okunsa</em> bile, makine tarafından <em>uygulanmadığı</em> sürece çoğaltılamaz, devredilemez, sürdürülemez.</p>
+        <span class="dq-block-attr">— Bölüm IV · Jeton Mimarisi Doktrini</span>
+      </div>
+
+      <div class="dq-block tbk-left">
+        <span class="dq-block-mark">"</span>
+        <p class="dq-block-tx">Jeton mimarisi sistemin <em>anayasal mührüdür</em>. Bir primitive'in değiştirilmesi, sistemin sözleşmesinin değiştirilmesidir.</p>
+        <span class="dq-block-attr">— Bölüm VII · Jeton Yönetişim Doktrini</span>
+      </div>
+    </section>
+
+    <section class="demo" id="tokens">
+      <div class="demo-eb">● 09 / 09 · Token</div>
+      <h2>Token Kartları</h2>
+      <p class="demo-sub">Üç katmanın sergisi: primitive · semantic · tier (component-level).</p>
+      <div class="token-card primitive">
+        <div class="token-card-name"><span class="prefix">--tcm</span>-color-turkuvaz-9</div>
+        <div class="token-card-val">#1A8B8C</div>
+        <div class="token-card-d">Anadolu Selçuklu Turkuvazı · solid base · <em>Karatay 1251 kanonik referans</em>. Primitive katman.</div>
+      </div>
+      <div class="token-card semantic">
+        <div class="token-card-name"><span class="prefix">--tcm</span>-kanun-mark</div>
+        <div class="token-card-val">→ {color.turkuvaz.9}</div>
+        <div class="token-card-d">Kanun kademesi kromatik mührü. <em>Semantic katman</em> — primitive'e referans.</div>
+      </div>
+      <div class="token-card tier">
+        <div class="token-card-name"><span class="prefix">--tcm</span>-c-rozet-kanun-bg</div>
+        <div class="token-card-val">→ {tier.kanun.rozet-bg}</div>
+        <div class="token-card-d">Rozet bileşeni · Kanun varyantı arka plan. <em>Component-level katman</em>.</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  // Tema değiştirici
+  const htmlEl = document.documentElement;
+  document.querySelectorAll('[data-tema-set]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tema = btn.getAttribute('data-tema-set');
+      if (tema) htmlEl.setAttribute('data-tema', tema);
+      else htmlEl.removeAttribute('data-tema');
+      document.querySelectorAll('[data-tema-set]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Active section highlight (basit scrollspy)
+  const sections = document.querySelectorAll('section.demo');
+  const navLinks = document.querySelectorAll('.nav a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.nav a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0% -60% 0%' });
+  sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>

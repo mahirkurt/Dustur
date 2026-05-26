@@ -1,0 +1,63 @@
+name: Release · Tag and Build Artifacts
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate tokens
+        run: node scripts/lint-tokens.mjs
+
+      - name: Build CSS bundle
+        run: node scripts/build-css-from-tokens.mjs
+
+      - name: Generate contrast report
+        run: node scripts/check-contrast.mjs --strict
+
+      - name: Package release
+        run: |
+          mkdir -p release
+          cp -r dist/web release/css
+          cp -r dist/reports release/reports
+          cp -r tokens release/tokens
+          cp README.md CHANGELOG.md LICENSE release/
+          cd release && tar czf ../dustur-${{ github.ref_name }}.tar.gz . && cd ..
+          cd release && zip -r ../dustur-${{ github.ref_name }}.zip . && cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dustur-${{ github.ref_name }}.tar.gz
+            dustur-${{ github.ref_name }}.zip
+            dist/web/tcm-tokens.css
+            dist/reports/contrast.json
+          generate_release_notes: true
+          body: |
+            ## Düstur ${{ github.ref_name }}
+
+            ### İçindekiler
+            - `tcm-tokens.css` — Auto-generated CSS variables
+            - `contrast.json` — WCAG + APCA kontrast raporu
+            - Tam release bundle: `.tar.gz` ve `.zip`
+
+            ### Yükleme
+            ```bash
+            npm install @dustur/tasarim-sistemi@${{ github.ref_name }}
+            ```
+
+            CHANGELOG.md detayları için.

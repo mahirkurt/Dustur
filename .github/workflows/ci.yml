@@ -1,0 +1,49 @@
+name: CI · Token + Contrast Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Token validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Lint tokens (JSON + DTCG)
+        run: node scripts/lint-tokens.mjs
+
+      - name: Contrast audit (WCAG + APCA · strict)
+        run: node scripts/check-contrast.mjs --strict
+
+      - name: TR diakritik audit
+        run: node scripts/check-diacritics.mjs
+
+      - name: Build CSS bundle
+        run: node scripts/build-css-from-tokens.mjs
+
+      - name: Token usage map
+        run: node scripts/token-usage-map.mjs
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dustur-reports-${{ github.sha }}
+          path: dist/reports/
+          retention-days: 30
+
+      - name: Upload built CSS
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dustur-css-${{ github.sha }}
+          path: dist/web/
+          retention-days: 30

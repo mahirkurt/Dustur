@@ -10,11 +10,13 @@ Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey
 
 Bu repo, sistemin **tek-kaynak-doğruluk** (single source of truth) deposudur:
 
-- **`tokens/`** — W3C DTCG (Tasarım Jetonları Community Group) standartında JSON jetonları. Sistemin makine-okunabilir anayasası.
-- **`css/`** — Web/print uygulama katmanı. Primitive + semantic jetonların CSS Custom Properties biçimi + base ve bileşen stilleri.
-- **`docs/`** — Doktrin belgesi. 7 ana bölüm + ön/arka-matter.
-- **`reference/`** — Tam orijinal kaynak HTML (`dustur-source.html`). Print-ready, Paged.js uyumlu, A4 PDF üretimi için.
-- **`examples/`** — Yüzey örnekleri (madde detay, kanun ana, anayasa kademe, vb.).
+- **`tokens/`** — W3C DTCG jetonları (primitive · semantic · component · akoma-ntoso). Sistemin makine-okunabilir anayasası.
+- **`css/`** — Web/print uygulama katmanı. CSS `@layer` cascade · base · components · themes (HC/RM/print) · Akoma Ntoso element stilleri.
+- **`docs/`** — Doktrin belgesi. 7 ana bölüm + ön/arka-matter + sözlük.
+- **`reference/`** — Tam orijinal kaynak HTML. Print-ready, Paged.js uyumlu, A4 PDF üretimi.
+- **`examples/`** — Canlı galeri (`index.html`) + yüzey örnekleri + AKN XML + anatomi SVG + do/don't.
+- **`scripts/`** — Token lint, contrast audit (WCAG+APCA), diakritik audit, usage map, fallback build.
+- **`.github/`** — CI workflow, Issue/PR templates, CODEOWNERS, dependabot.
 - **`assets/`** — Selçuklu motif kütüphanesi, sigil, mühür SVG'leri.
 
 ---
@@ -25,51 +27,56 @@ Bu repo, sistemin **tek-kaynak-doğruluk** (single source of truth) deposudur:
 Dustur/
 ├── tokens/                         W3C DTCG · single source of truth
 │   ├── primitives/                 — Ham değer kütüphanesi (~140 jeton)
-│   │   ├── color.json              · 6 aile × 12 step = 72 renk
-│   │   ├── typography.json         · Fraunces · Albert Sans · Recursive eksen değerleri
-│   │   ├── space.json              · 12-step modular scale (4mm base)
-│   │   ├── radius.json             · sabit 0 (kurumsal sade)
-│   │   ├── motion.json             · duration + easing
-│   │   └── z-index.json            · katman hiyerarşisi
-│   └── semantic/                   — Rol-bağlam kütüphanesi (~80 jeton)
-│       ├── tier.json               · Anayasa · Kanun · CBK · Yönetmelik · Tebliğ · AYM
-│       ├── action.json             · buton · link · durum mesajları
-│       ├── surface.json            · yüzey · kenarlık · metin
-│       └── typography.json         · rol bazlı kompozit tipografi
+│   │   ├── color.json              · 6 aile × 12 step · $extensions kaynak/kilit
+│   │   ├── typography.json         · 3 variable font + axis · lisans meta
+│   │   ├── space.json              · 12-step modular (4mm base)
+│   │   ├── radius.json, motion.json, z-index.json
+│   ├── semantic/                   — Rol-bağlam (~80 jeton)
+│   │   ├── tier.json, action.json, surface.json, typography.json
+│   ├── component/                  — Bileşen-düzeyi (üçüncü katman)
+│   │   ├── rozet.json, yuzey.json, atif-modal.json
+│   ├── akoma-ntoso/                — XML element eşlemesi
+│   │   ├── element-map.json        · AKN → CSS class → semantic jeton
+│   │   └── eli-uri.schema.json     · TR ELI URI JSON Schema
+│   └── index.json                  · Manifest + LOCKED jeton listesi
 │
-├── css/                            Web/print uygulama katmanı
-│   ├── tokens/
-│   │   ├── primitives.css          · :root --tcm-* primitives
-│   │   └── semantics.css           · :root --tcm-* semantics (referans)
-│   ├── base/
-│   │   ├── reset.css               · minimal reset
-│   │   ├── typography.css          · .t-display, .t-section, .t-body, ...
-│   │   └── print.css               · @page · Paged.js disiplini
-│   ├── components/
-│   │   ├── badges.css              · .yuzey-badge.{anayasa,kanun,cbk,...}
-│   │   ├── code-block.css          · syntax-highlighted dark code
-│   │   ├── quote-block.css         · doktriner alıntı + aside-box
-│   │   └── token-card.css          · jeton sergi kartları
-│   └── dustur.css                  · tek-dosya bundle (@import zinciri)
+├── css/                            Web/print uygulama · @layer cascade
+│   ├── tokens/                     · primitives.css · semantics.css
+│   ├── base/                       · reset · typography · print
+│   ├── components/                 · badges · code-block · quote-block · token-card
+│   ├── themes/                     · high-contrast · reduced-motion · print
+│   ├── akn/                        · element-styles.css (AKN XML render)
+│   └── dustur.css                  · @layer ile bundled
 │
-├── docs/                           Doktrin belgesi · 7 ana bölüm
-│   ├── 00-overview/                · Önsöz · Konvansiyonlar · Lock Statement
-│   ├── 01-manifesto/               · Üç Evren · Kompozit Palet · Modern Geometri
-│   ├── 02-typography/              · Fraunces · Albert Sans · Recursive · opsz · WONK/SOFT
-│   ├── 03-color/                   · TBK · Turkuvaz · Bordo · Lacivert · Amber · 12-step LCH · WCAG/APCA
-│   ├── 04-tokens/                  · DTCG · naming · primitive · semantic · cross-platform · governance
-│   ├── 05-ui-surface/              · 17 UI yüzey spesifikasyonu
-│   ├── 06-akoma-ntoso/             · XML standardı · TR adaptasyonu · ELI URI
-│   ├── 07-governance/              · Axis Lock · değişiklik yönetimi · handoff
-│   └── glossary/                   · Tipografik · Kromatik · Hukuk sözlüğü
+├── docs/                           Doktrin belgesi · 7 bölüm + sözlük
+│   ├── 00-overview / 01-manifesto / 02-typography / 03-color
+│   ├── 04-tokens / 05-ui-surface / 06-akoma-ntoso / 07-governance
+│   └── glossary/                   · Tipografik · Kromatik · Hukuk
 │
-├── examples/                       Yüzey HTML örnekleri
-├── reference/
-│   └── dustur-source.html          Tam orijinal kaynak · Paged.js A4 PDF
+├── examples/                       Canlı galeri + örnekler
+│   ├── index.html                  · Sticky-nav component galerisi (tema switcher)
+│   ├── madde-detay.html · badge-galeri.html
+│   ├── akn/                        · TCK Madde 220 XML + render
+│   ├── anatomy/                    · Annotated SVG anatomi diyagramları
+│   └── do-dont/                    · Yapın/Yapmayın pattern library
+│
+├── scripts/                        Audit + build (zero-dependency ESM)
+│   ├── lint-tokens.mjs             · DTCG + referans çözümleme
+│   ├── check-contrast.mjs          · WCAG + APCA · CI strict
+│   ├── check-diacritics.mjs        · TR diakritik audit
+│   ├── token-usage-map.mjs         · Kullanılan/ölü token raporu
+│   └── build-css-from-tokens.mjs   · Style Dictionary fallback
+│
+├── .github/                        Yönetişim + CI
+│   ├── workflows/                  · ci.yml · release.yml
+│   ├── ISSUE_TEMPLATE/             · jeton-rfc · hata-raporu · doc
+│   ├── pull_request_template.md, CODEOWNERS, dependabot.yml
+│
+├── reference/dustur-source.html    Tam orijinal kaynak · Paged.js A4 PDF
 ├── assets/motifs/                  Selçuklu rozet · sigil · chain SVG'leri
 │
-├── package.json                    NPM package (@dustur/tasarim-sistemi)
-├── style-dictionary.config.json    Cross-platform export pipeline
+├── package.json · style-dictionary.config.json
+├── CONTRIBUTING.md · CHANGELOG.md · SECURITY.md · CODE_OF_CONDUCT.md
 └── README.md                       (bu dosya)
 ```
 
@@ -104,7 +111,8 @@ Sonra bileşenler doğrudan semantic jetonlar üzerinden çalışır:
 
 ```bash
 npm install
-npm run build
+npm run build:sd   # Style Dictionary tam pipeline (5 platform)
+npm run build      # Style Dictionary'siz fallback (sadece CSS)
 ```
 
 Çıktı `dist/` altında üretilir:
@@ -116,6 +124,35 @@ npm run build
 | Android | `dist/android/colors.xml` · `dimens.xml` | Android resources |
 | DTCG | `dist/dtcg/tcm-tokens.json` | W3C DTCG JSON |
 | TS | `dist/ts/tokens.ts` | TypeScript/ES6 |
+
+### 3) Audit / Quality
+
+```bash
+npm run check:all          # token lint + contrast + diakritik
+npm run check:contrast     # WCAG + APCA matrisi (strict mode CI'da fail)
+npm run report:usage       # Hangi token nerede kullanılıyor / ölü kod tespiti
+```
+
+CI'da `.github/workflows/ci.yml` her PR'da bu auditleri çalıştırır.
+
+### 4) Tema Değiştirme
+
+```html
+<!-- Otomatik (prefers-contrast / prefers-reduced-motion / print) -->
+<html>
+
+<!-- Manuel ekran/baskı/yüksek kontrast -->
+<html data-tema="ekran">
+<html data-tema="baski">
+<html data-tema="yuksek-kontrast">
+```
+
+### 5) Canlı Galeri
+
+```bash
+npm run preview   # python http server :8080
+# Sonra http://localhost:8080/examples/
+```
 
 ---
 

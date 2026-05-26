@@ -1,25 +1,48 @@
 /* ═══════════════════════════════════════════════════════════════════
    DÜSTUR · T.C. MEVZUAT TASARIM SİSTEMİ · BUNDLED CSS
-   Tek dosya import — tüm jeton, base ve bileşen katmanlarını yükler.
+   Tek dosya import — tüm jeton, base, bileşen ve tema katmanlarını yükler.
 
-   Import sırası önemlidir:
-     1. primitives  — ham değer kütüphanesi
-     2. semantics   — rol-bağlam birleşimleri
-     3. base/*      — reset, typography, print
-     4. components/* — yeniden kullanılabilir bileşenler
+   Cascade disiplini için CSS @layer kullanılır:
+     reset → tokens → base → components → themes → utilities → overrides
+
+   En soldaki katman en düşük öncelik; sağa doğru artar.
    ═══════════════════════════════════════════════════════════════════ */
 
-/* 1) Tokens */
-@import "./tokens/primitives.css";
-@import "./tokens/semantics.css";
+@layer reset, tokens, base, components, themes, utilities, overrides;
 
-/* 2) Base */
-@import "./base/reset.css";
-@import "./base/typography.css";
-@import "./base/print.css";
+/* 1) Tokens · primitive sonra semantic */
+@layer tokens {
+  @import "./tokens/primitives.css";
+  @import "./tokens/semantics.css";
+}
 
-/* 3) Components */
-@import "./components/badges.css";
-@import "./components/code-block.css";
-@import "./components/quote-block.css";
-@import "./components/token-card.css";
+/* 2) Reset */
+@layer reset {
+  @import "./base/reset.css";
+}
+
+/* 3) Base */
+@layer base {
+  @import "./base/typography.css";
+  @import "./base/print.css";
+}
+
+/* 4) Components */
+@layer components {
+  @import "./components/badges.css";
+  @import "./components/code-block.css";
+  @import "./components/quote-block.css";
+  @import "./components/token-card.css";
+}
+
+/* 5) Akoma Ntoso katmanı (XML render eden ürünler için) */
+@layer components {
+  @import "./akn/element-styles.css";
+}
+
+/* 6) Themes (light/dark/HC/reduced-motion/print) */
+@layer themes {
+  @import "./themes/print.css";
+  @import "./themes/high-contrast.css";
+  @import "./themes/reduced-motion.css";
+}

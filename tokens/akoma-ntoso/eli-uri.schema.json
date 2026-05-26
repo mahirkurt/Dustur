@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mahirkurt/dustur/blob/main/tokens/akoma-ntoso/eli-uri.schema.json",
+  "title": "DÜSTUR · TR ELI URI Schema",
+  "description": "European Legislation Identifier · Türkiye Cumhuriyeti adaptasyonu. Düstur sisteminin tüm norm URI'larının kalıcı pattern'ı.",
+  "type": "object",
+  "required": ["country", "type", "year", "number"],
+  "properties": {
+    "country": {
+      "const": "tr",
+      "description": "ISO 3166-1 alpha-2 ülke kodu"
+    },
+    "type": {
+      "enum": [
+        "act",
+        "bill",
+        "amendmentAct",
+        "constitution",
+        "constitutionalAmendment",
+        "cbk",
+        "khk",
+        "yonetmelik",
+        "teblig",
+        "genelge",
+        "judgment",
+        "regulation"
+      ],
+      "description": "Norm tipi (Akoma Ntoso vocabulary + TR ekleri)"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1923,
+      "description": "Kabul yılı (Cumhuriyet sonrası ≥ 1923)"
+    },
+    "number": {
+      "type": "string",
+      "pattern": "^[0-9]+(?:-[0-9]+)?$",
+      "description": "Kanun/karar numarası (örn. 5237, 1982-7 anayasa değişikliği)"
+    },
+    "version-date": {
+      "type": "string",
+      "format": "date",
+      "description": "Konsolide tarih (ISO 8601). Omitted ise ibtidai."
+    },
+    "language": {
+      "enum": ["tur", "eng", "ota"],
+      "default": "tur",
+      "description": "ISO 639-3 dil kodu (tur=Türkçe, eng=İngilizce çevirisi, ota=Osmanlıca arşiv)"
+    },
+    "expression": {
+      "enum": ["main", "alt", "transitional"],
+      "default": "main"
+    },
+    "element": {
+      "type": "string",
+      "pattern": "^[a-z]+(?:_[A-Za-z0-9]+)?$",
+      "description": "Element ID (örn. article_220, paragraph_1, subparagraph_b)"
+    }
+  },
+  "examples": [
+    {
+      "country": "tr",
+      "type": "act",
+      "year": 2004,
+      "number": "5237",
+      "version-date": "2026-01-15",
+      "language": "tur",
+      "expression": "main",
+      "element": "article_220",
+      "rendered": "/akn/tr/act/2004/5237/2026-01-15/tur@main/article_220"
+    },
+    {
+      "country": "tr",
+      "type": "constitution",
+      "year": 1982,
+      "number": "2709",
+      "version-date": "2017-04-16",
+      "rendered": "/akn/tr/constitution/1982/2709/2017-04-16/tur@main"
+    },
+    {
+      "country": "tr",
+      "type": "cbk",
+      "year": 2018,
+      "number": "1",
+      "rendered": "/akn/tr/cbk/2018/1/tur@main"
+    },
+    {
+      "country": "tr",
+      "type": "judgment",
+      "year": 2022,
+      "number": "E2021-99",
+      "rendered": "/akn/tr/judgment/2022/E2021-99/tur@main"
+    }
+  ]
+}

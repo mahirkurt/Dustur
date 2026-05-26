@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · AKOMA NTOSO ELEMENT STYLES
+   XML element'lerini doğrudan render eden CSS · tokens/akoma-ntoso/element-map.json uygulaması.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────────────────────────────
+   Belge kapsayıcılar · tier border
+   ────────────────────────────────────────────────────────────────── */
+.akn-constitution { border-top: 3px solid var(--tcm-anayasa-mark); padding-top: var(--tcm-space-5); }
+.akn-act          { border-top: 3px solid var(--tcm-kanun-mark);    padding-top: var(--tcm-space-5); }
+.akn-amendment-act{ border-top: 3px solid var(--tcm-kanun-mark);    padding-top: var(--tcm-space-5); }
+.akn-bill         { border-top: 3px solid var(--tcm-color-turkuvaz-6); padding-top: var(--tcm-space-5); }
+.akn-judgment     { border-left: 3px solid var(--tcm-aym-mark);     padding-left: var(--tcm-space-5); }
+
+.akn-doc[data-type="cbk"]        { border-top:  3px solid var(--tcm-cbk-mark);        padding-top:  var(--tcm-space-5); }
+.akn-doc[data-type="yonetmelik"] { border-top:  2px solid var(--tcm-yonetmelik-mark); padding-top:  var(--tcm-space-5); }
+.akn-doc[data-type="teblig"]     { border-left: 2px solid var(--tcm-teblig-mark);     padding-left: var(--tcm-space-5); }
+.akn-doc[data-type="genelge"]    { border-left: 2px solid var(--tcm-genelge-mark);    padding-left: var(--tcm-space-5); }
+
+/* ──────────────────────────────────────────────────────────────────
+   Element-bazlı tipografi
+   ────────────────────────────────────────────────────────────────── */
+.akn-heading {
+  font-family: var(--tcm-h3-family);
+  font-variation-settings: "opsz" var(--tcm-h3-opsz), "wght" var(--tcm-h3-wght);
+  font-size: 16pt;
+  line-height: var(--tcm-lh-snug);
+  letter-spacing: var(--tcm-ls-tight);
+  color: var(--tcm-text-body);
+  margin-top: var(--tcm-space-6);
+  margin-bottom: var(--tcm-space-3);
+}
+
+.akn-article {
+  margin-bottom: var(--tcm-space-6);
+}
+.akn-article > .akn-num {
+  display: inline-block;
+  margin-right: var(--tcm-space-2);
+  font-family: var(--tcm-uri-family);
+  font-variation-settings: "MONO" 1, "wght" 600;
+  font-size: 10pt;
+  letter-spacing: var(--tcm-uri-ls);
+  color: var(--tcm-color-turkuvaz-10);
+}
+
+.akn-paragraph {
+  margin-bottom: var(--tcm-space-4);
+}
+.akn-paragraph > .akn-num {
+  font-family: var(--tcm-uri-family);
+  font-variation-settings: "MONO" 1;
+  color: var(--tcm-color-turkuvaz-10);
+  margin-right: var(--tcm-space-2);
+}
+
+.akn-subparagraph {
+  padding-left: var(--tcm-space-4);
+  margin-bottom: var(--tcm-space-3);
+}
+.akn-subparagraph > .akn-num {
+  font-family: var(--tcm-uri-family);
+  font-variation-settings: "MONO" 1;
+  color: var(--tcm-color-turkuvaz-10);
+  margin-right: var(--tcm-space-1);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   Cross-reference link
+   ────────────────────────────────────────────────────────────────── */
+.akn-ref {
+  color: var(--tcm-link-default);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--tcm-duration-fast) var(--tcm-easing-standard);
+}
+.akn-ref:hover  { color: var(--tcm-link-hover); }
+.akn-ref:visited { color: var(--tcm-link-visited); }
+
+/* ──────────────────────────────────────────────────────────────────
+   Quoted structure (alıntı blok)
+   ────────────────────────────────────────────────────────────────── */
+.akn-quoted {
+  background: var(--tcm-panel-subtle);
+  border-left: 3px solid var(--tcm-border-default);
+  padding: var(--tcm-space-3) var(--tcm-space-4);
+  margin: var(--tcm-space-4) 0;
+  font-style: italic;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   Madde durum işaretleri
+   ────────────────────────────────────────────────────────────────── */
+.akn-status-active {
+  /* default, no special styling */
+}
+
+.akn-status-repealed,
+[data-status="repealed"] {
+  text-decoration: line-through;
+  color: var(--tcm-color-gri-7);
+  opacity: 0.6;
+}
+
+.akn-status-aym-iptal::before {
+  content: "AYM İPTAL";
+  display: inline-block;
+  background: var(--tcm-aym-iptal-hap-bg);
+  color: var(--tcm-aym-iptal-hap-text);
+  font-family: var(--tcm-family-as);
+  font-weight: 700;
+  font-size: 6pt;
+  letter-spacing: 0.1em;
+  padding: 0.4mm 1.6mm;
+  margin-right: var(--tcm-space-2);
+  vertical-align: middle;
+}
+
+.akn-status-pending::before {
+  content: "DEĞİŞİKLİK BEKLEYEN";
+  display: inline-block;
+  background: var(--tcm-color-amber-2);
+  color: var(--tcm-color-amber-11);
+  font-family: var(--tcm-family-as);
+  font-weight: 700;
+  font-size: 6pt;
+  letter-spacing: 0.1em;
+  padding: 0.4mm 1.6mm;
+  margin-right: var(--tcm-space-2);
+  vertical-align: middle;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   Remark · Date · Term · Court Type
+   ────────────────────────────────────────────────────────────────── */
+.akn-remark {
+  color: var(--tcm-text-muted);
+  font-size: 0.92em;
+  font-style: italic;
+}
+
+.akn-date {
+  font-family: var(--tcm-uri-family);
+  font-variation-settings: "MONO" 1;
+  letter-spacing: var(--tcm-uri-ls);
+}
+
+.akn-term {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.akn-court-type {
+  color: var(--tcm-color-lacivert-11);
+  font-weight: 600;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   Container query · mobil madde görünümü (UI Yüzey 5.13)
+   ────────────────────────────────────────────────────────────────── */
+.akn-article {
+  container-type: inline-size;
+  container-name: akn-article;
+}
+
+@container akn-article (max-width: 480px) {
+  .akn-article > .akn-num {
+    display: block;
+    margin-bottom: var(--tcm-space-1);
+  }
+  .akn-subparagraph {
+    padding-left: var(--tcm-space-2);
+  }
+}

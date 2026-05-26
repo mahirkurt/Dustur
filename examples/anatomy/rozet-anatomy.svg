@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380" font-family="Albert Sans, sans-serif">
+  <title>Düstur · Rozet (Badge) Anatomy</title>
+
+  <rect x="0" y="0" width="700" height="380" fill="#FAF6EE"/>
+
+  <!-- Sample rozet (big) -->
+  <g transform="translate(220,110)">
+    <!-- Padding bounding box (dotted) -->
+    <rect x="-2" y="-2" width="160" height="50" fill="none" stroke="#807A72" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <!-- Inner background -->
+    <rect x="0" y="0" width="156" height="46" fill="#D7EDEE" stroke="#94CFD0" stroke-width="2"/>
+    <!-- Text -->
+    <text x="78" y="29" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#0C5455">KANUN</text>
+  </g>
+
+  <!-- Annotations -->
+  <g font-family="Recursive,monospace" font-size="9" fill="#807A72">
+    <!-- padding-y -->
+    <line x1="180" y1="108" x2="180" y2="158" stroke="#1A8B8C" stroke-width="0.8"/>
+    <line x1="176" y1="108" x2="184" y2="108" stroke="#1A8B8C" stroke-width="0.8"/>
+    <line x1="176" y1="158" x2="184" y2="158" stroke="#1A8B8C" stroke-width="0.8"/>
+    <text x="120" y="138" fill="#137070" font-weight="600">padding-y</text>
+    <text x="115" y="152" font-size="8">0.8mm</text>
+
+    <!-- padding-x -->
+    <line x1="220" y1="170" x2="378" y2="170" stroke="#1A8B8C" stroke-width="0.8"/>
+    <line x1="220" y1="166" x2="220" y2="174" stroke="#1A8B8C" stroke-width="0.8"/>
+    <line x1="378" y1="166" x2="378" y2="174" stroke="#1A8B8C" stroke-width="0.8"/>
+    <text x="280" y="186" fill="#137070" font-weight="600">padding-x</text>
+    <text x="285" y="200" font-size="8">--space-2</text>
+
+    <!-- Border annotation -->
+    <line x1="378" y1="118" x2="420" y2="118" stroke="#807A72" stroke-width="0.5"/>
+    <text x="426" y="106" font-weight="600" fill="#1A1A1A">① BORDER</text>
+    <text x="426" y="120">1px solid · turkuvaz-5</text>
+
+    <!-- Bg -->
+    <line x1="378" y1="135" x2="420" y2="135" stroke="#807A72" stroke-width="0.5"/>
+    <text x="426" y="142" font-weight="600" fill="#1A1A1A">② BG</text>
+    <text x="426" y="156">{tier.kanun.rozet-bg}</text>
+    <text x="426" y="170">→ {color.turkuvaz.3}</text>
+
+    <!-- Text -->
+    <line x1="378" y1="156" x2="420" y2="156" stroke="#807A72" stroke-width="0.5"/>
+    <text x="426" y="184" font-weight="600" fill="#1A1A1A">③ TEXT</text>
+    <text x="426" y="198">{tier.kanun.rozet-text}</text>
+    <text x="426" y="212">→ {color.turkuvaz.11}</text>
+
+    <!-- Type -->
+    <text x="426" y="234" font-weight="600" fill="#1A1A1A">④ TYPOGRAPHY</text>
+    <text x="426" y="248">Albert Sans · wght 700</text>
+    <text x="426" y="262">6.5pt · uppercase</text>
+    <text x="426" y="276">letter-spacing 0.14em</text>
+  </g>
+
+  <!-- Header -->
+  <text x="40" y="50" font-family="Fraunces,serif" font-size="24" font-weight="700" letter-spacing="-0.5" fill="#1A1A1A">Rozet · Anatomy</text>
+  <text x="40" y="70" font-family="Recursive,monospace" font-size="9" letter-spacing="3" fill="#1A8B8C">.YUZEY-BADGE.KANUN</text>
+
+  <!-- Contrast badge -->
+  <g transform="translate(40,310)">
+    <rect x="0" y="0" width="180" height="42" fill="#FFFFFF" stroke="#D8D1C4"/>
+    <text x="10" y="18" font-family="Recursive,monospace" font-size="8" letter-spacing="2" fill="#807A72">WCAG 2.1</text>
+    <text x="10" y="34" font-family="Albert Sans,sans-serif" font-size="14" font-weight="700" fill="#047857">7.14:1 · AAA ✓</text>
+    <text x="100" y="18" font-family="Recursive,monospace" font-size="8" letter-spacing="2" fill="#807A72">APCA</text>
+    <text x="100" y="34" font-family="Albert Sans,sans-serif" font-size="14" font-weight="700" fill="#047857">Lc 76.2</text>
+  </g>
+
+  <text x="40" y="360" font-family="Recursive,monospace" font-size="8" fill="#807A72" letter-spacing="2">DÜSTUR · ROZET ANATOMY · BÖLÜM V · 5.9</text>
+</svg>
