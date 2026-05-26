@@ -101,12 +101,21 @@ function flatten(obj, prefix = "", out = {}) {
   return out;
 }
 
-const primitives = flatten(JSON.parse(readFileSync("tokens/primitives/color.json", "utf8")));
-const semanticTier = flatten(JSON.parse(readFileSync("tokens/semantic/tier.json", "utf8")));
-const semanticAction = flatten(JSON.parse(readFileSync("tokens/semantic/action.json", "utf8")));
-const semanticSurface = flatten(JSON.parse(readFileSync("tokens/semantic/surface.json", "utf8")));
+// Tüm primitive ve semantic dosyaları yükle (yeni dosyalar otomatik dahil)
+import { readdirSync } from "node:fs";
+function loadDir(dir) {
+  const out = {};
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith(".json") || f.includes("schema")) continue;
+    Object.assign(out, flatten(JSON.parse(readFileSync(`${dir}/${f}`, "utf8"))));
+  }
+  return out;
+}
 
-const all = { ...primitives, ...semanticTier, ...semanticAction, ...semanticSurface };
+const all = {
+  ...loadDir("tokens/primitives"),
+  ...loadDir("tokens/semantic")
+};
 
 function resolve(val, depth = 0) {
   if (depth > 10) return val;

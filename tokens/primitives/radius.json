@@ -1,6 +1,6 @@
 {
   "$description": "DÜSTUR kenarlık-radius birincilleri · sistem sabit 0 · kurumsal sade keskin köşe disiplini · iOS soft-corner doktrinasyonunun karşıtı",
   "radius": {
-    "0": { "$type": "dimension", "$value": "0", "$description": "Tüm UI element'leri · sabit 0 · mevzuat sisteminin kurumsal tonu" }
+    "0": { "$type": "dimension", "$value": "0", "$description": "Tüm UI element'leri · sabit 0 · mevzuat sisteminin kurumsal tonu", "$extensions": { "tr.tcm.kilit": "LOCKED" } }
   }
 }

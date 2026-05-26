@@ -20,7 +20,7 @@ function walk(dir, files = []) {
     const p = join(dir, e);
     const s = statSync(p);
     if (s.isDirectory()) walk(p, files);
-    else if (p.endsWith(".json") && !p.includes("schema") && !p.endsWith("index.json")) files.push(p);
+    else if (p.endsWith(".json") && !p.includes("schema") && !p.endsWith("tokens/index.json") && p !== "tokens/index.json") files.push(p);
   }
   return files;
 }

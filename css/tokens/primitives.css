@@ -85,6 +85,29 @@
   --tcm-color-amber-12: #451900;
 
   /* ──────────────────────────────────────────────────────────────────
+     KÂĞIT · Specimen miras renkleri · ana 6 ailenin DIŞINDA
+     ────────────────────────────────────────────────────────────────── */
+  --tcm-kagit-sayfa:         #FAF6EE;
+  --tcm-kagit-deep:          #E9E2D2;
+  --tcm-kagit-panel:         #FFFFFF;
+  --tcm-kagit-subtle:        #F3EEE2;
+  --tcm-kagit-stripe:        #F7F1E3;
+  --tcm-kagit-border-subtle: #E9E2D2;
+  --tcm-kagit-border-default:#D8D1C4;
+
+  /* INK · specimen miras metin renkleri (sıcak gri tonları) */
+  --tcm-ink-1: #1A1A1A;
+  --tcm-ink-2: #4A4744;
+  --tcm-ink-3: #807A72;
+  --tcm-ink-4: #B5AE9F;
+
+  /* SYSTEM · bağımsız semantic stand-alone renkler (danger/success) */
+  --tcm-system-danger-bg:    #FEE2E2;
+  --tcm-system-danger-text:  #B91C1C;
+  --tcm-system-success-bg:   #D1FAE5;
+  --tcm-system-success-text: #047857;
+
+  /* ──────────────────────────────────────────────────────────────────
      RENK · NÖTR GRİ · UI omurgası · OKLCH neutral
      ────────────────────────────────────────────────────────────────── */
   --tcm-color-gri-1:  #FCFCFC;

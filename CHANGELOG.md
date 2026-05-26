@@ -7,6 +7,42 @@ Sürümlendirme [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html)
 
 ## [Unreleased]
 
+## [1.1.1] · 2026-05-26
+
+### Düzeltildi (audit-driven · `docs/audit-report.md`)
+
+**Kritik bug'lar:**
+- `build-css-from-tokens.mjs` filter `index.json`'i yakalamak için yazılmıştı ama `z-index.json`'i de yanlışlıkla atlıyordu → 7 z-index jetonu eksikti
+- Style Dictionary config'inde tanımsız `fileHeader: dustur-header` referansı → `build:sd` FAIL
+- SD Android filter `attributes.category` yerine DTCG `$type` kullanmalı → `dimens.xml` boş üretilmiyordu
+- mm → dp/pt cross-platform conversion 5× yanlıştı (`1mm → 16dp` yerine doğrusu `3.78dp`)
+
+**Architectural:**
+- Semantic katmanda 16 hex literal tespit edildi · yeni primitive `tokens/primitives/kagit.json` (kagit/ink/system) oluşturuldu
+- LOCKED jeton tutarsızlığı: index.json'da listede ama `$extensions.tr.tcm.kilit` eksik olan 6 jeton düzeltildi
+
+### Eklendi
+- `scripts/sd-config.mjs` · özel `size/mm-to-dp` ve `size/mm-to-pt` transform'larıyla SD programmatic API kullanır
+- `scripts/check-locked.mjs` · LOCKED jeton tutarlılık denetimi (index.json ↔ $extensions)
+- `tokens/primitives/kagit.json` · 7. primitive ailesi (specimen miras + system colors)
+- `docs/audit-report.md` · 30 testlik kapsamlı audit raporu
+
+### Değişti
+- `style-dictionary.config.json` · simplifiye edildi (collision-free, $type-aware filtering)
+- `package.json` → `build` artık `sd-config.mjs` kullanır (custom transform'lu)
+- `tokens/semantic/surface.json` · 12 hex literal → kagit.* referansları
+- `tokens/semantic/action.json` · 4 hex literal → system.* referansları
+
+### Doğrulama
+```
+✓ 308 jeton · 0 hata, 0 uyarı
+✓ 13 contrast pair · WCAG/APCA hedef
+✓ 14 LOCKED jeton tutarlı
+✓ 5 platform build (CSS, iOS, Android, DTCG, TS)
+✓ Full pipeline 911ms
+✓ 0 broken internal link (18 README)
+```
+
 ## [1.1.0] · 2026-05-26
 
 ### Eklendi · Carbon/MD3 paritesi iyileştirmeleri

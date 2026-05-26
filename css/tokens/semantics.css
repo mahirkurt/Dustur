@@ -60,14 +60,14 @@
   /* ──────────────────────────────────────────────────────────────────
      STATUS · Durum mesajları
      ────────────────────────────────────────────────────────────────── */
-  --tcm-danger-bg:    #FEE2E2;
-  --tcm-danger-text:  #B91C1C;
+  --tcm-danger-bg:    var(--tcm-system-danger-bg);
+  --tcm-danger-text:  var(--tcm-system-danger-text);
 
   --tcm-warning-bg:   var(--tcm-color-amber-2);
   --tcm-warning-text: var(--tcm-color-amber-11);
 
-  --tcm-success-bg:   #D1FAE5;
-  --tcm-success-text: #047857;
+  --tcm-success-bg:   var(--tcm-system-success-bg);
+  --tcm-success-text: var(--tcm-system-success-text);
 
   --tcm-info-bg:      var(--tcm-color-lacivert-3);
   --tcm-info-text:    var(--tcm-color-lacivert-11);
@@ -75,23 +75,23 @@
   /* ──────────────────────────────────────────────────────────────────
      SURFACE · Yüzeyler · kenarlıklar · metin
      ────────────────────────────────────────────────────────────────── */
-  --tcm-sayfa-bg:     #FAF6EE;       /* Specimen miras */
-  --tcm-sayfa-deep:   #E9E2D2;
-  --tcm-panel-bg:     #FFFFFF;
-  --tcm-panel-subtle: #F3EEE2;
-  --tcm-stripe:       #F7F1E3;
+  --tcm-sayfa-bg:     var(--tcm-kagit-sayfa);
+  --tcm-sayfa-deep:   var(--tcm-kagit-deep);
+  --tcm-panel-bg:     var(--tcm-kagit-panel);
+  --tcm-panel-subtle: var(--tcm-kagit-subtle);
+  --tcm-stripe:       var(--tcm-kagit-stripe);
 
-  --tcm-border-subtle:  #E9E2D2;
-  --tcm-border-default: #D8D1C4;
+  --tcm-border-subtle:  var(--tcm-kagit-border-subtle);
+  --tcm-border-default: var(--tcm-kagit-border-default);
   --tcm-border-strong:  var(--tcm-color-gri-7);
 
-  --tcm-text-body:    #1A1A1A;       /* AAA · ana mevzuat metni */
-  --tcm-text-2:       #4A4744;
-  --tcm-text-muted:   #807A72;
-  --tcm-text-4:       #B5AE9F;
+  --tcm-text-body:    var(--tcm-ink-1);
+  --tcm-text-2:       var(--tcm-ink-2);
+  --tcm-text-muted:   var(--tcm-ink-3);
+  --tcm-text-4:       var(--tcm-ink-4);
 
   --tcm-selection-bg:   var(--tcm-color-turkuvaz-9);
-  --tcm-selection-text: var(--tcm-sayfa-bg);
+  --tcm-selection-text: var(--tcm-kagit-sayfa);
 
   /* ──────────────────────────────────────────────────────────────────
      TYPOGRAPHY · Rol jetonları

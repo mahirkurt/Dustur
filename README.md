@@ -195,7 +195,7 @@ Sistem **W3C DTCG Format Module** ve **Semantic Versioning 2.0.0** üzerinde in�
 | **MINOR** | Yeni jeton ekleme · yeni primitive aile · yeni semantic kategori |
 | **PATCH** | Mevcut jeton değer düzeltmesi · contrast iyileştirme · doc güncelleme |
 
-Sorumluluk haritası, inceleme protokolü ve deprecation politikası: [`docs/07-governance/`](./docs/07-governance/) ve [`docs/04-tokens/governance.md`](./docs/04-tokens/governance.md).
+Sorumluluk haritası, inceleme protokolü ve deprecation politikası: [`docs/07-governance/`](./docs/07-governance/) ve [`docs/04-tokens/`](./docs/04-tokens/).
 
 ---
 

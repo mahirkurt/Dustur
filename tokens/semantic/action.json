@@ -19,16 +19,16 @@
     "visited": { "$type": "color", "$value": "{color.bordo.10}",    "$description": "Visited link rengi" }
   },
   "danger": {
-    "bg":   { "$type": "color", "$value": "#FEE2E2", "$description": "Error/uyarı bg (semantic, TBK değil)" },
-    "text": { "$type": "color", "$value": "#B91C1C", "$description": "Error/uyarı text" }
+    "bg":   { "$type": "color", "$value": "{system.danger-bg}",   "$description": "Error/uyarı bg (semantic, TBK değil)" },
+    "text": { "$type": "color", "$value": "{system.danger-text}", "$description": "Error/uyarı text" }
   },
   "warning": {
     "bg":   { "$type": "color", "$value": "{color.amber.2}",  "$description": "Uyarı bg" },
     "text": { "$type": "color", "$value": "{color.amber.11}", "$description": "Uyarı text · AAA" }
   },
   "success": {
-    "bg":   { "$type": "color", "$value": "#D1FAE5", "$description": "Başarı bg" },
-    "text": { "$type": "color", "$value": "#047857", "$description": "Başarı text" }
+    "bg":   { "$type": "color", "$value": "{system.success-bg}",   "$description": "Başarı bg" },
+    "text": { "$type": "color", "$value": "{system.success-text}", "$description": "Başarı text" }
   },
   "info": {
     "bg":   { "$type": "color", "$value": "{color.lacivert.3}",  "$description": "Bilgi bg" },

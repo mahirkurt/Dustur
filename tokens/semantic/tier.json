@@ -8,13 +8,13 @@
     "anayasa": {
       "$description": "Anayasa kademesi · TBK ile mühürlenir",
       "$extensions": { "tr.tcm.norm-tipi": "anayasa", "tr.tcm.hiyerarşi": 1 },
-      "mark":        { "$type": "color", "$value": "{color.tbk.9}",  "$description": "Border-top + rozet bg", "$extensions": { "tr.tcm.wcag-eslik": "on-white:5.42:1 AA" } },
+      "mark":        { "$type": "color", "$value": "{color.tbk.9}",  "$description": "Border-top + rozet bg", "$extensions": { "tr.tcm.kilit": "LOCKED", "tr.tcm.wcag-eslik": "on-white:5.42:1 AA" } },
       "text":        { "$type": "color", "$value": "{color.gri.1}",  "$description": "Rozet text (beyaz)" }
     },
     "aym": {
       "$description": "Anayasa Mahkemesi · Cumhuriyet Lacivert ile mühürlenir",
       "$extensions": { "tr.tcm.norm-tipi": "aym-karar", "tr.tcm.hiyerarşi": 2 },
-      "mark":        { "$type": "color", "$value": "{color.lacivert.9}",  "$description": "Border-left mührü" },
+      "mark":        { "$type": "color", "$value": "{color.lacivert.9}",  "$description": "Border-left mührü", "$extensions": { "tr.tcm.kilit": "LOCKED" } },
       "rozet-bg":    { "$type": "color", "$value": "{color.lacivert.3}",  "$description": "AYM rozet subtle bg" },
       "rozet-text":  { "$type": "color", "$value": "{color.lacivert.11}", "$description": "AYM rozet text · AAA", "$extensions": { "tr.tcm.wcag.aaa": true } }
     },
@@ -27,14 +27,14 @@
     "cbk": {
       "$description": "Cumhurbaşkanlığı Kararnamesi · Düstûr Bordo ile mühürlenir",
       "$extensions": { "tr.tcm.norm-tipi": "cbk", "tr.tcm.hiyerarşi": 3 },
-      "mark":       { "$type": "color", "$value": "{color.bordo.9}",  "$description": "Border-top mührü" },
+      "mark":       { "$type": "color", "$value": "{color.bordo.9}",  "$description": "Border-top mührü", "$extensions": { "tr.tcm.kilit": "LOCKED" } },
       "rozet-bg":   { "$type": "color", "$value": "{color.bordo.3}",  "$description": "CBK rozet subtle bg" },
       "rozet-text": { "$type": "color", "$value": "{color.bordo.11}", "$description": "CBK rozet text · AAA contrast", "$extensions": { "tr.tcm.wcag.aaa": true } }
     },
     "kanun": {
       "$description": "Kanun kademesi · Anadolu Selçuklu Turkuvazı ile mühürlenir",
       "$extensions": { "tr.tcm.norm-tipi": "kanun", "tr.tcm.hiyerarşi": 4 },
-      "mark":       { "$type": "color", "$value": "{color.turkuvaz.9}",  "$description": "Border-top mührü" },
+      "mark":       { "$type": "color", "$value": "{color.turkuvaz.9}",  "$description": "Border-top mührü", "$extensions": { "tr.tcm.kilit": "LOCKED" } },
       "rozet-bg":   { "$type": "color", "$value": "{color.turkuvaz.3}",  "$description": "Kanun rozet subtle bg" },
       "rozet-text": { "$type": "color", "$value": "{color.turkuvaz.11}", "$description": "Kanun rozet text · AAA", "$extensions": { "tr.tcm.wcag.aaa": true } }
     },
@@ -47,7 +47,7 @@
     "teblig": {
       "$description": "Tebliğ kademesi · Tebliğ Amber ile mühürlenir",
       "$extensions": { "tr.tcm.norm-tipi": "teblig", "tr.tcm.hiyerarşi": 6 },
-      "mark": { "$type": "color", "$value": "{color.amber.9}", "$description": "Border-left mührü" },
+      "mark": { "$type": "color", "$value": "{color.amber.9}", "$description": "Border-left mührü", "$extensions": { "tr.tcm.kilit": "LOCKED" } },
       "bg":   { "$type": "color", "$value": "{color.amber.2}", "$description": "Tebliğ kademesi subtle bg" }
     },
     "genelge": {

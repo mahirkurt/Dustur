@@ -26,6 +26,9 @@ jobs:
       - name: TR diakritik audit
         run: node scripts/check-diacritics.mjs
 
+      - name: LOCKED jeton audit
+        run: node scripts/check-locked.mjs
+
       - name: Build CSS bundle
         run: node scripts/build-css-from-tokens.mjs
 

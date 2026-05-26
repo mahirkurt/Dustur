@@ -1,0 +1,31 @@
+{
+  "$description": "DÜSTUR Kâğıt (Paper) primitive · specimen miras renkleri · klasik kitap kâğıdı tonları + hardcoded UI grays. Ana 6 ailenin DIŞINDA bağımsız bir primitive ailesi.",
+  "$extensions": {
+    "tr.tcm.kaynak": "Specimen miras · Penguin/Stripe Press/Phaidon kitap standardı",
+    "tr.tcm.kilit": "LOCKED"
+  },
+  "kagit": {
+    "$description": "Specimen miras kâğıt renkleri",
+    "sayfa":  { "$type": "color", "$value": "#FAF6EE", "$description": "Sayfa zemini · klasik kitap kâğıdı" },
+    "deep":   { "$type": "color", "$value": "#E9E2D2", "$description": "Sayfa zemini koyu varyant" },
+    "panel":  { "$type": "color", "$value": "#FFFFFF", "$description": "Panel · kart bg" },
+    "subtle": { "$type": "color", "$value": "#F3EEE2", "$description": "Subtle panel bg" },
+    "stripe": { "$type": "color", "$value": "#F7F1E3", "$description": "Zebra çizgili yüzey" },
+    "border-subtle":  { "$type": "color", "$value": "#E9E2D2", "$description": "Subtle · ince ayraç" },
+    "border-default": { "$type": "color", "$value": "#D8D1C4", "$description": "Default UI border" }
+  },
+  "ink": {
+    "$description": "Specimen miras metin renkleri · sıcak gri tonları (saf siyah değil)",
+    "1": { "$type": "color", "$value": "#1A1A1A", "$description": "Body text · ana mevzuat metni · AAA" },
+    "2": { "$type": "color", "$value": "#4A4744", "$description": "Secondary text" },
+    "3": { "$type": "color", "$value": "#807A72", "$description": "Muted text · açıklama" },
+    "4": { "$type": "color", "$value": "#B5AE9F", "$description": "Disabled text · placeholder" }
+  },
+  "system": {
+    "$description": "Sistem semantic renkleri · TBK/Turkuvaz vb. DIŞINDA bağımsız renkler. Danger/Success/Warning/Info için yerel doktrin yok; bunlar Tailwind/Radix Renkler ekosistemine paralel açılım.",
+    "danger-bg":   { "$type": "color", "$value": "#FEE2E2", "$description": "Error/uyarı bg" },
+    "danger-text": { "$type": "color", "$value": "#B91C1C", "$description": "Error/uyarı text" },
+    "success-bg":   { "$type": "color", "$value": "#D1FAE5", "$description": "Başarı bg" },
+    "success-text": { "$type": "color", "$value": "#047857", "$description": "Başarı text" }
+  }
+}

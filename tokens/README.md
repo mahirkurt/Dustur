@@ -15,6 +15,7 @@ Politik olarak nötr jetonlar. Hiçbir UI rolüne, hiçbir bağlama bağlı değ
 | Dosya | İçerik | Sayı |
 |---|---|---|
 | [`color.json`](./primitives/color.json) | 6 aile × 12 step LCH scale | 72 |
+| [`kagit.json`](./primitives/kagit.json) | Specimen miras (kâğıt + ink + system) · ana 6 ailenin dışında | 16 |
 | [`typography.json`](./primitives/typography.json) | Font aileleri + variable axis değerleri | ~35 |
 | [`space.json`](./primitives/space.json) | 12-step modular scale (4mm base) | 12 |
 | [`radius.json`](./primitives/radius.json) | Sabit 0 (kurumsal sade keskin köşe) | 1 |
