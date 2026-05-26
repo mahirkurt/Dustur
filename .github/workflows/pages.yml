@@ -1,0 +1,70 @@
+name: Pages · Docs + Examples + Reference PDF
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build CSS + Source Map
+        run: |
+          npm run build
+          npm run build:sourcemap
+
+      - name: Build Reference PDF (Paged.js)
+        run: |
+          npx --yes pagedjs-cli reference/dustur-source.html -o dist/dustur.pdf || echo "PDF build skipped (browser not available)"
+        continue-on-error: true
+
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          cp -r examples _site/
+          cp -r css _site/
+          cp -r assets _site/
+          cp -r tokens _site/
+          cp -r docs _site/
+          cp -r dist _site/dist
+          cp -r reference _site/
+          cp README.md _site/
+          # Hero landing page (Düstur kök sayfası)
+          cp index.html _site/index.html
+          ls -la _site/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

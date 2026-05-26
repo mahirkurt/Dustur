@@ -1,0 +1,96 @@
+name: Publish · NPM Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Dry run (publish etmeden simüle et)"
+        type: boolean
+        default: true
+
+jobs:
+  publish:
+    name: Publish to NPM + GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write   # npm provenance için
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Install xmllint (AKN validation için)
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Verify (lint + audit + build)
+        run: npm run verify
+
+      - name: Pack (tarball oluştur)
+        run: npm pack
+
+      - name: NPM publish (dry-run veya real)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ "${{ inputs.dry-run }}" = "true" ]; then
+            npm publish --dry-run
+          else
+            npm publish --provenance --access public
+          fi
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            dustur-tasarim-sistemi-*.tgz
+            dist/web/tcm-tokens.css
+            dist/web/tcm-tokens.css.map
+            dist/dtcg/tcm-tokens.json
+            dist/ios/TCMTokens.swift
+            dist/android/colors.xml
+            dist/android/dimens.xml
+            dist/reports/contrast.json
+            dist/reports/colorblind.json
+          body: |
+            ## Düstur ${{ github.ref_name }}
+
+            Türkiye Cumhuriyeti mevzuat sisteminin tasarım sistemi.
+
+            ### Yükleme
+
+            ```bash
+            npm install @dustur/tasarim-sistemi@${{ github.ref_name }}
+            ```
+
+            ```html
+            <link rel="stylesheet" href="https://unpkg.com/@dustur/tasarim-sistemi@${{ github.ref_name }}/css/dustur.css">
+            ```
+
+            ### Artifacts
+
+            | Dosya | Açıklama |
+            |---|---|
+            | `tcm-tokens.css` | CSS Custom Properties (web) |
+            | `tcm-tokens.css.map` | Source Map v3 (DevTools) |
+            | `tcm-tokens.json` | W3C DTCG JSON |
+            | `TCMTokens.swift` | iOS Swift constants |
+            | `colors.xml` · `dimens.xml` | Android resources |
+            | `contrast.json` · `colorblind.json` | Erişilebilirlik raporları |
+
+            Tam değişiklik listesi: [`CHANGELOG.md`](./CHANGELOG.md)

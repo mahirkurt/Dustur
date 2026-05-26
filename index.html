@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Düstur · T.C. Mevzuat Tasarım Sistemi</title>
+<meta name="description" content="DÜSTUR · Türkiye Cumhuriyeti mevzuat sisteminin tasarım sistemi · jeton mimarisi, renk doktrini, Akoma Ntoso XML, WCAG 2.1 AAA.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..800,0..100,0..1&family=Albert+Sans:wght@400..700&family=Recursive:MONO,wght@0..1,400..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/tokens/primitives.css">
+<link rel="stylesheet" href="./css/tokens/semantics.css">
+<link rel="stylesheet" href="./css/themes/print.css">
+<link rel="stylesheet" href="./css/themes/high-contrast.css">
+<link rel="stylesheet" href="./css/themes/reduced-motion.css">
+<link rel="stylesheet" href="./css/base/reset.css">
+<link rel="stylesheet" href="./css/base/typography.css">
+<link rel="stylesheet" href="./css/components/badges.css">
+<link rel="stylesheet" href="./css/components/quote-block.css">
+
+<style>
+  body { max-width: 800px; margin: 0 auto; padding: 12mm 8mm; }
+  .hero { text-align: center; padding: var(--tcm-space-12) 0 var(--tcm-space-8); border-bottom: 1px solid var(--tcm-border-default); margin-bottom: var(--tcm-space-8); }
+  .hero-eb { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.32em; color: var(--tcm-color-turkuvaz-9); margin-bottom: var(--tcm-space-4); font-weight: 600; }
+  .hero-title { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 144, "wght" 800, "SOFT" 20, "WONK" 1; font-size: 84pt; line-height: 0.9; letter-spacing: -0.05em; margin-bottom: var(--tcm-space-3); }
+  .hero-sub { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 22, "wght" 400, "SOFT" 50; font-style: italic; font-size: 18pt; color: var(--tcm-color-turkuvaz-10); margin-bottom: var(--tcm-space-6); }
+  .hero-tag { font-family: var(--tcm-family-fr); font-size: 12pt; line-height: 1.6; color: var(--tcm-text-2); max-width: 540px; margin: 0 auto; }
+  .cta { display: flex; gap: var(--tcm-space-3); justify-content: center; margin-top: var(--tcm-space-6); flex-wrap: wrap; }
+  .cta a { display: inline-block; padding: var(--tcm-space-2) var(--tcm-space-5); font-family: var(--tcm-family-as); font-weight: 600; text-decoration: none; font-size: 10pt; border: 1px solid currentColor; }
+  .cta a.primary { background: var(--tcm-color-turkuvaz-9); color: var(--tcm-color-gri-1); border-color: var(--tcm-color-turkuvaz-9); }
+  .cta a.secondary { background: transparent; color: var(--tcm-text-body); }
+
+  .nav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--tcm-space-3); margin-bottom: var(--tcm-space-8); }
+  .nav-card { background: var(--tcm-panel-bg); border: 1px solid var(--tcm-border-default); padding: var(--tcm-space-4) var(--tcm-space-5); text-decoration: none; color: inherit; transition: border-color 200ms; }
+  .nav-card:hover { border-color: var(--tcm-color-turkuvaz-9); }
+  .nav-card h3 { font-family: var(--tcm-family-fr); font-variation-settings: "opsz" 32, "wght" 700; font-size: 14pt; margin-bottom: var(--tcm-space-1); color: var(--tcm-text-body); }
+  .nav-card p { font-family: var(--tcm-family-fr); font-size: 10pt; color: var(--tcm-text-2); line-height: 1.5; }
+  .nav-card .eb { font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.18em; color: var(--tcm-color-turkuvaz-9); display: block; margin-bottom: var(--tcm-space-1); }
+
+  .tier-row { display: flex; gap: var(--tcm-space-2); flex-wrap: wrap; justify-content: center; padding: var(--tcm-space-5); background: var(--tcm-panel-subtle); border: 1px solid var(--tcm-border-default); margin: var(--tcm-space-4) 0 var(--tcm-space-8); }
+
+  footer { text-align: center; padding: var(--tcm-space-6) 0; border-top: 1px solid var(--tcm-border-default); font-family: var(--tcm-family-mo); font-variation-settings: "MONO" 1; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.18em; color: var(--tcm-text-muted); }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-eb">● T.C. Mevzuat Tasarım Sistemi</div>
+  <h1 class="hero-title">Düstur</h1>
+  <p class="hero-sub">Stratejik Çerçeve · v1.2.0</p>
+  <p class="hero-tag">Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey doktrini. Anayasa'dan Tebliğ'e tüm normlara — basılı belgeden mobil arayüze tüm yüzeylere — tek bir devredilebilir kaynak.</p>
+
+  <div class="cta">
+    <a href="./examples/" class="primary">Canlı Galeri</a>
+    <a href="./docs/getting-started.md" class="secondary">Başlangıç</a>
+    <a href="https://github.com/mahirkurt/Dustur" class="secondary">GitHub</a>
+  </div>
+</section>
+
+<div class="tier-row">
+  <span class="yuzey-badge anayasa">ANAYASA</span>
+  <span class="yuzey-badge aym">AYM KARARI</span>
+  <span class="yuzey-badge cbk">CBK</span>
+  <span class="yuzey-badge kanun">KANUN</span>
+  <span class="yuzey-badge yonetmelik">YÖNETMELİK</span>
+  <span class="yuzey-badge teblig">TEBLİĞ</span>
+  <span class="yuzey-badge genelge">GENELGE</span>
+</div>
+
+<nav class="nav-grid">
+  <a href="./examples/" class="nav-card">
+    <span class="eb">● Canlı Galeri</span>
+    <h3>Bileşen Galerisi</h3>
+    <p>9 demo bölüm · tema switcher · scrollspy</p>
+  </a>
+  <a href="./examples/akn/render.html" class="nav-card">
+    <span class="eb">● Akoma Ntoso</span>
+    <h3>XML → Render</h3>
+    <p>TCK Madde 220 örnek render</p>
+  </a>
+  <a href="./examples/do-dont/" class="nav-card">
+    <span class="eb">● Pattern Lib</span>
+    <h3>Yapın · Yapmayın</h3>
+    <p>5 karşı-örnekli kullanım rehberi</p>
+  </a>
+  <a href="./docs/01-manifesto/" class="nav-card">
+    <span class="eb">● Bölüm I</span>
+    <h3>Manifesto</h3>
+    <p>Üç evren doktrini · kompozit palet</p>
+  </a>
+  <a href="./docs/02-typography/" class="nav-card">
+    <span class="eb">● Bölüm II</span>
+    <h3>Tipografi</h3>
+    <p>Fraunces · Albert Sans · Recursive</p>
+  </a>
+  <a href="./docs/03-color/" class="nav-card">
+    <span class="eb">● Bölüm III</span>
+    <h3>Renk Sistemi</h3>
+    <p>12-step LCH · WCAG · APCA · CVD</p>
+  </a>
+  <a href="./docs/04-tokens/" class="nav-card">
+    <span class="eb">● Bölüm IV</span>
+    <h3>Jeton Mimarisi</h3>
+    <p>W3C DTCG · 308 jeton · 3 katman</p>
+  </a>
+  <a href="./docs/06-akoma-ntoso/" class="nav-card">
+    <span class="eb">● Bölüm VI</span>
+    <h3>Akoma Ntoso</h3>
+    <p>OASIS XML standart · ELI URI · TR adaptasyon</p>
+  </a>
+  <a href="./reference/dustur-source.html" class="nav-card">
+    <span class="eb">● Reference</span>
+    <h3>Tam Belge</h3>
+    <p>Paged.js A4 PDF kaynak · ~100 sayfa</p>
+  </a>
+</nav>
+
+<div class="dq-block tur-left">
+  <span class="dq-block-mark">"</span>
+  <p class="dq-block-tx">Bir tasarım sistemi insan tarafından <em>okunsa</em> bile, makine tarafından <em>uygulanmadığı</em> sürece çoğaltılamaz, devredilemez, sürdürülemez.</p>
+  <span class="dq-block-attr">— Bölüm IV · Jeton Mimarisi Doktrini</span>
+</div>
+
+<footer>
+  Düstur v1.2.0 · @dustur/tasarim-sistemi · github.com/mahirkurt/Dustur
+</footer>
+
+</body>
+</html>

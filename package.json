@@ -6,13 +6,22 @@
   "type": "module",
   "main": "css/dustur.css",
   "style": "css/dustur.css",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "files": [
     "css/",
     "tokens/",
     "docs/",
-    "assets/",
+    "assets/fonts/subset/",
+    "assets/motifs/",
     "dist/web/",
-    "dist/dtcg/"
+    "dist/dtcg/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "SECURITY.md"
   ],
   "exports": {
     ".": {
@@ -25,7 +34,9 @@
     "./themes/high-contrast": "./css/themes/high-contrast.css",
     "./themes/reduced-motion": "./css/themes/reduced-motion.css",
     "./themes/print": "./css/themes/print.css",
-    "./akn": "./css/akn/element-styles.css"
+    "./fonts": "./css/fonts.css",
+    "./akn": "./css/akn/element-styles.css",
+    "./dist/*": "./dist/*"
   },
   "scripts": {
     "lint": "node scripts/lint-tokens.mjs",
@@ -40,20 +51,27 @@
     "check:visual:baseline": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs --baseline",
     "check:visual:strict": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/visual-regression.mjs --strict",
     "check:all": "npm run lint && npm run check:contrast && npm run check:diacritics && npm run check:locked && npm run check:colorblind && npm run check:akn",
+    "verify": "npm run check:all && npm run build",
     "build": "node scripts/sd-config.mjs",
     "build:sd": "node scripts/sd-config.mjs",
     "build:fallback": "node scripts/build-css-from-tokens.mjs",
     "build:sourcemap": "node scripts/build-css-sourcemap.mjs",
     "build:fonts": "node scripts/subset-fonts.mjs",
+    "build:all": "npm run build && npm run build:sourcemap",
     "report:usage": "node scripts/token-usage-map.mjs",
     "report:all": "npm run check:contrast && npm run check:colorblind && npm run report:usage",
     "preview": "python3 -m http.server 8080 || python -m http.server 8080",
     "pdf": "pagedjs-cli reference/dustur-source.html -o dustur.pdf",
-    "clean": "rm -rf dist/"
+    "clean": "rm -rf dist/ node_modules/.cache/",
+    "prepublishOnly": "npm run check:all && npm run build:all"
   },
   "devDependencies": {
     "playwright": "^1.60.0",
     "style-dictionary": "^4.0.0"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0"
   },
   "keywords": [
     "design-system",
@@ -66,19 +84,23 @@
     "akoma-ntoso",
     "wcag-aaa",
     "apca",
-    "variable-fonts"
+    "variable-fonts",
+    "print-first",
+    "paged-js",
+    "tr",
+    "turkish"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mahirkurt/dustur.git"
+    "url": "git+https://github.com/mahirkurt/Dustur.git"
   },
   "bugs": {
-    "url": "https://github.com/mahirkurt/dustur/issues"
+    "url": "https://github.com/mahirkurt/Dustur/issues"
   },
-  "homepage": "https://github.com/mahirkurt/dustur#readme",
+  "homepage": "https://github.com/mahirkurt/Dustur#readme",
   "author": "Düstur Tasarım Sistemi Ekibi",
-  "dependencies": {
-    "pixelmatch": "^7.2.0",
-    "pngjs": "^7.0.0"
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

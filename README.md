@@ -2,7 +2,20 @@
 
 **T.C. Mevzuat Tasarım Sistemi · Stratejik Çerçeve**
 
+[![CI](https://github.com/mahirkurt/Dustur/actions/workflows/ci.yml/badge.svg)](https://github.com/mahirkurt/Dustur/actions/workflows/ci.yml)
+[![Visual Regression](https://github.com/mahirkurt/Dustur/actions/workflows/visual.yml/badge.svg)](https://github.com/mahirkurt/Dustur/actions/workflows/visual.yml)
+[![Pages](https://github.com/mahirkurt/Dustur/actions/workflows/pages.yml/badge.svg)](https://mahirkurt.github.io/Dustur/)
+[![npm version](https://img.shields.io/npm/v/@dustur/tasarim-sistemi.svg)](https://www.npmjs.com/package/@dustur/tasarim-sistemi)
+[![License](https://img.shields.io/badge/license-See%20LICENSE-blue.svg)](./LICENSE)
+[![W3C DTCG](https://img.shields.io/badge/tokens-W3C%20DTCG-green.svg)](./tokens/)
+[![WCAG 2.1 AAA](https://img.shields.io/badge/a11y-WCAG%202.1%20AAA-brightgreen.svg)](./docs/03-color/colorblind-strategy.md)
+[![Akoma Ntoso](https://img.shields.io/badge/AKN-OASIS%203.0-purple.svg)](./tokens/akoma-ntoso/)
+
 Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey doktrini. Anayasa'dan Tebliğ'e tüm normlara — basılı belgeden mobil arayüze tüm yüzeylere — tek bir devredilebilir kaynak.
+
+🌐 **Live demo:** https://mahirkurt.github.io/Dustur/
+📦 **NPM:** `npm install @dustur/tasarim-sistemi`
+📜 **Reference PDF:** [`reference/dustur-source.html`](./reference/dustur-source.html) (~100 sayfa, Paged.js)
 
 ---
 
