@@ -61,6 +61,7 @@
     "report:usage": "node scripts/token-usage-map.mjs",
     "report:all": "npm run check:contrast && npm run check:colorblind && npm run report:usage",
     "preview": "python3 -m http.server 8080 || python -m http.server 8080",
+    "showcase:shoot": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/showcase-shoot.mjs",
     "pdf": "pagedjs-cli reference/dustur-source.html -o dustur.pdf",
     "clean": "rm -rf dist/ node_modules/.cache/",
     "prepublishOnly": "npm run check:all && npm run build:all"
