@@ -1,6 +1,6 @@
 {
   "name": "@dustur/tasarim-sistemi",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "DÜSTUR · T.C. Mevzuat Tasarım Sistemi · Türkiye Cumhuriyeti mevzuat sisteminin kromatik, tipografik, jeton ve UI yüzey doktrini.",
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
