@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "playwright": "^1.60.0",
-    "style-dictionary": "^4.0.0"
+    "style-dictionary": "^5.4.1"
   },
   "dependencies": {
     "pixelmatch": "^7.2.0",
