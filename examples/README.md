@@ -10,6 +10,17 @@ Sistemin gerçek kullanımını gösteren HTML/SVG/XML örnekleri.
 | [`madde-detay.html`](./madde-detay.html) | Madde Detay Sayfası (Bölüm V · 5.1) |
 | [`badge-galeri.html`](./badge-galeri.html) | Rozet + tier border galerisi (Bölüm V · 5.9) |
 
+## Tam Mevzuat Render (A4 · Paged.js)
+
+| Dosya | Açıklama |
+|---|---|
+| [`evde-saglik-yonetmeligi.html`](./evde-saglik-yonetmeligi.html) | **Evde Sağlık ve Evde Bakım Hizmetlerinin Sunumu Hakkında Yönetmelik** · gerçek bir yönetmeliğin uçtan uca render'ı · Yönetmelik (Turkuvaz) kademesi · kapak + künye + otomatik içindekiler (`target-counter`) + 9 bölüm · 46 madde · 3 geçici madde + 13 ek · madde/fıkra/bent (AKN) semantiği · 102 A4 sayfa |
+
+```bash
+# PDF üretimi (Paged.js):
+npx pagedjs-cli examples/evde-saglik-yonetmeligi.html -o evde-saglik-yonetmeligi.pdf
+```
+
 ## Akoma Ntoso
 
 | Dosya | Açıklama |
