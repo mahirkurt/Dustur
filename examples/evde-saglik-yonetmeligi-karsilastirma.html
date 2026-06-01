@@ -128,10 +128,10 @@ a.toc-ch.top::after { font-size:10.5pt; color:var(--ink-1); font-weight:600; }
 /* alt-bölüm başlığı (Bölüm II içindeki BİRİNCİ BÖLÜM …) */
 .altbolum { padding-top:8mm; margin-bottom:5mm; }
 .altbolum .k { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:7.5pt; letter-spacing:0.22em; text-transform:uppercase; color:var(--tur-10); display:block; margin-bottom:2mm; }
-.altbolum .t { font-family:'Fraunces',serif; font-variation-settings:'opsz' 32,'wght' 600,'SOFT' 8; font-size:18pt; line-height:1.15; color:var(--ink-1); padding-bottom:2.5mm; border-bottom:2px solid var(--ink-1); }
+.altbolum .t { font-family:'Fraunces',serif; font-variation-settings:'opsz' 32,'wght' 600,'SOFT' 8; font-size:18pt; line-height:1.25; color:var(--ink-1); padding-bottom:3.2mm; border-bottom:2px solid var(--ink-1); }
 
 /* genel başlıklar */
-.sub-h3 { font-family:'Fraunces',serif; font-variation-settings:'opsz' 24,'wght' 600,'SOFT' 8; font-size:14pt; line-height:1.2; color:var(--ink-1); margin:7mm 0 3mm; padding-bottom:1.4mm; border-bottom:1px solid var(--rule); }
+.sub-h3 { font-family:'Fraunces',serif; font-variation-settings:'opsz' 24,'wght' 600,'SOFT' 8; font-size:14pt; line-height:1.3; color:var(--ink-1); margin:7mm 0 3mm; padding-bottom:2.4mm; border-bottom:1px solid var(--rule); }
 .body-p { font-family:'Fraunces',serif; font-size:10pt; line-height:1.6; color:var(--ink-1); margin:2.5mm 0; text-align:justify; max-width:168mm; }
 .body-p strong { font-weight:600; }
 
@@ -151,9 +151,9 @@ a.toc-ch.top::after { font-size:10.5pt; color:var(--ink-1); font-weight:600; }
 
 /* ═══════════════ MADDE KARŞILAŞTIRMA BLOĞU ═══════════════ */
 .cmp { margin:0 0 6mm; }
-.cmp-head { display:flex; align-items:baseline; gap:3mm; flex-wrap:wrap; margin-top:6mm; margin-bottom:3mm; padding-bottom:1.6mm; border-bottom:1px solid var(--rule); }
+.cmp-head { display:flex; align-items:baseline; gap:2mm 3mm; flex-wrap:wrap; margin-top:6mm; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--rule); }
 .cmp-no { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:8.5pt; letter-spacing:0.04em; color:var(--tur-10); text-transform:uppercase; }
-.cmp-title { font-family:'Fraunces',serif; font-variation-settings:'opsz' 26,'wght' 600,'SOFT' 6; font-size:14.5pt; color:var(--ink-1); line-height:1.1; flex:1 1 auto; }
+.cmp-title { font-family:'Fraunces',serif; font-variation-settings:'opsz' 26,'wght' 600,'SOFT' 6; font-size:14.5pt; color:var(--ink-1); line-height:1.3; flex:1 1 auto; }
 
 /* alıntı (kaynak metin → v18) */
 .qsrc, .qnew { padding:3mm 4mm; margin:2.2mm 0; }
@@ -462,71 +462,70 @@ a.toc-ch.top::after { font-size:10.5pt; color:var(--ink-1); font-weight:600; }
 
 <div class="cmp">
   <div class="cmp-head"><span class="cmp-no">Madde 4</span><span class="cmp-title">Tanımlar</span><span class="nb nb-gen">Büyük Ölçüde Genişletildi</span></div>
-  <p class="body-p">Mevcut metinler: 2023/40219 yönetmeliği <strong>26 tanım</strong>; 2005/25751 yönetmeliği <strong>21 tanım</strong> içerir. v18 — Madde 4: <strong>56 tanım</strong> (a–yy bentleri).</p>
+  <p class="body-p">Mevcut metinler: 2023/40219 yönetmeliği <strong>26 tanım</strong>; 2005/25751 yönetmeliği <strong>21 tanım</strong> içerir. v18 — Madde 4: <strong>56 tanım</strong> (a–vv bentleri).</p>
   <table class="mzv">
     <thead><tr><th>Tanım</th><th class="c">2023</th><th class="c">2005</th><th class="c hi">v18</th><th class="c">Notasyon</th></tr></thead>
     <tbody>
-      <tr><td>Bakanlık</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">a</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Genel Müdürlük</td><td class="c">SHGM</td><td class="c">TSHGM</td><td class="c hi">b</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Müdürlük</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">c</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Sağlık tesisi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ç</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Hasta</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">d</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
-      <tr><td>Hizmet birimi</td><td class="c">ESH-H/D</td><td class="c cross">—</td><td class="c hi">e</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
-      <tr><td>ESH-H</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">f</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>ESH-D</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">g</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Özel evde bakım merkezi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">ğ</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Özel evde bakım birimi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">h</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>ESHİM</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">ı</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>ESKOM</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">i</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Yürütme komisyonu</td><td class="c">Md. 16</td><td class="c cross">—</td><td class="c hi">j</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>İl değerlendirme komisyonu</td><td class="c">Md. 17</td><td class="c cross">—</td><td class="c hi">k</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Merkez koordinasyon komisyonu</td><td class="c">Md. 18</td><td class="c cross">—</td><td class="c hi">l</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
-      <tr><td>Sorumlu hekim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">m</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Sorumlu idareci</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">n</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Mesul müdür</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">o</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Klinik sorumlu hekim</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ö</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Bakım destek personeli</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">p</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Hizmet ekibi</td><td class="c">Md. 12</td><td class="c cross">—</td><td class="c hi">r</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
-      <tr><td>Faaliyet izin belgesi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">s</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
-      <tr><td>Özel faaliyet izni</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ş</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Akut evde sağlık hizmeti</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">t</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Hospital-at-Home (HaH)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">u</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Erken taburculuk</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ü</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Yatış yerine evde tedavi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">v</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Kanser hastalarına yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">y</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Çocuk hastalara yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">z</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Yaşam sonu bakım</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">aa</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Yaşlı sağlığına yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">bb</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Yaşlı Sağlığı Merkezi</td><td class="c">YAŞAM</td><td class="c cross">—</td><td class="c hi">cc</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
-      <tr><td>OPAT (damar yoluyla antimikrobiyal)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">çç</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Evde ağız ve diş sağlığı hizmeti</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">dd</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Uzaktan hasta izleme</td><td class="c">Md. 22/19</td><td class="c cross">—</td><td class="c hi">ee</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
-      <tr><td>Uzaktan sağlık hizmeti</td><td class="c">Md. 4/ö</td><td class="c cross">—</td><td class="c hi">ff</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Sürekli evde sağlık</td><td class="c">Md. 20</td><td class="c cross">—</td><td class="c hi">gg</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Süreli evde sağlık</td><td class="c">Md. 20</td><td class="c cross">—</td><td class="c hi">ğğ</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Aydınlatılmış onam</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">hh</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Kişisel sağlık verisi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ıı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Veri sorumlusu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ii</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Veri işleyen</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">jj</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Standart Hizmet Protokolü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">kk</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Klinik kalite çıktısı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ll</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Aile hekimi</td><td class="c">atıf</td><td class="c cross">—</td><td class="c hi">a</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Akut evde sağlık hizmeti</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">b</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Aydınlatılmış onam</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">c</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Bakan</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">ç</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Bakanlık</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">d</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Bakım destek personeli</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">e</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Bakım planı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">f</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Bakım veren kişi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">g</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Birim sorumlusu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ğ</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Çocuk hasta</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">h</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Çocuk hastalara yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Ekip</td><td class="c">hizmet ekibi</td><td class="c cross">—</td><td class="c hi">i</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+      <tr><td>ESHİM</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">j</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>ESKOM</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">k</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>ESH-D türü birim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">l</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>ESH-H türü birim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">m</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde bakım birimi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">n</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde bakım hizmeti</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">o</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde bakım merkezi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">ö</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde damar yoluyla antimikrobiyal tedavi (OPAT)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">p</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Evde sağlık hizmet birimi</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">r</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde sağlık hizmet ünitesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">s</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Evde sağlık hizmeti</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">ş</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Faaliyet izin belgesi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">t</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+      <tr><td>Genel Müdürlük</td><td class="c">SHGM</td><td class="c">TSHGM</td><td class="c hi">u</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Hareket güçlüğü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ü</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Yaşam sonu bakım</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">v</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hekim</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">y</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hemşire</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">z</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hizmet kuruluşu (kapsayıcı)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">aa</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>İl değerlendirme komisyonu</td><td class="c">Md. 17</td><td class="c cross">—</td><td class="c hi">bb</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>İl koordinatörü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">cc</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>İl sağlık müdürlüğü</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">çç</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Kanser hastalarına yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">dd</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kanuni temsilci</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ee</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kapsamlı yaşlı değerlendirmesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ff</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kişisel sağlık verisi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">gg</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Klinik sorumlu hekim</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ğğ</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kronik kompleks tıbbi durum</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">hh</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Merkez koordinasyon komisyonu</td><td class="c">Md. 18</td><td class="c cross">—</td><td class="c hi">ıı</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+      <tr><td>Mesul müdür</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">ii</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Müdürlük</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">jj</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Olağan dışı durum bildirimi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">kk</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Özel faaliyet izni</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ll</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
       <tr><td>Özellikli evde sağlık hizmeti</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">mm</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Aile hekimliği birimi</td><td class="c">atıf</td><td class="c cross">—</td><td class="c hi">nn</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-      <tr><td>Hizmet kuruluşu (kapsayıcı)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">oo</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Kanuni temsilci</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">öö</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Aydınlatma yükümlülüğü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">pp</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Açık rıza</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">rr</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Yurt dışına aktarım</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ss</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Hizmet sürekliliği</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">şş</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Hizmetin kesintisiz yürütülmesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">tt</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Aydınlatılmış onam belgesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">uu</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Mahremiyet</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">üü</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Bakım planı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">vv</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-      <tr><td>Acil sevk protokolü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">yy</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Sağlık personeli</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">nn</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Sorumlu hekim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">oo</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Sorumlu idareci</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">öö</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Standart hizmet protokolü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">pp</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Tedavi planı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">rr</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Teknoloji bağımlısı çocuk</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ss</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Uzaktan hasta izleme</td><td class="c">Md. 22/19</td><td class="c cross">—</td><td class="c hi">şş</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+      <tr><td>Veri işleyen</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">tt</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Veri sorumlusu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">uu</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Yaşlı Sağlığı Merkezi</td><td class="c">YAŞAM</td><td class="c cross">—</td><td class="c hi">üü</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+      <tr><td>Yürütme komisyonu</td><td class="c">Md. 16</td><td class="c cross">—</td><td class="c hi">vv</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
     </tbody>
   </table>
-  <div class="keynote"><span class="k">Sayısal Özet</span><p><span class="nt nt-kor">Korundu</span> 12 tanım &nbsp;·&nbsp; <span class="nt nt-yen">Yeniden Yazıldı</span> 5 &nbsp;·&nbsp; <span class="nt nt-gen">Genişletildi</span> 3 &nbsp;·&nbsp; <span class="nt nt-new">Yeni Eklendi</span> 36 &nbsp;·&nbsp; <span class="nt nt-kal">Kaldırıldı</span> 0. Mevcut tanımların tümü korundu veya yeniden yazıldı.</p></div>
-  <div class="keynote"><span class="k">Anahtar Yenilikler</span><p><strong>(ö) Klinik sorumlu hekim:</strong> özellikli hizmetler için branş uzmanı, idari mesul müdürden ayrıldı. <strong>(s+ş) Faaliyet izin belgesi + özel faaliyet izni:</strong> iki kademeli yetkilendirme. <strong>(mm) Özellikli evde sağlık hizmeti:</strong> Md. 27, 28, 29, 30 ve 32 ile sınırlı. <strong>(ıı–rr) KVKK terminolojisi:</strong> veri sorumlusu / veri işleyen / kişisel sağlık verisi / açık rıza / yurt dışına aktarım — tam kavram seti.</p></div>
+  <div class="keynote"><span class="k">Sayısal Özet</span><p><span class="nt nt-kor">Korundu</span> 21 tanım &nbsp;·&nbsp; <span class="nt nt-yen">Yeniden Yazıldı</span> 3 &nbsp;·&nbsp; <span class="nt nt-gen">Genişletildi</span> 2 &nbsp;·&nbsp; <span class="nt nt-new">Yeni Eklendi</span> 30 &nbsp;·&nbsp; <span class="nt nt-kal">Kaldırıldı</span> 0. Mevcut metinlerdeki tanımlar korundu veya yeniden yazıldı; yeni hizmet türü, klinik ve KVKK kavramları eklendi.</p></div>
+  <div class="keynote"><span class="k">Anahtar Yenilikler</span><p><strong>(ğğ) Klinik sorumlu hekim:</strong> özellikli hizmetler için branş uzmanı, idari mesul müdürden ayrıldı. <strong>(t) Faaliyet izin belgesi + (ll) özel faaliyet izni:</strong> iki kademeli yetkilendirme. <strong>(mm) Özellikli evde sağlık hizmeti:</strong> Md. 27, 28, 29, 30 ve 32 ile sınırlı. <strong>(gg · tt · uu) KVKK terminolojisi:</strong> kişisel sağlık verisi / veri işleyen / veri sorumlusu — tam kavram seti.</p></div>
 </div>
 
 <div class="altbolum" id="b2">
@@ -708,7 +707,7 @@ a.toc-ch.top::after { font-size:10.5pt; color:var(--ink-1); font-weight:600; }
   <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 6 · YENİ BÖLÜM</span>
   <span class="t">Altıncı Bölüm — Özellikli Evde Sağlık Hizmet Türleri</span>
 </div>
-<div class="note-genel"><strong>Genel not:</strong> Md. 27–33 arasındaki yedi madde ile düzenlenen yedi özellikli hizmet türü, mevcut metinlerin hiçbirinde bağımsız maddeler olarak yer almamaktadır. Tümü <span class="nt nt-new">Yeni Eklendi</span> kategorisindedir.</div>
+<div class="note-genel"><strong>Genel not:</strong> Bu bölümdeki hizmet türlerinden <strong>Md. 27, 28, 29, 30 ve 32</strong>, mevcut metinlerde bağımsız madde olarak yer almayan <span class="nt nt-new">Yeni Eklendi</span> hükümlerdir (yönetmeliğin tanımladığı "özellikli evde sağlık hizmetleri"). Buna karşılık <strong>Md. 31</strong> (yaşlı sağlığı) mevcut örtük düzenlemeyi <span class="nt nt-gen">Genişletir</span>; <strong>Md. 33</strong> (ağız ve diş sağlığı) ise 2023/40219'daki ESH-D türü kamu birimine dayanan, <span class="nt nt-kor">Korunan</span> hizmettir — yeni eklenen bir başlık değildir.</div>
 
 <div class="cmp">
   <div class="cmp-head"><span class="cmp-no">Madde 27</span><span class="cmp-title">Akut evde sağlık hizmeti (Hospital-at-Home)</span><span class="nb nb-new">Yeni — kritik modernizasyon</span></div>
@@ -909,25 +908,25 @@ a.toc-ch.top::after { font-size:10.5pt; color:var(--ink-1); font-weight:600; }
 <table class="mzv">
   <thead><tr><th class="c">EK</th><th>Adı</th><th class="c">2023</th><th class="c">2005</th><th class="c hi">v18</th><th class="c">Notasyon</th></tr></thead>
   <tbody>
-    <tr><td class="c mono">EK-1</td><td>Tanımlar ve Kısaltmalar</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-1</td><td>Asgari Araç, Malzeme, Tıbbi Cihaz ve İlaç Standardı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
     <tr><td class="c mono">EK-2</td><td>Asgari Kalite Çıktı Göstergeleri</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-3</td><td>Başvuru Dilekçesi (özel kuruluş)</td><td class="c cross">—</td><td class="c">Ek-1</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-    <tr><td class="c mono">EK-4</td><td>Açılış İzni Formu (kamu)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-5</td><td>Mesul Müdür Beyanı</td><td class="c cross">—</td><td class="c">Ek-2</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-    <tr><td class="c mono">EK-6</td><td>Faaliyet İzin Belgesi (özel)</td><td class="c cross">—</td><td class="c">Ek-3</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="c mono">EK-3</td><td>Özel Evde Bakım Merkezi / Birimi Başvuru Dilekçesi</td><td class="c cross">—</td><td class="c">Ek-1</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="c mono">EK-4</td><td>Malzeme ve Tıbbi Cihaz Temini Taahhütnamesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-5</td><td>Nakil Koordinasyonu Taahhütnamesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-6</td><td>Faaliyet İzin Belgesi</td><td class="c cross">—</td><td class="c">Ek-3</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
     <tr><td class="c mono">EK-6/A</td><td>Özel Faaliyet İzin Belgesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-7</td><td>Personel Bildirim Formu</td><td class="c cross">—</td><td class="c">Ek-4</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
-    <tr><td class="c mono">EK-8</td><td>Hasta Kabul Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-9</td><td>Bakım Planı Formatı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-10</td><td>KVKK Aydınlatma Metni</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-10/A</td><td>KVKK Açık Rıza Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-10/B</td><td>Yurt Dışı Aktarım Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-7</td><td>Mesul Müdür / Birim Sorumlusu Belgesi</td><td class="c cross">—</td><td class="c">Ek-2</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="c mono">EK-8</td><td>Personel Çalışma Belgesi</td><td class="c cross">—</td><td class="c">Ek-4</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="c mono">EK-9</td><td>Hasta Kabul ve Değerlendirme Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-10</td><td>Aydınlatılmış Onam Formu (Tıbbi)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-10/A</td><td>KVKK Aydınlatma Metni (Kişisel Sağlık Verileri)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-10/B</td><td>Açık Rıza Beyanı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
     <tr><td class="c mono">EK-11</td><td>Denetim Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
     <tr><td class="c mono">EK-12</td><td>Standart Hizmet Protokolü Genel Çerçevesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
-    <tr><td class="c mono">EK-13</td><td>İdari Yaptırım Cetveli (kanuni sınır içinde)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-13</td><td>Yaptırım Cetveli</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
   </tbody>
 </table>
-<div class="keynote"><span class="k">Sayısal Özet</span><p><span class="nt nt-kor">Korundu</span> 3 ek (özel kuruluş başvuru, mesul müdür beyanı, personel bildirim) &nbsp;·&nbsp; <span class="nt nt-gen">Genişletildi</span> 1 ek (faaliyet izin belgesi) &nbsp;·&nbsp; <span class="nt nt-new">Yeni Eklendi</span> 12 ek (KVKK, kalite, denetim, yaptırım, hizmet protokolü, klinik formlar).</p></div>
+<div class="keynote"><span class="k">Sayısal Özet</span><p><span class="nt nt-kor">Korundu</span> 3 ek (başvuru dilekçesi, mesul müdür/birim sorumlusu belgesi, personel çalışma belgesi) &nbsp;·&nbsp; <span class="nt nt-gen">Genişletildi</span> 1 ek (faaliyet izin belgesi) &nbsp;·&nbsp; <span class="nt nt-new">Yeni Eklendi</span> 12 ek (kalite, hasta kabul, onam, KVKK aydınlatma, açık rıza, denetim, protokol, yaptırım ve sair). <strong>Not:</strong> Yurt dışına veri aktarımı ayrı bir form (ek) olarak düzenlenmemiştir; EK-10/B Açık Rıza Beyanı içinde bir başlık olarak yer alır.</p></div>
 
 <!-- ═══════════════ IV · SONUÇ ═══════════════ -->
 <section class="sec-opener" id="s4">
