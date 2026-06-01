@@ -330,20 +330,19 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
   font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1, 'wght' 700;
   font-size: 9pt; letter-spacing: 0.04em; color: var(--tur-10); text-transform: uppercase; margin-right: 1.5mm;
 }
-.fikra { margin-bottom: 2.8mm; padding-left: 8mm; position: relative; text-align: justify; hyphens: auto; }
+/* Fıkra — mevzuat (Resmî Gazete) düzeni: numara satır içi, metin sola dayalı;
+   ilk fıkrada madde numarası başta gelir (MADDE 5- (1) …). */
+.fikra { margin-bottom: 2.8mm; text-align: justify; hyphens: auto; }
 .fikra > .fikra-no {
-  position: absolute; left: 0; top: 0; width: 7mm;
-  font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1; font-size: 9pt; color: var(--tur-10);
+  font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1; font-size: 9pt; color: var(--tur-10); margin-right: 0.8mm;
 }
-.fikra.no-indent { padding-left: 0; }
-.fikra.no-indent > .fikra-no { position: static; width: auto; margin-right: 1mm; }
-.fikra-tx { display: block; }
+.fikra-tx { }
 .bentler { list-style: none; margin: 2mm 0 2mm 0; padding-left: 8mm; }
 .bent { display: grid; grid-template-columns: 8mm 1fr; gap: 1mm; margin-bottom: 1.8mm; text-align: justify; hyphens: auto; }
 .bent > .bent-no { font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1; font-size: 9pt; color: var(--tur-9); }
 .altbent { list-style: none; margin: 1.5mm 0; padding-left: 8mm; }
 .altbent .bent > .bent-no { color: var(--ink-3); }
-.kapanis { padding-left: 8mm; margin-top: 1.5mm; font-style: italic; color: var(--ink-2); }
+.kapanis { margin-top: 1.5mm; font-style: italic; color: var(--ink-2); }
 
 /* Tanımlar (definition list) */
 .tanim-liste { margin: 3mm 0 2mm; }
@@ -605,13 +604,13 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Amaç</h2>
 <div class="madde akn-article" id="m1">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 1</span>Bu Yönetmeliğin amacı; evde sağlık ve evde bakım hizmetlerinin sunumuna, bu hizmetleri sunacak birim ve kuruluşların yetkilendirilmesine, personel, kayıt, kalite, denetim ve hasta haklarına ilişkin usul ve esasları belirlemektir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 1-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmeliğin amacı; evde sağlık ve evde bakım hizmetlerinin sunumuna, bu hizmetleri sunacak birim ve kuruluşların yetkilendirilmesine, personel, kayıt, kalite, denetim ve hasta haklarına ilişkin usul ve esasları belirlemektir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu Yönetmelik kapsamında düzenlenen hizmetler; bireyin yaşam kalitesinin yaşadığı ortamda sürdürülebilmesini, gereksiz hastane yatışlarının önlenmesini veya kısaltılmasını, yatış sonrası tıbbi bakımın ev ortamında sürdürülebilirliğini, koruyucu sağlık hizmetlerinin yaygınlaştırılmasını ve bireyin özerkliğinin gözetilmesini hedefler.</span></p>
 </div>
 
 <h2 class="madde-baslik">Kapsam</h2>
 <div class="madde akn-article" id="m2">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 2</span>Bu Yönetmelik;</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 2-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Sağlık Bakanlığına bağlı sağlık tesisleri ile üniversite hastaneleri ve eğitim ve araştırma hastaneleri bünyesinde kurulan evde sağlık hizmet birimlerini,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Bakanlıkça uygun görülen diğer kamu kurum ve kuruluşlarına ait sağlık tesisleri bünyesinde kurulan evde sağlık hizmet birimlerini,</span></li>
@@ -624,12 +623,12 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Dayanak</h2>
 <div class="madde akn-article" id="m3">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 3</span>Bu Yönetmelik; <span class="tarih">11/4/1928</span> tarihli ve <span class="tarih">1219</span> sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun, <span class="tarih">25/2/1954</span> tarihli ve <span class="tarih">6283</span> sayılı Hemşirelik Kanunu, <span class="tarih">7/5/1987</span> tarihli ve <span class="tarih">3359</span> sayılı Sağlık Hizmetleri Temel Kanununun 3 üncü, 9 uncu, 10 uncu, ek 11 inci ve ek 19 uncu maddeleri, <span class="tarih">24/11/2004</span> tarihli ve <span class="tarih">5258</span> sayılı Aile Hekimliği Kanununun 5 inci maddesi, <span class="tarih">24/3/2016</span> tarihli ve <span class="tarih">6698</span> sayılı Kişisel Verilerin Korunması Kanununun 6 ncı ve 9 uncu maddeleri ile 1 sayılı Cumhurbaşkanlığı Teşkilatı Hakkında Cumhurbaşkanlığı Kararnamesinin Sağlık Bakanlığının görev ve yetkilerine ilişkin hükümlerine dayanılarak hazırlanmıştır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 3-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik; <span class="tarih">11/4/1928</span> tarihli ve <span class="tarih">1219</span> sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun, <span class="tarih">25/2/1954</span> tarihli ve <span class="tarih">6283</span> sayılı Hemşirelik Kanunu, <span class="tarih">7/5/1987</span> tarihli ve <span class="tarih">3359</span> sayılı Sağlık Hizmetleri Temel Kanununun 3 üncü, 9 uncu, 10 uncu, ek 11 inci ve ek 19 uncu maddeleri, <span class="tarih">24/11/2004</span> tarihli ve <span class="tarih">5258</span> sayılı Aile Hekimliği Kanununun 5 inci maddesi, <span class="tarih">24/3/2016</span> tarihli ve <span class="tarih">6698</span> sayılı Kişisel Verilerin Korunması Kanununun 6 ncı ve 9 uncu maddeleri ile 1 sayılı Cumhurbaşkanlığı Teşkilatı Hakkında Cumhurbaşkanlığı Kararnamesinin Sağlık Bakanlığının görev ve yetkilerine ilişkin hükümlerine dayanılarak hazırlanmıştır.</span></p>
 </div>
 
 <h2 class="madde-baslik">Tanımlar</h2>
 <div class="madde akn-article" id="m4">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 4</span>Bu Yönetmelikte geçen;</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 4-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelikte geçen;</span></p>
   <div class="tanim-liste">
     <div class="tanim-i"><span class="tanim-n">a)</span><span><span class="tanim-term">Aile hekimi:</span> 5258 sayılı Kanun gereğince görevlendirilen hekimi,</span></div>
     <div class="tanim-i"><span class="tanim-n">b)</span><span><span class="tanim-term">Akut evde sağlık hizmeti:</span> Akut tıbbi durumların hastanede yatış yerine, klinik sorumlu hekim sorumluluğunda ve hastane düzeyinde izlem, tanı ile tedavi imkânları ile evde yönetildiği hizmet türünü,</span></div>
@@ -703,21 +702,21 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hizmetin yapılanması</h2>
 <div class="madde akn-article" id="m5">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 5</span>Bu Yönetmelik kapsamında sunulan hizmetlerin il düzeyinde planlanması, yürütülmesi ve koordinasyonu müdürlüğün yetkisindedir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 5-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan hizmetlerin il düzeyinde planlanması, yürütülmesi ve koordinasyonu müdürlüğün yetkisindedir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Müdürlük; ESKOM ile ESHİM'in kurulmasından, il koordinatörünün belirlenmesinden, personel, araç, malzeme ve donanım ihtiyacının karşılanmasından, uygun çalışma ortamının sağlanmasından sorumludur.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Hizmet birimleri ile özel evde bakım merkez ve birimleri, yönetim ve iletişim yönünden ESKOM ile bağlantılıdır.</span></p>
 </div>
 
 <h2 class="madde-baslik">Evde Sağlık Hizmetleri İletişim Merkezi</h2>
 <div class="madde akn-article" id="m6">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 6</span>ESHİM, Bakanlık tarafından belirlenen iletişim hattı üzerinden hizmet sunar. Hasta başvuruları elektronik kayıt sisteminde kayıt altına alınarak ESKOM'a iletilir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 6-</span><span class="fikra-no">(1)</span><span class="fikra-tx">ESHİM, Bakanlık tarafından belirlenen iletişim hattı üzerinden hizmet sunar. Hasta başvuruları elektronik kayıt sisteminde kayıt altına alınarak ESKOM'a iletilir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">ESHİM, günün yirmi dört saati başvuru kabul eder. Acil sağlık ihtiyacı tespit edilen başvurularda hasta 112 acil çağrı merkezine yönlendirilir.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">ESHİM aracılığıyla yapılan görüşmeler ses kayıt sistemi ile kayıt altına alınır; bu kayıtlara ilişkin işleme, saklama ve imha süreçleri 36 ncı maddenin yedinci fıkrasına göre yürütülür.</span></p>
 </div>
 
 <h2 class="madde-baslik">Evde Sağlık Hizmetleri Koordinasyon Merkezi</h2>
 <div class="madde akn-article" id="m7">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 7</span>ESKOM müdürlüğe bağlı olarak il düzeyinde tek elden hizmet koordinasyonunu sağlar. ESKOM'un yerleşkesi ve sayısı, ilin nüfus yoğunluğu ile coğrafi büyüklüğü gözetilerek belirlenir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 7-</span><span class="fikra-no">(1)</span><span class="fikra-tx">ESKOM müdürlüğe bağlı olarak il düzeyinde tek elden hizmet koordinasyonunu sağlar. ESKOM'un yerleşkesi ve sayısı, ilin nüfus yoğunluğu ile coğrafi büyüklüğü gözetilerek belirlenir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">ESKOM'un başlıca görevleri şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>İl genelinde kesintisiz hizmet sunumunu sağlamak,</span></li>
@@ -734,7 +733,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Yürütme komisyonu</h2>
 <div class="madde akn-article" id="m8">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 8</span>Hizmetin etkinlik, verimlilik ve süreklilik içinde yürütülmesi, şikâyetlerin ve itirazların değerlendirilmesi ve iyi uygulamaların yaygınlaştırılması amacıyla müdürlük bünyesinde yürütme komisyonu kurulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 8-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Hizmetin etkinlik, verimlilik ve süreklilik içinde yürütülmesi, şikâyetlerin ve itirazların değerlendirilmesi ve iyi uygulamaların yaygınlaştırılması amacıyla müdürlük bünyesinde yürütme komisyonu kurulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Komisyonun başkanı il sağlık müdürüdür. Başkanın yokluğunda kamu hastaneleri hizmetleri başkanı vekâlet eder. Komisyon en az beş, en çok dokuz üyeden oluşur. Üyeler il koordinatörü ile kamu hastaneleri hizmetleri başkanlığı, halk sağlığı hizmetleri başkanlığı ve acil sağlık hizmetleri başkanlıklarının başkanları veya yardımcılarından oluşur.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Komisyon ayda en az bir defa toplanır. Başkanın çağrısı veya üye başvurusu üzerine olağanüstü toplantı yapılır.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Komisyon en az beş üye ile toplanır, oy çokluğu ile karar verir. Oyların eşitliği hâlinde başkanın oyu yönünde karar oluşur. Komisyon kararları ESKOM'a iletilir; Bakanlık ve müdürlük hiyerarşisindeki hizmet birimleri bakımından bağlayıcıdır. Üniversite hastaneleri, diğer kamu kurum ve kuruluşları ile özel hizmet kuruluşları bakımından bu kararlar, ilgili mevzuat, faaliyet izin şartları ve varsa Bakanlıkla yapılmış protokol hükümleri çerçevesinde uygulanır.</span></p>
@@ -743,7 +742,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">İl değerlendirme komisyonu</h2>
 <div class="madde akn-article" id="m9">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 9</span>İl düzeyinde sağlık, sosyal hizmetler ve sosyal güvenlik alanlarında koordinasyonu sağlamak ve evde sağlık ile evde bakım hizmetlerini sosyal destek hizmetleri ile entegre etmek amacıyla valilik bünyesinde il değerlendirme komisyonu kurulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 9-</span><span class="fikra-no">(1)</span><span class="fikra-tx">İl düzeyinde sağlık, sosyal hizmetler ve sosyal güvenlik alanlarında koordinasyonu sağlamak ve evde sağlık ile evde bakım hizmetlerini sosyal destek hizmetleri ile entegre etmek amacıyla valilik bünyesinde il değerlendirme komisyonu kurulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Komisyonun üyeleri şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Vali veya görevlendireceği vali yardımcısı (başkan),</span></li>
@@ -761,7 +760,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Merkez koordinasyon komisyonu</h2>
 <div class="madde akn-article" id="m10">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 10</span>Ülke düzeyinde koordinasyon ile sorun çözümünü sağlamak amacıyla Bakanlık bünyesinde merkez koordinasyon komisyonu kurulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 10-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Ülke düzeyinde koordinasyon ile sorun çözümünü sağlamak amacıyla Bakanlık bünyesinde merkez koordinasyon komisyonu kurulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Komisyon, Bakanlığın daveti üzerine Bakanlık ile evde sağlık ve evde bakım alanlarında ilgili olan diğer Bakanlık temsilcilerinin katılımı ile yılda en az bir defa toplanır. İlgili diğer kamu kurum ve kuruluşları ile meslek örgütlerinin temsilcileri istişari mahiyette davet edilebilir.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Komisyon, illerin iyi uygulamalarını değerlendirir ve yaygınlaştırılması için tavsiyelerde bulunur.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Komisyonun sekretarya hizmetleri Genel Müdürlük tarafından yürütülür.</span></p>
@@ -778,7 +777,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Ekip yapısı</h2>
 <div class="madde akn-article" id="m11">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 11</span>Bu Yönetmelik kapsamında sunulan hizmetler, asgari olarak hekim, hemşire ve gerekli görülmesi hâlinde sağlık teknisyeni veya sağlık memurundan oluşan ekip ile yürütülür.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 11-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan hizmetler, asgari olarak hekim, hemşire ve gerekli görülmesi hâlinde sağlık teknisyeni veya sağlık memurundan oluşan ekip ile yürütülür.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Hizmet türünün gerektirmesi hâlinde ekibe eczacı, ebe, fizyoterapist, diyetisyen, psikolog ve sosyal hizmet uzmanı görevlendirilir.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Ekip personelinin bilgileri ESKOM'a bildirilir. Ekip personeli ESKOM'un görev tanımları ile evde sağlık hizmet birimi veya özel evde bakım merkez ve biriminin iş planı çerçevesinde görev yapar.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">İlk ev ziyareti hekim eşliğinde gerçekleştirilir. Sonraki izlemlerde, tıbbi ihtiyaca göre sorumlu hekimin görevlendirmesi ile ekip üyelerinden uygun olanı ziyareti gerçekleştirir.</span></p>
@@ -787,7 +786,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Sorumlu hekim</h2>
 <div class="madde akn-article" id="m12">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 12</span>Kamu evde sağlık hizmet birimlerinde sorumlu hekim, sorumlu idarecinin teklifi ve müdürlüğün uygun görmesi ile görevlendirilir. Sorumlu hekim, biriminin tıbbi yönden işleyişinden sorumludur ve aşağıdaki görevleri yürütür:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 12-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Kamu evde sağlık hizmet birimlerinde sorumlu hekim, sorumlu idarecinin teklifi ve müdürlüğün uygun görmesi ile görevlendirilir. Sorumlu hekim, biriminin tıbbi yönden işleyişinden sorumludur ve aşağıdaki görevleri yürütür:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Birimin günlük tıbbi faaliyetlerini koordine etmek,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Ekip üyelerini görevlendirmek, sevk ve idaresini sağlamak,</span></li>
@@ -825,7 +824,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hekimin görev, yetki ve sorumlulukları</h2>
 <div class="madde akn-article" id="m13">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 13</span>Hizmet biriminde görevli hekim;</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 13-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Hizmet biriminde görevli hekim;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Hastanın kapsamlı tıbbi değerlendirmesini yapmaktan,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Hastanın tanısını koyan ve tedavisini üstlenen diğer hekimler ile bağlantı kurarak tedavi planını hazırlamaktan,</span></li>
@@ -851,7 +850,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hemşirenin görev, yetki ve sorumlulukları</h2>
 <div class="madde akn-article" id="m14">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 14</span>Hizmet biriminde görevli hemşire;</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 14-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Hizmet biriminde görevli hemşire;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Hekimin yazılı ve imzalı tedavi istemini almak, hemşire formlarına kaydetmek ve uygulamak; uygulama sonuçlarını kaydetmekten,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Hasta için gerekli özel işlemlerin uygulanmasında hekime ve diğer ekip üyelerine destek sağlamaktan,</span></li>
@@ -875,7 +874,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Diğer sağlık personeli</h2>
 <div class="madde akn-article" id="m15">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 15</span>Hizmet biriminin sunduğu hizmet türüne göre ekibe görevlendirilen psikolog, fizyoterapist, diyetisyen, sosyal hizmet uzmanı, eczacı ve sağlık teknisyeni; ilgili meslek mevzuatı çerçevesinde kendi alanları ile sınırlı görev yapar. Bunlara yardımcı olmak üzere bakım destek personeli istihdam edilebilir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 15-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Hizmet biriminin sunduğu hizmet türüne göre ekibe görevlendirilen psikolog, fizyoterapist, diyetisyen, sosyal hizmet uzmanı, eczacı ve sağlık teknisyeni; ilgili meslek mevzuatı çerçevesinde kendi alanları ile sınırlı görev yapar. Bunlara yardımcı olmak üzere bakım destek personeli istihdam edilebilir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Eczacı, ekipte yer aldığı hâllerde akılcı ilaç kullanımı, ilaç-ilaç etkileşimi denetimi, doz hesabı, ilaç hazırlanması, ilaç saklama koşullarının uygunluğu ile hasta ve aile eğitiminden sorumludur.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Bakım destek personeli, sağlık meslek mensuplarına özgü teşhis, tedavi, ilaç uygulama, invaziv girişim ve tıbbi karar gerektiren işlemleri yapamaz. Bakım destek personelinin görevleri; sağlık personelinin gözetiminde günlük yaşam etkinliklerine destek, hijyen ve genel bakım ile evde sağlık veya evde bakım hizmetinin lojistik desteğinden oluşur.</span></p>
 </div>
@@ -891,7 +890,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Kamu evde sağlık hizmet birimleri</h2>
 <div class="madde akn-article" id="m16">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 16</span>Kamu evde sağlık hizmet birimleri aşağıdaki türlerde kurulur:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 16-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Kamu evde sağlık hizmet birimleri aşağıdaki türlerde kurulur:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span><strong>ESH-H türü birim:</strong> İkinci ve üçüncü basamak kamu sağlık tesisleri bünyesinde kurulur. ESH-H türü birim, bünyesinde bulunduğu sağlık tesisinin uzmanlık kapasitesi ve insan kaynağı ile uyumlu olmak kaydıyla bu Yönetmelikte düzenlenen hizmet türlerini sunar. 28, 29 ve 32 nci maddelerde düzenlenen hizmetler, ilgili maddelerde belirtilen uzmanlık dallarının sağlık tesisi bünyesinde fiilen bulunması hâlinde sunulur.</span></li>
     <li class="bent"><span class="bent-no">b)</span><span><strong>ESH-D türü birim:</strong> Ağız ve diş sağlığı merkezleri ile ağız ve diş hastaneleri bünyesinde kurulur ve evde ağız ile diş sağlığı hizmetlerini sunar.</span></li>
@@ -904,7 +903,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Kamu evde sağlık hizmet biriminin tescili</h2>
 <div class="madde akn-article" id="m17">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 17</span>Kamu evde sağlık hizmet biriminin açılış izni sorumlu idarecinin teklifi ile müdürlük onayına sunulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 17-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Kamu evde sağlık hizmet biriminin açılış izni sorumlu idarecinin teklifi ile müdürlük onayına sunulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Müdürlük, en az bir hekim olmak üzere üç sağlık personelinden oluşan değerlendirme ekibi kurar. Değerlendirme ekibi, birim için aranan asgari donanım, personel ve fiziki koşulların sağlandığını yerinde tespit eder.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Uygunluk durumunda müdürlük tarafından tescil işlemi yapılır.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Bina değişikliği ve benzeri durumlarda tescil yenilenir.</span></p>
@@ -914,7 +913,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Özel evde bakım merkez ve birimleri</h2>
 <div class="madde akn-article" id="m18">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 18</span>Özel evde bakım hizmetleri, bu Yönetmelik hükümlerine göre müdürlükten faaliyet izin belgesi alınmak suretiyle aşağıdaki kuruluşlar tarafından yürütülür:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 18-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Özel evde bakım hizmetleri, bu Yönetmelik hükümlerine göre müdürlükten faaliyet izin belgesi alınmak suretiyle aşağıdaki kuruluşlar tarafından yürütülür:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Yalnızca evde bakım hizmeti sunmak üzere müstakil olarak açılan özel evde bakım merkezleri,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span><span class="tarih">27/3/2002</span> tarihli ve <span class="tarih">24708</span> sayılı Resmî Gazete'de yayımlanan Özel Hastaneler Yönetmeliği ile <span class="tarih">15/2/2008</span> tarihli ve <span class="tarih">26788</span> sayılı Resmî Gazete'de yayımlanan Ayakta Teşhis ve Tedavi Yapılan Özel Sağlık Kuruluşları Hakkında Yönetmelik hükümlerine göre ruhsatlandırılmış özel hastane, tıp merkezi, dal merkezi veya poliklinik bünyesinde kurulan özel evde bakım birimleri.</span></li>
@@ -931,7 +930,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Özel evde bakım merkez ve biriminin yetkilendirilmesi</h2>
 <div class="madde akn-article" id="m19">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 19</span>Özel evde bakım merkezi veya birimi açacak gerçek veya tüzel kişiler, müdürlüğe Ek-3'te yer alan başvuru dilekçesi ile aşağıdaki belgeleri sunar:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 19-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Özel evde bakım merkezi veya birimi açacak gerçek veya tüzel kişiler, müdürlüğe Ek-3'te yer alan başvuru dilekçesi ile aşağıdaki belgeleri sunar:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Sağlık kuruluşunun bütün oda ve bölümlerinin kullanım amacını gösteren en az 1/100 ölçekli onaylanmış plan örneği,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Ticaret şirketleri için ticaret unvanı, kayıtlı olunan ticaret sicili müdürlüğünün adı ve ticaret sicil numarası beyanı,</span></li>
@@ -960,7 +959,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Fiziki altyapı, donanım ve tıbbi cihazlar</h2>
 <div class="madde akn-article" id="m20">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 20</span>Özel evde bakım merkezleri betonarme bina veya ahşap olması hâlinde müstakil bina içinde kurulur. Bütün bölümler aynı bina içinde ve birbirine bitişik konumda bulunur. Binada yangına karşı güvenlik önlemleri ilgili mevzuata uygun şekilde alınır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 20-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Özel evde bakım merkezleri betonarme bina veya ahşap olması hâlinde müstakil bina içinde kurulur. Bütün bölümler aynı bina içinde ve birbirine bitişik konumda bulunur. Binada yangına karşı güvenlik önlemleri ilgili mevzuata uygun şekilde alınır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Özel evde bakım merkez ve birimlerinde asgari olarak aşağıdaki bölümlerin bulunması zorunludur:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span><strong>Başvuru ve danışma bölümü:</strong> En az yirmi metrekare genişliğinde olup faaliyet izin belgesinin aslı, mesul müdürlük veya birim sorumlusu belgesinin aslı, hizmet verilen alanların yer aldığı tabela ile şikâyet başvurusu yapılabilecek müdürlüğün ve meslek odalarının telefon numaralarının yer aldığı liste bulundurulur.</span></li>
@@ -978,7 +977,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Tabela ve kıyafet</h2>
 <div class="madde akn-article" id="m21">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 21</span>Özel evde bakım merkez ve biriminin bütün oda ve bölümlerinin kapılarında beş santimetreye yirmi santimetre boyutunda, oda veya bölümün kullanım amacını gösteren tabela bulundurulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 21-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Özel evde bakım merkez ve biriminin bütün oda ve bölümlerinin kapılarında beş santimetreye yirmi santimetre boyutunda, oda veya bölümün kullanım amacını gösteren tabela bulundurulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Özel evde bakım merkez ve biriminin dış tabelasında yalnızca faaliyet izin belgesinde belirtilen kuruluş ismi ve unvanı yazılır. Tabela ile basılı materyalde "Özel" ibaresini takiben sağlık kuruluşunun adı, ardından "Evde Bakım Merkezi" veya "Evde Bakım Birimi" unvanı yer alır.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Hizmet birimi personeli, ev ziyaretinde mesleğine ve hizmetin niteliğine uygun önlük veya üniforma giyer ve adı, soyadı, unvanı ile mesleğini gösteren, fotoğraflı ve sorumlu hekim ya da mesul müdürün imzasını taşıyan yaka kartı takar.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Kamu evde sağlık hizmet biriminin hizmet aracı üzerinde Bakanlık logosu, evde sağlık hizmeti logosu ile ESHİM'in iletişim numarası yer alır.</span></p>
@@ -997,7 +996,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hizmet alacak bireyin belirlenmesi</h2>
 <div class="madde akn-article" id="m22">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 22</span>Bu Yönetmelik kapsamında evde sağlık ve evde bakım hizmetleri aşağıdaki bireylere sunulur:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 22-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında evde sağlık ve evde bakım hizmetleri aşağıdaki bireylere sunulur:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Seksen yaş ve üzeri olup hizmet talep eden tüm yaşlılar,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Altmış beş yaş ve üzeri olup sağlık kurulu raporu ile belgelenmiş kronik hastalığı bulunan ve günlük yaşam etkinlikleri yönünden tam veya ileri derecede bağımlı olan bireyler,</span></li>
@@ -1039,7 +1038,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hizmetin sınıflandırılması</h2>
 <div class="madde akn-article" id="m23">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 23</span>Bu Yönetmelik kapsamında evde sağlık ve evde bakım hizmetleri süre yönünden aşağıdaki şekilde sınıflandırılır:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 23-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında evde sağlık ve evde bakım hizmetleri süre yönünden aşağıdaki şekilde sınıflandırılır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span><strong>Sürekli hizmet:</strong> Hastanın tıbbi ve bakım ihtiyacı devam ettiği sürece sürdürülen; hizmet biriminin hekimi tarafından en az altı ayda bir hizmet ihtiyacının ve bakım planının yeniden değerlendirildiği hizmettir. Yeniden değerlendirme sonucunda hizmet ihtiyacının kalmadığının tespiti, hastanın veya kanuni temsilcisinin talebi ya da 26 ncı maddedeki sona erdirme hâllerinden birinin gerçekleşmesi durumunda hizmet sona erdirilir. 22 nci maddenin birinci fıkrasının (a), (b), (c) ve (h) bentleri kapsamına giren bireylere sürekli hizmet sunulur.</span></li>
     <li class="bent"><span class="bent-no">b)</span><span><strong>Süreli hizmet:</strong> Hastaneden taburculuk sonrası evde tıbbi bakım gerektiren bireylere, taburculuk tarihinden itibaren otuz güne kadar sunulan, klinik sorumlu hekimin gerekçeli kararı ile bir defaya mahsus olmak üzere otuz güne kadar uzatılabilen hizmettir.</span></li>
@@ -1050,7 +1049,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Başvuru ve değerlendirme</h2>
 <div class="madde akn-article" id="m24">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 24</span>Bu Yönetmelik kapsamındaki hizmete başvuru aşağıdaki kanallar üzerinden yapılır:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 24-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamındaki hizmete başvuru aşağıdaki kanallar üzerinden yapılır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>ESHİM üzerinden telefon, kısa mesaj veya Bakanlıkça belirlenen iletişim araçları,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Hekim, aile hekimi veya sağlık personelinin elektronik kayıt sistemi üzerinden bildirimi,</span></li>
@@ -1066,7 +1065,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hizmetin sunum esasları</h2>
 <div class="madde akn-article" id="m25">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 25</span>Bu Yönetmelik kapsamında sunulan tüm hizmetlerde Ek-12'de yer alan Standart Hizmet Protokolü Genel Çerçevesi ile Bakanlık tarafından her hizmet türü için ayrı yayımlanan Standart Hizmet Protokollerinin hükümlerine uyulur. Standart hizmet protokolleri, bu Yönetmelikte yer alan yükümlülükleri açıklamak ve uygulama birliğini sağlamak amacıyla hazırlanır; bu Yönetmelikte açıkça öngörülmeyen yeni idari yaptırım, yeni izin şartı veya yeni mali yükümlülük doğuracak şekilde uygulanamaz.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 25-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan tüm hizmetlerde Ek-12'de yer alan Standart Hizmet Protokolü Genel Çerçevesi ile Bakanlık tarafından her hizmet türü için ayrı yayımlanan Standart Hizmet Protokollerinin hükümlerine uyulur. Standart hizmet protokolleri, bu Yönetmelikte yer alan yükümlülükleri açıklamak ve uygulama birliğini sağlamak amacıyla hazırlanır; bu Yönetmelikte açıkça öngörülmeyen yeni idari yaptırım, yeni izin şartı veya yeni mali yükümlülük doğuracak şekilde uygulanamaz.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Evde sağlık hizmeti mesai saatlerinde sunulur. Müdürlük; ilin durumu, başvuru yoğunluğu ve hastaların tıbbi durumunu dikkate alarak hafta içi, hafta sonu ve tatil günlerinde mesai kaydırması yapabilir. Bakanlık genel düzenleme yapabilir. 27 nci madde kapsamında akut evde sağlık hizmeti, 28 inci madde kapsamında kanser hastalarına yönelik evde sağlık hizmeti ve 32 nci madde kapsamında evde damar yoluyla antimikrobiyal tedavi hizmetlerinde, ilgili maddelerde belirtilen yirmi dört saat erişilebilirlik standartları uygulanır.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Özel evde bakım merkez ve birimlerinde hizmette devamlılık esastır. Bu devamlılık, hastanın talebi ve hizmetin gerekliliklerine göre gece, gündüz, hafta sonu ve tatil günleri dâhil olmak üzere ihtiyaç hâlinde yirmi dört saat kesintisiz şekilde sürdürülür.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Evde sağlık veya evde bakım hizmetinin sunumuna başlamadan önce, hizmetin genel kabulüne ilişkin aydınlatılmış yazılı onam alınması zorunludur. Aydınlatılmış genel onam, Ek-10'da yer alan formda alınır. Riskli girişimler ile invaziv tıbbi müdahaleler için ayrıca girişime özgü yazılı onam alınır. Hasta Hakları Yönetmeliği hükümleri saklı kalmak kaydıyla, rutin tıbbi izlem ve düşük riskli uygulamalar için sözlü onam yeterlidir; sözlü onam ile yapılan uygulamalar hasta dosyasına işlenir. Onam vermeye elverişli olmayan hastalarda kanuni temsilciden onam alınır. Acil durumda ve gecikmesinde sakınca bulunan hâllerde, hekim aydınlatılmış onam alınmaksızın gerekli müdahaleyi yapar; durum en kısa sürede kanuni temsilciye bildirilir.</span></p>
@@ -1088,7 +1087,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hizmetin sona erdirilmesi ve sunulamayacak hâller</h2>
 <div class="madde akn-article" id="m26">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 26</span>Bu Yönetmelik kapsamındaki hizmet aşağıdaki hâllerde sona erdirilir:</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 26-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamındaki hizmet aşağıdaki hâllerde sona erdirilir:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Hastanın vefatı,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>Hekim tarafından hizmete ihtiyacın kalmadığının tespiti,</span></li>
@@ -1115,7 +1114,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Akut evde sağlık hizmeti</h2>
 <div class="madde akn-article" id="m27">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 27</span>Akut evde sağlık hizmeti; akut bir tıbbi durumun, hastanede yatış yerine, klinik sorumlu hekim sorumluluğunda ve hastane düzeyinde izlem, tanı ile tedavi imkânları ile evde yönetildiği hizmet türüdür.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 27-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Akut evde sağlık hizmeti; akut bir tıbbi durumun, hastanede yatış yerine, klinik sorumlu hekim sorumluluğunda ve hastane düzeyinde izlem, tanı ile tedavi imkânları ile evde yönetildiği hizmet türüdür.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Akut evde sağlık hizmeti acil servisten doğrudan eve yönlendirme veya hastanede başlatılan akut tedavinin evde sürdürülmesi şeklinde sunulur.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Bu hizmet kapsamında izlenebilecek başlıca durumlar şunlardır:</span></p>
   <ul class="bentler">
@@ -1152,7 +1151,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Kanser hastalarına yönelik evde sağlık hizmeti</h2>
 <div class="madde akn-article" id="m28">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 28</span>Kanser hastalarına yönelik evde sağlık hizmeti; kanser tanılı hastalara tedavi planının uygun bölümlerinin evde sürdürülmesi suretiyle, tıbbi onkoloji veya çocuk hematolojisi ve onkolojisi uzmanı klinik sorumluluğunda sunulan bütüncül bakımdır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 28-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Kanser hastalarına yönelik evde sağlık hizmeti; kanser tanılı hastalara tedavi planının uygun bölümlerinin evde sürdürülmesi suretiyle, tıbbi onkoloji veya çocuk hematolojisi ve onkolojisi uzmanı klinik sorumluluğunda sunulan bütüncül bakımdır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu hizmet kapsamında sunulabilecek başlıca tıbbi uygulamalar şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Cilt altına uygulanan bağışıklık tedavileri,</span></li>
@@ -1184,7 +1183,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Çocuk hastalara yönelik evde sağlık hizmeti</h2>
 <div class="madde akn-article" id="m29">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 29</span>Çocuk hastalara yönelik evde sağlık hizmeti; on sekiz yaş altı, kronik kompleks tıbbi durumu veya teknoloji bağımlılığı bulunan çocuk hastalara, çocuk sağlığı ve hastalıkları uzmanı klinik sorumluluğunda sunulan bakım hizmetidir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 29-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Çocuk hastalara yönelik evde sağlık hizmeti; on sekiz yaş altı, kronik kompleks tıbbi durumu veya teknoloji bağımlılığı bulunan çocuk hastalara, çocuk sağlığı ve hastalıkları uzmanı klinik sorumluluğunda sunulan bakım hizmetidir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu hizmet kapsamında izlenebilecek başlıca durumlar şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Evde mekanik solunum cihazı desteği alan çocuk hastalar,</span></li>
@@ -1210,7 +1209,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Evde yaşam sonu bakım hizmeti</h2>
 <div class="madde akn-article" id="m30">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 30</span>Evde yaşam sonu bakım hizmeti; iyileştirici tedavi seçeneği kalmamış veya hasta tarafından iyileştirici tedaviye devam edilmek istenmediği durumda, hastalara evde sunulan ağrı ile diğer belirtilerin kontrolü, psikolojik destek, manevi destek ve hasta yakınlarına yönelik bilgilendirme hizmetlerini içeren bakımdır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 30-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Evde yaşam sonu bakım hizmeti; iyileştirici tedavi seçeneği kalmamış veya hasta tarafından iyileştirici tedaviye devam edilmek istenmediği durumda, hastalara evde sunulan ağrı ile diğer belirtilerin kontrolü, psikolojik destek, manevi destek ve hasta yakınlarına yönelik bilgilendirme hizmetlerini içeren bakımdır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu hizmet kapsamında sunulabilecek başlıca uygulamalar şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Ağrı kontrolü,</span></li>
@@ -1225,7 +1224,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Yaşlı sağlığına yönelik evde sağlık hizmeti</h2>
 <div class="madde akn-article" id="m31">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 31</span>Yaşlı sağlığına yönelik evde sağlık hizmeti; altmış beş yaş ve üzeri, çoklu kronik hastalığı bulunan, kırılganlık, çoklu ilaç kullanımı, bunama, düşme gibi yaşlılık bulguları gösteren bireylere, kapsamlı yaşlı değerlendirmesi yapılarak sunulan hizmettir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 31-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Yaşlı sağlığına yönelik evde sağlık hizmeti; altmış beş yaş ve üzeri, çoklu kronik hastalığı bulunan, kırılganlık, çoklu ilaç kullanımı, bunama, düşme gibi yaşlılık bulguları gösteren bireylere, kapsamlı yaşlı değerlendirmesi yapılarak sunulan hizmettir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu hizmet; ESH-H türü kamu evde sağlık hizmet birimi, 34 üncü madde kapsamında kurulan Yaşlı Sağlığı Merkezi veya bu Yönetmelik kapsamında faaliyet izin belgesi bulunan özel evde bakım merkez ve birimleri tarafından sunulabilir. Özel hizmet kuruluşlarında bu hizmetin sunumu için 12 nci maddenin beşinci fıkrasının (d) bendinde belirtilen klinik sorumlu hekim şartı aranır.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Hizmet kapsamında uygulanan kapsamlı yaşlı değerlendirmesi aşağıdaki boyutları içerir:</span></p>
   <ul class="bentler">
@@ -1242,7 +1241,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Evde damar yoluyla antimikrobiyal tedavi</h2>
 <div class="madde akn-article" id="m32">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 32</span>Evde damar yoluyla antimikrobiyal tedavi; uzun süreli damar yoluyla antimikrobiyal tedavinin enfeksiyon hastalıkları ve klinik mikrobiyoloji uzmanı klinik sorumluluğunda evde sürdürülmesidir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 32-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Evde damar yoluyla antimikrobiyal tedavi; uzun süreli damar yoluyla antimikrobiyal tedavinin enfeksiyon hastalıkları ve klinik mikrobiyoloji uzmanı klinik sorumluluğunda evde sürdürülmesidir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu hizmet kapsamında yönetilebilecek başlıca durumlar şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>İnfektif endokarditin idame tedavisi,</span></li>
@@ -1270,7 +1269,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Evde ağız ve diş sağlığı hizmeti</h2>
 <div class="madde akn-article" id="m33">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 33</span>Evde ağız ve diş sağlığı hizmeti; 22 nci maddenin birinci fıkrasının (ğ) bendinde belirtilen hareket güçlüğü çeken, hastaneye ulaşması güç olan veya yatağa bağımlı bireyler ile aynı fıkranın diğer bentleri kapsamında hizmet alan bireylere, ESH-D türü birim tarafından sunulan teşhis, tedavi ve önleme hizmetlerini içerir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 33-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Evde ağız ve diş sağlığı hizmeti; 22 nci maddenin birinci fıkrasının (ğ) bendinde belirtilen hareket güçlüğü çeken, hastaneye ulaşması güç olan veya yatağa bağımlı bireyler ile aynı fıkranın diğer bentleri kapsamında hizmet alan bireylere, ESH-D türü birim tarafından sunulan teşhis, tedavi ve önleme hizmetlerini içerir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu hizmet kapsamında sunulabilecek başlıca uygulamalar şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Ağız ve diş muayenesi,</span></li>
@@ -1284,7 +1283,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Yaşlı Sağlığı Merkezi</h2>
 <div class="madde akn-article" id="m34">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 34</span>Yaşlı Sağlığı Merkezi; Bakanlığa bağlı sağlık tesisi bünyesinde, yaşlı bireylere yaşadıkları ortamda tıbbi bakım, tıbbi izlem, uzaktan sağlık hizmeti yoluyla muayene ve danışmanlık ile sağlık tesisi-ev nakil koordinasyonu sağlamak üzere kurulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 34-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Yaşlı Sağlığı Merkezi; Bakanlığa bağlı sağlık tesisi bünyesinde, yaşlı bireylere yaşadıkları ortamda tıbbi bakım, tıbbi izlem, uzaktan sağlık hizmeti yoluyla muayene ve danışmanlık ile sağlık tesisi-ev nakil koordinasyonu sağlamak üzere kurulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Yaşlı Sağlığı Merkezinin kurulması, faaliyetleri ve personel standartları Genel Müdürlük tarafından belirlenir.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Yaşlı Sağlığı Merkezi bünyesinde 31 inci madde kapsamındaki yaşlı sağlığına yönelik evde sağlık hizmeti yürütülebilir.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Bakanlıkça Sağlıklı Yaş Alma Merkezleri (YAŞAM) adı altında kurulmuş ve faaliyetini sürdüren birimler, bu Yönetmeliğin yürürlüğe girdiği tarihten itibaren bir yıl içinde, faaliyet kapsamına göre Yaşlı Sağlığı Merkezi veya 31 inci madde kapsamında bir kamu evde sağlık hizmet birimi olarak intibak ettirilir. İntibak süresince bu birimler faaliyetlerini mevcut düzenlemeleri çerçevesinde sürdürür. İntibakın esas ve usulleri Bakanlıkça belirlenir.</span></p>
@@ -1301,7 +1300,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Uzaktan hasta izleme</h2>
 <div class="madde akn-article" id="m35">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 35</span>Bu Yönetmelik kapsamında sunulan hizmetlerde uzaktan hasta izleme, hizmet türünün gerektirdiği biçimde uygulanır. 27 nci madde kapsamındaki akut evde sağlık hizmetinde uzaktan hasta izleme zorunludur. Diğer hizmet türlerinde uzaktan hasta izlemenin kapsam ve sıklığı, hizmet türüne özgü Standart Hizmet Protokolünde klinik risk düzeyi gözetilerek belirlenir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 35-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan hizmetlerde uzaktan hasta izleme, hizmet türünün gerektirdiği biçimde uygulanır. 27 nci madde kapsamındaki akut evde sağlık hizmetinde uzaktan hasta izleme zorunludur. Diğer hizmet türlerinde uzaktan hasta izlemenin kapsam ve sıklığı, hizmet türüne özgü Standart Hizmet Protokolünde klinik risk düzeyi gözetilerek belirlenir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Uzaktan hasta izleme altyapısı hizmet türüne göre asgari olarak aşağıdaki bileşenleri içerir:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Hizmet türünün gerektirdiği yaşamsal bulguların ölçümü ve iletimi,</span></li>
@@ -1317,7 +1316,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Sağlık verisinin işlenmesi, kayıt ve arşiv</h2>
 <div class="madde akn-article" id="m36">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 36</span>Bu Yönetmelik kapsamında işlenen kişisel sağlık verileri; <span class="tarih">6698</span> sayılı Kişisel Verilerin Korunması Kanunu, <span class="tarih">21/6/2019</span> tarihli ve <span class="tarih">30808</span> sayılı Resmî Gazete'de yayımlanan Kişisel Sağlık Verileri Hakkında Yönetmelik ile ilgili diğer mevzuat hükümlerine göre korunur. Kişisel sağlık verileri, sır saklama yükümlülüğü altındaki sağlık personeli tarafından kamu sağlığının korunması, koruyucu hekimlik, tıbbi teşhis, tedavi ve bakım hizmetlerinin yürütülmesi amacıyla 6698 sayılı Kanunun 6 ncı maddesi kapsamında işlenir; Kişisel Verileri Koruma Kurulu tarafından belirlenen yeterli önlemler alınır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 36-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında işlenen kişisel sağlık verileri; <span class="tarih">6698</span> sayılı Kişisel Verilerin Korunması Kanunu, <span class="tarih">21/6/2019</span> tarihli ve <span class="tarih">30808</span> sayılı Resmî Gazete'de yayımlanan Kişisel Sağlık Verileri Hakkında Yönetmelik ile ilgili diğer mevzuat hükümlerine göre korunur. Kişisel sağlık verileri, sır saklama yükümlülüğü altındaki sağlık personeli tarafından kamu sağlığının korunması, koruyucu hekimlik, tıbbi teşhis, tedavi ve bakım hizmetlerinin yürütülmesi amacıyla 6698 sayılı Kanunun 6 ncı maddesi kapsamında işlenir; Kişisel Verileri Koruma Kurulu tarafından belirlenen yeterli önlemler alınır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bu Yönetmelik kapsamındaki süreçlerde veri sorumlusu;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Bakanlığın merkez teşkilatınca işletilen sistemler bakımından Bakanlık,</span></li>
@@ -1343,7 +1342,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Hasta hakları ve aydınlatılmış onam</h2>
 <div class="madde akn-article" id="m37">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 37</span>Bu Yönetmelik kapsamında sunulan tüm hizmetler, <span class="tarih">1/8/1998</span> tarihli ve <span class="tarih">23420</span> sayılı Resmî Gazete'de yayımlanan Hasta Hakları Yönetmeliği hükümleri çerçevesinde sunulur.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 37-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan tüm hizmetler, <span class="tarih">1/8/1998</span> tarihli ve <span class="tarih">23420</span> sayılı Resmî Gazete'de yayımlanan Hasta Hakları Yönetmeliği hükümleri çerçevesinde sunulur.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Tıbbi müdahaleye ilişkin aydınlatılmış onam, hasta haklarına ilişkin mevzuat hükümlerine göre alınır. Bu onam, hizmetin amacı, kapsamı ve süresi; beklenen yararlar ve olası riskler; tedavi seçenekleri ile hastanede yatış imkânı; hizmetten çekilme hakkı ve sonuçları ile iletişim ve şikâyet kanalları hususlarını asgari olarak kapsar. Aydınlatılmış genel onam Ek-10'da yer alan formda alınır.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Kişisel sağlık verilerinin işlenmesine ilişkin aydınlatma yükümlülüğü, tıbbi aydınlatılmış onamdan ayrı olarak 6698 sayılı Kanun ve Kişisel Sağlık Verileri Hakkında Yönetmelik hükümlerine göre yerine getirilir. KVKK aydınlatma metni Ek-10/A'da, açık rıza metni ise Ek-10/B'de yer alır. Açık rıza gerektiren işleme ve aktarım faaliyetleri için ayrı, açık, belirli, bilgilendirilmiş ve özgür iradeye dayalı bir rıza alınır. Hizmetin sunumu, zorunlu olmayan veri işleme veya aktarım faaliyetlerine bağlı tutulamaz.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Hasta, ehliyetli olduğu sürece evde sağlık hizmetini veya öngörülen tıbbi müdahaleyi reddetme hakkına sahiptir. Hizmet birimi, hastanın ret kararını etkilemeyecek biçimde olası tıbbi sonuçlar hakkında hastayı aydınlatır. Ret kararı, kararın gerekçesi ve hekim aydınlatmasının içeriği ile birlikte hasta dosyasına işlenir; karar hasta veya kanuni temsilcisi tarafından imzalanır. Ret kararı sonrasında hastanın aile hekimine bilgi verilir ve istenmesi hâlinde uygun sağlık tesisine sevki sağlanır.</span></p>
@@ -1355,7 +1354,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Aile hekimliği ile iş birliği</h2>
 <div class="madde akn-article" id="m38">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 38</span>Bu Yönetmelik kapsamında sunulan hizmetler, 5258 sayılı Kanun çerçevesinde aile hekimliği birimleri ile iş birliği içinde yürütülür.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 38-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan hizmetler, 5258 sayılı Kanun çerçevesinde aile hekimliği birimleri ile iş birliği içinde yürütülür.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Aile hekimi;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Hizmete ihtiyaç duyan kayıtlı kişiyi ESKOM'a bildirir veya yönlendirir,</span></li>
@@ -1376,7 +1375,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Eğitim</h2>
 <div class="madde akn-article" id="m39">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 39</span>Bu Yönetmelik kapsamında görev alan personelin hizmet içi eğitimleri ile sertifikalı eğitimleri Genel Müdürlük tarafından planlanır, müdürlükler tarafından düzenlenir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 39-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında görev alan personelin hizmet içi eğitimleri ile sertifikalı eğitimleri Genel Müdürlük tarafından planlanır, müdürlükler tarafından düzenlenir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Bakım veren kişiler için yazılı eğitim materyali ile sözlü eğitim, hizmet birimi tarafından sağlanır.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Yaşamsal cihaza bağımlı hasta, yutma güçlüğü olan hasta, enteral veya parenteral beslenme desteği alan hasta, kalıcı kateteri bulunan hasta, stoma bakımı gerektiren hasta ve basınç ülseri riski yüksek hasta bakımını üstlenen bakım veren kişilere yönelik klinik beceri eğitim programı, hizmet birimi tarafından uygulanır. Program asgari olarak; temel hasta bakımı, ilaç uygulama güvenliği, cihaz kullanımı, hijyen ve enfeksiyon önleme, acil durum tanıma ve bildirim konularını kapsar. Eğitimini tamamlayan bakım veren kişiye hizmet birimi tarafından katılım belgesi düzenlenir.</span></p>
   <p class="fikra"><span class="fikra-no">(4)</span><span class="fikra-tx">Üçüncü fıkrada belirtilen klinik beceri eğitim programının çerçeve içeriği, eğitim süresi ve değerlendirme esasları Bakanlık tarafından yayımlanır.</span></p>
@@ -1385,7 +1384,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Kalite</h2>
 <div class="madde akn-article" id="m40">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 40</span>Bu Yönetmelik kapsamında sunulan hizmetler, Bakanlıkça belirlenen kalite standartlarına uygun şekilde sunulur. Asgari kalite çıktı göstergeleri Ek-2'de düzenlenmiştir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 40-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında sunulan hizmetler, Bakanlıkça belirlenen kalite standartlarına uygun şekilde sunulur. Asgari kalite çıktı göstergeleri Ek-2'de düzenlenmiştir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Kalite çıktı göstergeleri, her hizmet türü için ayrı ve risk ayarlı biçimde belirlenir. Asgari olarak;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>27 nci madde kapsamındaki akut evde sağlık hizmetinde planlanmamış hastane yatışı, acil sevk ve tedavi başarısı,</span></li>
@@ -1403,7 +1402,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Denetim</h2>
 <div class="madde akn-article" id="m41">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 41</span>Bu Yönetmelik kapsamında hizmet sunan kamu birimleri ile özel evde bakım merkez ve birimleri planlı ve plansız denetime tâbidir.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 41-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik kapsamında hizmet sunan kamu birimleri ile özel evde bakım merkez ve birimleri planlı ve plansız denetime tâbidir.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Müdürlük; her bir hizmet birimini yılda en az iki defa, plansız denetim talep edilmesi hâlinde ek olarak denetler. Denetim, en az bir hekim olmak üzere üç sağlık personelinden oluşan ekip tarafından yapılır. Bakanlık merkez teşkilatı da gerekli gördüğü hâlde denetim yapabilir.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">Denetim kapsamı:</span></p>
   <ul class="bentler">
@@ -1425,7 +1424,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Müeyyideler</h2>
 <div class="madde akn-article" id="m42">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 42</span>Bu Yönetmelik hükümlerine aykırılık hâlinde, fiilin niteliğine göre 3359 sayılı Sağlık Hizmetleri Temel Kanununun ek 11 inci maddesi ile ilgili diğer mevzuatta öngörülen idari yaptırımlar uygulanır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 42-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik hükümlerine aykırılık hâlinde, fiilin niteliğine göre 3359 sayılı Sağlık Hizmetleri Temel Kanununun ek 11 inci maddesi ile ilgili diğer mevzuatta öngörülen idari yaptırımlar uygulanır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Aykırılıklar; hafif, orta, ağır ve çok ağır aykırılık olarak Ek-13'te yer alan Yaptırım Cetvelinde sınıflandırılır. Her aykırılık için uygulanacak düzeltme süresi, idari yaptırım türü ve tekrar halinde uygulanacak yaptırım Ek-13'te gösterilir. Yaptırım türleri şunlardır:</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>Yazılı uyarı,</span></li>
@@ -1469,37 +1468,37 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Atıf hükümleri</h2>
 <div class="madde akn-article" id="m43">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 43</span>Bu Yönetmelikte hüküm bulunmayan hâllerde <span class="tarih">11/4/1928</span> tarihli ve <span class="tarih">1219</span> sayılı Kanun, <span class="tarih">25/2/1954</span> tarihli ve <span class="tarih">6283</span> sayılı Kanun, <span class="tarih">7/5/1987</span> tarihli ve <span class="tarih">3359</span> sayılı Kanun, <span class="tarih">24/11/2004</span> tarihli ve <span class="tarih">5258</span> sayılı Kanun, <span class="tarih">31/5/2006</span> tarihli ve <span class="tarih">5510</span> sayılı Kanun, <span class="tarih">24/3/2016</span> tarihli ve <span class="tarih">6698</span> sayılı Kanun, <span class="tarih">1/8/1998</span> tarihli ve <span class="tarih">23420</span> sayılı Resmî Gazete'de yayımlanan Hasta Hakları Yönetmeliği, <span class="tarih">21/6/2019</span> tarihli ve <span class="tarih">30808</span> sayılı Resmî Gazete'de yayımlanan Kişisel Sağlık Verileri Hakkında Yönetmelik, <span class="tarih">10/7/2024</span> tarihli ve <span class="tarih">32598</span> sayılı Resmî Gazete'de yayımlanan Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik, <span class="tarih">10/2/2022</span> tarihli ve <span class="tarih">31746</span> sayılı Resmî Gazete'de yayımlanan Uzaktan Sağlık Hizmetlerinin Sunumu Hakkında Yönetmelik, <span class="tarih">2/6/2021</span> tarihli ve <span class="tarih">31499</span> sayılı Resmî Gazete'de yayımlanan Tıbbi Cihaz Yönetmeliği, <span class="tarih">25/1/2017</span> tarihli ve <span class="tarih">29959</span> sayılı Resmî Gazete'de yayımlanan Tıbbi Atıkların Kontrolü Yönetmeliği ile <span class="tarih">18/10/2019</span> tarihli ve <span class="tarih">30922</span> sayılı Resmî Gazete'de yayımlanan Devlet Arşiv Hizmetleri Hakkında Yönetmelik ve ilgili diğer mevzuat hükümleri uygulanır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 43-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelikte hüküm bulunmayan hâllerde <span class="tarih">11/4/1928</span> tarihli ve <span class="tarih">1219</span> sayılı Kanun, <span class="tarih">25/2/1954</span> tarihli ve <span class="tarih">6283</span> sayılı Kanun, <span class="tarih">7/5/1987</span> tarihli ve <span class="tarih">3359</span> sayılı Kanun, <span class="tarih">24/11/2004</span> tarihli ve <span class="tarih">5258</span> sayılı Kanun, <span class="tarih">31/5/2006</span> tarihli ve <span class="tarih">5510</span> sayılı Kanun, <span class="tarih">24/3/2016</span> tarihli ve <span class="tarih">6698</span> sayılı Kanun, <span class="tarih">1/8/1998</span> tarihli ve <span class="tarih">23420</span> sayılı Resmî Gazete'de yayımlanan Hasta Hakları Yönetmeliği, <span class="tarih">21/6/2019</span> tarihli ve <span class="tarih">30808</span> sayılı Resmî Gazete'de yayımlanan Kişisel Sağlık Verileri Hakkında Yönetmelik, <span class="tarih">10/7/2024</span> tarihli ve <span class="tarih">32598</span> sayılı Resmî Gazete'de yayımlanan Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik, <span class="tarih">10/2/2022</span> tarihli ve <span class="tarih">31746</span> sayılı Resmî Gazete'de yayımlanan Uzaktan Sağlık Hizmetlerinin Sunumu Hakkında Yönetmelik, <span class="tarih">2/6/2021</span> tarihli ve <span class="tarih">31499</span> sayılı Resmî Gazete'de yayımlanan Tıbbi Cihaz Yönetmeliği, <span class="tarih">25/1/2017</span> tarihli ve <span class="tarih">29959</span> sayılı Resmî Gazete'de yayımlanan Tıbbi Atıkların Kontrolü Yönetmeliği ile <span class="tarih">18/10/2019</span> tarihli ve <span class="tarih">30922</span> sayılı Resmî Gazete'de yayımlanan Devlet Arşiv Hizmetleri Hakkında Yönetmelik ve ilgili diğer mevzuat hükümleri uygulanır.</span></p>
 </div>
 
 <h2 class="madde-baslik">Yürürlükten kaldırılan yönetmelikler</h2>
 <div class="madde akn-article" id="m44">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 44</span><span class="tarih">2/6/2023</span> tarihli ve <span class="tarih">32209</span> sayılı Resmî Gazete'de yayımlanan Evde Sağlık Hizmeti Sunumu Hakkında Yönetmelik ile <span class="tarih">10/3/2005</span> tarihli ve <span class="tarih">25751</span> sayılı Resmî Gazete'de yayımlanan Evde Bakım Hizmetleri Sunumu Hakkında Yönetmelik yürürlükten kaldırılmıştır.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 44-</span><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="tarih">2/6/2023</span> tarihli ve <span class="tarih">32209</span> sayılı Resmî Gazete'de yayımlanan Evde Sağlık Hizmeti Sunumu Hakkında Yönetmelik ile <span class="tarih">10/3/2005</span> tarihli ve <span class="tarih">25751</span> sayılı Resmî Gazete'de yayımlanan Evde Bakım Hizmetleri Sunumu Hakkında Yönetmelik yürürlükten kaldırılmıştır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Diğer mevzuatta birinci fıkrada yürürlükten kaldırılan yönetmeliklere yapılan atıflar, bu Yönetmeliğe yapılmış sayılır.</span></p>
 </div>
 
 <h2 class="madde-baslik">İntibak süresi</h2>
 <div class="madde akn-article" id="gm1">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">GEÇİCİ MADDE 1</span>Bu Yönetmeliğin yürürlüğe girdiği tarihten önce 44 üncü maddenin birinci fıkrasında belirtilen yönetmelikler kapsamında faaliyet gösteren kamu evde sağlık hizmet birimleri dokuz ay, faaliyet izin belgesi bulunan özel evde bakım merkez ve birimleri on iki ay içinde bu Yönetmelik hükümlerine intibak ederler.</span></p>
+  <p class="fikra"><span class="madde-no">GEÇİCİ MADDE 1-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmeliğin yürürlüğe girdiği tarihten önce 44 üncü maddenin birinci fıkrasında belirtilen yönetmelikler kapsamında faaliyet gösteren kamu evde sağlık hizmet birimleri dokuz ay, faaliyet izin belgesi bulunan özel evde bakım merkez ve birimleri on iki ay içinde bu Yönetmelik hükümlerine intibak ederler.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">Mevcut faaliyet izin belgeleri süreleri sona erinceye kadar geçerli olup intibak süresinde sürelerinden bağımsız olarak bu Yönetmelik hükümlerine uygunluğun sağlanması gerekir. Sürelerin sona ermesi hâlinde yenileme bu Yönetmelik hükümlerine göre yapılır. Ancak hasta güvenliği, kişisel sağlık verilerinin korunması, tıbbi cihaz güvenliği ve asgari personel standardına ilişkin hükümler bakımından kazanılmış hak iddiasında bulunulamaz.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">İntibak süresi içinde bu Yönetmelik hükümlerine intibak etmediği tespit edilen hizmet kuruluşları hakkında 42 nci madde hükümleri uygulanır.</span></p>
 </div>
 
 <h2 class="madde-baslik">Standart hizmet protokolleri</h2>
 <div class="madde akn-article" id="gm2">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">GEÇİCİ MADDE 2</span>Ek-12'de yer alan Standart Hizmet Protokolü Genel Çerçevesi esas alınarak, bu Yönetmeliğin 27 ila 33 üncü maddelerinde düzenlenen hizmet türlerinin her biri için hazırlanacak ayrı Standart Hizmet Protokolleri, Bakanlık tarafından bu Yönetmeliğin yürürlüğe girdiği tarihten itibaren altı ay içinde yayımlanır.</span></p>
+  <p class="fikra"><span class="madde-no">GEÇİCİ MADDE 2-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Ek-12'de yer alan Standart Hizmet Protokolü Genel Çerçevesi esas alınarak, bu Yönetmeliğin 27 ila 33 üncü maddelerinde düzenlenen hizmet türlerinin her biri için hazırlanacak ayrı Standart Hizmet Protokolleri, Bakanlık tarafından bu Yönetmeliğin yürürlüğe girdiği tarihten itibaren altı ay içinde yayımlanır.</span></p>
   <p class="fikra"><span class="fikra-no">(2)</span><span class="fikra-tx">31 inci ve 33 üncü maddelerde düzenlenen hizmetler bakımından ilgili Standart Hizmet Protokolü yayımlanıncaya kadar, mevcut Bakanlık genelge, talimatname ve yönergelerinin bu Yönetmeliğe aykırı olmayan hükümleri ile müdürlükçe belirlenen geçici uygulama esasları uygulanır.</span></p>
   <p class="fikra"><span class="fikra-no">(3)</span><span class="fikra-tx">27, 28, 29, 30 ve 32 nci maddelerde düzenlenen özellikli evde sağlık hizmetleri, ilgili Standart Hizmet Protokolü yayımlanmadan ve özel hizmet kuruluşları bakımından özel faaliyet izni verilmeden sunulamaz.</span></p>
 </div>
 
 <h2 class="madde-baslik">Yaşlı Sağlığı Merkezi</h2>
 <div class="madde akn-article" id="gm3">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">GEÇİCİ MADDE 3</span>34 üncü maddede düzenlenen Yaşlı Sağlığı Merkezinin kurulması, faaliyetleri ve personel standartlarına ilişkin düzenleme, bu Yönetmeliğin yürürlüğe girdiği tarihten itibaren bir yıl içinde Genel Müdürlük tarafından yayımlanır. Bu düzenleme yayımlanmadan yeni Yaşlı Sağlığı Merkezi kurulamaz. Mevcut YAŞAM birimleri, anılan düzenleme yayımlanıncaya kadar yürürlükteki mevzuat çerçevesinde faaliyetini sürdürür ve düzenlemenin yürürlüğe girmesinden itibaren altı ay içinde Yaşlı Sağlığı Merkezi standartlarına intibak ettirilir.</span></p>
+  <p class="fikra"><span class="madde-no">GEÇİCİ MADDE 3-</span><span class="fikra-no">(1)</span><span class="fikra-tx">34 üncü maddede düzenlenen Yaşlı Sağlığı Merkezinin kurulması, faaliyetleri ve personel standartlarına ilişkin düzenleme, bu Yönetmeliğin yürürlüğe girdiği tarihten itibaren bir yıl içinde Genel Müdürlük tarafından yayımlanır. Bu düzenleme yayımlanmadan yeni Yaşlı Sağlığı Merkezi kurulamaz. Mevcut YAŞAM birimleri, anılan düzenleme yayımlanıncaya kadar yürürlükteki mevzuat çerçevesinde faaliyetini sürdürür ve düzenlemenin yürürlüğe girmesinden itibaren altı ay içinde Yaşlı Sağlığı Merkezi standartlarına intibak ettirilir.</span></p>
 </div>
 
 <h2 class="madde-baslik">Yürürlük</h2>
 <div class="madde akn-article" id="m45">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 45</span>Bu Yönetmeliğin;</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 45-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmeliğin;</span></p>
   <ul class="bentler">
     <li class="bent"><span class="bent-no">a)</span><span>27, 28, 29, 30 ve 32 nci maddelerinde düzenlenen özellikli evde sağlık hizmetlerine ilişkin hükümler, ilgili hizmet türüne ilişkin standart hizmet protokolünün yayımlandığı; özel hizmet kuruluşları bakımından ise ayrıca hizmet türüne özgü özel faaliyet izninin verildiği tarihten itibaren,</span></li>
     <li class="bent"><span class="bent-no">b)</span><span>19 uncu, 20 nci, 35 inci, 41 inci ve 44 üncü maddeleri yayımı tarihinden dokuz ay sonra,</span></li>
@@ -1510,7 +1509,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
 <h2 class="madde-baslik">Yürütme</h2>
 <div class="madde akn-article" id="m46">
-  <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 46</span>Bu Yönetmelik hükümlerini Sağlık Bakanı yürütür.</span></p>
+  <p class="fikra"><span class="madde-no">MADDE 46-</span><span class="fikra-no">(1)</span><span class="fikra-tx">Bu Yönetmelik hükümlerini Sağlık Bakanı yürütür.</span></p>
 </div>
 
 <!-- ─────────── EKLER · EK-1 ─────────── -->
