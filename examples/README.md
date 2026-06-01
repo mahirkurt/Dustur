@@ -14,7 +14,8 @@ Sistemin gerçek kullanımını gösteren HTML/SVG/XML örnekleri.
 
 | Dosya | Açıklama |
 |---|---|
-| [`evde-saglik-yonetmeligi.html`](./evde-saglik-yonetmeligi.html) | **Evde Sağlık ve Evde Bakım Hizmetlerinin Sunumu Hakkında Yönetmelik** · gerçek bir yönetmeliğin uçtan uca render'ı · Yönetmelik (Turkuvaz) kademesi · kapak + künye + otomatik içindekiler (`target-counter`) + 9 bölüm · 46 madde · 3 geçici madde + 13 ek · madde/fıkra/bent (AKN) semantiği · 102 A4 sayfa |
+| [`evde-saglik-yonetmeligi.html`](./evde-saglik-yonetmeligi.html) | **Evde Sağlık ve Evde Bakım Hizmetlerinin Sunumu Hakkında Yönetmelik** · gerçek bir yönetmeliğin uçtan uca render'ı · Yönetmelik (Turkuvaz) kademesi · kapak + otomatik içindekiler (`target-counter`) + 9 bölüm · 46 madde · 3 geçici madde + 13 ek · madde/fıkra/bent (AKN) semantiği · ~86 A4 sayfa |
+| [`evde-saglik-yonetmeligi-karsilastirma.html`](./evde-saglik-yonetmeligi-karsilastirma.html) | **Madde-Bazlı Karşılaştırma Dokümanı** · yürürlükteki iki yönetmelik ile v18 taslağının madde madde analizi · altı renk kodlu değişiklik notasyonu (korundu / yeniden / genişletildi / yeni / daraltıldı / kaldırıldı) · kaynak→v18 alıntı blokları · karşılaştırma matrisleri · ~32 A4 sayfa |
 
 ```bash
 # PDF üretimi (Paged.js):
