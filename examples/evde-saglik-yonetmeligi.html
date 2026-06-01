@@ -95,17 +95,13 @@
   @bottom-left {
     content: "Evde Sağlık ve Evde Bakım Hizmetlerinin Sunumu Hakkında Yönetmelik";
     font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1;
-    font-size: 6.6pt; color: #B5AE9F; margin-top: 6mm;
+    font-size: 6pt; letter-spacing: 0.02em; color: #9C958A; white-space: nowrap; margin-top: 6mm;
   }
-  @bottom-center {
-    content: counter(page);
-    font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 14, 'wght' 500, 'SOFT' 0;
-    font-size: 9pt; color: #4A4744; margin-top: 6mm;
-  }
+  @bottom-center { content: none; }
   @bottom-right {
-    content: "/ " counter(pages);
+    content: "Sayfa " counter(page) " / " counter(pages);
     font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1;
-    font-size: 7pt; color: #B5AE9F; margin-top: 6mm;
+    font-size: 7pt; letter-spacing: 0.04em; color: #6B655C; white-space: nowrap; margin-top: 6mm;
   }
 }
 @page :first { margin: 0; background: #0A0E14;
@@ -150,9 +146,10 @@ h1,h2,h3,h4,h5,h6 { break-after: avoid-page; page-break-after: avoid; }
 table { break-inside: auto; }
 table thead { break-after: avoid-page; page-break-after: avoid; display: table-header-group; }
 table tr { break-inside: avoid; page-break-inside: avoid; }
-.not-box, .ek-liste, .form-blok, .tanim-i, .imza-blok { break-inside: avoid; page-break-inside: avoid; }
+.not-box, .tanim-i, .form-resmi, .form-satir, .form-cb, .form-imza, .ek-liste > li { break-inside: avoid; page-break-inside: avoid; }
+.form-blok, .ek-liste { break-inside: auto; page-break-inside: auto; }
+.form-grp-h, .ek-h3, .ek-h4 { break-after: avoid-page; page-break-after: avoid; }
 .bolum-opener, .ek-opener { break-before: page; page-break-before: always; }
-.bolum-opener > *, .ek-opener > * { break-before: avoid; page-break-before: avoid; }
 .dq-block { break-inside: avoid-page; page-break-inside: avoid; }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -377,20 +374,20 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 /* ═══════════════════════════════════════════════════════════════════
    EK (annex) açılışı + form + tablo
    ═══════════════════════════════════════════════════════════════════ */
-.ek-opener { padding-top: 12mm; }
+.ek-opener { padding-top: 10mm; }
 .ek-opener-eb {
   font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1;
   font-size: 8pt; text-transform: uppercase; letter-spacing: 0.24em; color: var(--amber);
   font-weight: 600; margin-bottom: 4mm; display: block;
 }
 .ek-opener-no {
-  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 120, 'wght' 700, 'SOFT' 18, 'WONK' 1;
-  font-size: 56pt; line-height: 0.85; letter-spacing: -0.04em; color: var(--ink-1); margin-bottom: 2mm;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 96, 'wght' 700, 'SOFT' 18, 'WONK' 1;
+  font-size: 40pt; line-height: 0.9; letter-spacing: -0.03em; color: var(--amber); margin-bottom: 1mm;
 }
 .ek-opener-t {
   font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 28, 'wght' 600, 'SOFT' 10;
-  font-size: 17pt; line-height: 1.18; color: var(--ink-1); max-width: 150mm;
-  padding-bottom: 5mm; border-bottom: 2px solid var(--ink-1); margin-bottom: 7mm;
+  font-size: 17pt; line-height: 1.2; color: var(--ink-1); max-width: 155mm;
+  padding-bottom: 4mm; border-bottom: 2px solid var(--ink-1); margin-bottom: 5mm;
 }
 .ek-h3 {
   font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 22, 'wght' 600, 'SOFT' 8;
@@ -431,16 +428,19 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 .kcg .kcg-satir b { font-weight: 600; color: var(--ink-1); }
 
 /* Form alanları (EK-3..EK-11) */
-.form-blok { background: var(--bg-panel); border: 1px solid var(--rule); padding: 4mm 5mm; margin: 3mm 0; }
-.form-resmi { text-align: center; font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1; font-size: 8pt; letter-spacing: 0.18em; color: var(--ink-2); line-height: 1.7; margin-bottom: 4mm; padding-bottom: 3mm; border-bottom: 1px solid var(--rule); }
-.form-resmi b { color: var(--ink-1); display: block; font-variation-settings: 'MONO' 1, 'wght' 700; }
-.form-grp-h { font-family: 'Albert Sans', sans-serif; font-weight: 700; font-size: 8.8pt; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tur-11); margin: 3.5mm 0 2mm; }
-.form-satir { font-family: 'Albert Sans', sans-serif; font-size: 9.2pt; line-height: 1.95; color: var(--ink-1); }
+.form-blok { margin: 4mm 0 5mm; }
+.ek-section-kicker { font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1, 'wght' 700; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.3em; color: var(--amber); margin-bottom: 5mm; }
+.form-resmi { text-align: center; font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1; font-size: 8pt; letter-spacing: 0.2em; color: var(--ink-3); line-height: 1.85; margin: 0 auto 6mm; padding: 3mm 0; max-width: 122mm; border-top: 1px solid var(--ink-2); border-bottom: 1px solid var(--ink-2); }
+.form-resmi b { color: var(--ink-1); display: block; font-variation-settings: 'MONO' 1, 'wght' 700; letter-spacing: 0.12em; margin-top: 0.5mm; }
+.form-grp-h { font-family: 'Recursive', monospace; font-variation-settings: 'MONO' 1, 'wght' 700; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.16em; color: var(--tur-10); margin: 5.5mm 0 2.5mm; padding-bottom: 1.4mm; border-bottom: 1px solid var(--rule); }
+.form-satir { font-family: 'Albert Sans', sans-serif; font-size: 9.2pt; line-height: 2.05; color: var(--ink-1); margin-bottom: 1mm; }
 .form-satir .lbl { color: var(--ink-2); }
-.form-satir .fill { display: inline-block; min-width: 30mm; border-bottom: 1px dotted var(--ink-3); margin-left: 1mm; }
-.form-cb { font-family: 'Albert Sans', sans-serif; font-size: 9.2pt; line-height: 1.7; color: var(--ink-1); }
-.form-cb .box { color: var(--tur-9); margin-right: 1mm; }
-.form-imza { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 5mm; padding-top: 4mm; border-top: 1px solid var(--rule); font-family: 'Albert Sans', sans-serif; font-size: 8.8pt; color: var(--ink-2); }
+.fill { display: inline-block; min-width: 26mm; border-bottom: 1px dotted var(--ink-4); margin: 0 0.4mm; vertical-align: baseline; }
+.form-cb { font-family: 'Albert Sans', sans-serif; font-size: 9.2pt; line-height: 1.95; color: var(--ink-1); margin-bottom: 1mm; }
+.form-cb .box { color: var(--tur-9); margin-right: 0.8mm; font-size: 10pt; }
+.form-cb .lbl { color: var(--ink-2); }
+.form-cb strong { color: var(--ink-1); }
+.form-imza { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 6mm; padding-top: 4mm; border-top: 1px solid var(--rule); font-family: 'Albert Sans', sans-serif; font-size: 8.6pt; line-height: 1.7; color: var(--ink-2); }
 
 /* Mevzuat atıf (cross-reference) vurgusu */
 .ref { color: var(--tur-10); }
@@ -577,7 +577,7 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
 
   <div class="toc-block">
     <span class="toc-pre">Ekler</span>
-    <a class="toc-ch top" href="#ekler"><span class="toc-no">EK</span><span class="toc-tt">Ekler · EK-1 — EK-13</span></a>
+    <a class="toc-ch top" href="#ek1"><span class="toc-no">EK</span><span class="toc-tt">Ekler · EK-1 — EK-13</span></a>
     <a class="toc-ch sub" href="#ek1"><span class="toc-no">EK-1</span><span class="toc-tt">Asgari Araç, Malzeme, Tıbbi Cihaz ve İlaç Standardı</span></a>
     <a class="toc-ch sub" href="#ek2"><span class="toc-no">EK-2</span><span class="toc-tt">Asgari Kalite Çıktı Göstergeleri</span></a>
     <a class="toc-ch sub" href="#ek3"><span class="toc-no">EK-3</span><span class="toc-tt">Başvuru Dilekçesi</span></a>
@@ -1513,17 +1513,10 @@ a.toc-ch.top::after { font-size: 10.5pt; color: var(--ink-1); font-weight: 600; 
   <p class="fikra"><span class="fikra-no">(1)</span><span class="fikra-tx"><span class="madde-no">MADDE 46</span>Bu Yönetmelik hükümlerini Sağlık Bakanı yürütür.</span></p>
 </div>
 
-<!-- ═══════════════════ EKLER · BÖLÜM AYRACI ═══════════════════ -->
-<section class="bolum-opener" id="ekler" style="border-top:none;">
-  <span class="run-bolum">Ekler</span>
-  <div class="bolum-opener-mid">
-    <h1 class="bolum-opener-t" style="color:var(--amber);">Ekler</h1>
-  </div>
-</section>
-
-<!-- ─────────── EK-1 ─────────── -->
+<!-- ─────────── EKLER · EK-1 ─────────── -->
 <section class="ek-opener" id="ek1">
   <span class="run-bolum">Ekler · EK-1 Asgari Donanım Standardı</span>
+  <div class="ek-section-kicker">EKLER</div>
   <div class="ek-opener-no">EK-1</div>
   <div class="ek-opener-t">Hizmet Birimlerinde Bulundurulması Gereken Asgari Araç, Malzeme, Tıbbi Cihaz ve İlaç Standardı</div>
 
