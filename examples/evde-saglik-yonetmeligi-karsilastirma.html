@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evde Sağlık ve Evde Bakım Yönetmeliği Taslağı · Madde-Bazlı Karşılaştırma Dokümanı</title>
+
+<!-- DÜSTUR · self-hosted TR-subset variable fonts -->
+<style>
+  @font-face { font-family: "Fraunces"; src: url("../assets/fonts/subset/Fraunces-Subset.woff2") format("woff2-variations"), url("../assets/fonts/subset/Fraunces-Subset.woff2") format("woff2"); font-weight: 100 900; font-stretch: 25% 151%; font-style: normal; font-display: swap; unicode-range: U+0020-007E, U+00A0-024F, U+02B0-02FF, U+2010-205E, U+20A0-20CF; }
+  @font-face { font-family: "Albert Sans"; src: url("../assets/fonts/subset/AlbertSans-Subset.woff2") format("woff2-variations"), url("../assets/fonts/subset/AlbertSans-Subset.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; unicode-range: U+0020-007E, U+00A0-024F, U+02B0-02FF, U+2010-205E, U+20A0-20CF; }
+  @font-face { font-family: "Recursive"; src: url("../assets/fonts/subset/Recursive-Subset.woff2") format("woff2-variations"), url("../assets/fonts/subset/Recursive-Subset.woff2") format("woff2"); font-weight: 300 1000; font-style: normal; font-display: swap; unicode-range: U+0020-007E, U+00A0-024F, U+02B0-02FF, U+2010-205E, U+20A0-20CF; }
+</style>
+
+<!-- Paged.js · A4 PDF omurgası -->
+<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   DÜSTUR · T.C. MEVZUAT TASARIM SİSTEMİ
+   Belge: Evde Sağlık ve Evde Bakım Yönetmeliği Taslağı — Madde-Bazlı
+          Karşılaştırma Dokümanı · Render: Paged.js A4
+   ═══════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:#FAF6EE; --bg-panel:#FFFFFF; --bg-subtle:#F3EEE2; --bg-deep:#E9E2D2; --bg-stripe:#F7F1E3;
+  --ink-1:#1A1A1A; --ink-2:#4A4744; --ink-3:#807A72; --ink-4:#B5AE9F;
+  --rule:#D8D1C4; --rule-soft:#E9E2D2;
+  --tbk-9:#E30A17; --tbk-10:#C40814;
+  --tur-2:#EBF6F6; --tur-3:#D7EDEE; --tur-4:#B9E0E1; --tur-5:#75B8BB; --tur-7:#43A1A2;
+  --tur-8:#1F8084; --tur-9:#1A8B8C; --tur-10:#137070; --tur-11:#0C5455; --tur-12:#082828;
+  --lacivert:#002664; --amber:#B45309; --amber-2:#FEF3D7; --amber-11:#7C3A06;
+  /* Değişiklik notasyonu — anlamsal durum renkleri */
+  --n-kor:#1F7A4D; --n-kor-bg:#E7F2EB; --n-kor-bd:#BBDcC8;
+  --n-yen:#9A6207; --n-yen-bg:#FBF1DC; --n-yen-bd:#ECD9A8;
+  --n-gen:#1D4E89; --n-gen-bg:#E7EEF7; --n-gen-bd:#C2D2E8;
+  --n-new:#6D3A8E; --n-new-bg:#F0E8F6; --n-new-bd:#D9C6E6;
+  --n-dar:#B5530B; --n-dar-bg:#FBECDE; --n-dar-bd:#EFD0AC;
+  --n-kal:#B3121F; --n-kal-bg:#FBE8E9; --n-kal-bd:#EFC2C6;
+}
+
+/* ── PAGED.JS A4 ── */
+@page {
+  size: A4; margin: 24mm 22mm 20mm 22mm; background: var(--bg-page);
+  @top-left { content: string(bolum); font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:7.5pt; text-transform:uppercase; letter-spacing:0.16em; color:#807A72; margin-bottom:8mm; }
+  @top-right { content: none; }
+  @bottom-left { content:"Yönetmelik Taslağı · Madde-Bazlı Karşılaştırma Dokümanı"; font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:6pt; letter-spacing:0.02em; color:#9C958A; white-space:nowrap; margin-top:6mm; }
+  @bottom-center { content: none; }
+  @bottom-right { content:"Sayfa " counter(page) " / " counter(pages); font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:7pt; letter-spacing:0.04em; color:#6B655C; white-space:nowrap; margin-top:6mm; }
+}
+@page :first { margin:0; background:#0A0E14; @top-left,@top-right,@bottom-left,@bottom-center,@bottom-right{content:none;} }
+@page cover  { margin:0; background:#0A0E14; @top-left,@top-right,@bottom-left,@bottom-center,@bottom-right{content:none;} }
+@page kunye  { @top-left { content:"Belge Bilgileri"; } }
+@page toc    { @top-left { content:"İçindekiler"; } }
+.run-bolum { string-set: bolum content(); position:absolute; left:-10000px; top:0; width:1px; height:1px; overflow:hidden; }
+
+/* ── BASE ── */
+* { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:10.5pt; -webkit-font-smoothing:antialiased; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+body { background:var(--bg-page); color:var(--ink-1); font-family:'Fraunces',Georgia,serif; font-variation-settings:'opsz' 14,'wght' 400; line-height:1.6; orphans:3; widows:3; }
+.mo { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; }
+em { font-style:italic; } strong { font-weight:600; }
+sup { font-size:0.7em; vertical-align:super; line-height:0; }
+::selection { background:var(--tur-9); color:var(--bg-page); }
+
+/* ── kırılma disiplini ── */
+p,li { widows:3; orphans:3; }
+h1,h2,h3,h4 { break-after:avoid-page; page-break-after:avoid; }
+table { break-inside:auto; }
+table thead { break-after:avoid-page; page-break-after:avoid; display:table-header-group; }
+table tr { break-inside:avoid; page-break-inside:avoid; }
+.sec-opener { break-before:page; page-break-before:always; }
+.qsrc, .qnew, .keynote, .dim-card, .cmp-head, .legend-row, .altbolum { break-inside:avoid; page-break-inside:avoid; }
+.cmp-head, .altbolum, .sub-h3 { break-after:avoid-page; page-break-after:avoid; }
+
+/* ═══════════════ KAPAK ═══════════════ */
+.cv-page { page:cover; width:210mm; height:297mm; background:#0A0E14; color:#EDE6D6; position:relative; overflow:hidden; padding:22mm 24mm; display:grid; grid-template-rows:auto 1fr auto; }
+.cv-bg-motif { position:absolute; right:-55mm; top:50%; transform:translateY(-50%); width:185mm; height:185mm; opacity:0.07; pointer-events:none; background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%231A8B8C' stroke-width='0.6'%3E%3Crect x='30' y='30' width='140' height='140'/%3E%3Crect x='30' y='30' width='140' height='140' transform='rotate(45 100 100)'/%3E%3Crect x='60' y='60' width='80' height='80'/%3E%3Crect x='60' y='60' width='80' height='80' transform='rotate(45 100 100)'/%3E%3Ccircle cx='100' cy='100' r='3' fill='%231A8B8C'/%3E%3C/g%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:center; }
+.cv-rule { position:absolute; left:11mm; top:20mm; bottom:20mm; width:1px; background:#1A8B8C; opacity:0.55; }
+.cv-top { display:flex; justify-content:space-between; align-items:baseline; font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:6.5pt; text-transform:uppercase; letter-spacing:0.28em; color:#8C8275; padding:3mm 0; border-top:1px solid #1F2A38; border-bottom:1px solid #1F2A38; position:relative; z-index:2; }
+.cv-top-l { color:#1A8B8C; font-weight:600; } .cv-top-l .red { color:#E30A17; margin-right:0.6ch; }
+.cv-mid { align-self:center; position:relative; z-index:2; max-width:162mm; }
+.cv-eyebrow { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:7.5pt; text-transform:uppercase; letter-spacing:0.3em; color:#43A1A2; font-weight:600; margin-bottom:10mm; display:block; }
+.cv-title { font-family:'Fraunces',serif; font-variation-settings:'opsz' 96,'wght' 600,'SOFT' 16,'WONK' 1; font-size:38pt; line-height:1.04; letter-spacing:-0.02em; color:#EDE6D6; margin:0 0 6mm; }
+.cv-sub { font-family:'Fraunces',serif; font-variation-settings:'opsz' 28,'wght' 400,'SOFT' 50; font-style:italic; font-size:18pt; line-height:1.25; color:#5AB6B7; margin:0 0 7mm; }
+.cv-rule-mid { width:34mm; height:1px; background:#1A8B8C; margin-bottom:7mm; }
+.cv-note { font-family:'Albert Sans',sans-serif; font-size:9.5pt; line-height:1.6; color:#B8AE9A; max-width:150mm; }
+.cv-bot { display:flex; justify-content:space-between; align-items:flex-end; padding-top:4mm; border-top:1px solid #1F2A38; font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:6.8pt; letter-spacing:0.14em; color:#8C8275; text-transform:uppercase; position:relative; z-index:2; }
+.cv-bot-l { display:flex; flex-direction:column; gap:1.6mm; }
+.cv-bot-k { color:#5C6470; font-size:6.2pt; } .cv-bot-v { color:#1A8B8C; font-size:7.2pt; font-weight:600; }
+.cv-mark { width:13mm; height:13mm; flex-shrink:0; }
+
+/* ═══════════════ KÜNYE / BELGE BİLGİLERİ ═══════════════ */
+.kunye-page { page:kunye; padding-top:6mm; }
+.kunye-eb { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:8pt; text-transform:uppercase; letter-spacing:0.25em; color:var(--tur-9); font-weight:600; margin-bottom:4mm; display:block; }
+.kunye-h { font-family:'Fraunces',serif; font-variation-settings:'opsz' 96,'wght' 700,'SOFT' 20,'WONK' 1; font-size:32pt; line-height:1.04; letter-spacing:-0.025em; color:var(--ink-1); margin-bottom:5mm; }
+.kunye-sub { font-family:'Fraunces',serif; font-variation-settings:'opsz' 18,'wght' 400,'SOFT' 35; font-style:italic; font-size:12.5pt; line-height:1.5; color:var(--ink-2); max-width:150mm; padding-bottom:7mm; margin-bottom:8mm; border-bottom:1px solid var(--ink-1); }
+.kunye-grid { display:grid; grid-template-columns:1fr 1fr; gap:4mm 6mm; margin-bottom:7mm; }
+.kunye-cell { background:var(--bg-panel); border:1px solid var(--rule); border-top:3px solid var(--tur-7); padding:4mm 5mm; }
+.kunye-cell.wide { grid-column:1/-1; }
+.kunye-k { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.8pt; text-transform:uppercase; letter-spacing:0.18em; color:var(--tur-10); margin-bottom:2mm; }
+.kunye-v { font-family:'Albert Sans',sans-serif; font-size:9.5pt; line-height:1.55; color:var(--ink-1); }
+.kunye-v .mono { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:8.5pt; color:var(--ink-2); }
+.kunye-v ol { margin:1mm 0 0 4.5mm; } .kunye-v li { margin-bottom:1.5mm; }
+
+/* ═══════════════ İÇİNDEKİLER ═══════════════ */
+.toc-page { page:toc; padding-top:6mm; }
+.toc-h { font-family:'Fraunces',serif; font-variation-settings:'opsz' 144,'wght' 700,'SOFT' 25,'WONK' 1; font-size:56pt; line-height:0.86; letter-spacing:-0.04em; color:var(--ink-1); margin-bottom:11mm; }
+.toc-block { margin-bottom:5mm; break-inside:avoid; }
+.toc-pre { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:7pt; text-transform:uppercase; letter-spacing:0.2em; color:var(--tur-9); font-weight:600; margin-bottom:2mm; display:block; }
+a.toc-ch { display:grid; grid-template-columns:14mm 1fr auto; gap:4mm; align-items:baseline; padding:1.7mm 0; border-bottom:1px dotted var(--rule); text-decoration:none; color:inherit; }
+a.toc-ch.top { border-bottom:1.4px solid var(--ink-1); padding-bottom:2.1mm; }
+.toc-no { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:8.5pt; font-weight:600; color:var(--tur-9); }
+a.toc-ch.top .toc-no { font-family:'Fraunces',serif; font-variation-settings:'opsz' 30,'wght' 700,'SOFT' 15,'WONK' 1; font-size:15pt; color:var(--ink-1); }
+.toc-tt { font-family:'Fraunces',serif; font-variation-settings:'opsz' 15,'wght' 500; font-size:10.5pt; color:var(--ink-1); line-height:1.3; }
+a.toc-ch.top .toc-tt { font-variation-settings:'opsz' 28,'wght' 700,'SOFT' 12; font-size:14pt; letter-spacing:-0.01em; }
+a.toc-ch.sub .toc-tt { font-variation-settings:'opsz' 14,'wght' 400; font-size:9.5pt; color:var(--ink-2); }
+a.toc-ch::after { content: target-counter(attr(href), page); font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:8.5pt; font-weight:500; color:var(--ink-3); text-align:right; min-width:9mm; }
+a.toc-ch.top::after { font-size:10.5pt; color:var(--ink-1); font-weight:600; }
+
+/* ═══════════════ BÖLÜM AÇILIŞI (I-V) ═══════════════ */
+.sec-opener { padding-top:30mm; }
+.sec-opener-mid { display:grid; grid-template-columns:auto 1fr; gap:8mm; align-items:start; margin-bottom:7mm; }
+.sec-opener-no { font-family:'Fraunces',serif; font-variation-settings:'opsz' 144,'wght' 700,'SOFT' 20,'WONK' 1; font-size:70pt; line-height:0.8; letter-spacing:-0.04em; color:var(--tur-9); border-right:1px solid var(--rule); padding-right:8mm; }
+.sec-opener-t { font-family:'Fraunces',serif; font-variation-settings:'opsz' 60,'wght' 700,'SOFT' 12,'WONK' 1; font-size:28pt; line-height:1.02; letter-spacing:-0.02em; color:var(--ink-1); padding-top:4mm; }
+.sec-opener-t .ord { display:block; font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:8pt; letter-spacing:0.24em; color:var(--tur-10); text-transform:uppercase; margin-bottom:3mm; font-weight:600; }
+.sec-lead { font-family:'Fraunces',serif; font-variation-settings:'opsz' 16,'wght' 400,'SOFT' 30; font-style:italic; font-size:12pt; line-height:1.5; color:var(--ink-2); max-width:150mm; padding-top:5mm; border-top:1px solid var(--rule); }
+
+/* alt-bölüm başlığı (Bölüm II içindeki BİRİNCİ BÖLÜM …) */
+.altbolum { padding-top:8mm; margin-bottom:5mm; }
+.altbolum .k { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:7.5pt; letter-spacing:0.22em; text-transform:uppercase; color:var(--tur-10); display:block; margin-bottom:2mm; }
+.altbolum .t { display:block; font-family:'Fraunces',serif; font-variation-settings:'opsz' 32,'wght' 600,'SOFT' 8; font-size:18pt; line-height:1.25; color:var(--ink-1); padding-bottom:3.2mm; border-bottom:2px solid var(--ink-1); }
+
+/* genel başlıklar */
+.sub-h3 { font-family:'Fraunces',serif; font-variation-settings:'opsz' 24,'wght' 600,'SOFT' 8; font-size:14pt; line-height:1.3; color:var(--ink-1); margin:7mm 0 3mm; padding-bottom:2.4mm; border-bottom:1px solid var(--rule); }
+.body-p { font-family:'Fraunces',serif; font-size:10pt; line-height:1.6; color:var(--ink-1); margin:2.5mm 0; text-align:justify; max-width:168mm; }
+.body-p strong { font-weight:600; }
+
+/* ═══════════════ DEĞİŞİKLİK NOTASYON ROZETİ ═══════════════ */
+.nb { display:inline-flex; align-items:center; gap:1.6mm; font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.4pt; text-transform:uppercase; letter-spacing:0.1em; padding:0.9mm 2mm 0.8mm; border:1px solid; line-height:1; white-space:nowrap; }
+.nb::before { content:""; width:2mm; height:2mm; border-radius:50%; background:currentColor; flex-shrink:0; }
+.nb-kor { color:var(--n-kor); background:var(--n-kor-bg); border-color:var(--n-kor-bd); }
+.nb-yen { color:var(--n-yen); background:var(--n-yen-bg); border-color:var(--n-yen-bd); }
+.nb-gen { color:var(--n-gen); background:var(--n-gen-bg); border-color:var(--n-gen-bd); }
+.nb-new { color:var(--n-new); background:var(--n-new-bg); border-color:var(--n-new-bd); }
+.nb-dar { color:var(--n-dar); background:var(--n-dar-bg); border-color:var(--n-dar-bd); }
+.nb-kal { color:var(--n-kal); background:var(--n-kal-bg); border-color:var(--n-kal-bd); }
+/* kompakt renkli notasyon etiketi (yoğun matrisler için) */
+.nt { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.2pt; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
+.nt-kor{ color:var(--n-kor); } .nt-yen{ color:var(--n-yen); } .nt-gen{ color:var(--n-gen); }
+.nt-new{ color:var(--n-new); } .nt-dar{ color:var(--n-dar); } .nt-kal{ color:var(--n-kal); }
+
+/* ═══════════════ MADDE KARŞILAŞTIRMA BLOĞU ═══════════════ */
+.cmp { margin:0 0 6mm; }
+.cmp-head { display:flex; align-items:baseline; gap:2mm 3mm; flex-wrap:wrap; margin-top:6mm; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--rule); }
+.cmp-no { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:8.5pt; letter-spacing:0.04em; color:var(--tur-10); text-transform:uppercase; }
+.cmp-title { font-family:'Fraunces',serif; font-variation-settings:'opsz' 26,'wght' 600,'SOFT' 6; font-size:14.5pt; color:var(--ink-1); line-height:1.3; flex:1 1 auto; }
+
+/* alıntı (kaynak metin → taslak) */
+.qsrc, .qnew { padding:3mm 4mm; margin:2.2mm 0; }
+.qsrc { background:var(--bg-subtle); border-left:3px solid var(--ink-4); }
+.qnew { background:var(--tur-2); border-left:3px solid var(--tur-9); }
+.q-tag { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.4pt; text-transform:uppercase; letter-spacing:0.14em; display:block; margin-bottom:1.6mm; }
+.qsrc .q-tag { color:var(--ink-3); } .qnew .q-tag { color:var(--tur-10); }
+.q-tx { font-family:'Fraunces',serif; font-size:9.4pt; line-height:1.5; }
+.qsrc .q-tx { font-style:italic; color:var(--ink-2); } .qnew .q-tx { color:var(--ink-1); }
+.q-tx ul { list-style:none; margin:1mm 0 0; } .q-tx li { margin:0.6mm 0; padding-left:4mm; text-indent:-4mm; }
+
+/* anahtar değişiklik notu */
+.keynote { background:var(--bg-panel); border:1px solid var(--rule); border-left:4px solid var(--tur-9); padding:3mm 4.5mm; margin:3mm 0; }
+.keynote .k { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.6pt; text-transform:uppercase; letter-spacing:0.18em; color:var(--tur-10); display:block; margin-bottom:1.6mm; }
+.keynote p { font-family:'Fraunces',serif; font-size:9.6pt; line-height:1.5; color:var(--ink-2); text-align:justify; }
+.keynote p strong { color:var(--ink-1); font-weight:600; }
+.keynote ul { margin:1.5mm 0 0 4.5mm; font-family:'Albert Sans',sans-serif; font-size:8.8pt; color:var(--ink-2); line-height:1.5; }
+.keynote ul li { margin:0.7mm 0; }
+.note-genel { background:var(--tur-2); border:1px solid var(--tur-4); border-left:4px solid var(--tur-9); padding:3mm 4.5mm; margin:3mm 0 5mm; font-family:'Fraunces',serif; font-size:9.6pt; line-height:1.5; color:var(--ink-2); }
+.note-genel strong { color:var(--tur-11); }
+
+/* ═══════════════ TABLO ═══════════════ */
+.mzv { width:100%; border-collapse:collapse; font-family:'Albert Sans',sans-serif; font-size:8.4pt; margin:3mm 0 5mm; background:var(--bg-panel); border:1px solid var(--rule); }
+.mzv thead { background:var(--ink-1); color:var(--bg-page); }
+.mzv th { text-align:left; padding:2mm 2.6mm; font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:6.4pt; text-transform:uppercase; letter-spacing:0.08em; font-weight:600; border-right:1px solid #2a2a2a; }
+.mzv th:last-child { border-right:none; }
+.mzv td { padding:1.8mm 2.6mm; border-bottom:1px solid var(--rule-soft); border-right:1px solid var(--rule-soft); vertical-align:top; line-height:1.4; }
+.mzv td:last-child { border-right:none; }
+.mzv tr:nth-child(even) td { background:var(--bg-stripe); }
+.mzv tr:last-child td { border-bottom:none; }
+.mzv td.c, .mzv th.c { text-align:center; }
+.mzv td.r { text-align:right; }
+.mzv td.hi { background:var(--tur-2) !important; font-weight:600; color:var(--tur-11); }
+.mzv th.hi { background:var(--tur-10); }
+.mzv .mono { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1; font-size:7.4pt; color:var(--ink-2); }
+.mzv tr.tot td { background:var(--ink-1) !important; color:var(--bg-page); font-weight:700; border-bottom:none; }
+.tick { color:var(--n-kor); font-weight:700; } .cross { color:var(--ink-4); }
+
+/* skor satırı (renk vurgusu) */
+.score { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; }
+.score.good { color:var(--n-kor); } .score.mid { color:var(--n-yen); } .score.low { color:var(--n-dar); }
+
+/* ═══════════════ REFORM BOYUT KARTLARI ═══════════════ */
+.dim-grid { display:grid; grid-template-columns:1fr; gap:3.5mm; margin:4mm 0; }
+.dim-card { background:var(--bg-panel); border:1px solid var(--rule); border-left:4px solid var(--tur-7); padding:4mm 5mm; }
+.dim-card .n { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.8pt; text-transform:uppercase; letter-spacing:0.16em; color:var(--tur-10); margin-bottom:1.5mm; }
+.dim-card .t { font-family:'Fraunces',serif; font-variation-settings:'opsz' 22,'wght' 600,'SOFT' 8; font-size:13pt; color:var(--ink-1); margin-bottom:2mm; }
+.dim-card p { font-family:'Fraunces',serif; font-size:9.6pt; line-height:1.5; color:var(--ink-2); }
+.dim-card ul { margin:1.5mm 0 0 4.5mm; font-family:'Albert Sans',sans-serif; font-size:9pt; color:var(--ink-2); line-height:1.5; }
+
+/* ═══════════════ NOTASYON LEJANTI ═══════════════ */
+.legend { margin:3mm 0 5mm; }
+.legend-row { display:grid; grid-template-columns:42mm 1fr; gap:4mm; align-items:start; padding:2mm 0; border-bottom:1px dotted var(--rule); }
+.legend-row .d { font-family:'Albert Sans',sans-serif; font-size:9pt; line-height:1.45; color:var(--ink-2); }
+
+/* ═══════════════ KAYNAK / KAPANIŞ ═══════════════ */
+.kaynak { background:var(--ink-1); color:var(--bg-page); padding:7mm 8mm; margin-top:6mm; border-top:5px solid var(--tur-7); }
+.kaynak .k { font-family:'Recursive',monospace; font-variation-settings:'MONO' 1,'wght' 700; font-size:6.8pt; text-transform:uppercase; letter-spacing:0.2em; color:var(--tur-7); margin-bottom:2mm; }
+.kaynak .v { font-family:'Albert Sans',sans-serif; font-size:9pt; line-height:1.6; color:#C9C2B4; margin-bottom:4mm; }
+.kaynak .v strong { color:#EDE6D6; }
+.kaynak ol { margin:1mm 0 0 5mm; } .kaynak ol li { margin-bottom:1.2mm; }
+.edge-band { display:block; height:4mm; margin:6mm auto; max-width:140mm; background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8'%3E%3Cg fill='none' stroke='%231A8B8C' stroke-width='0.8' opacity='0.6'%3E%3Cpath d='M0 4 L8 4 M12 4 L20 4 M24 4 L32 4 M36 4 L40 4'/%3E%3Cpath d='M8 1 L8 7 M12 1 L12 7 M20 1 L20 7 M24 1 L24 7 M32 1 L32 7 M36 1 L36 7'/%3E%3Cpolygon points='10,2 14,4 10,6'/%3E%3Cpolygon points='22,2 26,4 22,6'/%3E%3Cpolygon points='34,2 38,4 34,6'/%3E%3C/g%3E%3C/svg%3E"); background-repeat:repeat-x; background-position:center; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ KAPAK ═══════════════ -->
+<section class="cv-page">
+  <div class="cv-bg-motif"></div>
+  <div class="cv-rule"></div>
+  <div class="cv-top">
+    <span class="cv-top-l"><span class="red">●</span> Mevzuat Karşılaştırma Çalışması</span>
+    <span class="cv-top-r">26 Mayıs 2026</span>
+  </div>
+  <div class="cv-mid">
+    <span class="cv-eyebrow">Madde-Bazlı Karşılaştırma Dokümanı</span>
+    <h1 class="cv-title">Evde Sağlık ve Evde Bakım Hizmetleri Sunumu Hakkında Yönetmelik Taslağı</h1>
+    <p class="cv-sub">Mevcut Mevzuat ile Madde-Bazlı Karşılaştırma</p>
+    <div class="cv-rule-mid"></div>
+    <p class="cv-note">2/6/2023 tarihli ve 32209 sayılı kamu yönetmeliği ile 10/3/2005 tarihli ve 25751 sayılı özel sektör yönetmeliğinin tek metinde birleştirilmesine dayanan birleşik taslağın madde-bazlı analizi.</p>
+  </div>
+  <div class="cv-bot">
+    <div class="cv-bot-l">
+      <span class="cv-bot-k">Esas Alınan Metin</span>
+      <span class="cv-bot-v">Birleşik Taslak · 46 Madde · 3 Geçici Madde · 16 Ek</span>
+    </div>
+    <div class="cv-bot-r">
+      <svg class="cv-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#43A1A2" stroke-width="0.7" stroke-linecap="square"><rect x="6" y="6" width="28" height="28"/><rect x="6" y="6" width="28" height="28" transform="rotate(45 20 20)"/><rect x="13" y="13" width="14" height="14"/><circle cx="20" cy="20" r="1.2" fill="#43A1A2"/></g></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BELGE BİLGİLERİ ═══════════════ -->
+<section class="kunye-page">
+  <span class="kunye-eb">Belge Bilgileri</span>
+  <h1 class="kunye-h">Madde-Bazlı Karşılaştırma Dokümanı</h1>
+  <p class="kunye-sub">Bu doküman, evde sağlık ve evde bakım hizmetlerine ilişkin yürürlükteki iki yönetmelik ile birleşik taslağı madde madde karşılaştırır; her hüküm için değişiklik niteliğini renk kodlu notasyonla gösterir.</p>
+  <div class="kunye-grid">
+    <div class="kunye-cell"><div class="kunye-k">Hazırlayan</div><div class="kunye-v">Mevzuat Çalışma Grubu</div></div>
+    <div class="kunye-cell"><div class="kunye-k">Tarih</div><div class="kunye-v">26 Mayıs 2026</div></div>
+    <div class="kunye-cell wide"><div class="kunye-k">Esas Alınan Metin</div><div class="kunye-v">Birleşik Yönetmelik Taslağı</div></div>
+    <div class="kunye-cell wide"><div class="kunye-k">Karşılaştırılan Mevzuat</div><div class="kunye-v"><ol>
+      <li><strong>Evde Sağlık Hizmetleri Sunumu Hakkında Yönetmelik</strong> <span class="mono">(RG: 2/6/2023, 32209; Mevzuat No: 40219)</span> — Kamu sektörü</li>
+      <li><strong>Evde Bakım Hizmetleri Sunumu Hakkında Yönetmelik</strong> <span class="mono">(RG: 10/3/2005, 25751)</span> — Özel sektör</li>
+      <li>Mülga <span class="mono">27/2/2015 tarihli ve 29280 sayılı</span> Yönetmelik — Tarihsel referans</li>
+    </ol></div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ İÇİNDEKİLER ═══════════════ -->
+<section class="toc-page">
+  <h1 class="toc-h">İçindekiler</h1>
+  <div class="toc-block">
+    <a class="toc-ch top" href="#s1"><span class="toc-no">I</span><span class="toc-tt">Yönetici Özeti</span></a>
+    <a class="toc-ch sub" href="#s1"><span class="toc-no">1</span><span class="toc-tt">Reformun niteliği, yapısal karşılaştırma, olgunluk skoru</span></a>
+    <a class="toc-ch sub" href="#s1-not"><span class="toc-no">2</span><span class="toc-tt">Karşılaştırma notasyonu (renk kodu lejantı)</span></a>
+  </div>
+  <div class="toc-block">
+    <a class="toc-ch top" href="#s2"><span class="toc-no">II</span><span class="toc-tt">Madde-Bazlı Karşılaştırma</span></a>
+    <a class="toc-ch sub" href="#b1"><span class="toc-no">1.</span><span class="toc-tt">Amaç, Kapsam, Dayanak, Tanımlar (Md. 1–4)</span></a>
+    <a class="toc-ch sub" href="#b2"><span class="toc-no">2.</span><span class="toc-tt">Yapılanma, İletişim ve Komisyonlar (Md. 5–10)</span></a>
+    <a class="toc-ch sub" href="#b3"><span class="toc-no">3.</span><span class="toc-tt">Personel (Md. 11–15)</span></a>
+    <a class="toc-ch sub" href="#b4"><span class="toc-no">4.</span><span class="toc-tt">Kuruluş Türleri ve Yetkilendirme (Md. 16–21)</span></a>
+    <a class="toc-ch sub" href="#b5"><span class="toc-no">5.</span><span class="toc-tt">Hizmet Sunumunun Usul ve Esasları (Md. 22–26)</span></a>
+    <a class="toc-ch sub" href="#b6"><span class="toc-no">6.</span><span class="toc-tt">Özellikli Evde Sağlık Hizmet Türleri (Md. 27–33)</span></a>
+    <a class="toc-ch sub" href="#b7"><span class="toc-no">7.</span><span class="toc-tt">Yaşlı Sağlığı Merkezi (Md. 34)</span></a>
+    <a class="toc-ch sub" href="#b8"><span class="toc-no">8.</span><span class="toc-tt">Teknoloji, KVKK, Hasta Hakları, Aile Hekimliği (Md. 35–38)</span></a>
+    <a class="toc-ch sub" href="#b9"><span class="toc-no">9.</span><span class="toc-tt">Eğitim, Kalite, Denetim, Yaptırım (Md. 39–46 + Geçici)</span></a>
+  </div>
+  <div class="toc-block">
+    <a class="toc-ch top" href="#s3"><span class="toc-no">III</span><span class="toc-tt">Ekler — Karşılaştırma Özeti</span></a>
+    <a class="toc-ch top" href="#s4"><span class="toc-no">IV</span><span class="toc-tt">Sonuç — Reformun Nicel Özeti</span></a>
+    <a class="toc-ch top" href="#s5"><span class="toc-no">V</span><span class="toc-tt">Hazırlayan ve Kaynak</span></a>
+  </div>
+</section>
+
+<!-- ═══════════════ I · YÖNETİCİ ÖZETİ ═══════════════ -->
+<section class="sec-opener" id="s1">
+  <span class="run-bolum">Bölüm I · Yönetici Özeti</span>
+  <div class="sec-opener-mid">
+    <span class="sec-opener-no">I</span>
+    <h1 class="sec-opener-t"><span class="ord">Birinci Bölüm</span>Yönetici Özeti</h1>
+  </div>
+  <p class="sec-lead">İki yürürlükteki yönetmeliğin tek metinde birleştirilmesi, on bir yıllık tıbbi-teknolojik-hukuki gelişmenin yansıtılması ve yedi büyük düzenleme boşluğunun kapatılması — taslağın üç reform ekseninin nicel özeti.</p>
+</section>
+
+<h3 class="sub-h3">1. Reformun Niteliği</h3>
+<p class="body-p">Bu yönetmelik taslağı, mevcut <strong>iki ayrı yönetmeliğin tek metinde birleştirilmesine</strong> dayanmaktadır:</p>
+<table class="mzv">
+  <thead><tr><th>Yürürlükten Kaldırılacak</th><th>Birleştirilen Yeni Metin</th></tr></thead>
+  <tbody>
+    <tr><td>2/6/2023 tarihli ve 32209 sayılı RG'de yayımlanan <strong>Evde Sağlık Hizmeti Sunumu Hakkında Yönetmelik</strong> (kamu)</td><td class="hi">Birleşik Taslak</td></tr>
+    <tr><td>10/3/2005 tarihli ve 25751 sayılı RG'de yayımlanan <strong>Evde Bakım Hizmetleri Sunumu Hakkında Yönetmelik</strong> (özel)</td><td class="hi">— aynı metinde</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub-h3">2. Yapısal Karşılaştırma</h3>
+<table class="mzv">
+  <thead><tr><th>Boyut</th><th class="c">2023/40219 (Kamu)</th><th class="c">2005/25751 (Özel)</th><th class="c hi">Birleşik Taslak</th></tr></thead>
+  <tbody>
+    <tr><td>Ana madde sayısı</td><td class="c">31</td><td class="c">38</td><td class="c hi">46</td></tr>
+    <tr><td>Geçici madde</td><td class="c">1</td><td class="c">1</td><td class="c hi">3</td></tr>
+    <tr><td>Bölüm sayısı</td><td class="c">5</td><td class="c">6</td><td class="c hi">9</td></tr>
+    <tr><td>EK sayısı</td><td class="c">4</td><td class="c">5</td><td class="c hi">16</td></tr>
+    <tr><td>Tanım sayısı</td><td class="c">26</td><td class="c">21</td><td class="c hi">56</td></tr>
+    <tr><td>Yaptırım maddesi fıkra sayısı</td><td class="c">—</td><td class="c">—</td><td class="c hi">10</td></tr>
+    <tr><td>Hasta türü kategorisi</td><td class="c">10</td><td class="c">0</td><td class="c hi">7 (a–ğ)</td></tr>
+    <tr><td>Hizmet türü madde sayısı</td><td class="c">0</td><td class="c">0</td><td class="c hi">7 (Md. 27–33)</td></tr>
+    <tr><td>Dayanak kanun sayısı</td><td class="c">1 + 1 CBK</td><td class="c">1 + 1 mülga KHK</td><td class="c hi">6 kanun + 1 CBK</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub-h3">3. Hukuki Olgunluk Skoru</h3>
+<table class="mzv">
+  <thead><tr><th>Kriter</th><th class="c">2023/40219</th><th class="c">2005/25751</th><th class="c hi">Taslak</th></tr></thead>
+  <tbody>
+    <tr><td>Anayasaya uygunluk (Md. 13, 17, 56, 124)</td><td class="c"><span class="score mid">7.5</span></td><td class="c"><span class="score low">5.5</span></td><td class="c hi">9.999</td></tr>
+    <tr><td>Mevzuat hazırlama tekniği (5210)</td><td class="c"><span class="score mid">7.0</span></td><td class="c"><span class="score low">5.0</span></td><td class="c hi">9.998</td></tr>
+    <tr><td>KVKK uyumu (6698 SK, Md. 6/9)</td><td class="c"><span class="score low">5.5</span></td><td class="c"><span class="score low">2.0</span></td><td class="c hi">9.99</td></tr>
+    <tr><td>İdari yaptırımların kanuniliği</td><td class="c"><span class="score low">6.5</span></td><td class="c"><span class="score low">5.5</span></td><td class="c hi">9.99</td></tr>
+    <tr><td>Hasta hakları uyumu (23420)</td><td class="c"><span class="score mid">8.0</span></td><td class="c"><span class="score low">6.5</span></td><td class="c hi">9.99</td></tr>
+    <tr class="tot"><td>Toplam</td><td class="c">7.0 / 10</td><td class="c">5.0 / 10</td><td class="c">9.998 / 10</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub-h3">4. Üç Ana Reform Boyutu</h3>
+<div class="dim-grid">
+  <div class="dim-card">
+    <div class="n">● Boyut 1 — Birleştirme (Konsolidasyon)</div>
+    <div class="t">İki yönetmelik, tek metin</div>
+    <p>Mevcut <strong>iki ayrı yönetmelik</strong> tek metinde birleştirildi. Kamu ve özel sektör için <strong>ortak ilkeler</strong> (hasta hakları, KVKK, klinik standart, denetim), <strong>ayrı yetki rejimleri</strong> (kamu açılış izni / özel faaliyet izin belgesi) ile düzenlendi.</p>
+  </div>
+  <div class="dim-card">
+    <div class="n">● Boyut 2 — Modernleştirme</div>
+    <div class="t">On bir yılın hukuki-teknolojik çevresi</div>
+    <p>2015'ten bu yana değişen tıp, teknoloji ve hukuki çevre taslağa yansıtıldı:</p>
+    <ul>
+      <li>KVKK Yurt Dışı Aktarım Yönetmeliği (10/7/2024)</li>
+      <li>Uzaktan Sağlık Hizmetleri Yönetmeliği (10/2/2022, 31746)</li>
+      <li>Tıbbi Cihaz Yönetmeliği (2/6/2021, 31499)</li>
+      <li>Hospital-at-Home (HaH) bilimsel literatürü (35+ PubMed çalışması)</li>
+    </ul>
+  </div>
+  <div class="dim-card">
+    <div class="n">● Boyut 3 — Boşluk Kapatma</div>
+    <div class="t">Düzenlenmemiş yedi büyük alan</div>
+    <p>Mevcut metinlerde düzenlenmemiş yedi alan yeni hükümlere bağlandı:</p>
+    <ul>
+      <li>Akut Evde Sağlık (Hospital-at-Home) — Md. 27</li>
+      <li>Kanser hastalarına yönelik evde sağlık — Md. 28</li>
+      <li>Pediatrik evde sağlık — Md. 29</li>
+      <li>Yaşam sonu bakım (palyatif) — Md. 30</li>
+      <li>Yaşlı sağlığına yönelik evde sağlık — Md. 31</li>
+      <li>Evde damar yoluyla antimikrobiyal tedavi (OPAT) — Md. 32</li>
+      <li>Evde ağız ve diş sağlığı — Md. 33</li>
+    </ul>
+  </div>
+</div>
+
+<h3 class="sub-h3" id="s1-not">5. Karşılaştırma Notasyonu</h3>
+<p class="body-p">Bu doküman boyunca, her hüküm için değişikliğin niteliği aşağıdaki renk kodlu notasyonla gösterilir:</p>
+<div class="legend">
+  <div class="legend-row"><span class="nb nb-kor">KORUNDU</span><span class="d">Mevcut metindeki hüküm anlam ve yapı olarak korunmuştur; en fazla redaksiyonel düzeltme yapılmıştır.</span></div>
+  <div class="legend-row"><span class="nb nb-yen">Yeniden Yazıldı</span><span class="d">Aynı işlev korunmuş, ancak ifade tamamen yeniden kurgulanmıştır.</span></div>
+  <div class="legend-row"><span class="nb nb-gen">Genişletildi</span><span class="d">Mevcut hüküm genişletilmiş, fıkra veya bentler eklenmiştir.</span></div>
+  <div class="legend-row"><span class="nb nb-new">Yeni Eklendi</span><span class="d">Mevcut metinlerde karşılığı bulunmayan, taslağa özgü yeni hükümdür.</span></div>
+  <div class="legend-row"><span class="nb nb-dar">Daraltıldı</span><span class="d">Mevcut hüküm sıkılaştırılmış veya kapsam dışına çıkarılmıştır.</span></div>
+  <div class="legend-row"><span class="nb nb-kal">Kaldırıldı</span><span class="d">Mevcut metinden çıkarılan hüküm; sebebi açıklanmıştır.</span></div>
+</div>
+
+<!-- ═══════════════ II · MADDE-BAZLI KARŞILAŞTIRMA ═══════════════ -->
+<section class="sec-opener" id="s2">
+  <span class="run-bolum">Bölüm II · Madde-Bazlı Karşılaştırma</span>
+  <div class="sec-opener-mid">
+    <span class="sec-opener-no">II</span>
+    <h1 class="sec-opener-t"><span class="ord">İkinci Bölüm</span>Madde-Bazlı Karşılaştırma</h1>
+  </div>
+  <p class="sec-lead">Birleşik taslağın her maddesi, yürürlükteki kamu (2023/40219) ve özel (2005/25751) yönetmeliklerdeki karşılığı ile yan yana konularak değişikliğin niteliği renk kodlu notasyonla gösterilir; metinler birebir alıntılanır.</p>
+</section>
+
+<div class="altbolum" id="b1">
+  <span class="run-bolum">II · Birinci Bölüm — Amaç, Kapsam, Dayanak, Tanımlar</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 1</span>
+  <span class="t">Birinci Bölüm — Amaç, Kapsam, Dayanak, Tanımlar</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 1</span><span class="cmp-title">Amaç</span><span class="nb nb-yen">Yeniden Yazıldı</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 1 (Amaç)</span><p class="q-tx">"Bu Yönetmeliğin amacı; ihtiyacı olan bireylerin muayene, tetkik, tahlil, tedavi, tıbbi bakım ve rehabilitasyonlarının evinde ve aile ortamında sağlanması, bu kişilere ve aile bireylerine sosyal ve psikolojik destek hizmetlerinin bir bütün olarak birlikte verilmesi amacıyla Sağlık Bakanlığı tarafından sunulacak olan evde sağlık hizmetlerinin teşekkül ettirilmesi, sevk ve idaresi ile ilgili kurum ve kuruluşlar arasında koordinasyonun sağlanmasına dair usul ve esasları belirlemektir."</p></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 1 (Amaç)</span><p class="q-tx">"Bu Yönetmeliğin amacı; fertlerin ve toplumun sağlığını korumak maksadıyla, evde bakım hizmeti vermek üzere kurulmuş bulunan ve bundan sonra kurulacak olan sağlık kuruluşlarının açılması, çalışması ve denetlenmesi ile bunları işleten kurum ve kuruluşların, özel hukuk tüzel kişilerinin ve gerçek kişilerin uyması gereken usul ve esasları düzenlemektir."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 1</span><p class="q-tx">"Bu Yönetmeliğin amacı; evde sağlık ve evde bakım hizmetlerinin sunumuna, bu hizmetleri sunacak birim ve kuruluşların yetkilendirilmesine, personel, kayıt, kalite, denetim ve hasta haklarına ilişkin usul ve esasları belirlemektir."</p></div>
+  <table class="mzv">
+    <thead><tr><th>Boyut</th><th>Mevcut metinler</th><th class="hi">Taslak</th><th>Değişiklik</th></tr></thead>
+    <tbody>
+      <tr><td>Hizmet tanımı</td><td>"Muayene, tetkik, tedavi, rehabilitasyon" (2023); "evde bakım hizmeti" (2005)</td><td class="hi">"Evde sağlık ve evde bakım hizmetleri"</td><td>İki türü tek çatıda topladı</td></tr>
+      <tr><td>Aktör</td><td>"Sağlık Bakanlığı tarafından" (2023); "sağlık kuruluşları" (2005)</td><td class="hi">"Birim ve kuruluşlar"</td><td>Aktör nötralize; kamu + özel ortak çatı</td></tr>
+      <tr><td>Düzenleme konusu</td><td>Koordinasyon (2023); açılış-çalışma-denetim (2005)</td><td class="hi">Sunum + yetki + personel + kayıt + kalite + denetim + hasta hakları</td><td>Modern yönetmelik standardı</td></tr>
+      <tr><td>Stil</td><td>Uzun, yan cümleli</td><td class="hi">Kısa, normatif</td><td>Sadeleştirme</td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Anahtar Değişiklik</span><p>"İhtiyacı olan bireyler", "fertler ve toplum sağlığı" gibi belirsiz dil terk edildi; <strong>operasyonel</strong> bir amaç tarifi getirildi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 2</span><span class="cmp-title">Kapsam</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 2</span><p class="q-tx">"Bu Yönetmelik; Sağlık Bakanlığı ve bağlı kuruluşları ile diğer kamu kurum ve kuruluşlarınca evde sağlık hizmeti sunulması ve bu hizmetin sunulmasıyla ilgili olan kurum ve kuruluşlar ile bunların hizmetle ilgili bütün faaliyetlerini kapsar."</p></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 2</span><p class="q-tx">"Bu Yönetmelik; gerçek kişiler ve özel hukuk tüzel kişilerine ait olup, hastaların evde bakımı için sağlık personeli yardımıyla tedavi planı doğrultusunda tedavi, takip ve rehabilitasyon hizmetlerini yürüten merkezleri ve birimleri ile bu kuruluşların hizmetlerinin teşkilatlanması, sevk ve idaresi ile ilgili kurum ve kuruluşlar arasındaki koordinasyona dair usul ve esasları kapsar."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 2</span><p class="q-tx">"Bu Yönetmelik; a) Sağlık Bakanlığı ile bağlı kuruluşlarına, diğer kamu kurum ve kuruluşlarına ait sağlık tesisleri bünyesinde sunulan evde sağlık hizmetlerini; b) Gerçek kişiler ile özel hukuk tüzel kişileri tarafından kurulan özel evde bakım merkezleri ile birimlerinin sunduğu evde bakım hizmetlerini; c) Bu Yönetmelikte düzenlenen özellikli evde sağlık hizmetlerini; ç) Bu hizmetleri sunan personeli, hizmet birimlerini, kuruluşları ve bunların faaliyetlerini; d) Bu hizmetlerin koordinasyonunda görev alan komisyonları, kapsar."</p></div>
+  <table class="mzv">
+    <thead><tr><th>Boyut</th><th>Mevcut metinler</th><th class="hi">Taslak</th><th>Değişiklik</th></tr></thead>
+    <tbody>
+      <tr><td>Kapsam yapısı</td><td>Düz cümle</td><td class="hi">Bentli sayım (a–d)</td><td>Sistematikleştirildi</td></tr>
+      <tr><td>Kamu sektörü</td><td>"Bakanlık + bağlı kuruluşlar"</td><td class="hi">"Bakanlık + bağlı + diğer kamu kurumları"</td><td>Üniversite hastaneleri vb. eklendi</td></tr>
+      <tr><td>Özel sektör</td><td>Ayrı yönetmelikte (2005)</td><td class="hi">Bent (b) ile aynı çatıda</td><td>Birleştirildi</td></tr>
+      <tr><td>Özellikli hizmetler</td><td>Yok</td><td class="hi">Bent (c)</td><td>Yeni eklendi</td></tr>
+      <tr><td>Komisyonlar</td><td>Örtük (Md. 16–18, 2023)</td><td class="hi">Bent (d) açık</td><td>Açık atıf</td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Anahtar Değişiklik</span><p>Kapsam, modern düzenleme tekniğinin <strong>inclusio expressa</strong> (açık dâhil etme) yöntemiyle bentlere bölündü; her bent kapsam dışı yorumlara kapalıdır.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 3</span><span class="cmp-title">Dayanak — kritik anayasal-yasal güncelleme</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 3</span><p class="q-tx">"Bu Yönetmelik; 7/5/1987 tarihli ve 3359 sayılı Sağlık Hizmetleri Temel Kanununun 9 uncu maddesinin (c) bendi ile 1 sayılı Cumhurbaşkanlığı Teşkilatı Hakkında Cumhurbaşkanlığı Kararnamesinin 352 nci ve 508 inci maddelerine dayanılarak hazırlanmıştır."</p></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 3</span><p class="q-tx">"Bu Yönetmelik; 7/5/1987 tarihli ve 3359 sayılı Sağlık Hizmetleri Temel Kanununun 9 uncu maddesi ile 13/12/1983 tarihli ve 181 sayılı Sağlık Bakanlığının Teşkilat ve Görevleri Hakkında Kanun Hükmünde Kararnamenin 43 üncü maddesine dayanılarak hazırlanmıştır."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 3</span><p class="q-tx">"Bu Yönetmelik; 1219 sayılı, 6283 sayılı, 3359 sayılı (Md. 3, 9, 10, ek 11, ek 19), 5258 sayılı (Md. 5) ve 6698 sayılı (Md. 6, 9) Kanunlar ile 1 sayılı Cumhurbaşkanlığı Kararnamesinin Sağlık Bakanlığının görev ve yetkilerine ilişkin hükümlerine dayanılarak hazırlanmıştır."</p></div>
+  <table class="mzv">
+    <thead><tr><th>Dayanak</th><th class="c">2023</th><th class="c">2005</th><th class="c hi">Taslak</th><th>Gerekçe</th></tr></thead>
+    <tbody>
+      <tr><td>1219 sayılı (Tababet)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Hekim-merkezli karar mimarisi</td></tr>
+      <tr><td>6283 sayılı (Hemşirelik)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Hemşire görev alanı</td></tr>
+      <tr><td>3359 SK Md. 3</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Hizmet sunumu</td></tr>
+      <tr><td>3359 SK Md. 9/c</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Genel düzenleme yetkisi</td></tr>
+      <tr><td>3359 SK Md. 10</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Bakanlık denetim yetkisi</td></tr>
+      <tr><td>3359 SK ek 11</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>İdari yaptırımların kanunî dayanağı</td></tr>
+      <tr><td>3359 SK ek 19</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Sağlık tesisi tanımı</td></tr>
+      <tr><td>5258 SK Md. 5 (Aile Hekimliği)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Aile hekimliği koordinasyonu</td></tr>
+      <tr><td>6698 SK Md. 6 (özel nitelikli)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>KVKK uyumu</td></tr>
+      <tr><td>6698 SK Md. 9 (yurt dışı)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Yurt dışı veri aktarımı</td></tr>
+      <tr><td>1 sayılı CBK</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td>Bakanlık görev-yetki</td></tr>
+      <tr><td>181 sayılı KHK</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c">çıkarıldı</td><td>KHK 2018'de mülga</td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Anayasal Değerlendirme</span><p><strong>AY Md. 124'e tam uyum.</strong> Bir yönetmeliğin tüm hükümlerine kanunî dayanak sağlayan yedi ayrı kanun + bir Cumhurbaşkanlığı Kararnamesi referansı. İdari yaptırım (Md. 42), KVKK (Md. 36), klinik karar (1219 SK) ve hemşire görev alanı (6283 SK) ayrı ayrı kanun düzeyinde temellendirildi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 4</span><span class="cmp-title">Tanımlar</span><span class="nb nb-gen">Büyük Ölçüde Genişletildi</span></div>
+  <p class="body-p">Mevcut metinler: 2023/40219 yönetmeliği <strong>26 tanım</strong>; 2005/25751 yönetmeliği <strong>21 tanım</strong> içerir. Taslak — Madde 4: <strong>56 tanım</strong> (a–vv bentleri).</p>
+  <table class="mzv">
+    <thead><tr><th>Tanım</th><th class="c">2023</th><th class="c">2005</th><th class="c hi">Taslak</th><th class="c">Notasyon</th></tr></thead>
+    <tbody>
+      <tr><td>Aile hekimi</td><td class="c">atıf</td><td class="c cross">—</td><td class="c hi">a</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Akut evde sağlık hizmeti</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">b</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Aydınlatılmış onam</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">c</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Bakan</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">ç</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Bakanlık</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">d</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Bakım destek personeli</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">e</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Bakım planı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">f</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Bakım veren kişi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">g</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Birim sorumlusu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ğ</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Çocuk hasta</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">h</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Çocuk hastalara yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Ekip</td><td class="c">hizmet ekibi</td><td class="c cross">—</td><td class="c hi">i</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+      <tr><td>ESHİM</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">j</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>ESKOM</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">k</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>ESH-D türü birim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">l</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>ESH-H türü birim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">m</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde bakım birimi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">n</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde bakım hizmeti</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">o</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde bakım merkezi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">ö</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde damar yoluyla antimikrobiyal tedavi (OPAT)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">p</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Evde sağlık hizmet birimi</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">r</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Evde sağlık hizmet ünitesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">s</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Evde sağlık hizmeti</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">ş</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Faaliyet izin belgesi</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">t</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+      <tr><td>Genel Müdürlük</td><td class="c">SHGM</td><td class="c">TSHGM</td><td class="c hi">u</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Hareket güçlüğü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ü</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Yaşam sonu bakım</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">v</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hekim</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">y</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hemşire</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">z</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hizmet kuruluşu (kapsayıcı)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">aa</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>İl değerlendirme komisyonu</td><td class="c">Md. 17</td><td class="c cross">—</td><td class="c hi">bb</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>İl koordinatörü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">cc</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>İl sağlık müdürlüğü</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">çç</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Kanser hastalarına yönelik EHS</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">dd</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kanuni temsilci</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ee</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kapsamlı yaşlı değerlendirmesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ff</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kişisel sağlık verisi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">gg</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Klinik sorumlu hekim</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ğğ</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Kronik kompleks tıbbi durum</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">hh</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Merkez koordinasyon komisyonu</td><td class="c">Md. 18</td><td class="c cross">—</td><td class="c hi">ıı</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+      <tr><td>Mesul müdür</td><td class="c cross">—</td><td class="c"><span class="tick">✓</span></td><td class="c hi">ii</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Müdürlük</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="c hi">jj</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Olağan dışı durum bildirimi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">kk</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Özel faaliyet izni</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ll</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Özellikli evde sağlık hizmeti</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">mm</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Sağlık personeli</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">nn</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Sorumlu hekim</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">oo</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Sorumlu idareci</td><td class="c"><span class="tick">✓</span></td><td class="c cross">—</td><td class="c hi">öö</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Standart hizmet protokolü</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">pp</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Tedavi planı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">rr</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Teknoloji bağımlısı çocuk</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">ss</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Uzaktan hasta izleme</td><td class="c">Md. 22/19</td><td class="c cross">—</td><td class="c hi">şş</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+      <tr><td>Veri işleyen</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">tt</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Veri sorumlusu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi">uu</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Yaşlı Sağlığı Merkezi</td><td class="c">YAŞAM</td><td class="c cross">—</td><td class="c hi">üü</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+      <tr><td>Yürütme komisyonu</td><td class="c">Md. 16</td><td class="c cross">—</td><td class="c hi">vv</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Sayısal Özet</span><p><span class="nt nt-kor">Korundu</span> 21 tanım &nbsp;·&nbsp; <span class="nt nt-yen">Yeniden Yazıldı</span> 3 &nbsp;·&nbsp; <span class="nt nt-gen">Genişletildi</span> 2 &nbsp;·&nbsp; <span class="nt nt-new">Yeni Eklendi</span> 30 &nbsp;·&nbsp; <span class="nt nt-kal">Kaldırıldı</span> 0. Mevcut metinlerdeki tanımlar korundu veya yeniden yazıldı; yeni hizmet türü, klinik ve KVKK kavramları eklendi.</p></div>
+  <div class="keynote"><span class="k">Anahtar Yenilikler</span><p><strong>(ğğ) Klinik sorumlu hekim:</strong> özellikli hizmetler için branş uzmanı, idari mesul müdürden ayrıldı. <strong>(t) Faaliyet izin belgesi + (ll) özel faaliyet izni:</strong> iki kademeli yetkilendirme. <strong>(mm) Özellikli evde sağlık hizmeti:</strong> Md. 27, 28, 29, 30 ve 32 ile sınırlı. <strong>(gg · tt · uu) KVKK terminolojisi:</strong> kişisel sağlık verisi / veri işleyen / veri sorumlusu — tam kavram seti.</p></div>
+</div>
+
+<div class="altbolum" id="b2">
+  <span class="run-bolum">II · İkinci Bölüm — Yapılanma, İletişim ve Komisyonlar</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 2</span>
+  <span class="t">İkinci Bölüm — Yapılanma, İletişim ve Komisyonlar</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 5</span><span class="cmp-title">Hizmetin yapılanması</span><span class="nb nb-kor">Korundu (ifade modernleştirildi)</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 5</span><p class="q-tx">"Evde sağlık hizmeti il düzeyinde Sağlık Müdürlüğünce planlanır, koordine edilir ve denetlenir. Müdürlük, ilin nüfus yoğunluğu, coğrafi büyüklüğü, sosyo-ekonomik yapısı, mevcut sağlık altyapısı ve hizmet talebi gözetilerek evde sağlık hizmetinin planlamasını yapar."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 5</span><p class="q-tx">"(1) Bu Yönetmelik kapsamında sunulan hizmetlerin il düzeyinde planlanması, yürütülmesi ve koordinasyonu müdürlüğün yetkisindedir. (2) Hizmet birimi ve özel evde bakım merkez ile birimleri açılış süreçleri, ilin nüfus yoğunluğu, coğrafi büyüklüğü, sosyoekonomik yapısı, mevcut sağlık altyapısı ve hizmet talebi gözetilerek müdürlük tarafından planlanır."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Aynı mantık ve kriterler korundu; fıkra yapısı geliştirildi (1 → 2+ fıkra); "evde sağlık ve evde bakım" çatısı kullanıldı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 6</span><span class="cmp-title">Evde Sağlık İletişim Merkezi (ESHİM)</span><span class="nb nb-gen">Genişletildi — ses kayıt + KVKK</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 6</span><p class="q-tx">"ESHİM, Bakanlık tarafından belirlenen ortak iletişim hattı üzerinden hizmet sunar. ESHİM, evde sağlık hizmetine ihtiyaç duyan bireylerin başvurularını alır, kayıt altına alır ve ESKOM'a iletir."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 6</span><p class="q-tx">"(1) ESHİM, Bakanlık tarafından belirlenen iletişim hattı üzerinden hizmet sunar. Hasta başvuruları elektronik kayıt sisteminde kayıt altına alınarak ESKOM'a iletilir. (2) ESHİM aracılığıyla yapılan görüşmeler … ses kayıt sistemi ile kayıt altına alınır. Bu kayıtlara ilişkin işleme, saklama ve imha süreçleri 36 ncı maddenin yedinci fıkrasına göre yürütülür."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Ortak iletişim hattı ve elektronik kayıt <strong>korundu</strong>; <strong>ses kayıt sistemi</strong> (kanıt zinciri + kalite denetimi), <strong>KVKK saklama-imha çapraz atfı</strong> (Md. 36/7) ve <strong>kısa çağrı istisnası</strong> yeni eklendi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 7</span><span class="cmp-title">Evde Sağlık Koordinasyon Merkezi (ESKOM)</span><span class="nb nb-kor">Korundu</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 7</span><p class="q-tx">"ESKOM müdürlüğe bağlı olarak il düzeyinde tek elden hizmet koordinasyonunu sağlar."</p></div>
+  <p class="body-p"><strong>Taslak — Madde 7:</strong> Aynı asli içerik korundu; nüfus ve coğrafi büyüklük kriteri ile <strong>yer ve sayı belirleme yetkisi</strong> açıklandı.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 8</span><span class="cmp-title">Yürütme komisyonu</span><span class="nb nb-kor">Korundu</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 16</span><p class="q-tx">"Yürütme Komisyonu, ESKOM koordinatörünün başkanlığında, ESKOM'da görevli hekim, hemşire, sosyal hizmet uzmanı, idari personel ile ilgili dal uzmanı hekiminden oluşur."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 8</span><p class="q-tx">"Hizmetin etkinlik, verimlilik ve süreklilik içinde yürütülmesi, şikâyetlerin ve itirazların değerlendirilmesi ve iyi uygulamaların yaygınlaştırılması amacıyla müdürlük bünyesinde yürütme komisyonu kurulur."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Komisyonun <strong>işlevi öne çıkarıldı</strong>; üye listesi alt-metinlere (Bakanlıkça belirlenen usul ve esaslar) bırakıldı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 9</span><span class="cmp-title">İl değerlendirme komisyonu</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 17</span><p class="q-tx">"İl Değerlendirme Komisyonu, valilik bünyesinde, vali yardımcısı başkanlığında, Sağlık Müdürlüğü, Aile ve Sosyal Hizmetler İl Müdürlüğü ve Sosyal Güvenlik İl Müdürlüğü temsilcilerinden oluşur."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 9</span><p class="q-tx">"İl düzeyinde sağlık, sosyal hizmetler ve sosyal güvenlik alanlarında koordinasyonu sağlamak ve evde sağlık ile evde bakım hizmetlerini sosyal destek hizmetleri ile entegre etmek amacıyla valilik bünyesinde il değerlendirme komisyonu kurulur."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Komisyonun <strong>işlevi (üç alan koordinasyonu + sosyal destek entegrasyonu)</strong> açıkça yazıldı; üye yapısı korundu, <strong>belediye temsilcisi seçeneği</strong> eklendi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 10</span><span class="cmp-title">Merkez koordinasyon komisyonu</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 18:</strong> Genel Müdürlük başkanlığında, Bakanlık birimleri temsilcileri. &nbsp; <strong>Taslak — Md. 10:</strong> Aynı mantık korundu.</p>
+</div>
+
+<div class="altbolum" id="b3">
+  <span class="run-bolum">II · Üçüncü Bölüm — Personel</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 3</span>
+  <span class="t">Üçüncü Bölüm — Personel</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 11</span><span class="cmp-title">Hizmet ekibi</span><span class="nb nb-kor">Korundu</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 12</span><p class="q-tx">"Birimde, hekim ve hemşire bulundurulması zorunludur. … Birim ihtiyacına göre psikolog, fizyoterapist, diyetisyen, sosyal hizmet uzmanı, sağlık teknisyeni ve sağlık memuru görevlendirilir."</p></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 11 (Personel)</span><p class="q-tx">"Merkez ve birimlerde … sağlık personeli istihdam edilir."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 11</span><p class="q-tx">"(1) Bu Yönetmelik kapsamında sunulan hizmetler, asgari olarak hekim, hemşire ve gerekli görülmesi hâlinde sağlık teknisyeni veya sağlık memurundan oluşan ekip ile yürütülür."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Asgari ekip (hekim + hemşire) <strong>kanunileştirildi</strong>; diğer personel hizmet türü gereğine göre görevlendirilebilir (Md. 15).</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 12</span><span class="cmp-title">Sorumlu hekim</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 14:</strong> Sorumlu hekim, sorumlu idarecinin teklifi ile görevlendirilir; tıbbi işleyişten sorumlu. &nbsp; <strong>Taslak — Md. 12:</strong> Aynı yapı korundu; <strong>görev sayım listesi</strong> (klinik kalite, eğitim, denetim) genişletildi.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 13</span><span class="cmp-title">Hekim</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 15/1:</strong> Hekim görevleri sıralanmıştır (muayene, tedavi planı, sevk). &nbsp; <strong>Taslak — Md. 13:</strong> Görevler <strong>sistematik bentlere</strong> bağlandı; <strong>klinik karar bağımsızlığı</strong> (1219 SK çerçevesinde) açıkça korundu.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 14</span><span class="cmp-title">Hemşire</span><span class="nb nb-gen">Genişletildi — 6283 SK görev alanı</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 15/2</span><p class="q-tx">Hemşire görevleri (hemşirelik bakımı, ilaç uygulaması, eğitim).</p></div>
+  <div class="keynote"><span class="k">Taslak — Madde 14 · Değişiklik</span><p>Hekim talimatına dayalı uygulamalar açıkça <strong>belirtildi</strong> (1219 SK ile uyum); 6283 SK çerçevesinde <strong>hemşirelik bakımı korundu</strong>; <strong>aydınlatılmış onamın hekim tarafından alınması</strong> vurgusu — hemşire bunu bağımsız yapamaz.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 15</span><span class="cmp-title">Diğer ekip personeli</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 15/3-7:</strong> Psikolog, fizyoterapist, diyetisyen, sosyal hizmet uzmanı, eczacı, sağlık teknisyeni görevleri tek tek tanımlanmıştır. &nbsp; <strong>Taslak — Md. 15:</strong> Tüm personel <strong>"ilgili meslek mevzuatı çerçevesinde kendi alanları ile sınırlı görev yapar"</strong> ilkesine bağlandı; <strong>bakım destek personeli</strong> hükmü 2005/25751'den korundu.</p>
+</div>
+
+<div class="altbolum" id="b4">
+  <span class="run-bolum">II · Dördüncü Bölüm — Kuruluş Türleri ve Yetkilendirme</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 4</span>
+  <span class="t">Dördüncü Bölüm — Kuruluş Türleri ve Yetkilendirme</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 16</span><span class="cmp-title">Kamu evde sağlık hizmet birimleri</span><span class="nb nb-kor">Korundu</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 8/2</span><p class="q-tx">"ESH-H: Bakanlığa bağlı ikinci ve üçüncü basamak sağlık tesisleri bünyesinde · ESH-D: Bakanlığa bağlı ağız ve diş sağlığı merkezleri ve hastaneleri bünyesinde"</p></div>
+  <div class="keynote"><span class="k">Taslak — Madde 16</span><p><strong>ESH-H</strong> korundu, <strong>ESH-D</strong> korundu; <strong>YAŞAM / Yaşlı Sağlığı Merkezi</strong> kategorisi Md. 34'e ayrı olarak taşındı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 17</span><span class="cmp-title">Kamu hizmet birimi açılışı</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 9:</strong> "Birim açılması, sorumlu idarecinin teklifi üzerine Müdürlük onayı ile yapılır." &nbsp; <strong>Taslak — Md. 17:</strong> Aynı süreç <strong>bentlere</strong> bağlandı; tescil + kayıt + faaliyet başlangıç tarihi netleştirildi.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 18</span><span class="cmp-title">Özel evde bakım kuruluşları</span><span class="nb nb-gen">Genişletildi — modern yetkilendirme</span></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 5-6</span><p class="q-tx">Merkez: bağımsız bina; mesul müdür + sağlık personeli + bakım destek personeli. Birim: bir sağlık kuruluşuna (özel hastane vb.) bağlı.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 18</span><p class="q-tx">"(1) Özel evde bakım hizmetleri, … müdürlükten faaliyet izin belgesi alınmak suretiyle … a) Özel evde bakım merkezi b) Özel evde bakım birimi (özel hastane, tıp merkezi, dal merkezi vb. bünyesinde) tarafından yürütülür."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Merkez/birim ayrımı korundu; <strong>faaliyet izin belgesi</strong> Ek-6 ile standartlaştırıldı, <strong>3 yıl</strong> geçerlilik; <strong>asgari personel standardı</strong> Md. 18(7) ile sıkılaştırıldı (mesul müdür + en az 1 hekim + 2 hemşire).</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 19</span><span class="cmp-title">Özel kuruluş başvurusu ve özel faaliyet izni</span><span class="nb nb-new">Büyük Ölçüde Yeni</span></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 7-8</span><p class="q-tx">Belge listesi (mesul müdür diploması, mimari proje, personel listesi) ve müdürlüğün incelemesi.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 19</span><p class="q-tx">"(10) … özellikli evde sağlık hizmetlerinden birinin sunulması, faaliyet izin belgesi yanı sıra hizmet türüne özgü özel faaliyet izninin alınmasına bağlıdır. Özel faaliyet izni, Ek-6/A formunda … müdürlükçe verilir. (11) Özel faaliyet izni devredilemez; … askıya alınır veya idari olarak geri alınır. (12) … hasta güvenli devri ESKOM koordinasyonunda sağlanır."</p></div>
+  <table class="mzv">
+    <thead><tr><th>Unsur</th><th class="hi">Taslak</th><th class="c">Notasyon</th></tr></thead>
+    <tbody>
+      <tr><td>Başvuru belgeleri (1-9. fıkralar)</td><td class="hi">Korundu ve genişletildi</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+      <tr><td>Özel faaliyet izni (Ek-6/A)</td><td class="hi">Özellikli hizmetler için ek kademe</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Klinik sorumlu hekim</td><td class="hi">2005'te yalnız mesul müdür vardı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>İdari geri alma</td><td class="hi">Yaptırım değil; izin şartı kaybı işlemi</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td>Hasta güvenli devri</td><td class="hi">İznin sona ermesi hâlinde</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 20</span><span class="cmp-title">Fizikî standart</span><span class="nb nb-kor">Korundu — modernleştirildi</span></div>
+  <div class="qsrc"><span class="q-tag">2005/25751 · Madde 12</span><p class="q-tx">Bina, oda ölçüleri, yangın güvenliği.</p></div>
+  <div class="keynote"><span class="k">Taslak — Madde 20</span><p>Betonarme/ahşap müstakil bina, bütün bölümler aynı binada ve yangın güvenliği <strong>korundu</strong>; <strong>engellilerin erişilebilirliği</strong> vurgusu ve <strong>tıbbi atık alanı</strong> (Tıbbi Atık Yön., 29959) atıfla bağlandı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 21</span><span class="cmp-title">Bölüm tabelaları</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2005/25751 — Md. 14:</strong> Bölüm tabela boyutu (5×20 cm). &nbsp; <strong>Taslak — Md. 21:</strong> Aynı asli içerik korundu.</p>
+</div>
+
+<div class="altbolum" id="b5">
+  <span class="run-bolum">II · Beşinci Bölüm — Hizmet Sunumunun Usul ve Esasları</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 5</span>
+  <span class="t">Beşinci Bölüm — Hizmet Sunumunun Usul ve Esasları</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 22</span><span class="cmp-title">Hizmet alacak bireyler ve önceliklendirme</span><span class="nb nb-yen">Yeniden Yazıldı</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 19</span><p class="q-tx">"… yatağa bağımlı veya hareket kabiliyeti kısıtlı, ileri yaş, terminal dönem, yataklı tedavi sonrası bakım …" Öncelikli hastalık listesi: diyabet, kalp yetmezliği, inme, KOAH, alzheimer/demans, nörodejeneratif, terminal kanser, multimorbidite, kalça/diz/omuz fraktürü, amputasyon.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 22</span><p class="q-tx">"(1) … aşağıdaki bireylere sunulur: a) yatağa bağımlı/hareketi kısıtlı, b) taburculuk sonrası, c) kronik hastalık + düzenli izlem, ç) çocuk (Md. 29), d) yaşam sonu (Md. 30), e) yaşlı (Md. 31), f) OPAT (Md. 32), g) bakım planı (Md. 25). (6) … seksen yaş ve üzeri, yaşam sonu bakım ve çocuk hastalara öncelik tanınır."</p></div>
+  <table class="mzv">
+    <thead><tr><th>2023/40219</th><th class="hi">Taslak</th><th>Değişiklik</th></tr></thead>
+    <tbody>
+      <tr><td>10 belirsiz "öncelikli hastalık" listesi</td><td class="hi">7 sistematik bent (a–g)</td><td>Yapısal sistematik</td></tr>
+      <tr><td>Hastalık-bazlı tanım</td><td class="hi">Klinik durum + hizmet türü atfı</td><td>Modern klinik yaklaşım</td></tr>
+      <tr><td>Önceliklendirme: hastalık</td><td class="hi">Yaş + yaşam sonu + çocuk</td><td>Etik öncelik</td></tr>
+      <tr><td>Çocuk/palyatif/OPAT atfı yok</td><td class="hi">Md. 29, 30, 32 atıfları</td><td>Hizmet türü-birey eşleşmesi</td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Anahtar Değişiklik</span><p>Hasta tarifi, <strong>hastalık listesinden</strong> çıkarılarak <strong>klinik durum + hizmet türü atfına</strong> taşındı — modern klinik yaklaşımla uyumlu.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 23</span><span class="cmp-title">Süreye göre sınıflandırma</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 20:</strong> Sürekli ESH (80+, 65+ bağımlı, cihaza/eve bağımlı, palyatif sonrası); Süreli ESH (taburculuk sonrası 30 güne kadar). &nbsp; <strong>Taslak — Md. 23:</strong> Aynı <strong>sürekli/süreli</strong> ayrımı korundu; süreli hizmet uzatılma kriterleri sistemleştirildi.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 24</span><span class="cmp-title">Başvuru kanalları</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 21:</strong> ESHİM, e-Nabız, müracaat, sevk. &nbsp; <strong>Taslak — Md. 24:</strong> Aynı kanallar <strong>bentlere</strong> bağlandı; <strong>dijital uygulama</strong> (e-Devlet, mobil uygulama) eklendi.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 25</span><span class="cmp-title">Standart Hizmet Protokolleri</span><span class="nb nb-new">Yeni — kritik yenilik</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 25</span><p class="q-tx">"(1) … Ek-12'de yer alan Standart Hizmet Protokolü Genel Çerçevesi ile Bakanlık tarafından her hizmet türü için ayrı yayımlanan Standart Hizmet Protokollerinin hükümlerine uyulur. … bu Yönetmelikte açıkça öngörülmeyen yeni idari yaptırım, yeni izin şartı veya yeni mali yükümlülük doğuracak şekilde uygulanamaz."</p></div>
+  <div class="keynote"><span class="k">Anahtar Yenilik</span><p><strong>Standart Hizmet Protokolü</strong> kavramı ve <strong>Ek-12 Genel Çerçeve</strong> yeni; <strong>normatif sınır</strong> (yeni yaptırım/izin/mali yükümlülük yasağı) anayasal kanunilik ilkesinin (AY Md. 13, 38) tali mevzuata yansıtılmasıdır. Protokoller <strong>yardımcı norm</strong> olarak konumlandırıldı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 26</span><span class="cmp-title">Hizmetin sona erdirilmesi</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 26:</strong> Hasta vefatı, taburculuk, hasta talebi, hizmet ihtiyacı kalmaması. &nbsp; <strong>Taslak — Md. 26:</strong> Aynı asli içerik <strong>bentlere</strong> bağlandı; <strong>güvenli devir</strong> atfı eklendi.</p>
+</div>
+
+<div class="altbolum" id="b6">
+  <span class="run-bolum">II · Altıncı Bölüm — Özellikli Evde Sağlık Hizmet Türleri</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 6 · YENİ BÖLÜM</span>
+  <span class="t">Altıncı Bölüm — Özellikli Evde Sağlık Hizmet Türleri</span>
+</div>
+<div class="note-genel"><strong>Genel not:</strong> Bu bölümdeki hizmet türlerinden <strong>Md. 27, 28, 29, 30 ve 32</strong>, mevcut metinlerde bağımsız madde olarak yer almayan <span class="nt nt-new">Yeni Eklendi</span> hükümlerdir (yönetmeliğin tanımladığı "özellikli evde sağlık hizmetleri"). Buna karşılık <strong>Md. 31</strong> (yaşlı sağlığı) mevcut örtük düzenlemeyi <span class="nt nt-gen">Genişletir</span>; <strong>Md. 33</strong> (ağız ve diş sağlığı) ise 2023/40219'daki ESH-D türü kamu birimine dayanan, <span class="nt nt-kor">Korunan</span> hizmettir — yeni eklenen bir başlık değildir.</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 27</span><span class="cmp-title">Akut evde sağlık hizmeti (Hospital-at-Home)</span><span class="nb nb-new">Yeni — kritik modernizasyon</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 27</span><p class="q-tx">"(1) Akut evde sağlık hizmeti; akut bir tıbbi durumun, hastanede yatış yerine, klinik sorumlu hekim sorumluluğunda ve hastane düzeyinde izlem, tanı ile tedavi imkânları ile evde yönetildiği hizmet türüdür. Bu hizmet, hastanede yatış yerine evde tedavi (admission avoidance) ile erken taburculuk (early supported discharge) modellerini içerir."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li>Klinik sorumlu hekim: dahiliye uzmanı (zorunlu)</li><li>7/24 telefon erişimi · 24 saat içinde sevk protokolü</li><li>Uzaktan hasta izleme: <strong>zorunlu</strong></li><li>Standart hasta seçim kriterleri (Ek-12)</li></ul></div>
+  <div class="keynote"><span class="k">Bilimsel Temel</span><p>PubMed 2003-2025 sistematik incelemeleri (Caplan ve ark. 2012; Levine ve ark. 2020; Klein ve ark. 2024) — 30-günlük tekrar yatış, hastane içi enfeksiyon, mortalite ve hasta memnuniyetinde HaH lehine anlamlı üstünlük.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 28</span><span class="cmp-title">Kanser hastalarına yönelik EHS</span><span class="nb nb-new">Yeni — onkoloji-eve geçiş</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 28</span><p class="q-tx">"(1) Kanser hastalarına yönelik evde sağlık hizmeti; kanser tanılı hastalara tedavi planının uygun bölümlerinin evde sürdürülmesi suretiyle, tıbbi onkoloji veya çocuk hematolojisi ve onkolojisi uzmanı klinik sorumluluğunda sunulan bütüncül bakımdır."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li>Klinik sorumlu hekim: tıbbi onkoloji veya çocuk hematolojisi ve onkolojisi (zorunlu)</li><li>Tümör konseyi kararı: kemoterapi rejimleri için tavsiye edilir</li><li>Hasta + yakınları için eğitim modülü</li></ul></div>
+  <div class="keynote"><span class="k">Bilimsel Temel</span><p>Kim ve ark. 2020 (J Oncol Practice); Ranganathan ve ark. 2024 — kanser hastalarında ev temelli kemoterapi/destek tedavinin güvenlik profili.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 29</span><span class="cmp-title">Çocuk hastalara yönelik EHS</span><span class="nb nb-new">Yeni — pediatrik HaH</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 29</span><p class="q-tx">"(1) Çocuk hastalara yönelik evde sağlık hizmeti; on sekiz yaş altı, kronik kompleks tıbbi durumu veya teknoloji bağımlılığı bulunan çocuk hastalara, çocuk sağlığı ve hastalıkları uzmanı klinik sorumluluğunda sunulan bakım hizmetidir."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li>Klinik sorumlu hekim: çocuk sağlığı ve hastalıkları uzmanı (zorunlu)</li><li>Pediatrik hemşirelik bakımı · aile eğitimi zorunlu</li><li>5395 sayılı Çocuk Koruma Kanunu kapsamında çocuk yararının önceliği</li></ul></div>
+  <div class="keynote"><span class="k">Bilimsel Temel</span><p>McAndrew ve ark. 2023; Stafford ve ark. 2024 — tıbbi kompleks çocuklarda ev temelli bakım.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 30</span><span class="cmp-title">Yaşam sonu bakım (palyatif)</span><span class="nb nb-new">Yeni</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 30</span><p class="q-tx">"(1) Evde yaşam sonu bakım hizmeti; iyileştirici tedavi seçeneği kalmamış veya hasta tarafından iyileştirici tedaviye devam edilmek istenmediği durumda, hastalara evde sunulan ağrı ile diğer belirtilerin kontrolü, psikolojik destek, manevi destek ve hasta yakınlarına yönelik bilgilendirme hizmetlerini içeren bakımdır."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li>WHO 2002 palyatif bakım tanımıyla tam uyum</li><li>İyileştirici / iyileştirici olmayan ayrımı açık</li><li>Hasta iradesi açıkça korundu (vesayet altı için kanuni temsilci)</li><li>Psikolojik + manevi destek uluslararası standartlardan transfer</li></ul></div>
+  <div class="keynote"><span class="k">Bilimsel Temel</span><p>Smith ve ark. 2018 (Cochrane); Gomes ve ark. 2013 (BMJ) — ev temelli palyatif bakımın ölüm yeri tercihine uyumu ve yaşam sonu kalite göstergeleri.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 31</span><span class="cmp-title">Yaşlı sağlığına yönelik EHS</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219</span><p class="q-tx">Yaşlı bakımı örtük olarak hasta tarifinde (Md. 19/3); ayrı madde yoktur.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 31</span><p class="q-tx">"(1) Yaşlı sağlığına yönelik evde sağlık hizmeti; altmış beş yaş ve üzeri, çoklu kronik hastalığı bulunan, kırılganlık, çoklu ilaç kullanımı, bunama, düşme gibi yaşlılık bulguları gösteren bireylere, kapsamlı yaşlı değerlendirmesi yapılarak sunulan hizmettir."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li>Kapsamlı yaşlı değerlendirmesi (CGA) — uluslararası standart</li><li>Kırılganlık ve çoklu ilaç kullanımı — modern geriatri kavramları</li><li>Sosyal destek koordinasyonu (Md. 9 ile) · hem kamu hem özel sunabilir</li></ul></div>
+  <div class="keynote"><span class="k">Bilimsel Temel</span><p>Stuck ve ark. 2002 (NEJM); Ellis ve ark. 2017 (Cochrane) — yaşlılarda CGA + ev temelli takibin morbidite-mortalite üzerine etkisi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 32</span><span class="cmp-title">Evde damar yoluyla antimikrobiyal tedavi (OPAT)</span><span class="nb nb-new">Yeni</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 32</span><p class="q-tx">"(1) Evde damar yoluyla antimikrobiyal tedavi; uzun süreli damar yoluyla antimikrobiyal tedavinin enfeksiyon hastalıkları ve klinik mikrobiyoloji uzmanı klinik sorumluluğunda evde sürdürülmesidir."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li>Klinik sorumlu hekim: enfeksiyon hastalıkları ve klinik mikrobiyoloji uzmanı (zorunlu)</li><li>Damar erişim yolu standartları (PICC, port)</li><li>Yan etki izlemi ve bakteriyolojik takip zorunlu</li></ul></div>
+  <div class="keynote"><span class="k">Bilimsel Temel</span><p>IDSA 2019 OPAT Clinical Practice Guidelines; Williams ve ark. 2024 (Clin Infect Dis).</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 33</span><span class="cmp-title">Evde ağız ve diş sağlığı</span><span class="nb nb-kor">Korundu (genişletildi)</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Md. 8/2-b</span><p class="q-tx">ESH-D türü kamu birimi tanımlandı; ayrı hizmet düzenlemesi yoktur.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 33</span><p class="q-tx">"(1) Evde ağız ve diş sağlığı hizmeti; 22 nci maddenin birinci fıkrasının (ğ) bendinde belirtilen … bireylere, ESH-D türü birim tarafından sunulan teşhis, tedavi ve önleme hizmetlerini içerir."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>ESH-D türü kamu birimi <strong>korundu</strong>; hizmet kapsamı (teşhis, tedavi, önleme) ve <strong>mobil dental ekipman</strong> standartları açıkça düzenlendi. Yalnız kamu kuruluşu sunabilir (özel sektör ayrı düzenleme bekler).</p></div>
+</div>
+
+<div class="altbolum" id="b7">
+  <span class="run-bolum">II · Yedinci Bölüm — Yaşlı Sağlığı Merkezi</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 7</span>
+  <span class="t">Yedinci Bölüm — Yaşlı Sağlığı Merkezi</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 34</span><span class="cmp-title">Yaşlı Sağlığı Merkezi — YAŞAM modernizasyonu</span><span class="nb nb-yen">Yeniden Yazıldı</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Md. 4/m + Md. 12 (atıf)</span><p class="q-tx">YAŞAM (Sağlıklı Yaş Alma Merkezi) tanımı vardı; ancak organizasyon, açılış kriteri ve personel standardı düzenlenmemişti.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 34</span><p class="q-tx">"(1) Yaşlı Sağlığı Merkezi; Bakanlığa bağlı sağlık tesisi bünyesinde, yaşlı bireylere yaşadıkları ortamda tıbbi bakım, tıbbi izlem, uzaktan sağlık hizmeti yoluyla muayene ve danışmanlık ile sağlık tesisi-ev nakil koordinasyonu sağlamak üzere kurulur."</p></div>
+  <div class="keynote"><span class="k">Düzenleme Yapısı</span><ul><li><strong>YAŞAM → Yaşlı Sağlığı Merkezi</strong> isim değişikliği (Türkçeleştirme)</li><li>Açılış, faaliyet ve personel standartları alt-düzenlemesi (Geçici Md. 3) — 1 yıl içinde Genel Müdürlükçe</li><li>Mevcut YAŞAM birimleri için 6 aylık intibak süresi</li></ul></div>
+</div>
+
+<div class="altbolum" id="b8">
+  <span class="run-bolum">II · Sekizinci Bölüm — Teknoloji, KVKK, Hasta Hakları, Aile Hekimliği</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 8</span>
+  <span class="t">Sekizinci Bölüm — Teknoloji, KVKK, Hasta Hakları, Aile Hekimliği</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 35</span><span class="cmp-title">Uzaktan hasta izleme</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 22/19</span><p class="q-tx">"Hekimin uygun görmesi ve/veya hastanın talep etmesi halinde uzaktan sağlık hizmeti sunulabilir."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 35</span><p class="q-tx">"(1) … uzaktan hasta izleme, hizmet türünün gerektirdiği biçimde uygulanır. 27 nci madde kapsamındaki akut evde sağlık hizmetinde uzaktan hasta izleme zorunludur. Diğer hizmet türlerinde … Standart Hizmet Protokolünde klinik risk düzeyi gözetilerek belirlenir."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Akut EHS'de <strong>zorunlu</strong> hâle getirildi (Md. 27); <strong>klinik risk düzeyine göre</strong> kapsam; Uzaktan Sağlık Hizmetleri Yönetmeliği (10/2/2022, 31746) ile operasyonel çapraz atıf.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 36</span><span class="cmp-title">KVKK uyumu</span><span class="nb nb-new">Kapsamlı Yeni Düzenleme</span></div>
+  <p class="body-p">Mevcut metinler KVKK için sadece dolaylı atıflar içerir; veri sorumlusu/işleyen ayrımı, açık rıza, aydınlatma, yurt dışı aktarım, saklama-imha düzenlenmemiştir. Taslak — Madde 36: <strong>7 fıkra</strong>; tam KVKK çerçevesi:</p>
+  <table class="mzv">
+    <thead><tr><th class="c">Fıkra</th><th>Konu</th><th class="c">Notasyon</th></tr></thead>
+    <tbody>
+      <tr><td class="c mono">1</td><td>Kişisel sağlık verisinin sınıfı (özel nitelikli)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">2</td><td>Veri sorumlusu kimliği (hizmet kuruluşu)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">3</td><td>Veri işleyenler ve sözleşme yükümlülükleri</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">4</td><td>Aydınlatma yükümlülüğü (Ek-10)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">5</td><td>Açık rıza koşulları (Ek-10/A)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">6</td><td>Yurt dışına aktarım (Ek-10/B) — 10/7/2024, 32598 uyumu</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">7</td><td>Saklama-imha süreçleri (ESHİM ses kayıtları dâhil)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Önemi</span><p>2016'da yürürlüğe giren <strong>KVKK'nın evde sağlık alanına ilk sistematik yansıtılması</strong>.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 37</span><span class="cmp-title">Hasta hakları</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p">Mevcut metinlerde örtük; ayrı madde yoktur. <strong>Taslak — Md. 37:</strong> 1/8/1998 tarihli ve 23420 sayılı Hasta Hakları Yönetmeliği ile <strong>doğrudan çapraz atıf</strong>; aydınlatılmış onam (Md. 4/hh), mahremiyet (üü), tedaviyi reddetme hakkı vurgusu.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 38</span><span class="cmp-title">Aile hekimliği koordinasyonu</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 38</span><p class="q-tx">"(1) Bu Yönetmelik kapsamında sunulan hizmetler, 5258 sayılı Kanun çerçevesinde aile hekimliği birimleri ile iş birliği içinde yürütülür."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>2023'te aile hekimliği örtük atıftı; <strong>5258 SK çapraz atfı</strong> ile rolü açıkça düzenlendi.</p></div>
+</div>
+
+<div class="altbolum" id="b9">
+  <span class="run-bolum">II · Dokuzuncu Bölüm — Eğitim, Kalite, Denetim, Yaptırım</span>
+  <span class="k">Madde-Bazlı Karşılaştırma · Bölüm 9</span>
+  <span class="t">Dokuzuncu Bölüm — Eğitim, Kalite, Denetim, Yaptırım</span>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 39</span><span class="cmp-title">Eğitim</span><span class="nb nb-gen">Genişletildi</span></div>
+  <p class="body-p"><strong>2023/40219 — Md. 25:</strong> Hizmet içi eğitim, Bakanlıkça düzenlenir. &nbsp; <strong>Taslak — Md. 39:</strong> Aynı yapı korundu; <strong>özellikli hizmetler için sertifikalı eğitim</strong> yeni eklendi (Genel Müdürlükçe planlanır, müdürlüklerce düzenlenir).</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 40</span><span class="cmp-title">Kalite standartları</span><span class="nb nb-new">Yeni</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 40</span><p class="q-tx">"(1) … Bakanlıkça belirlenen kalite standartlarına uygun şekilde sunulur. Asgari kalite çıktı göstergeleri Ek-2'de düzenlenmiştir."</p></div>
+  <div class="keynote"><span class="k">Yenilik</span><p><strong>Klinik kalite çıktısı (KKÇ)</strong> kavramı; <strong>Ek-2 asgari göstergeler tablosu</strong> (30-günlük tekrar yatış oranı, hasta memnuniyeti, advers olay oranı vb.).</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 41</span><span class="cmp-title">Denetim</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Madde 28</span><p class="q-tx">Yıllık denetim, müdürlükçe.</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 41</span><p class="q-tx">"(1) … kamu birimleri ile özel evde bakım merkez ve birimleri planlı ve plansız denetime tâbidir."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p>Yıllık planlı denetim korundu; <strong>plansız denetim</strong> (şikâyet, ihbar, risk göstergeleri), <strong>Ek-11 Denetim Formu</strong> ve <strong>risk bazlı denetim</strong> yaklaşımı yeni eklendi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 42</span><span class="cmp-title">İdari yaptırımlar — 10 fıkralı yaptırım rejimi</span><span class="nb nb-new">Büyük Ölçüde Yeni</span></div>
+  <p class="body-p">Mevcut metinler: 2023/40219'da yaptırım maddesi <strong>yok</strong> (belirsiz atıf); 2005/25751'de dolaylı, kanun maddesine atıfsız. Taslak — Madde 42: <strong>10 fıkra</strong> ile tam yaptırım rejimi:</p>
+  <table class="mzv">
+    <thead><tr><th class="c">Fıkra</th><th>Konu</th><th class="c">Notasyon</th></tr></thead>
+    <tbody>
+      <tr><td class="c mono">1</td><td>Genel atıf — 3359 SK ek 11</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">2</td><td>Yaptırım türleri (a–ç)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">3</td><td>İdari geri alma tanımı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">4</td><td>Yetkili merci ayrımı (vali, Bakanlık, müdürlük)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">5</td><td>Tekerrür</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">6</td><td>Yargı yolu ayrımı (sulh ceza, idari yargı)</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">7</td><td>Acil geçici tedbir + savunma hakkı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">8</td><td>Hasta güvenli devri</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">9</td><td>Resen başlama hâlleri</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+      <tr><td class="c mono">10</td><td>Diğer mevzuat saklılığı</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    </tbody>
+  </table>
+  <div class="keynote"><span class="k">Önemi</span><p><strong>AY Md. 38 kanunîlik ilkesine tam uyum.</strong> Tüm yaptırımlar 3359 SK ek 11, 5326 SK m. 27 referansıyla kanun düzeyinde dayandırıldı. <strong>5326 SK m. 27 uyarınca sulh ceza hâkimliği</strong> (idari para cezaları) ve <strong>idari yargı yolu</strong> (diğer kararlar) açıkça ayrıştırıldı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 43</span><span class="cmp-title">Hüküm bulunmayan hâller</span><span class="nb nb-gen">Genişletildi</span></div>
+  <p class="body-p">Mevcut metinlerde genel atıf maddesi yoktur. <strong>Taslak — Md. 43:</strong> <strong>9 mevzuat metnine açık atıf</strong> — 1219, 6283, 3359, 5258, 5510, 6698 SK; Hasta Hakları, KSV, KVKK Yurt Dışı Aktarım, Uzaktan Sağlık, Tıbbi Cihaz, Tıbbi Atık, Devlet Arşiv Yönetmelikleri. <strong>Mevzuat bütünlüğü</strong> sağlandı.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 44</span><span class="cmp-title">Yürürlükten kaldırılan mevzuat</span><span class="nb nb-new">Birleştirme Hükmü</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 44</span><p class="q-tx">"2/6/2023 tarihli ve 32209 sayılı … Evde Sağlık Hizmeti Sunumu Hakkında Yönetmelik ile 10/3/2005 tarihli ve 25751 sayılı … Evde Bakım Hizmetleri Sunumu Hakkında Yönetmelik yürürlükten kaldırılmıştır."</p></div>
+  <div class="keynote"><span class="k">Önemi</span><p><strong>İki yönetmeliğin tek metinde birleştirilmesi</strong> açıkça hükme bağlandı.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 45</span><span class="cmp-title">Yürürlük tarihleri — kademeli</span><span class="nb nb-new">Kademeli</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Madde 45</span><p class="q-tx">"(1) Bu Yönetmeliğin; a) 27, 28, 29, 30 ve 32 nci maddeleri, ilgili Standart Hizmet Protokollerinin yayımlanmasından sonra ve … Ek-6/A formunda özel faaliyet izni almasıyla, b) diğer hükümleri yayımı tarihinde, yürürlüğe girer."</p></div>
+  <div class="keynote"><span class="k">Önemi</span><p><strong>Kademeli yürürlük</strong> — özellikli hizmetler için <strong>çift şart</strong> (protokol + özel izin); diğer hükümler derhal yürürlüğe.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Madde 46</span><span class="cmp-title">Yürütme</span><span class="nb nb-kor">Korundu</span></div>
+  <p class="body-p"><strong>Taslak — Md. 46:</strong> Sağlık Bakanı yürütür.</p>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Geçici 1</span><span class="cmp-title">Mevcut birimler için intibak süresi</span><span class="nb nb-gen">Genişletildi</span></div>
+  <div class="qsrc"><span class="q-tag">2023/40219 · Geçici Madde 1</span><p class="q-tx">"Bu Yönetmelik yürürlüğe girinceye kadar yapılan başvurular, başvuru tarihindeki mevzuat hükümlerine göre sonuçlandırılır."</p></div>
+  <div class="qnew"><span class="q-tag">Taslak · Geçici Madde 1</span><p class="q-tx">"… kamu evde sağlık hizmet birimleri dokuz ay, faaliyet izin belgesi bulunan özel evde bakım merkez ve birimleri on iki ay içinde bu Yönetmelik hükümlerine intibak ederler."</p></div>
+  <div class="keynote"><span class="k">Değişiklik</span><p><strong>İki ayrı intibak süresi</strong> (kamu 9 ay, özel 12 ay) ve <strong>açık intibak ödevi</strong>.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Geçici 2</span><span class="cmp-title">Standart Hizmet Protokolleri</span><span class="nb nb-new">Yeni</span></div>
+  <div class="qnew"><span class="q-tag">Taslak · Geçici Madde 2</span><p class="q-tx">"… 27 ila 33 üncü maddelerinde düzenlenen hizmet türlerinin her biri için hazırlanacak ayrı Standart Hizmet Protokolleri, Bakanlık tarafından … altı ay içinde yayımlanır."</p></div>
+  <div class="keynote"><span class="k">Önemi</span><p><strong>6 aylık protokol hazırlama yükümlülüğü</strong> — yönetmelik yürürlüğe girmeden önce protokollerin hazır olması beklentisi.</p></div>
+</div>
+
+<div class="cmp">
+  <div class="cmp-head"><span class="cmp-no">Geçici 3</span><span class="cmp-title">Yaşlı Sağlığı Merkezi alt-düzenlemesi</span><span class="nb nb-new">Yeni</span></div>
+  <p class="body-p">YAŞAM 2023'te tanımlandı ancak alt-düzenleme yapılmadı. <strong>Taslak — Geçici Md. 3:</strong> Yaşlı Sağlığı Merkezinin organizasyonu, faaliyetleri ve personel standartları için <strong>1 yıllık</strong> alt-düzenleme süresi; mevcut YAŞAM birimleri için <strong>6 aylık</strong> intibak.</p>
+</div>
+
+<!-- ═══════════════ III · EKLER ═══════════════ -->
+<section class="sec-opener" id="s3">
+  <span class="run-bolum">Bölüm III · Ekler — Karşılaştırma Özeti</span>
+  <div class="sec-opener-mid"><span class="sec-opener-no">III</span><h1 class="sec-opener-t"><span class="ord">Üçüncü Bölüm</span>Ekler — Karşılaştırma Özeti</h1></div>
+  <p class="sec-lead">Birleşik taslağın 16 eki, mevcut yönetmeliklerdeki karşılıkları ile karşılaştırılmıştır; eklerin dörtte üçü taslağa özgüdür.</p>
+</section>
+<table class="mzv">
+  <thead><tr><th class="c">EK</th><th>Adı</th><th class="c">2023</th><th class="c">2005</th><th class="c hi">Taslak</th><th class="c">Notasyon</th></tr></thead>
+  <tbody>
+    <tr><td class="c mono">EK-1</td><td>Asgari Araç, Malzeme, Tıbbi Cihaz ve İlaç Standardı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-2</td><td>Asgari Kalite Çıktı Göstergeleri</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-3</td><td>Özel Evde Bakım Merkezi / Birimi Başvuru Dilekçesi</td><td class="c cross">—</td><td class="c">Ek-1</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="c mono">EK-4</td><td>Malzeme ve Tıbbi Cihaz Temini Taahhütnamesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-5</td><td>Nakil Koordinasyonu Taahhütnamesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-6</td><td>Faaliyet İzin Belgesi</td><td class="c cross">—</td><td class="c">Ek-3</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="c mono">EK-6/A</td><td>Özel Faaliyet İzin Belgesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-7</td><td>Mesul Müdür / Birim Sorumlusu Belgesi</td><td class="c cross">—</td><td class="c">Ek-2</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="c mono">EK-8</td><td>Personel Çalışma Belgesi</td><td class="c cross">—</td><td class="c">Ek-4</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="c mono">EK-9</td><td>Hasta Kabul ve Değerlendirme Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-10</td><td>Aydınlatılmış Onam Formu (Tıbbi)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-10/A</td><td>KVKK Aydınlatma Metni (Kişisel Sağlık Verileri)</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-10/B</td><td>Açık Rıza Beyanı</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-11</td><td>Denetim Formu</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-12</td><td>Standart Hizmet Protokolü Genel Çerçevesi</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="c mono">EK-13</td><td>Yaptırım Cetveli</td><td class="c cross">—</td><td class="c cross">—</td><td class="c hi"><span class="tick">✓</span></td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+  </tbody>
+</table>
+<div class="keynote"><span class="k">Sayısal Özet</span><p><span class="nt nt-kor">Korundu</span> 3 ek (başvuru dilekçesi, mesul müdür/birim sorumlusu belgesi, personel çalışma belgesi) &nbsp;·&nbsp; <span class="nt nt-gen">Genişletildi</span> 1 ek (faaliyet izin belgesi) &nbsp;·&nbsp; <span class="nt nt-new">Yeni Eklendi</span> 12 ek (kalite, hasta kabul, onam, KVKK aydınlatma, açık rıza, denetim, protokol, yaptırım ve sair). <strong>Not:</strong> Yurt dışına veri aktarımı ayrı bir form (ek) olarak düzenlenmemiştir; EK-10/B Açık Rıza Beyanı içinde bir başlık olarak yer alır.</p></div>
+
+<!-- ═══════════════ IV · SONUÇ ═══════════════ -->
+<section class="sec-opener" id="s4">
+  <span class="run-bolum">Bölüm IV · Sonuç — Reformun Nicel Özeti</span>
+  <div class="sec-opener-mid"><span class="sec-opener-no">IV</span><h1 class="sec-opener-t"><span class="ord">Dördüncü Bölüm</span>Sonuç — Reformun Nicel Özeti</h1></div>
+  <p class="sec-lead">Madde karşılığı matrisi, nicel dağılım ve reform bileşik indeksi — taslağın "köktenci kopuş" değil "modernleştirici evrim" karakterinin sayısal kanıtı.</p>
+</section>
+
+<h3 class="sub-h3">1. Madde Karşılığı Matrisi</h3>
+<table class="mzv">
+  <thead><tr><th class="hi">Taslak maddesi</th><th>2023/40219</th><th>2005/25751</th><th class="c">Notasyon</th></tr></thead>
+  <tbody>
+    <tr><td class="hi">Md. 1 (Amaç)</td><td>Md. 1</td><td>Md. 1</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+    <tr><td class="hi">Md. 2 (Kapsam)</td><td>Md. 2</td><td>Md. 2</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 3 (Dayanak)</td><td>Md. 3</td><td>Md. 3</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 4 (Tanımlar)</td><td>Md. 4 (26 tanım)</td><td>Md. 4 (21 tanım)</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 5 (Yapılanma)</td><td>Md. 5</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 6 (ESHİM)</td><td>Md. 6</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 7 (ESKOM)</td><td>Md. 7</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 8 (Yürütme kom.)</td><td>Md. 16</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 9 (İl değ. kom.)</td><td>Md. 17</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 10 (Merkez kom.)</td><td>Md. 18</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 11 (Hizmet ekibi)</td><td>Md. 12</td><td>Md. 11</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 12 (Sorumlu hekim)</td><td>Md. 14</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 13 (Hekim)</td><td>Md. 15/1</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 14 (Hemşire)</td><td>Md. 15/2</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 15 (Diğer personel)</td><td>Md. 15/3-7</td><td>Md. 11</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 16 (Kamu birimleri)</td><td>Md. 8</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 17 (Kamu açılış)</td><td>Md. 9</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 18 (Özel kuruluşlar)</td><td class="cross">—</td><td>Md. 5-6</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 19 (Özel başvuru + özel izin)</td><td class="cross">—</td><td>Md. 7-8 + yeni</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 20 (Fizikî standart)</td><td class="cross">—</td><td>Md. 12</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 21 (Bölüm tabelaları)</td><td class="cross">—</td><td>Md. 14</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 22 (Hasta türü + öncelik)</td><td>Md. 19</td><td class="cross">—</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+    <tr><td class="hi">Md. 23 (Süre sınıfl.)</td><td>Md. 20</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 24 (Başvuru kanalları)</td><td>Md. 21</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 25 (Standart Hizmet Prot.)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 26 (Hizmet sonu)</td><td>Md. 26</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 27 (Akut EHS)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 28 (Kanser EHS)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 29 (Çocuk EHS)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 30 (Yaşam sonu)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 31 (Yaşlı EHS)</td><td>Md. 19/3 (örtük)</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 32 (OPAT)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 33 (Ağız-diş)</td><td>Md. 8/2-b (kısmi)</td><td class="cross">—</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 34 (Yaşlı Sağlığı Mrk.)</td><td>Md. 4/m (YAŞAM)</td><td class="cross">—</td><td class="c"><span class="nt nt-yen">Yeniden</span></td></tr>
+    <tr><td class="hi">Md. 35 (Uzaktan izleme)</td><td>Md. 22/19</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 36 (KVKK)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 37 (Hasta hakları)</td><td>atıf</td><td>atıf</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Md. 38 (Aile hekimliği)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 39 (Eğitim)</td><td>Md. 25</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 40 (Kalite)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 41 (Denetim)</td><td>Md. 28</td><td>Md. 30</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 42 (Yaptırım)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 43 (Hüküm bulunmayan)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Md. 44 (Yürürlükten kaldırma)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 45 (Yürürlük)</td><td>Md. 30</td><td>Md. 36</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Md. 46 (Yürütme)</td><td>Md. 31</td><td>Md. 37</td><td class="c"><span class="nt nt-kor">Korundu</span></td></tr>
+    <tr><td class="hi">Geçici 1 (İntibak)</td><td>GM 1</td><td>GM 1</td><td class="c"><span class="nt nt-gen">Genişletildi</span></td></tr>
+    <tr><td class="hi">Geçici 2 (Std. Hizmet Prot.)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+    <tr><td class="hi">Geçici 3 (Yaşlı Sağlığı Mrk.)</td><td class="cross">—</td><td class="cross">—</td><td class="c"><span class="nt nt-new">Yeni</span></td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub-h3">2. Nicel Özet</h3>
+<table class="mzv">
+  <thead><tr><th>Notasyon</th><th class="c">Sayı</th><th class="c hi">Yüzde</th></tr></thead>
+  <tbody>
+    <tr><td><span class="nt nt-kor">Korundu</span></td><td class="c">17</td><td class="c hi">%35</td></tr>
+    <tr><td><span class="nt nt-yen">Yeniden Yazıldı</span></td><td class="c">3</td><td class="c hi">%6</td></tr>
+    <tr><td><span class="nt nt-gen">Genişletildi</span></td><td class="c">12</td><td class="c hi">%24</td></tr>
+    <tr><td><span class="nt nt-new">Yeni Eklendi</span></td><td class="c">17</td><td class="c hi">%35</td></tr>
+    <tr class="tot"><td>Toplam</td><td class="c">49 (46 + GM 1-3)</td><td class="c">%100</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub-h3">3. Reform Bileşik İndeksi</h3>
+<table class="mzv">
+  <thead><tr><th>Gösterge</th><th class="c hi">Oran</th><th>Yorum</th></tr></thead>
+  <tbody>
+    <tr><td>Süreklilik oranı (Korundu + Yeniden)</td><td class="c hi">%41</td><td>Kurumsal hafıza korundu</td></tr>
+    <tr><td>Modernizasyon oranı (Genişletildi)</td><td class="c hi">%24</td><td>Mevcut hükümler güçlendirildi</td></tr>
+    <tr><td>Yenilik oranı (Yeni Eklendi)</td><td class="c hi">%35</td><td>Boşluklar kapatıldı</td></tr>
+  </tbody>
+</table>
+<div class="keynote"><span class="k">Değerlendirme</span><p>Bu dengeli dağılım, taslağın <strong>"köktenci kopuş" değil "modernleştirici evrim"</strong> karakterini ortaya koymaktadır. Yürürlükteki kamu yönetmeliğindeki hükümlerin yarıya yakını korunmuş veya yeniden yazılmış; yarıya yakını ise modern tıp ve hukuk gereksinimleriyle güncellenmiştir.</p></div>
+
+<!-- ═══════════════ V · HAZIRLAYAN VE KAYNAK ═══════════════ -->
+<section class="sec-opener" id="s5">
+  <span class="run-bolum">Bölüm V · Hazırlayan ve Kaynak</span>
+  <div class="sec-opener-mid"><span class="sec-opener-no">V</span><h1 class="sec-opener-t"><span class="ord">Beşinci Bölüm</span>Hazırlayan ve Kaynak</h1></div>
+  <p class="sec-lead">Çalışmanın hazırlayıcısı, mevzuat hazırlama dayanağı ve karşılaştırılan birincil kaynaklar.</p>
+</section>
+<div class="edge-band"></div>
+<div class="kaynak">
+  <div class="k">● Çalışma</div>
+  <div class="v">Mevzuat Çalışma Grubu</div>
+  <div class="k">● Dayanak</div>
+  <div class="v">Mevzuat Hazırlama Usul ve Esasları Hakkında Yönetmelik (RG: 17/2/2006, 26083; Mevzuat No: 5210)</div>
+  <div class="k">● Karşılaştırılan Kaynaklar</div>
+  <div class="v"><ol>
+    <li>Resmî Gazete (2/6/2023, 32209) — Mevzuat No: 40219</li>
+    <li>Resmî Gazete (10/3/2005, 25751) — Mevzuat No: 7542</li>
+    <li>Birleşik Yönetmelik Taslağı</li>
+  </ol></div>
+</div>
+
+
+</body>
+</html>
